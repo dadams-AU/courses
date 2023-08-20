@@ -6,8 +6,8 @@
 
   <title>Reveal JS presentation</title>
 
-  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-  <meta name="author" content="Hakim El Hattab">
+  <meta name="description" content="POSC 315 Introduction Lecture">
+  <meta name="author" content="David P. Adams">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -48,7 +48,29 @@
   
 
    <!-- css list -->
-	
+	<style>
+    /* Assuming that the default state of your fragments is a regular font color */
+.fragment {
+  transition: color 0.5s;
+}
+
+/* When a fragment has been shown, change its color to a lighter shade */
+.fragment.past-fragment {
+  color: gray;
+}
+
+/* The currently visible fragment can have the regular color or any emphasis you want */
+.fragment.current-fragment {
+  color: #eee8d5;
+  font-weight: bold;
+}
+
+/* Future fragments can be invisible or shown with a lighter color */
+.fragment.future-fragment {
+  color: silver;
+}
+
+  </style>
 
    
 
@@ -69,9 +91,13 @@
     
         <section >
             
-            <h2>Introduction to Public Policy</h2>
+            <h2>Introduction to <br> Public Policy</h2>
+
+            <br> 
 <h3>POSC 315-01</h3>
-<h4>Fall 2023 – Week 1-1</h4>
+<br> 
+<h4>Week 1-1</h4>
+<br>
 <h5>David P. Adams, Ph.D.</h5>
 
             </section>
@@ -88,8 +114,10 @@
 <li>Office Hours and Contact Information
 <ul>
 <li>Office Hours: 9:30-11:00am on Tuesdays and Thursdays</li>
-<li>Appointments: <code>https://t.ly/dpa-appt</code></li>
-<li>Website: <code>https://dadams.site</code></li>
+<li>Appointments: <a href="https://t.ly/dpa-appt"><code>https://t.ly/dpa-appt</code></a></li>
+<li>Website: <a href="https://dadams.site"><code>https://dadams.site</code></a></li>
+<li>Email: <a href="mailto:dpadams@fullerton.edu"><code>dpadams@fullerton.edu</code></a></li>
+<li>Phone/SMS: 657-278-4770</li>
 </ul>
 </li>
 <li>Canvas Website</li>
@@ -108,7 +136,7 @@
             </section>
         
             <section >
-                <h6>Education</h6>
+                <h3>Education</h3>
 <ul>
 <li>B.S. in Political Science from Kennesaw State University</li>
 <li>M.P.A. in Public Administration from Auburn University</li>
@@ -118,7 +146,7 @@
             </section>
         
             <section >
-                <h6>Research Interests</h6>
+                <h3>Research Interests</h3>
 <ul>
 <li>Environmental and Natural Resource Policy</li>
 <li>Energy Policy</li>
@@ -138,7 +166,7 @@
     
         <section >
             
-            <h2>Guiding Question for the Course</h2>
+            <h3>Guiding Question for the Course</h3>
 <blockquote>
 <p>Can we do <em>anything</em> without governmental policy or governmental interusion in our lives?</p>
 </blockquote>
@@ -164,73 +192,18 @@
             </section>
     
 
-
-
-    
-    <section>
-        <section slide-in fade-out>
-            <h2>Questions?</h2>
-
-            </section>
-        
-            <section data-transition="slide-in fade-out">
-                <h2>Questions?</h2>
-<ul>
-<li>Check out the Canvas Page.</li>
-</ul>
-
-            </section>
-        
-            <section data-transition="slide-in fade-out">
-                <h2>Questions?</h2>
-<ul>
-<li>
-<p><span style="color: gray">Check out the Canvas Page.</span></p>
-</li>
-<li>
-<p>Read the Syllabus.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section data-transition="slide-in fade-out">
-                <h2>Questions?</h2>
-<ul>
-<li>
-<p><span style="color: gray">Check out the Canvas Page.</span></p>
-</li>
-<li>
-<p><span style="color: gray">Read the Syllabus.</span></p>
-</li>
-<li>
-<p>Read chapter 1 of <em>An Introduction to the Policy Process: Theories, Concepts, and Models of Public Policy Making</em> by Thomas A. Birkland.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section data-transition="slide-in fade-out">
-                <h2>Questions?</h2>
-<ul>
-<li>
-<p><span style="color: gray">Check out the Canvas Page.</span></p>
-</li>
-<li>
-<p><span style="color: gray">Read the Syllabus.</span></p>
-</li>
-<li>
-<p><span style="color: gray">Read chapter 1 of <em>An Introduction to the Policy Process: Theories, Concepts, and Models of Public Policy Making</em> by Thomas A. Birkland.</span></p>
-</li>
-<li>
-<p><span style="color:white">Email me if you’re here but not on the class roll.</span></p>
-</li>
-</ul>
-
-            </section>
-        
-
-    </section>
+            <section>
+              <h2>Questions?</h2>
+              
+              <ul>
+                  <li class="fragment" data-fragment-index="0">Check out the Canvas Page.</li>
+                  <li class="fragment" data-fragment-index="1">Read the Syllabus.</li>
+                  <li class="fragment" data-fragment-index="2">Read chapter 1 of <em>An Introduction to the Policy Process: Theories, Concepts, and Models of Public Policy Making</em> by Thomas A. Birkland.</li>
+                  <li class="fragment" data-fragment-index="3">Email me if you’re here but not on the class roll.</li>
+              </ul>
+          
+          </section>
+          
     
 
 
@@ -372,10 +345,10 @@
       //#hideCursorTime: 5000
 
       // Parallax Background
-      parallaxBackgroundImage: 'https://revealjs.com/images/diamonds.png',
-      parallaxBackgroundSize: '2100px 1320px',
-      parallaxBackgroundHorizontal: 200,
-      parallaxBackgroundVertical: 150,
+      //parallaxBackgroundImage: 'backgrounds/forest.png',
+      parallaxBackgroundSize: '3600 1800',
+      parallaxBackgroundHorizontal: 150,
+      parallaxBackgroundVertical: 250,
 
       //Presentation Size
       width: 960,

@@ -20,10 +20,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #3B4252;
+  --r-background-color: #E5E9F0;
   --r-main-font: Lato, sans-serif;
   --r-main-font-size: 42px;
-  --r-main-color: #3B4252;
+  --r-main-color: #2E3440;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font: League Gothic, Impact, sans-serif;
@@ -556,10 +556,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   font-family: 'League Gothic', Impact, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #81A1C1;
+  color: #5E81AC;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
-h2, li {
+.h2, li {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 

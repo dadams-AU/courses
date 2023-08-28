@@ -36,40 +36,7 @@
     </symbol>
   </svg>
 
-  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-            id="bd-theme"
-            type="button"
-            aria-expanded="false"
-            data-bs-toggle="dropdown"
-            aria-label="Toggle theme (auto)">
-      <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-          Light
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-          Dark
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-        </button>
-      </li>
-    </ul>
-  </div>
+  
 
 <header>
   <div class="container">
@@ -100,6 +67,40 @@
             </li>
           </ul>
          </div>
+      </div>
+      <div class="dropdown mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                id="bd-theme"
+                type="button"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                aria-label="Toggle theme (auto)">
+          <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+          <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+              <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+              Light
+              <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+              <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+              Dark
+              <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+              <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+              Auto
+              <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </button>
+          </li>
+        </ul>
       </div>
     </nav>
   </div>
@@ -132,10 +133,9 @@
   <div class="container px-4 py-5" id="hanging-icons">
     <h2 class="pb-2 border-bottom d-flex justify-content-between align-items-center">
             POSC 315: Introduction to Public Policy
-            <!-- Using a hover state class for clearer interactivity; "btn-primary" can be more noticeable -->
             <a href="https://dadams.site/posc315.html" class="btn btn-outline-primary btn-lg px-4 gap-3" role="button">Syllabus</a>
         </h2>
-
+    
     <div class="row g-4 py-5">
         <div class="col-md-6">
           <div class="col d-flex align-items-start">
@@ -160,8 +160,8 @@
               <a href="POSC315/presentations/week_1-2/index.html" class="btn btn-primary" role="button">Slide Deck</a>
             </div>
           </div>
-          
         </div>
+     
         <div class="col-md-6">
             <div class="d-flex align-items-start">
               <div class="me-3">
@@ -173,10 +173,21 @@
                 <a href="POSC315/presentations/week2/index.html" class="btn btn-primary" role="button">Slide Deck</a>
               </div>
             </div>
-            </div>
         </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-start">
+          <div class="me-3">
+            <i class="fa-solid fa-person-chalkboard fa-xl"></i>
+          </div>
+          <div>
+            <h3 class="fs-2 text-body-emphasis">Week 3-1 Historical and Structural Elements</h3>
+            <p>Here we look at the institutional and structural elements than enable and enjoin policy making in the United States. This presentation covers Birkland Chapter 3.</p>
+            <a href="POSC315/presentations/week_3-1/index.html" class="btn btn-primary" role="button">Slide Deck</a>
+          </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 </section>
 
 <div class="container">
@@ -211,48 +222,23 @@
 
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-12 col-md-4 d-flex align-items-center flex-column flex-md-row">
-      <a href="https://dadams.site" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        <img src="dadams.png" alt="David Adams" style="width: 100px; height: auto;" class="img-responsive">
-      </a>
-      <a href="termsofuse.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-        Terms of Use
-      </a>
-      <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 David Prescott Adams</span>
+    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center flex-column flex-md-row">
+        <a href="https://dadams.site" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <img src="dadams.png" alt="David Adams" style="width: 100px; height: auto;" class="img-responsive">
+        </a>
     </div>
-
-    <div class="col-12 col-md-4">
-      <ul class="nav justify-content-center justify-content-md-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="text-body-secondary" href="https://www.linkedin.com/in/dadamscsuf/">
-              <i class="fab fa-linkedin fa-2x social-icon"></i>
-          </a>
-      </li>
-      <li class="ms-3">
-          <a class="text-body-secondary" href="https://discordapp.com/users/740691766277177346">
-              <i class="fab fa-discord fa-2x social-icon"></i>
-          </a>
-      </li>
-      <li class="ms-3">
-          <a class="text-body-secondary" href="https://github.com/dadams-AU">
-              <i class="fab fa-github fa-2x social-icon"></i>
-          </a>
-      </li>
-      <li class="ms-3">
-          <a class="text-body-secondary" href="https://x.com/dadamsAU">
-              <i class="fab fa-twitter fa-2x social-icon"></i>
-          </a>
-      </li>
-      <li class="ms-3">
-          <a class="text-body-secondary" href="https://www.librarything.com/profile/dadamsAU">
-              <i class="fas fa-book fa-2x social-icon"></i>
-          </a>
-      </li>
-      </ul>
+    
+    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+        <a href="termsofuse.html" class="text-body-secondary text-decoration-none lh-1">
+            Terms of Use
+        </a>
     </div>
+    
+    <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
+        <span class="text-body-secondary">&copy; 2023 David Prescott Adams</span>
+    </div>
+</footer>
 
-   
-  </footer>
 </div>
 
 

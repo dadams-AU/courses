@@ -21,26 +21,6 @@ body[data-theme="dark"] a {
     color: #88C0D0;
 }
 
-/* Social icons */
-
-body[data-theme="dark"] .social-icon {
-    color: #D8DEE9; /* Lighter color for icons in dark mode */
-}
-
-body[data-theme="dark"] .social-icon:hover {
-    color: #4C566A; /* A bit darker on hover for contrast in dark mode */
-}
-
-.social-icon {
-    color: #3B4252; /* Nord3 */
-}
-
-.social-icon:hover {
-    color: #4C566A; /* This is a slightly darker gray color */
-}
-
-/* Buttons */
-
 body[data-theme="dark"] .btn-primary {
     background-color: #81A1C1; 
     color: #D8DEE9; 

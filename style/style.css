@@ -9,6 +9,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; /* Bold */
 }
 
+.navbar {
+    background-color: #f8f9fa;  /* Light gray background for light mode */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar[data-theme="dark"] {
+    background-color: #333333;  /* Darker background for dark mode */
+}
 
 
 /* Dark mode styles */
@@ -113,92 +123,6 @@ a:hover {
     color: #81A1C1; /* A bit darker on hover */
 }
 
-
-/* navbar */
-
-/* Default navbar styles (light mode) */
-.navbar {
-    background-color: #ECEFF4; /* This is the light mode background color */
-    color: #3B4252; /* Text color for light mode */
-}
-
-.navbar a {
-    color: #3B4252;
-}
-
-.navbar a:hover {
-    color: #2E3440; /* A slightly darker shade for hover effect in light mode */
-}
-
-/* Dark mode navbar styles */
-body[data-theme="dark"] .navbar {
-    background-color: #2E3440; /* Dark mode background color */
-    color: #D8DEE9; /* Text color for dark mode */
-}
-
-body[data-theme="dark"] .navbar a {
-    color: #D8DEE9;
-}
-
-body[data-theme="dark"] .navbar a:hover {
-    color: #B3C3D3; /* A slightly lighter shade for hover effect in dark mode */
-}
-
-/* Default light mode styles */
-.navbar {
-    background-color: #ECEFF4;
-    border: 1px solid #D8DEE9; /* Optional border */
-}
-
-.navbar .nav-link {
-    color: #3B4252; /* Dark text */
-}
-
-.navbar .nav-link:hover, .navbar .nav-link.active {
-    color: #2E3440; /* Slightly darker on hover and for active links */
-}
-
-.navbar-toggler-icon {
-    /* Adjust the color of the hamburger icon as required, especially if it's not visible against your navbar's background color */
-    filter: invert(34%);
-}
-
-/* Dark mode styles */
-body[data-theme="dark"] .navbar {
-    background-color: #2E3440;
-    border: 1px solid #3B4252; /* Optional border */
-}
-
-body[data-theme="dark"] .navbar .nav-link {
-    color: #D8DEE9; /* Light text for dark theme */
-}
-
-body[data-theme="dark"] .navbar .nav-link:hover, body[data-theme="dark"] .navbar .nav-link.active {
-    color: #ECEFF4; /* Slightly lighter on hover and for active links in dark mode */
-}
-
-body[data-theme="dark"] .navbar-toggler-icon {
-    filter: invert(66%);
-}
-
-/* Dropdown styling */
-.dropdown-menu {
-    background-color: inherit; /* Inherit from navbar for consistency */
-}
-
-.dropdown-item {
-    color: inherit; /* Inherit from nav-link for consistency */
-}
-
-.dropdown-item:hover {
-    background-color: #D8DEE9; /* Light gray for light mode, adjust as needed */
-    color: #2E3440; /* Dark text on hover */
-}
-
-body[data-theme="dark"] .dropdown-item:hover {
-    background-color: #2E3440; /* Dark gray for dark mode */
-    color: #D8DEE9; /* Light text on hover in dark mode */
-}
 
 /* Links in Footer*/
 

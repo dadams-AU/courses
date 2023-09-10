@@ -13,8 +13,8 @@ parallaxBackgroundVertical: 150
 
 ---
 
-
 ## Institutions
+
 **Rules** (i.e., agreements, laws, regulations, norms, etc.) structure individuals and organizations' interactions and transactions.
 
 **Institutions** are the organizations that enforce the rules.
@@ -77,7 +77,6 @@ parallaxBackgroundVertical: 150
   * Allows the government to grow and respond to needs
 * It lasts because of its _elasticity_.
 
-
 ---
 
 ## The Constitution and Separation of Powers
@@ -85,7 +84,6 @@ parallaxBackgroundVertical: 150
 * **Separation of Powers**: The division of government responsibilities into distinct branches to limit any one branch from exercising the core functions of another
 
 --
-
 
 * **Checks and Balances**: The ability of each branch of government to exercise checks, or controls, over the other branches
 
@@ -98,11 +96,10 @@ parallaxBackgroundVertical: 150
 ---
 
 ## The Constitution and Policymaking
+
 ### Policy Making Powers
 
-
 --
-
 
 <section>
 <div style="text-align: center;">
@@ -126,7 +123,6 @@ Article 1, Section 8: Enumerated Powers
 <!-- Second column -->
 <div style="width: 55%;">
 
-
 * Defense
 * Naturalization
 * Weights and Measures
@@ -136,27 +132,26 @@ Article 1, Section 8: Enumerated Powers
 </div>
 </br>
 
-  * **Necessary and Proper Clause**
-  * **Commerce Clause**
-
+* **Necessary and Proper Clause**
+* **Commerce Clause**
 
 ---
-
 
 ### Policy Making Powers
 
 Amendment 14: Guiding Principle for Policy Making
+
 * Equal Protection Clause
 * Due Process Clause
 * Privileges and Immunities Clause
 * Citizenship Clause
-
 
 --
 
 ### Policy Making Powers
 
 Amendment 10: Reserved Powers
+
 * Structure of the Federal System
 * States' Rights
 * Police Powers
@@ -172,12 +167,11 @@ The system is slow to change because of the institutional structure.
 * **Federalism**
 * **Separation of Powers**
 * **Checks and Balances**
-* **Bicameralism** 
+* **Bicameralism**
 * **Judicial Review**
 * **Amendment Process**
 
-
--- 
+--
 
 ## Incrementalism
 
@@ -204,18 +198,17 @@ The system is slow to change because of the institutional structure.
 * The founders believed that federalism would protect liberty
 * Factions: groups of citizens who have a common interest in some proposal that would either violate the rights of other citizens or would harm the nation as a whole
 
-
--- 
+--
 
 # To the founders, federalism
-  * prevents any one faction from dominating the government
-  * allows states to experiment with different policies
-  * keeps government closer to the people
-  * increases political participation
-  * produces more effective government
-  * provides more access points to government
-  * increases policy innovation
 
+* prevents any one faction from dominating the government
+* allows states to experiment with different policies
+* keeps government closer to the people
+* increases political participation
+* produces more effective government
+* provides more access points to government
+* increases policy innovation
 
 ---
 
@@ -227,10 +220,7 @@ The system is slow to change because of the institutional structure.
 * **National Standards** (1961-1981)
 * **Devolution** (1981-Present)
 
-
 ---
-
-
 
 ## Eras of Federalism (from the Literature)
 
@@ -239,7 +229,6 @@ The system is slow to change because of the institutional structure.
 * **Creative Federalism** (1960s-1990s)
 * **New Federalism** (1990s-2010s)
 * **Fragmented Federalism** (2010s-present)
-
 
 --
 
@@ -277,6 +266,7 @@ The system is slow to change because of the institutional structure.
 --
 
 ## New Federalism
+
 * **Pineapple Upside-Down Cake Federalism**
 * **Competitive Federalism**
 * **Devolution Revolution**
@@ -295,27 +285,10 @@ The system is slow to change because of the institutional structure.
 * **Federalism is fractured: dimensions of all previous models**
 * **Overall: ???-centered federalism**
 
-
 ---
 
 ## Questions
 
-
 ---
 
-# Have a great day!
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
+# Have a great day

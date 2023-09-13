@@ -9,6 +9,43 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; /* Bold */
 }
 
+/* theme switcher */
+
+.dropdown-item.active svg.bi.ms-auto {
+    display: inline-block !important;
+}
+
+.dropdown-item svg.bi.ms-auto {
+    display: none !important;
+}
+
+.dropdown-toggle {
+    color: #FFFFFF;
+} 
+
+.dropdown-item.active {
+    color: #FFFFFF;
+    background-color: #333333;
+}   
+
+.dropdown-item.active:hover {
+    color: #FFFFFF;
+    background-color: #333333;
+}   
+
+.dropdown-item.active .theme-icon {
+    fill: white; /* Change this to your desired icon color */
+    opacity: 1; /* Making the icon fully visible */
+}
+
+.dropdown-item .theme-icon {
+    fill: #333333; /* Change this to your desired icon color */
+    opacity: 0; /* Making the icon invisible */
+}
+
+
+
+
 .navbar {
     background-color: #f8f9fa;  /* Light gray background for light mode */
     padding: 20px;

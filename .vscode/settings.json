@@ -9,6 +9,11 @@
             "language": "markdown",
             "scheme": "file",
             "pattern": "POSC315/week4.md"
+        },
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "POSC315/presentations/week4-2.md"
         }
     ]
 }

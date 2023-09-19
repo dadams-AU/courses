@@ -15,10 +15,10 @@
 ## The News Media
 
 ### Framing
-  - "The process by which a communication source, such as a news organization, defines and constructs a political issue or public controversy." - Stone
-  - They "frame" issues with their lenses, affecting how we see them.
-  - Example: "Immigrant Caravan" vs. "Refugee Caravan"
 
+- "The process by which a communication source, such as a news organization, defines and constructs a political issue or public controversy." - Stone
+- They "frame" issues with their lenses, affecting how we see them.
+- Example: "Immigrant Caravan" vs. "Refugee Caravan"
 
 ---
 
@@ -30,7 +30,7 @@ They devote time to specific issues over others, moving items up to the national
 
 ## The News Media
 
-- They use a game scheme to cover politics
+- They use a game scheme to cover politics 
   - "Who's ahead?"
   - "Who's behind?"
   - "Who's going to win?"
@@ -49,7 +49,7 @@ They devote time to specific issues over others, moving items up to the national
 
 ## The News Media
 
-- Public opinion formation
+- Public opinion formation 
   - They can influence public opinion by what they cover and how they cover it.
   - They can also be influenced by public opinion.
   - Policymakers can also influence them.
@@ -61,10 +61,10 @@ They devote time to specific issues over others, moving items up to the national
 
 ### Pack Journalism
 
-  - "The tendency of journalists to cover the same stories in the same way because they are competing with each other for audience attention." - Stone
-  - gives credibility to the story and the source
-  - lends to a "herd mentality" in the news media
-  - can lead to a lack of diversity in coverage
+- "The tendency of journalists to cover the same stories in the same way because they are competing with each other for audience attention." - Stone
+- gives credibility to the story and the source
+- lends to a "herd mentality" in the news media
+- can lead to a lack of diversity in coverage
 
 ---
 
@@ -75,7 +75,7 @@ They devote time to specific issues over others, moving items up to the national
 - Increasing reliance on "experts"
 - Increasing reliance on "official sources"
 - News boiled down to "sound bites" and "talking points"
-  
+
 All of this allows for less comprehension of complex issues.
 
 ---
@@ -105,7 +105,7 @@ They solve collective action problems for politicians to
 
 - They are a source of information for voters.
 - Heuristics for the electorate
-- Party realignment
+- Party realignment 
   - "A major shift in the partisan identification of the electorate." - Stone
   - Example: The New Deal Coalition
 
@@ -127,7 +127,7 @@ They solve collective action problems for politicians to
 ## Interest Groups
 
 - Capital, social, and informational resources often determine the size and effectiveness of an interest group.
-- Groups often come together for a similar cause, creating a _social movement_.
+- Groups often come together for a similar cause, creating a *social movement*. 
   - Example: The Civil Rights Movement
   - Example: The Tea Party Movement
   - Example: The #MeToo Movement
@@ -176,7 +176,6 @@ They solve collective action problems for politicians to
 - Example: The National Rifle Association
 - Example: The National Right to Life Committee
 
-
 ---
 
 ## Interest Groups
@@ -208,7 +207,6 @@ They solve collective action problems for politicians to
 #### Lobbying
 
 - "The process by which interest groups attempt to influence the policy process through persuasion of government officials." - Stone
-
 
 ---
 
@@ -264,7 +262,6 @@ They solve collective action problems for politicians to
 - Example: The Tea Party Movement
 - Example: Mom's for Liberty
 
-
 ---
 
 ## Think Tanks
@@ -273,7 +270,7 @@ They solve collective action problems for politicians to
 
 ---
 
-## Think Tanks  
+## Think Tanks
 
 - Some are non-partisan, some are partisan.
 - The government funds some, and private donors fund some.
@@ -333,8 +330,8 @@ They solve collective action problems for politicians to
 
 ## Interaction of Actors
 
-- **Policy Domain**
-  - "A substantive area of public policy such as health care, education, or the environment." - Stone
+- **Policy Domain** 
+  - "A substantive area of public policy such as health care, education, or the environment." - Stone 
     - A policy domain can be a single policy or a group of related policies
     - an area where actors compete and compromise
 
@@ -342,16 +339,16 @@ They solve collective action problems for politicians to
 
 ## Interaction of Actors
 
-- **Policy Community**
+- **Policy Community** 
   - The group of actors who are involved in a particular policy domain.
 
 ---
 
 ## Interaction of Actors
 
-- **Subgovernment**
+- **Subgovernment** 
   - "A network of groups within the American political system that exercise a great deal of control over specific policy areas." - Stone
-  - An _issue network_ is a more open version of a subgovernment.
+  - An *issue network* is a more open version of a subgovernment.
   - Open to numerous actors, interest groups, think tanks, corporations, individuals, etc.
   - Often consists of a few key actors or advocacy coalitions.
 
@@ -359,7 +356,7 @@ They solve collective action problems for politicians to
 
 ## Interaction of Actors
 
-- **Iron Triangle**
+- **Iron Triangle** 
   - "A stable, mutually beneficial political relationship among a congressional committee (or subcommittee), an administrative agency, and organized interests concerned with a particular policy domain." - Stone
   - Example: The House Committee on Energy and Commerce, the EPA, and the American Petroleum Institute
   - A sub-government is sometimes more closed than an issue network.
@@ -368,11 +365,10 @@ They solve collective action problems for politicians to
 
 ## Interaction of Actors
 
-- **Policy Regime**
+- **Policy Regime** 
   - "A set of policies affecting a particular policy domain." - Stone
   - "A loosely formed governance structure formed by a policy community around a particularly broad policy domain." - Birkland
   - When a policy domain is broad and spans boundaries of various types, the actors, coalitions, interests, and agencies form a policy regime—a loose governance structure.
-
 
 ---
 
@@ -382,15 +378,12 @@ They solve collective action problems for politicians to
 
 ## References
 
-- Stone, Deborah A. 2012. _Policy Paradox: The Art of Political Decision Making_. 3rd ed. New York: W.W. Norton & Company.
-- Lowi, Theodore J., Benjamin Ginsberg, Kenneth A. Shepsle, and Stephen Ansolabehere. 2017. _American Government: Power and Purpose_. 15th ed. New York: W.W. Norton & Company.
-- Birkland, Thomas A. 2020. _An Introduction to the Policy Process: Theories, Concepts, and Models of Public Policy Making_. 5th ed. New York: Routledge.
-
+- Stone, Deborah A. 2012. *Policy Paradox: The Art of Political Decision Making*. 3rd ed. New York: W.W. Norton & Company.
+- Lowi, Theodore J., Benjamin Ginsberg, Kenneth A. Shepsle, and Stephen Ansolabehere. 2017. *American Government: Power and Purpose*. 15th ed. New York: W.W. Norton & Company.
+- Birkland, Thomas A. 2020. *An Introduction to the Policy Process: Theories, Concepts, and Models of Public Policy Making*. 5th ed. New York: Routledge.
 
 ---
 
 ## Have a great weekend! See you next week!
 
---- 
-
-
+---

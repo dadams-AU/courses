@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "presentations",
+			"path": "."
+		}
+	],
+	"settings": {
+		"grammarly.selectors": [
+			{
+				"language": "markdown",
+				"scheme": "file"
+			}
+		],
+		"grammarly.files.include": [
+			"**/readme.md",
+			"**/README.md",
+			"**/*.txt",
+			"**/*.md"
+		],
+		"grammarly.startTextCheckInPausedState": true,
+		"grammarly.config.suggestions.UnnecessaryEllipses": false,
+		"grammarly.config.documentDialect": "american",
+		"grammarly.config.documentDomain": "academic"
+	}
+}

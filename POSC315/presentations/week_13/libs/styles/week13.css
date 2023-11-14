@@ -1,0 +1,47 @@
+/* Global font settings */
+  
+  .reveal h1 {
+    color: #d5d9e0;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif !important;
+  
+  }
+
+  
+  /* For H2: Bright Green with Shadow */
+  .reveal h2 {
+    color: #c6cdd7;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif !important;
+  
+  }
+  
+  /* For H3: Lighter Blue */
+  .reveal h3 {
+    color: #4a6d88;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif !important;
+  
+  }
+  
+  /* For H4: Light Gray, Less Cramped */
+  .reveal h4 {
+    color: #cccccc;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif !important;
+  
+  }
+  
+  .slides {
+    font-family: 'Montserrat', sans-serif !important;
+    text-shadow: 1px 1px 2px #c6cdd7;
+  
+  }
+  
+  .reveal small-text {
+    font-size: 8px; /* You can change the 12px to any size you prefer */
+  }
+  

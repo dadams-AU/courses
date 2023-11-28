@@ -13,7 +13,7 @@
 1. To create sound social science theories
 2. _To Solve Problems_
 
---
+---
 
 ## Science in the Policy Process
 
@@ -23,7 +23,7 @@ Problem solving is not always the goal of social science research.
 - Understanding the social world
 - _Basic_ versus _Applied_ research
 
---
+---
 
 ### The Scientific Method
 
@@ -39,7 +39,7 @@ Problem solving is not always the goal of social science research.
 10. Modify the theory
 11. Repeat
 
---
+---
 
 ### Laswell's Vision
 
@@ -55,7 +55,7 @@ Policy theory making has shifted to the development and testing of _how_ the sys
 
 A theory is a set of interrelated concepts, definitions, and propositions that explains or predicts events or situations by specifying relations among variables.
 
---
+---
 
 ### What is a theory?
 
@@ -67,7 +67,7 @@ A theory is a set of interrelated concepts, definitions, and propositions that e
 - empirically valid
 - useful
 
---
+---
 
 ### What is a theory?
 
@@ -77,7 +77,7 @@ It is necessary for finding solutions to problems.
 - It is a tool for understanding the policy process.
 - It is a tool for understanding policy change.
 
---
+---
 
 #### Deductive and Inductive Reasoning
 
@@ -85,7 +85,7 @@ It is necessary for finding solutions to problems.
 
 - Inductive reasoning is the process of reasoning from a set of specific observations to reach a general conclusion.
 
---
+---
 
 ### What characterizes science?
 
@@ -96,7 +96,7 @@ It is necessary for finding solutions to problems.
   - drives the development of theories
   - grounded in the real world
 
---
+---
 
 ### What characterizes science?
 
@@ -106,7 +106,7 @@ It is necessary for finding solutions to problems.
   - evidence-based
 
 
---
+---
 
 ### What characterizes science?
 
@@ -114,7 +114,7 @@ It is necessary for finding solutions to problems.
   - "I know a guy who..."
   - "I heard a story about..."
 
---
+---
 
 ### What characterizes science?
 
@@ -123,7 +123,7 @@ It is necessary for finding solutions to problems.
   - The process of subjecting an author's scholarly work, research, or ideas to the scrutiny of others who are experts in the same field.
   - The process is used by publishers and editors of academic journals to ensure that the articles they publish meet the accepted standards of their discipline..
 
---
+---
 
 #### Anecdote vs. Evidence
 
@@ -175,7 +175,7 @@ It is necessary for finding solutions to problems.
 </div>
 
 
---
+---
 
 
 ### Kingdon's Multiple Streams Framework
@@ -184,7 +184,7 @@ It is necessary for finding solutions to problems.
   - Individuals who are willing to invest their resources in order to promote their policy preferences
   - They are willing to invest their resources because they believe in their policy preferences and they believe they can influence the policy process
 
---
+---
 
 ### Kingdon's Multiple Streams Framework
 
@@ -202,7 +202,7 @@ It is necessary for finding solutions to problems.
   - They engage in a variety of activities to influence policy change
 
 
---
+---
 
 ### Advocacy Coalition Framework
 
@@ -216,7 +216,7 @@ It is necessary for finding solutions to problems.
   - Policy core beliefs
   - Secondary aspects of policy beliefs
 
---
+---
 
 ### Advocacy Coalition Framework
 
@@ -225,7 +225,7 @@ It is necessary for finding solutions to problems.
     - Policy actors are the agents of change
     - Policy actors are motivated by their policy core beliefs
 
---
+---
 
 ### Advocacy Coalition Framework
 
@@ -244,7 +244,7 @@ It is necessary for finding solutions to problems.
   - Policy change is driven by external events
   - Policy change is driven by policy-oriented learning
 
---
+---
 
 ### Punctuated Equilibrium Theory
 
@@ -254,7 +254,7 @@ It is necessary for finding solutions to problems.
   - public understanding of policy problems
   - the balance of power between groups seeking to fight for or against policy change
 
---
+---
 
 ### Punctuated Equilibrium Theory
 
@@ -265,7 +265,7 @@ It is necessary for finding solutions to problems.
     - this leads to policy stability but
     - an inability to respond to external events
 
---
+---
 
 ### Punctuated Equilibrium Theory
 
@@ -294,7 +294,7 @@ Focuses on how institutions (rules, norms, and strategies) govern collective act
   - **Levels of Analysis**: Operational (day-to-day decisions), Collective-Choice (institutional rules), Constitutional (fundamental rules).
 
 
---
+---
 
 ### Institutional Analysis and Development Framework
 
@@ -303,7 +303,7 @@ Focuses on how institutions (rules, norms, and strategies) govern collective act
    - Analyze interaction patterns and outcomes.
    - Evaluate how different rules affect actions and outcomes.
 
---
+---
 
 ### Socioecological Systems Framework
 
@@ -328,7 +328,7 @@ Focuses on how institutions (rules, norms, and strategies) govern collective act
   - **Interconnected Systems**: Social and ecological systems are interconnected and interdependent.
   - **Resilience and Adaptation**: Systems are resilient when they can absorb disturbances and adapt to change.
 
---
+---
 
 ### Socioecological Systems Framework
 
@@ -336,7 +336,7 @@ Focuses on how institutions (rules, norms, and strategies) govern collective act
   -  Uses nested frameworks to analyze interactions at multiple scales (local, regional, global).
   -  Emphasizes the role of governance, institutions, and human behavior in ecological outcomes.
 
---
+---
 
 ### Socioecological Systems Framework
 

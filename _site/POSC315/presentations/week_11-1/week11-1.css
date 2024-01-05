@@ -1,0 +1,41 @@
+/* Global font settings */
+.reveal {
+    font-family: 'Ubuntu', sans-serif !important;
+  }
+  
+  
+
+  
+  /* For H2: Bright Green with Shadow */
+  .reveal h2 {
+    color: #44d1df;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif !important;
+  
+  }
+  
+  /* For H3: Lighter Blue */
+  .reveal h3 {
+    color: #f44560;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif !important;
+  
+  }
+  
+  /* For H4: Light Gray, Less Cramped */
+  .reveal h4 {
+    color: #32a4a7;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif !important;
+  
+  }
+  
+  .slides {
+    font-family: 'Ubuntu', sans-serif !important;
+    text-shadow: 1px 1px 2px #1e7069;
+  
+  }
+  

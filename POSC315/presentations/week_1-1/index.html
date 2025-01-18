@@ -1,276 +1,267 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Public Policy</title>
+    
+    <!-- Core RevealJS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
+    
+    <!-- Custom Styling -->
+    <style>
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        blockquote {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-left: 4px solid #666;
+        }
 
-  <title>Reveal JS presentation</title>
+        .reveal .slides {
+            text-align: left;
+        }
 
-  <meta name="description" content="POSC 315 Introduction Lecture">
-  <meta name="author" content="David P. Adams">
+        .reveal h1, .reveal h2, .reveal h3 {
+            margin-bottom: 0.5em;
+        }
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
-  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-  <!-- highlight Theme -->
-  
-  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
-  
-	
-		
-	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
-	
-	
-	
-	
-
-
-
-  <!-- Revealjs Theme -->
-  
-  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/moon.css" id="theme">
-  
-  
-
-  <link rel="stylesheet" href="libs/styles/tasklist.css">
-	<link rel="stylesheet" href="libs/styles/iota.css">
-	<link rel="stylesheet" href="libs/styles/layout.css">
-  <link rel="stylesheet" href="libs/styles/custom.css">
-
-
-  <!-- Revealjs Theme -->
-  
-
-   <!-- css list -->
-	<style>
-    /* Assuming that the default state of your fragments is a regular font color */
-.fragment {
-  transition: color 0.5s;
-}
-
-/* When a fragment has been shown, change its color to a lighter shade */
-.fragment.past-fragment {
-  color: gray;
-}
-
-/* The currently visible fragment can have the regular color or any emphasis you want */
-.fragment.current-fragment {
-  color: #eee8d5;
-  font-weight: bold;
-}
-
-/* Future fragments can be invisible or shown with a lighter color */
-.fragment.future-fragment {
-  color: silver;
-}
-
-  </style>
-
-   
-
+        .fragment {
+            opacity: 1;
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="reveal">
-  <div class="slides">
-
-    <!-- Title Slide -->
-    <section data-background="https://via.placeholder.com/1920x1080/004/fff?text=Public+Policy" data-background-opacity="0.3">
-      <h1>Introduction to Public Policy</h1>
-      <h3>POSC 315-01</h3>
-      <h4>Week 1-1</h4>
-      <h5>David P. Adams, Ph.D.</h5>
-    </section>
-
-    <!-- Learning Objectives -->
-    <section>
-      <h2>Course Learning Objectives</h2>
-      <ul>
-        <li class="fragment">Understand fundamental concepts and theories in public policy</li>
-        <li class="fragment">Analyze the policy-making process and key stakeholders</li>
-        <li class="fragment">Evaluate real-world policy cases and their impacts</li>
-        <li class="fragment">Develop skills in policy analysis and research</li>
-        <li class="fragment">Apply theoretical frameworks to current policy challenges</li>
-      </ul>
-    </section>
-
-    <!-- Opening Activity -->
-    <section>
-      <h2>Opening Activity</h2>
-      <div class="fragment">
-        <h3>Quick Poll</h3>
-        <p>What policy issue matters most to you right now?</p>
-        <ul>
-          <li>Climate Change</li>
-          <li>Education</li>
-          <li>Healthcare</li>
-          <li>Economy</li>
-          <li>Other</li>
-        </ul>
-        <p><small>Use the raise hand feature to vote!</small></p>
-      </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section>
-      <h2>Getting in Touch</h2>
-      <div class="two-column">
-        <div>
-          <h3>Office Hours</h3>
-          <p>📅 Tuesdays & Thursdays</p>
-          <p>🕒 9:30-11:00am</p>
-        </div>
-        <div>
-          <h3>Contact Methods</h3>
-          <p>📧 dpadams@fullerton.edu</p>
-          <p>📱 657-278-4770</p>
-          <p>🌐 dadams.io</p>
-        </div>
-      </div>
-      <div class="fragment">
-        <p>Schedule appointments: <a href="https://dadams.io/appointments">https://dadams.io/appointments</a></p>
-      </div>
-    </section>
-
-    <!-- About Me -->
-    <section data-auto-animate>
-      <section>
-        <h2>About Your Instructor</h2>
-        <img src="https://via.placeholder.com/150" alt="Professor Photo" style="border-radius: 50%;">
-        <p>Dr. David P. Adams</p>
+  <div class="reveal">
+    <div class="slides">
+  
+      <!-- Title Slide -->
+      <section data-background="https://via.placeholder.com/1920x1080/004/fff?text=Public+Policy" data-background-opacity="0.3">
+        <h1>Introduction to Public Policy</h1>
+        <h3>POSC 315-01</h3>
+        <h4>Week 1-1</h4>
+        <h5>David P. Adams, Ph.D.</h5>
       </section>
-
+  
+      <!-- Learning Objectives -->
+      <section>
+        <h2>Course Learning Objectives</h2>
+        <ul>
+          <li class="fragment">Understand fundamental concepts and theories in public policy</li>
+          <li class="fragment">Analyze the policy-making process and key stakeholders</li>
+          <li class="fragment">Evaluate real-world policy cases and their impacts</li>
+          <li class="fragment">Develop skills in policy analysis and research</li>
+          <li class="fragment">Apply theoretical frameworks to current policy challenges</li>
+        </ul>
+      </section>
+  
+      <!-- Opening Activity -->
+      <section>
+        <h2>Opening Activity</h2>
+        <div class="fragment">
+          <h3>Quick Poll</h3>
+          <p>What policy issue matters most to you right now?</p>
+          <ul>
+            <li>Climate Change</li>
+            <li>Education</li>
+            <li>Healthcare</li>
+            <li>Economy</li>
+            <li>Other</li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- Contact Information -->
+      <section>
+        <h2>Getting in Touch</h2>
+        <div class="two-column">
+          <div>
+            <h3>Office Hours</h3>
+            <p>📅 Tuesdays & Thursdays</p>
+            <p>🕒 9:30-11:00am</p>
+          </div>
+          <div>
+            <h3>Contact Methods</h3>
+            <p>📧 dpadams@fullerton.edu</p>
+            <p>📱 657-278-4770</p>
+            <p>🌐 dadams.io</p>
+          </div>
+        </div>
+        <div class="fragment">
+          <p>Schedule appointments: <a href="https://dadams.io/appointments">https://dadams.io/appointments</a></p>
+        </div>
+      </section>
+  
+      <!-- About Me -->
       <section data-auto-animate>
-        <h3>Education Journey</h3>
-        <ul>
-          <li class="fragment">B.S. Political Science - Kennesaw State University</li>
-          <li class="fragment">M.P.A. Public Administration - Auburn University</li>
-          <li class="fragment">Ph.D. Public Policy and Administration - Auburn University</li>
-        </ul>
+        <section>
+          <h2>About Your Instructor</h2>
+          <img src="https://via.placeholder.com/150" alt="Professor Photo" style="border-radius: 50%;">
+          <p>Dr. David P. Adams</p>
+        </section>
+  
+        <section data-auto-animate>
+          <h3>Education Journey</h3>
+          <ul>
+            <li class="fragment">B.S. Political Science - Kennesaw State University</li>
+            <li class="fragment">M.P.A. Public Administration - Auburn University</li>
+            <li class="fragment">Ph.D. Public Policy and Administration - Auburn University</li>
+          </ul>
+        </section>
+  
+        <section data-auto-animate>
+          <h3>Research Focus Areas</h3>
+          <div class="grid">
+            <div class="fragment">🌍 Environmental Policy</div>
+            <div class="fragment">⚡ Energy Policy</div>
+            <div class="fragment">🤝 Collaborative Governance</div>
+            <div class="fragment">📊 Policy Process Theory</div>
+            <div class="fragment">📈 Policy Outcomes</div>
+          </div>
+        </section>
       </section>
-
-      <section data-auto-animate>
-        <h3>Research Focus Areas</h3>
-        <div class="grid">
-          <div class="fragment">🌍 Environmental Policy</div>
-          <div class="fragment">⚡ Energy Policy</div>
-          <div class="fragment">🤝 Collaborative Governance</div>
-          <div class="fragment">📊 Policy Process Theory</div>
-          <div class="fragment">📈 Policy Outcomes</div>
-        </div>
-      </section>
-    </section>
-
-    <!-- Course Overview -->
-    <section>
+  
+      <!-- Course Overview -->
       <section>
-        <h2>Course Overview</h2>
-        <p>Understanding how public policy shapes our daily lives</p>
+        <section>
+          <h2>Course Overview</h2>
+          <p>Understanding how public policy shapes our daily lives</p>
+        </section>
+  
+        <section>
+          <h3>Key Topics</h3>
+          <ul>
+            <li class="fragment">Policy Formation Process</li>
+            <li class="fragment">Stakeholder Analysis</li>
+            <li class="fragment">Policy Implementation</li>
+            <li class="fragment">Policy Evaluation</li>
+            <li class="fragment">Current Policy Challenges</li>
+          </ul>
+        </section>
+  
+        <section>
+          <h3>Assessment Methods</h3>
+          <ul>
+            <li class="fragment">Policy Analysis Term Paper</li>
+            <li class="fragment">Mid-term Exam</li>
+            <li class="fragment">Final Exam</li>
+            <li class="fragment">Class Participation</li>
+          </ul>
+        </section>
       </section>
-
+  
+      <!-- Guiding Question -->
+      <section data-background="#f0f0f0">
+        <h2>Guiding Question</h2>
+        <blockquote class="fragment">
+          <p>Can we do <em>anything</em> without governmental policy or governmental intrusion in our lives?</p>
+        </blockquote>
+        <div class="fragment">
+          <p>Consider:</p>
+          <ul>
+            <li>Your morning routine</li>
+            <li>Your commute to campus</li>
+            <li>Your educational experience</li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- Homework Assignment -->
       <section>
-        <h3>Key Topics</h3>
-        <ul>
-          <li class="fragment">Policy Formation Process</li>
-          <li class="fragment">Stakeholder Analysis</li>
-          <li class="fragment">Policy Implementation</li>
-          <li class="fragment">Policy Evaluation</li>
-          <li class="fragment">Current Policy Challenges</li>
-        </ul>
+        <h2>Policy Perspective Interview</h2>
+        <div class="fragment">
+          <h3>Assignment Details:</h3>
+          <ol>
+            <li>Interview someone about their views on policy & politics</li>
+            <li>Suggested questions:
+              <ul>
+                <li>What does "public policy" mean to you?</li>
+                <li>How do you think policies affect your daily life?</li>
+                <li>What policy issues concern you most?</li>
+              </ul>
+            </li>
+            <li>Record responses in your course journal</li>
+          </ol>
+        </div>
       </section>
-
+  
+      <!-- Resources -->
       <section>
-        <h3>Assessment Methods</h3>
-        <ul>
-          <li class="fragment">Policy Analysis Term Paper</li>
-          <li class="fragment">Mid-term Exam</li>
-          <li class="fragment">Final Exam</li>
-          <li class="fragment">Class Participation</li>
-        </ul>
+        <h2>Course Resources</h2>
+        <div class="three-column">
+          <div class="fragment">
+            <h3>Required Materials</h3>
+            <p>📚 Birkland's "Introduction to the Policy Process"</p>
+            <p>💻 Canvas Access</p>
+          </div>
+          <div class="fragment">
+            <h3>Research Tools</h3>
+            <p>🔍 Library Databases</p>
+            <p>📊 Policy Analysis Software</p>
+          </div>
+          <div class="fragment">
+            <h3>Support Services</h3>
+            <p>📝 Writing Center</p>
+            <p>🤝 Student Success Center</p>
+          </div>
+        </div>
       </section>
-    </section>
-
-    <!-- Guiding Question -->
-    <section data-background="#f0f0f0">
-      <h2>Guiding Question</h2>
-      <blockquote class="fragment">
-        <p>Can we do <em>anything</em> without governmental policy or governmental intrusion in our lives?</p>
-      </blockquote>
-      <div class="fragment">
-        <p>Consider:</p>
+  
+      <!-- Next Steps -->
+      <section>
+        <h2>Getting Started</h2>
         <ul>
-          <li>Your morning routine</li>
-          <li>Your commute to campus</li>
-          <li>Your educational experience</li>
+          <li class="fragment">✅ Review Canvas course page</li>
+          <li class="fragment">📖 Read Chapter 1 of Birkland</li>
+          <li class="fragment">🎤 Complete policy perspective interview</li>
+          <li class="fragment">📝 Prepare discussion points for next class</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- Homework Assignment -->
-    <section>
-      <h2>Policy Perspective Interview</h2>
-      <div class="fragment">
-        <h3>Assignment Details:</h3>
-        <ol>
-          <li>Interview someone about their views on policy & politics</li>
-          <li>Suggested questions:
-            <ul>
-              <li>What does "public policy" mean to you?</li>
-              <li>How do you think policies affect your daily life?</li>
-              <li>What policy issues concern you most?</li>
-            </ul>
-          </li>
-          <li>Record responses in your course journal</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Resources -->
-    <section>
-      <h2>Course Resources</h2>
-      <div class="three-column">
         <div class="fragment">
-          <h3>Required Materials</h3>
-          <p>📚 Birkland's "Introduction to the Policy Process"</p>
-          <p>💻 Canvas Access</p>
+          <h3>Next Class Preview:</h3>
+          <p>Exploring the Foundations of Public Policy Analysis</p>
         </div>
-        <div class="fragment">
-          <h3>Research Tools</h3>
-          <p>🔍 Library Databases</p>
-          <p>📊 Policy Analysis Software</p>
-        </div>
-        <div class="fragment">
-          <h3>Support Services</h3>
-          <p>📝 Writing Center</p>
-          <p>🤝 Student Success Center</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Next Steps -->
-    <section>
-      <h2>Getting Started</h2>
-      <ul>
-        <li class="fragment">✅ Review Canvas course page</li>
-        <li class="fragment">📖 Read Chapter 1 of Birkland</li>
-        <li class="fragment">🎤 Complete policy perspective interview</li>
-        <li class="fragment">📝 Prepare discussion points for next class</li>
-      </ul>
-      <div class="fragment">
-        <h3>Next Class Preview:</h3>
-        <p>Exploring the Foundations of Public Policy Analysis</p>
-      </div>
-    </section>
-
+      </section>
+  
+    </div>
   </div>
-</div>
-</body> 
+
+    <!-- RevealJS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            center: false,
+            progress: true,
+            controls: true,
+            touch: true,
+            fragments: true,
+            fragmentInURL: true,
+            transition: 'slide',
+            width: 1200,
+            height: 700,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0
+        });
+    </script>
+</body>
 </html>

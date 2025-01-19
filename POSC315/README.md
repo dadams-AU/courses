@@ -1,5 +1,5 @@
 # Introduction to Public Policy
-**Course Code**: POSC 315 | **Semester**: Fall 2023  
+**Course Code**: POSC 315 | **Semester**: Spring 2025 | **Section**: 02
 **Professor**: David P. Adams, Ph.D.
 
 ---
@@ -10,8 +10,6 @@ Federal domestic policymaking. Structure, functions, and relationships among Ame
 ---
 
 ## Lectures
-
-- [Lecture 01: Introduction Day](presentations/week1/index.html)
 
 
 ---

@@ -1,7 +1,7 @@
 # License for Repository Materials
 
 License for Public Administration and Public Policy Course Materials
-Copyright (c) 2023, David P. Adams
+Copyright (c) 2025, David P. Adams
 
 Permission is hereby granted, free of charge, to individuals and not-for-profit educational institutions to use, copy, modify, and distribute these materials exclusively for personal study and academic educational purposes, subject to the following conditions:
 

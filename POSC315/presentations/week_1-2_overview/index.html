@@ -10,96 +10,123 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
     <style>
         /* Global styles for the body */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+ /* Global styles for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-         /* Fit slides to widescreen*/
-         .reveal {
-            max-width: 1600px; /* Adjust max-width for desired widescreen size */
-            margin: 0 auto;
-            }
-        
-        /* Style blockquotes */
-        .reveal blockquote {
-            font-size: 1.2em; /* Increased font size */
-            font-style: italic;
-            color: #7f8c8d;
-            margin: 20px 0;
-            padding-left: 20px;
-            border-left: 4px solid #3498db;
-        }
+/* Fit slides to widescreen and maximize space*/
+.reveal {
+    max-width: 95vw !important;
+    margin: 0 auto;
+}
 
-        /* Style tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table td {
-            padding: 10px;
-            border: 1px solid #ccc;
-            text-align: left;
-        }
-        
-        /* Center slide heading text */
-        .reveal section h2 {
-            text-align: center;
-            color: #4287f5; /* set color to a shade of blue*/
-            margin-bottom: 20px;
-             text-transform: uppercase; /* uppercase text */
-             letter-spacing: 1.5px; /* add letter spacing */
-        }
+/* Style blockquotes */
+.reveal blockquote {
+    font-size: 1em;
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 4px solid #3498db;
+}
 
-        /* Center slide subheading text */
-        .reveal section h3 {
-            text-align: center;
-            color: #5cb85c; /* set color to green */
-            margin-bottom: 15px;
-        }
-           /* Center slide subsubheading text */
-        .reveal section h4 {
-            text-align: center;
-            color: #f0ad4e; /* set color to orange */
-            margin-bottom: 10px;
-        }
+/* Style tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
 
-        /* Style unordered list in slide*/
-        .reveal section ul {
-            list-style-type: disc; /* use standard discs*/
-            margin-left: 30px; /* add space on left */
-        }
+table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
 
-           /* Style ordered list in slide*/
-           .reveal section ol {
-            margin-left: 30px; /* add space on left */
-        }
+/* Center slide heading text */
+.reveal section h2 {
+    text-align: center;
+    color: #4287f5;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 2.2em;
+}
 
-        /* Style Paragraph text in slide*/
-        .reveal section p {
-            font-size: 1.05em; /* slightly larger text */
-            line-height: 1.6; /* better line spacing */
-        }
+/* Center slide subheading text */
+.reveal section h3 {
+    text-align: center;
+    color: #5cb85c;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
 
-        /* Style fragment texts */
-        .reveal .fragment {
-            opacity: 0.4;  /* Slightly fade fragments */
-            transition: opacity 0.3s ease;
-          }
-          .reveal .fragment.visible {
-            opacity: 1;  /* Make fragment visible on appearing */
-          }
+/* Center slide subsubheading text */
+.reveal section h4 {
+    text-align: center;
+    color: #f0ad4e;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
 
-          /* Style table text */
-          table {
-              font-size: 0.9em; /* make text a bit smaller */
-            }
-          /* Style strong elements */
-           .reveal strong {
-              color: #d9534f; /* set strong elements to a shade of red */
-            }
+/* Style unordered list in slide*/
+.reveal section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.3em;
+}
+
+/* Style ordered list in slide*/
+.reveal section ol {
+    margin-left: 40px;
+    font-size: 1.3em;
+}
+
+/* Style Paragraph text in slide*/
+.reveal section p {
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+/* Style fragment texts */
+.reveal .fragment {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.reveal .fragment.visible {
+    opacity: 1;
+}
+
+/* Style strong elements */
+.reveal strong {
+    color: #d9534f;
+}
+
+/* Style emph elements */
+.reveal em {
+    color: #6f42c1;
+}
+
+/* Ensure content scales properly */
+.reveal .slides section {
+    padding: 20px;
+}
+
+/* Adjust nested list sizes */
+.reveal section ul ul,
+.reveal section ul ol,
+.reveal section ol ol,
+.reveal section ol ul {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
 
     </style>
 </head>
@@ -507,15 +534,19 @@
     <script>
         Reveal.initialize({
             hash: true,
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            transition: 'slide',
             slideNumber: true,
-            width: 1600, // force the slide to a 1600 width
-            height: 900, // force the slide to a 900 height
-            margin: 0.1, // reduce the slide margin
-            center: false, // align the content to the left
-             
+            // Use 16:9 aspect ratio
+            width: 1920,
+            height: 1080,
+            margin: 0.1,
+            center: true,
+            // Scale to fit available space while maintaining aspect ratio
+            maxScale: 2,
+            // Automatically fit to window
+            disableLayout: false,
+            display: 'block'
         });
     </script>
-</body>
-
-</html>
+    </body>
+    </html>

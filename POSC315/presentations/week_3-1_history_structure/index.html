@@ -92,6 +92,7 @@
     .reveal .slides section {
       transition: transform 0.4s ease, opacity 0.4s ease;
     }
+
   </style>
 </head>
 <body>
@@ -375,50 +376,104 @@
           <li><strong>Fragmented Federalism</strong> (2010s-present)</li>
         </ul>
       </section>
+
+      <style>
+        section {
+          padding: 2rem 5%;
+        }
+        .slide-container {
+          display: flex;
+          gap: 1.5rem;
+          align-items: flex-start; /* Align items to the top */
+          justify-content: space-between;
+        }
+        .image-container {
+          flex: 0 0 35%; /* Adjust width to use more space */
+        }
+        .text-container {
+          flex: 1; /* Take up remaining space */
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      </style>
+      
       <section>
         <h2>Dual Federalism</h2>
-        <ul>
-          <li><strong>Layer Cake Federalism</strong></li>
-          <li><strong>Clear division of authority</strong></li>
-          <li><strong>National government is supreme in its sphere</strong></li>
-          <li><strong>States are supreme in their sphere</strong></li>
-          <li><strong>Little overlap between the two spheres</strong></li>
-          <li><strong>National government is limited to enumerated powers</strong></li>
-          <li><strong>Overall: State-centered federalism</strong></li>
-        </ul>
+        <div class="slide-container">
+          <div class="image-container">
+            <img src="images/layercake.jpeg" alt="Layer Cake Federalism">
+          </div>
+          <div class="text-container">
+            <ul>
+              <li><strong>Layer Cake Federalism</strong></li>
+              <li><strong>Clear division of authority</strong></li>
+              <li><strong>National government is supreme in its sphere</strong></li>
+              <li><strong>Little overlap between the two spheres</strong></li>
+              <li><strong>National government is limited to enumerated powers</strong></li>
+              <li><strong>Overall: State-centered federalism</strong></li>
+            </ul>
+          </div>
+        </div>
       </section>
+      
       <section>
         <h2>Cooperative Federalism</h2>
-        <ul>
-          <li><strong>Marble Cake Federalism</strong></li>
-          <li><strong>National and state governments share powers</strong></li>
-          <li><strong>Federal powers expand to deal with aftermath of the Great Depression</strong></li>
-          <li><strong>Cooperation between national and state governments</strong></li>
-          <li><strong>Overall: National-centered federalism</strong></li>
-        </ul>
+        <div class="slide-container">
+          <div class="image-container">
+            <img src="images/marblecake.jpeg" alt="Marble Cake Federalism">
+          </div>
+          <div class="text-container">
+            <ul>
+              <li><strong>Marble Cake Federalism</strong></li>
+              <li><strong>National and state governments share powers</strong></li>
+              <li><strong>Federal powers expand to deal with aftermath of the Great Depression</strong></li>
+              <li><strong>Cooperation between national and state governments</strong></li>
+              <li><strong>Overall: National-centered federalism</strong></li>
+            </ul>
+          </div>
+        </div>
       </section>
+      
       <section>
         <h2>Creative Federalism</h2>
-        <ul>
-          <li><strong>Picket Fence Federalism</strong></li>
-          <li><strong>Great Society programs</strong></li>
-          <li><strong>National government sets policy goals</strong></li>
-          <li><strong>States implement policy</strong></li>
-          <li><strong>Creative use of grants-in-aid</strong></li>
-          <li><strong>Overall: National-centered federalism</strong></li>
-        </ul>
+        <div class="slide-container">
+          <div class="image-container">
+            <img src="images/picketfence.jpeg" alt="Picket Fence Federalism">
+          </div>
+          <div class="text-container">
+            <ul>
+              <li><strong>Picket Fence Federalism</strong></li>
+              <li><strong>Great Society programs</strong></li>
+              <li><strong>National government sets policy goals</strong></li>
+              <li><strong>States implement policy</strong></li>
+              <li><strong>Creative use of grants-in-aid</strong></li>
+              <li><strong>Overall: National-centered federalism</strong></li>
+            </ul>
+          </div>
+        </div>
       </section>
+      
       <section>
         <h2>New Federalism</h2>
-        <ul>
-          <li><strong>Pineapple Upside-Down Cake Federalism</strong></li>
-          <li><strong>Competitive Federalism</strong></li>
-          <li><strong>Devolution Revolution</strong></li>
-          <li><strong>National government returns power to the states</strong></li>
-          <li><strong>Block grants</strong></li>
-          <li><strong>Overall: State-centered federalism</strong></li>
-        </ul>
+        <div class="slide-container">
+          <div class="image-container">
+            <img src="images/pinappleupsidedown.jpeg" alt="Pineapple Upside-Down Cake Federalism">
+          </div>
+          <div class="text-container">
+            <ul>
+              <li><strong>Pineapple Upside-Down Cake Federalism</strong></li>
+              <li><strong>Competitive Federalism</strong></li>
+              <li><strong>Devolution Revolution</strong></li>
+              <li><strong>National government returns power to the states</strong></li>
+              <li><strong>Block grants</strong></li>
+              <li><strong>Overall: State-centered federalism</strong></li>
+            </ul>
+          </div>
+        </div>
       </section>
+      
       <section>
         <h2>Fragmented Federalism</h2>
         <ul>
@@ -446,7 +501,7 @@
   height: 720,
   margin: 0.04,
   minScale: 0.2,
-  maxScale: 1.75,
+  maxScale: 1.5,
   controls: true,
   progress: true,
   slideNumber: true,

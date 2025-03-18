@@ -1,585 +1,768 @@
 <!DOCTYPE html>
-	<html class="sl-root decks export offline loaded">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Decision Making"}' />
-		<title>Decision Making</title>
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="week7.css">
-		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Decision Making in Public Policy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/night.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap">
+  <style>
+    :root {
+      --main-color: #2a76dd;
+      --accent-color: #61dafb;
+      --highlight-color: #ffcc00;
+      --text-color: #f8f8f8;
+      --bg-color: #111;
+      --section-bg: rgba(42, 118, 221, 0.1);
+    }
+    
+    .reveal {
+      font-family: 'Lato', sans-serif;
+      font-size: 30px; /* Reduced from 36px */
+      color: var(--text-color);
+    }
+    
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: 'Merriweather', serif;
+      color: var(--main-color);
+      margin-bottom: 0.5em;
+    }
+    
+    .reveal h1 { font-size: 2em; } /* Reduced from 2.2em */
+    .reveal h2 { font-size: 1.6em; } /* Reduced from 1.8em */
+    .reveal h3 { font-size: 1.2em; } /* Reduced from 1.4em */
+    
+    .reveal .slide-number {
+      font-size: 16px; /* Reduced from 18px */
+      color: var(--accent-color);
+    }
+    
+    .reveal ul, .reveal ol {
+      margin-left: 1em;
+    }
+    
+    .reveal li {
+      margin-bottom: 0.4em; /* Reduced from 0.5em */
+      line-height: 1.3; /* Reduced from 1.4 */
+    }
 
+    .reveal li li {
+      font-size: 0.9em; /* Smaller font for nested list items */
+    }
+    
+    .theory-card {
+      background: var(--section-bg);
+      border-left: 4px solid var(--main-color);
+      padding: 0.8em; /* Reduced from 1em */
+      margin: 0.8em 0; /* Reduced from 1em */
+      border-radius: 5px;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8em 0; /* Reduced from 1em */
+      font-size: 0.85em; /* Smaller font for tables */
+    }
+    
+    .comparison-table th {
+      background-color: var(--main-color);
+      color: var(--text-color);
+      text-align: left;
+      padding: 0.4em; /* Reduced from 0.5em */
+    }
+    
+    .comparison-table td {
+      border: 1px solid #444;
+      padding: 0.4em; /* Reduced from 0.5em */
+    }
+    
+    .comparison-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .highlight {
+      color: var(--highlight-color);
+      font-weight: 700;
+    }
+    
+    .two-column {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .two-column .col {
+      width: 48%;
+    }
+    
+    blockquote {
+      background-color: rgba(97, 218, 251, 0.1);
+      border-left: 4px solid var(--accent-color);
+      padding: 0.4em 0.8em; /* Reduced from 0.5em 1em */
+      font-style: italic;
+      font-size: 0.9em; /* Smaller font for quotes */
+    }
+    
+    .stage-diagram {
+      max-width: 90%;
+      margin: 0 auto;
+      display: block;
+      border: 2px solid var(--accent-color);
+      border-radius: 8px;
+      padding: 0.8em; /* Reduced from 1em */
+    }
+    
+    .process-arrow {
+      color: var(--accent-color);
+      font-size: 1.5em;
+      margin: 0 0.5em;
+    }
+    
+    .garbage-can {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0.8em; /* Reduced from 1em */
+    }
+    
+    .garbage-can-item {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--accent-color);
+      border-radius: 5px;
+      padding: 0.4em; /* Reduced from 0.5em */
+      width: 20%;
+      text-align: center;
+    }
 
+    .example-box {
+      background-color: rgba(255, 204, 0, 0.1);
+      border: 1px solid var(--highlight-color);
+      border-radius: 5px;
+      padding: 0.8em;
+      margin-top: 0.8em;
+    }
 
-	</head>
-	<body class="reveal-viewport theme-font-montserrat theme-color-silver-green">
-		<div class="reveal">
-			<div class="slides">
-				<section data-id="4a41fc3d08c296a77312b6be303ce624"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 173.5px; height: auto;" data-block-id="32b1f707159ec73823d5ada15c63a482">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1><span style="font-size:1.4em">Decision Making</span></h1></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 300.5px; height: auto;" data-block-id="5551969cef6e3c05eb7412ac6b36a7ac">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2><span style="font-size:1.4em">POSC 315</span></h2></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 404.5px; height: auto;" data-block-id="a470acde235a6d9de5615a467b689fd5">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text"><h3><span style="font-size:1.4em">Week 8</span></h3></div>
-						</div></section><section class="stack" data-id="fb1dabb42985f6bfbaa93ff91849c455"><section data-id="c7508f34668a7b8c3a8990a0bbeb91ec"><div class="sl-block" data-block-type="text" style="width: 1003px; left: 138.5px; top: 72px; height: auto;" data-block-id="e995c17869a20a2701ffa81234435d6a">
-							<div class="sl-block-content" style="text-align: center; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Agenda Setting       Decision-Making</h2></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 944px; left: 138.5px; top: 210px; height: auto;" data-block-id="d3c15b1591c517738564a6b35913ac62">
-							<div class="sl-block-content" style="text-align: left; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
-<ul>
-	<li><span style="font-size:1.2em">Policy design in the <strong>Alternative Selection</strong> stage requires decisions about what "tools" to adopt and how to design a policy to achieve the desired outcome.</span></li>
-</ul>
+    .example-title {
+      color: var(--highlight-color);
+      font-weight: bold;
+      margin-bottom: 0.4em;
+      text-align: center;
+    }
 
-<p> </p>
+    .policy-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
 
-<ul>
-	<li><span style="font-size:1.2em">As well decision-making also permeates ongoing policy design, budgeting, implementation, and evaluation.</span></li>
-</ul>
-</div>
-						</div>
-<div class="sl-block" data-block-type="shape" style="width: 48.5px; height: 53px; left: 597.5px; top: 79px;" data-name="shape-8d2788" data-block-id="b67ae0f555a84e326444c650f39af06d"><div class="sl-block-content" data-shape-type="arrow-right" data-shape-fill-color="rgb(0, 0, 0)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 49 53"><polygon points="0,15.899999999999999 24.25,15.899999999999999 24.25,0 48.5,26.5 24.25,53 24.25,37.099999999999994 0,37.099999999999994" class="shape-element" fill="rgb(0, 0, 0)"></polygon></svg></div></div></section><section data-id="eeda4e762e4e5afa42772abc7349d07d"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 144px; height: auto;" data-block-id="2473b97758526256617e1ad804043bbb">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Decisions</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 910px; left: 256px; top: 223px; height: auto;" data-block-id="1d413080abb7812cfd886e14cff45634">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">Decisions are made throughout the policy process</span></li>
-	<li><span style="font-size:1.2em">There are important considerations at each "stage"</span></li>
-	<li><span style="font-size:1.2em">There are multiple decision points at each stage</span></li>
-	<li><span style="font-size:1.2em">There are several theories about the decision-making process, both for individuals and organizations.</span></li>
-</ul></div>
-						</div></section><section data-id="d0cc5e35eb875d2a7c9ee168f9c34bfd"><div class="sl-block" data-block-type="text" style="width: 768px; left: 240px; top: 91px; height: auto;" data-block-id="349f9c314fde1cab1da282ec31ae9fd9">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Decisions</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 893px; left: 240px; top: 183px; height: auto;" data-block-id="59d55cdf61e6fda8538eea93976748c8">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Matters can be complex or simple:</span>
-	<ul>
-		<li><span style="font-size:1.2em">Complex: What is the best way to reduce the number of people who die in car accidents?</span></li>
-		<li><span style="font-size:1.2em">Simple: Should we build a new bridge?</span></li>
-	</ul>
-	</li>
-	<li><span style="font-size:1.2em">Remember, our constitutional system intentionally slows policy-oriented decision-making.</span></li>
-</ul></div>
-						</div></section></section><section data-id="0c59a84f22ebe9853cb3e12365a01a04"><div class="sl-block" data-block-type="text" style="width: 838px; left: 221px; top: 74px; height: auto;" data-block-id="d81fc7db8ecda5a0957b70f9d08efac1">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Decision-Making Theories</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 243px; height: auto;" data-block-id="d748a456e1bb7ed6250a8f541ea19b49">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-	<h3>Rational Choice</h3>
-	</li>
-	<li>
-	<h3>Bounded Rationality</h3>
-	</li>
-	<li>
-	<h3>Incrementalism</h3>
-	</li>
-</ul></div>
-						</div></section><section class="stack" data-id="b8482a866a860f92d68d355a37cd62e9"><section data-id="426ae499407716e403ec336072d3eb52"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="2a73e398e24fd89ad4452fefad9ca390">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Rational Choice</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 880px; left: 160px; top: 183px; height: auto;" data-block-id="bbfece2b79031e2df93361c565029370">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">The Rational-Comprehensive Model is the starting point for many decision-making theories.</span></li>
-	<li>
-<span style="font-size:1.2em">All important factors are considered</span>
-	<ul>
-		<li><span style="font-size:1.2em">Analysis of policy goal and policy tool is separate</span></li>
-		<li><span style="font-size:1.2em">Goals are isolated before tools are considered</span></li>
-	</ul>
-	</li>
-	<li><span style="font-size:1.2em">A <em>good</em> policy is the <em>technically</em> best policy</span></li>
-</ul></div>
-						</div></section><section data-id="d30d02f1500ba13ebd1ecfe3ef5475bf"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="23fda4f42665c4eda8a3aae05da1f41e">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Rational Choice</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 162px; height: auto;" data-block-id="43d393ae446bf8771c953b32ffe37882">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Starts with a rational actor: <em>Economic Man</em></span>
-	<ul>
-		<li>
-<span style="font-size:1.2em">Complete and perfect information</span>
-		<ul>
-			<li><span style="font-size:1.2em">about a problem(s)</span></li>
-			<li><span style="font-size:1.2em">about its causes and effects</span></li>
-			<li><span style="font-size:1.2em">about the consequences of alternative solutions</span></li>
-			<li><span style="font-size:1.2em">about the consequences of inaction</span></li>
-		</ul>
-		</li>
-		<li><span style="font-size:1.2em">Can accurately weigh costs and benefits</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="ea047421a5a20137d9f8c4bf18f421e8"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="51fe9d2d9602b70f4a8980ea6f0be12f">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Rational Choice</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="30f9a54e9e9ceababec6900866bed85b">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em"><strong>Optimization</strong></span>
-	<ul>
-		<li><span style="font-size:1.2em">The rational actor will choose the policy that maximizes benefits and minimizes costs</span></li>
-		<li><span style="font-size:1.2em">All alternatives are considered, and the rational actor chooses the best one</span></li>
-		<li><span style="font-size:1.2em">Achieve maximum social gain from the decision</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="a504464b80cec45b34d5b0a5ba97ef0c"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="69a66e1ad9c0b1bbb26a0da5e0fd42c0">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Rational Choice</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="af184aee39834ee323a73e418cc317e6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Pretty unrealistic model</span>
-	<ul>
-		<li><span style="font-size:1.2em">Information is never complete</span></li>
-		<li><span style="font-size:1.2em">Information is never perfect</span></li>
-		<li><span style="font-size:1.2em">Costs and benefits are never known</span></li>
-		<li><span style="font-size:1.2em">Costs and benefits are never accurately weighed</span></li>
-		<li><span style="font-size:1.2em">There are always constraints on the decision-maker</span></li>
-	</ul>
-	</li>
-	<li><span style="font-size:1.2em"><strong>Bureaucracy</strong> helps to make the model more realistic</span></li>
-</ul></div>
-						</div></section><section data-id="ea511d504a498c63a9e8dbcaca0bc989"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="be9467a342a09897a2969955c8c5a714">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Rational Choice</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 144px; height: auto;" data-block-id="6823851f4559a75a6c7123ef162cf3c3">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Six Steps to Rational Choice</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 216px; height: auto;" data-block-id="d5404d3573dea823626af2079f5539d6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ol>
-	<li><span style="font-size:1.2em">Define the problem</span></li>
-	<li><span style="font-size:1.2em">Identify decision criteria</span></li>
-	<li><span style="font-size:1.2em">Weight the criteria</span></li>
-	<li><span style="font-size:1.2em">Generate alternatives</span></li>
-	<li><span style="font-size:1.2em">Rate each alternative on each criterion</span></li>
-	<li><span style="font-size:1.2em">Compute the optimal decision</span></li>
-</ol></div>
-						</div></section></section><section class="stack" data-id="dc2f0d49ababd73eae65b306bc48a9f7"><section data-id="9d36113dc81de18369959fa7dacf794b"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="fb71cd01386f5aadc080877882e37e52">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Bounded Rationality</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="0baea006ccb23d8020e9642b31a72b32">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-<ul>
-	<li><span style="font-size:1.2em">Herbert Simon (1916-2001)</span></li>
-	<li><span style="font-size:1.2em">Nobel Prize in Economics (1978)</span></li>
-</ul>
+    .policy-step {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
 
-<p style="text-align:center"> </p>
+    small {
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Title Slide -->
+      <section>
+        <h1>Decision Making in Public Policy</h1>
+        <h3>POSC 315: Introduction to Public Policy</h3>
+        <p>Week 8</p>
+        <div style="margin-top: 2em;">
+          <p><small>David P. Adams, Ph.D.</small></p>
+          <p><small>Division of Politics, Administration &amp; Justice</small></p>
+        </div>
+      </section>
+      
+      <!-- Introduction to Decision Making -->
+      <section>
+        <section>
+          <h2>The Decision-Making Process</h2>
+          <div class="stage-diagram">
+            <div style="text-align: center">
+              <span style="display: inline-block; padding: 8px; background: rgba(42, 118, 221, 0.2); border-radius: 5px;">Agenda Setting</span>
+              <span class="process-arrow">→</span>
+              <span style="display: inline-block; padding: 8px; background: rgba(42, 118, 221, 0.6); border-radius: 5px; color: white;">Decision-Making</span>
+              <span class="process-arrow">→</span>
+              <span style="display: inline-block; padding: 8px; background: rgba(42, 118, 221, 0.2); border-radius: 5px;">Implementation</span>
+              <span class="process-arrow">→</span>
+              <span style="display: inline-block; padding: 8px; background: rgba(42, 118, 221, 0.2); border-radius: 5px;">Evaluation</span>
+            </div>
+          </div>
+          <ul>
+            <li>Policy design in the <span class="highlight">Alternative Selection</span> stage requires decisions about what "tools" to adopt</li>
+            <li>Decision-making also permeates ongoing policy design, budgeting, implementation, and evaluation</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>Understanding Decision Points</h2>
+          <div class="two-column">
+            <div class="col">
+              <h3>Key Considerations</h3>
+              <ul>
+                <li>Decisions occur throughout the policy process</li>
+                <li>Multiple decision points at each stage</li>
+                <li>Different actors involved at different points</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3>Complexity Spectrum</h3>
+              <div class="theory-card">
+                <p><strong>Complex:</strong> What is the best way to reduce traffic fatalities?</p>
+                <p><strong>Simple:</strong> Should we build a new bridge?</p>
+              </div>
+              <p><small>Our constitutional system intentionally slows policy-oriented decision-making.</small></p>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <!-- Decision-Making Theories Overview -->
+      <section>
+        <h2>Decision-Making Theories</h2>
+        <p>Three primary theoretical frameworks to understand how decisions are made in policy contexts:</p>
+        <div style="display: flex; justify-content: space-around; margin-top: 1.5em;">
+          <div style="text-align: center; padding: 15px; background: rgba(42, 118, 221, 0.1); border-radius: 10px; width: 25%;">
+            <h3>Rational Choice</h3>
+            <div style="font-size: 0.7em;">Optimizing decisions based on complete information</div>
+          </div>
+          <div style="text-align: center; padding: 15px; background: rgba(42, 118, 221, 0.2); border-radius: 10px; width: 25%;">
+            <h3>Bounded Rationality</h3>
+            <div style="font-size: 0.7em;">Satisficing with limited information & capacity</div>
+          </div>
+          <div style="text-align: center; padding: 15px; background: rgba(42, 118, 221, 0.1); border-radius: 10px; width: 25%;">
+            <h3>Incrementalism</h3>
+            <div style="font-size: 0.7em;">Making small changes from the status quo</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Rational Choice Theory -->
+      <section>
+        <section>
+          <h2>Rational Choice Theory</h2>
+          <div class="theory-card">
+            <p>The Rational-Comprehensive Model is the starting point for many decision-making theories.</p>
+          </div>
+          <div class="two-column">
+            <div class="col">
+              <h3>Key Assumptions</h3>
+              <ul>
+                <li>All important factors are considered</li>
+                <li>Analysis of goals separate from tools</li>
+                <li>Goals are isolated before tools are considered</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3>Definition of "Good" Policy</h3>
+              <p>A <em>good</em> policy is the <em>technically</em> best policy that maximizes benefits and minimizes costs.</p>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h2>The "Economic Man"</h2>
+          <p>Rational Choice depends on the existence of a perfectly rational actor:</p>
+          <div class="theory-card">
+            <h3>Complete and Perfect Information</h3>
+            <div class="two-column">
+              <div class="col">
+                <ul>
+                  <li>About problems</li>
+                  <li>About causes and effects</li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>About consequences of alternatives</li>
+                  <li>About consequences of inaction</li>
+                </ul>
+              </div>
+            </div>
+            <h3>Perfect Calculation Ability</h3>
+            <p>Can accurately weigh all costs and benefits</p>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Optimization in Rational Choice</h2>
+          <div class="theory-card">
+            <ul>
+              <li>The rational actor chooses the option that <span class="highlight">maximizes benefits</span> and <span class="highlight">minimizes costs</span></li>
+              <li>All alternatives are considered comprehensively</li>
+              <li>Decisions achieve maximum social gain</li>
+            </ul>
+          </div>
+          <div style="margin-top: 1.5em;">
+            <h3>Limitations of Rational Choice</h3>
+            <ul>
+              <li>Information is never complete or perfect</li>
+              <li>Costs and benefits are difficult to predict accurately</li>
+              <li>Decision-makers face resource constraints</li>
+              <li>Bureaucracy helps make the model more realistic</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Six Steps to Rational Choice</h2>
+          <ol>
+            <li><span class="highlight">Define the problem</span> - What exactly are we trying to solve?</li>
+            <li><span class="highlight">Identify decision criteria</span> - What factors matter in making this decision?</li>
+            <li><span class="highlight">Weight the criteria</span> - How important is each factor?</li>
+            <li><span class="highlight">Generate alternatives</span> - What are all possible solutions?</li>
+            <li><span class="highlight">Rate alternatives</span> - How does each solution perform on each criterion?</li>
+            <li><span class="highlight">Compute optimal decision</span> - Which solution maximizes benefits?</li>
+          </ol>
+        </section>
 
-<blockquote>
-<p><span style="font-size:1.2em">The capacity of the human mind for formulating and solving complex problems is very small compared with the size of the problems whose solution is required for objectively rational behavior in the real world.</span></p>
-</blockquote>
-</div>
-						</div></section><section data-id="48b0a24345cd91f30b7749ecee212295"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="267d30d0d3d7edb889ef271ff63d1520">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Bounded Rationality</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="dd50fe3131a0ed88701d1ba350864bff">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">Recognizes goals and tools are intertwined</span></li>
-	<li><span style="font-size:1.2em">Means and ends—goals and tools—are considered together</span></li>
-	<li><span style="font-size:1.2em">A good policy is one where consensus can be reached</span></li>
-</ul></div>
-						</div></section><section data-id="c1d489c6a96a7c632b32ce12da417b07"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="99bc82a92e8d03464845d2c6193bff54">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Bounded Rationality</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="d36337c92c9a6a1d3c10fc0b0d9fbfae">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Starts with a rational actor: <em>Administrative Man</em></span>
-	<ul>
-		<li>
-<span style="font-size:1.2em">This actor's rationality is "bounded" by:</span>
-		<ul>
-			<li><span style="font-size:1.2em">Limited information</span></li>
-			<li><span style="font-size:1.2em">Limited time</span></li>
-			<li><span style="font-size:1.2em">Limited cognitive capacity</span></li>
-			<li><span style="font-size:1.2em">Limited resources</span></li>
-			<li><span style="font-size:1.2em">Limited ability to process information</span></li>
-		</ul>
-		</li>
-		<li><span style="font-size:1.2em">So they <strong>satisfice</strong> rather than optimize</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="9bf297487bd10458c2ace7c14030e28a"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="1e08987e5fe077908bd9dbe833b90e28">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Bounded Rationality</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="987399eb86ea759757d3cf327208bb10">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em"><strong>Satisficing</strong>, "satisfy" + "suffice"</span>
-	<ul>
-		<li><span style="font-size:1.2em">Makes the most rational decision with the information and experience available</span></li>
-		<li><span style="font-size:1.2em">The administrative actor will choose the policy that is "good enough"</span></li>
-		<li><span style="font-size:1.2em">Decisions are made by choosing between facts and values</span></li>
-		<li><span style="font-size:1.2em">The first alternative that meets the minimum criteria is chosen</span></li>
-		<li><span style="font-size:1.2em">Achieve a satisfactory social gain from the decision</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="04fd7a4e4a8c70167fe7f533b7bbbab5"><div class="sl-block" data-block-type="text" style="width: 768px; left: 320px; top: 0px; height: auto;" data-block-id="8a77bdecc4acee4013124d2bec4302cd">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Bounded Rationality</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1280px; left: 0px; top: 84px; height: auto;" data-block-id="9d72265b755ef35cad2d625721d78619">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<table>
-<thead>
-<tr>
-<th>Rational Choice</th>
-<th>Bounded Rationality</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Complete information</td>
-<td>Limited information</td>
-</tr>
-<tr>
-<td>Values and facts are separate</td>
-<td>Values and facts are intertwined</td>
-</tr>
-<tr>
-<td>Goals are isolated before tools are considered</td>
-<td>Goals and tools are considered together</td>
-</tr>
-<tr>
-<td>Means and ends are separate</td>
-<td>Means and ends are intertwined</td>
-</tr>
-<tr>
-<td>A "good" policy is the "technically" best policy</td>
-<td>A "good" policy is one where consensus can be reached</td>
-</tr>
-<tr>
-<td>Analysis is comprehensive</td>
-<td>Analysis is limited</td>
-</tr>
-<tr>
-<td>Relies heavily on theory</td>
-<td>Succession of alternatives reduces reliance on  theory</td>
-</tr>
-</tbody>
-</table>
-							</div>
-						</div></section></section><section class="stack" data-id="5e12feaa27f000ce2081eb2ae583b5be"><section data-id="d57a8c98b4e8508b3316cdb184c7dd1a"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="c9c2d786b0d9766b6dc02de2ecebe594">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Incrementalism</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="bcf438444a76977e3bdbee67cff492fa">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">Charles Lindblom (1917-2018)</span></li>
-	<li><span style="font-size:1.2em">"The Science of Muddling Through" (1959)</span></li>
-	<li><span style="font-size:1.2em">"The Science of Muddling Through Revisited" (1979)</span></li>
-	<li><span style="font-size:1.2em">"Still Muddling, Not Yet Through" (1993)</span></li>
-	<li><span style="font-size:1.2em">"The Science of Muddling Through: Fifty Years Later" (2009)</span></li>
-</ul></div>
-						</div></section><section data-id="a8697ecef944f38f851387cf25e86f82"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="b5fa7618c3105b6424647633abea1edf">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Incrementalism</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="91cda268afc2887d081f9dac95de466f">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Builds on the work of Herbert Simon</span>
-	<ul>
-		<li><span style="font-size:1.2em">Recognizes people cannot process all the information available</span></li>
-		<li><span style="font-size:1.2em">We do the best we can with the information processing capacity we have</span></li>
-	</ul>
-	</li>
-	<li>
-<span style="font-size:1.2em">Based on "successive limited comparisons"</span>
-	<ul>
-		<li><span style="font-size:1.2em">Compare alternatives to the status quo</span></li>
-		<li><span style="font-size:1.2em">Choose the alternative that is the least different from the status quo</span></li>
-		<li><span style="font-size:1.2em">Incremental change is the norm</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="1c0c428baee6222b1471a7f89b275df6" data-auto-animate="" data-auto-animate-easing="linear"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="634d6bc312dcfee230e327341d301569" data-name="text-4891f3">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Incrementalism</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 966px; left: 160px; top: 144px; height: auto;" data-block-id="b83796ce7ab44f5a119ff206f8e3fe2b" data-name="text-c5d221">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Simplifies the decision-making process</span>
-	<ul>
-		<li><span style="font-size:1.2em">Reduces the number of alternatives to consider</span></li>
-		<li><span style="font-size:1.2em">Allows only those that are marginally different from the status quo</span></li>
-		<li><span style="font-size:1.2em">Allows decision-makers to rely on feedback from experience</span></li>
-	</ul>
-	</li>
-	<li>
-<span style="font-size:1.2em">Manages risk by making the process serial and remedial</span>
-	<ul>
-		<li><span style="font-size:1.2em">Avoids the possibility of large, irreversible errors.</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-auto-animate-easing="linear" data-auto-animate="" data-id="6bb1777650cd88452c2fe1bd1d0cf462"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-name="text-4891f3" data-block-id="129642a537365e89ac4131cd9e723175">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Incrementalism</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-name="text-443bf5" data-block-id="b4b161093c659a37560ca5f3a1165e99">
-							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em"><strong>Successive Limited Comparisons</strong></span>
-	<ul>
-		<li><span style="font-size:1.2em">Compare alternatives to the status quo</span></li>
-		<li><span style="font-size:1.2em">Choose the alternative that is the least different from the status quo</span></li>
-		<li><span style="font-size:1.2em">Incremental change is the norm</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="42f96e5c5477d509b60e7387dba03ca1"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="f9804f970bd19d3b211a334ff0629e5b">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Incrementalism</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 144px; height: auto;" data-block-id="31255adaec330c1b43ed90be87049dd1">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Problems with Incrementalism</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 216px; height: auto;" data-block-id="b3de8c286faa1c77d9956377098adb33">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Incrementalism is not always possible</span>
-	<ul>
-		<li><span style="font-size:1.2em">Some problems are too complex</span></li>
-		<li><span style="font-size:1.2em">Some problems are too urgent</span></li>
-		<li><span style="font-size:1.2em">Some problems are too important</span></li>
-	</ul>
-	</li>
-	<li><span style="font-size:1.2em">Some decisions require huge leaps: "moonshots, wars, pandemics, depressions"</span></li>
-</ul></div>
-						</div></section></section><section class="stack" data-id="391474942fb132d386daeee3c4d98699"><section data-id="6c3e744378393cb220866f807ebd18c1"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="c33e5fb31487ef14cc5cdeb72221cf6c">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Dysfunctional Decision-Making</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="62c96655c79594ea93c6b39c7f2dcfa1">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">Dysfunction often arises not from problems of disagreement but rather problems of agreement.</span></li>
-	<li><span style="font-size:1.2em">People can be hesitant to disagree with the group, or to speak truth to power.</span></li>
-	<li><span style="font-size:1.2em">Savvy administrators put safeguards in place to avoid groupthink.</span></li>
-</ul></div>
-						</div></section><section data-id="2a950a8ac298cd79126bfde86fead22a"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="87185fd42a40e5b07832daae4ceaf4a7">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Dysfunctional Decision-Making</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="b8bdc94de4617f80c647394be051c345">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em"><strong>Groupthink</strong></span>
-	<ul>
-		<li><span style="font-size:1.2em">A group of people make irrational decisions because they are more concerned with maintaining group cohesion than with assessing the facts of the problem with which the group is concerned.</span></li>
-		<li><span style="font-size:1.2em">The group is more concerned with maintaining unanimity than with objectively evaluating their situation, alternatives, and consequences.</span></li>
-		<li>
-<span style="font-size:1.2em"><em>The Bay of Pigs Invasion</em></span>, <span style="font-size:1.2em"><em>The Challenger Disaster</em></span>, <span style="font-size:1.2em"><em>The Abilene Paradox</em></span>
-</li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="750d4f8d6cd2bb8b9254272da15d3a60"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="438fbff09cbda69e0d9cb6b256b73090">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>The Garbage Can Model</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="475e9d2d25927c55db09b6c89bf66a8d">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">Michael Cohen, James March, and Johan Olsen (1972)</span>
-	<ul>
-		<li><span style="font-size:1.2em">Decisions are made in an "organized anarchy"</span></li>
-	</ul>
-	</li>
-	<li>
-<span style="font-size:1.2em">Decisions are made in a "garbage can"</span>
-	<ul>
-		<li><span style="font-size:1.2em">Problems</span></li>
-		<li><span style="font-size:1.2em">Solutions</span></li>
-		<li><span style="font-size:1.2em">Participants</span></li>
-		<li><span style="font-size:1.2em">Choice opportunities</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="a4bedb265707582a7cff2f1334478f42"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="c90d1d05f491decb34380e96d3269783">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>The Garbage Can Model</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="db3051886fa7777b3e78334ca503f641">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">Basic Structure:</span></li>
-	<li><span style="font-size:1.2em">There are choices looking for problems</span></li>
-	<li><span style="font-size:1.2em">There are issues and feelings looking for decision situations in which they might be expressed</span></li>
-	<li><span style="font-size:1.2em">There are solutions looking for issues to which they might be the answer</span></li>
-	<li><span style="font-size:1.2em">There are decision makers looking for work</span></li>
-</ul></div>
-						</div></section><section data-id="af525b1030f976a1ed9f79cbde1c6dd8" data-auto-animate="" data-auto-animate-easing="cubic-bezier(0.755, 0.050, 0.855, 0.060)"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="908f68bf1951b50a76e16b6acc1fa20c" data-name="text-84c61f">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>The Garbage Can Model</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-block-id="b95b308b7b7d268f4274d96b53321b66" data-name="text-b317e2">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li>
-<span style="font-size:1.2em">The Garbage Can Model is a model of decision-making in organizations with:</span>
-	<ul>
-		<li><span style="font-size:1.2em">Unclear goals</span></li>
-		<li><span style="font-size:1.2em">Fluid participation</span></li>
-		<li><span style="font-size:1.2em">Unclear technology</span></li>
-		<li><span style="font-size:1.2em">Organizationally induced time constraints</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-auto-animate-easing="cubic-bezier(0.755, 0.050, 0.855, 0.060)" data-auto-animate="" data-id="6d355b077bc0f5f0ef843fca0f5b22d7"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-name="text-03092f" data-block-id="a3dee54ba48292f95f3d25d08042e4fc">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 12;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>The Garbage Can Model</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 144px; height: auto;" data-name="text-b5fbd1" data-block-id="4d614de44e0f474be57f3004f06166db">
-							<div class="sl-block-content" style="text-align: left; z-index: 13;" data-placeholder-tag="p" data-placeholder-text="Text"><p><span style="font-size:1.2em">When the timing is right for a choice opportunity, a problem, a solution, and a decision maker to come together, a decision is made.</span></p></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 288px; height: auto;" data-name="text-fe2f21" data-block-id="13d3fc549ee87f60ee73e2685686534d">
-							<div class="sl-block-content" style="text-align: left; z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">The decision maker can pull a "solution" out of the "garbage can" and apply it to the "problem" at hand, hoping it works or suits the decision-maker's purposes.</span></li>
-</ul></div>
-						</div></section></section><section data-auto-animate-easing="cubic-bezier(0.755, 0.050, 0.855, 0.060)" data-auto-animate="" data-id="334158ed3b320bfb5fbb6cef63194014"><div class="sl-block" data-block-type="text" style="width: 768px; left: 240px; top: 72px; height: auto;" data-name="text-235e3d" data-block-id="7addbb434c1e1d21fd435543aead007f">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 15;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Conclusion</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 880px; left: 240px; top: 144px; height: auto;" data-name="text-04ff47" data-block-id="0a008e3f824c4f909e019d7b2c3c5e78">
-							<div class="sl-block-content" style="text-align: left; z-index: 16;" data-placeholder-tag="p" data-placeholder-text="Text"><ul>
-	<li><span style="font-size:1.2em">Decision-making is a critical part of the policy process</span></li>
-	<li>
-<span style="font-size:1.2em">We discussed three theories of decision-making:</span>
-	<ul>
-		<li><span style="font-size:1.2em">Rational Choice</span></li>
-		<li><span style="font-size:1.2em">Bounded Rationality</span></li>
-		<li><span style="font-size:1.2em">Incrementalism</span></li>
-	</ul>
-	</li>
-	<li>
-<span style="font-size:1.2em">We also discussed two theories of dysfunctional decision-making:</span>
-	<ul>
-		<li><span style="font-size:1.2em">The Garbage Can Model</span></li>
-		<li><span style="font-size:1.2em">Groupthink</span></li>
-	</ul>
-	</li>
-</ul></div>
-						</div></section><section data-id="451fd8e8a1a9af8fdf138df493420300"><div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 72px; height: auto;" data-block-id="7566678afdb874e05555454b2dda7bc7">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Next Week</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 160px; top: 144px; height: auto;" data-block-id="92faff5ff2447bfccbc5e66603a0f3c0">
-							<div class="sl-block-content" style="text-align: left; font-size: 90%; z-index: 11;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>No In-Person Class</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 960px; left: 160px; top: 216px; height: auto;" data-block-id="79f60dfdc097e4451b6c54327d4cbb81">
-							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text"><p><span style="font-size:1.2em">There will be a documentary film to watch and the second documentary writing assignment is assigned. The film and the assignment will be posted on Canvas.</span></p></div>
-						</div></section>
-			</div>
-		</div>
+        <section>
+          <h2>Rational Choice: Example</h2>
+          <div class="example-box">
+            <div class="example-title">Case: Highway Safety Policy</div>
+            <div class="two-column">
+              <div class="col">
+                <h3>Problem Definition</h3>
+                <p>Reduce traffic fatalities on interstate highways by 50% within 5 years</p>
+                <h3>Criteria & Weights</h3>
+                <ul>
+                  <li>Effectiveness (40%)</li>
+                  <li>Implementation cost (30%)</li>
+                  <li>Time to implement (20%)</li>
+                  <li>Public acceptance (10%)</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>Alternatives Analyzed</h3>
+                <ol>
+                  <li>Lower speed limits</li>
+                  <li>Increase enforcement</li>
+				  <li><strong><em>Mandate vehicle safety features</em></strong></li>
+                  <li>Improve road design</li>
+                  <li>Enhance driver education</li>
+                </ol>
+                <h3>Decision</h3>
+                <p>After comprehensive analysis, the highest-scoring option is selected as it provides optimal benefit-cost ratio.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <!-- Bounded Rationality -->
+      <section>
+        <section>
+          <h2>Bounded Rationality</h2>
+          <div style="text-align: center; margin-bottom: 0.8em;">
+            <p>Herbert Simon (1916-2001)</p>
+            <p>Nobel Prize in Economics (1978)</p>
+          </div>
+          <blockquote>
+            "The capacity of the human mind for formulating and solving complex problems is very small compared with the size of the problems whose solution is required for objectively rational behavior in the real world."
+          </blockquote>
+        </section>
+        
+        <section>
+          <h2>Core Concepts in Bounded Rationality</h2>
+          <div class="two-column">
+            <div class="col">
+              <div class="theory-card">
+                <h3>Intertwined Elements</h3>
+                <ul>
+                  <li>Goals and tools are considered together</li>
+                  <li>Means and ends are not separate</li>
+                  <li>Values and facts are interconnected</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="theory-card">
+                <h3>Definition of "Good" Policy</h3>
+                <p>A "good" policy is one where <span class="highlight">consensus can be reached</span> among stakeholders.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h2>The "Administrative Man"</h2>
+          <p>Bounded rationality recognizes that human rationality is limited:</p>
+          <div class="theory-card">
+            <h3>Rationality is "bounded" by:</h3>
+            <div class="two-column">
+              <div class="col">
+                <ul>
+                  <li>Limited information</li>
+                  <li>Limited time</li>
+                  <li>Limited cognitive capacity</li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>Limited resources</li>
+                  <li>Limited information processing</li>
+                  <li>Competing priorities</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Satisficing in Bounded Rationality</h2>
+          <div class="theory-card">
+            <h3>"Satisfice" = "Satisfy" + "Suffice"</h3>
+            <ul>
+              <li>Administrative actors choose the first option that meets <span class="highlight">minimum criteria</span></li>
+              <li>Makes the most rational decision with available information</li>
+              <li>Achieves satisfactory (not maximum) social gain</li>
+              <li>Recognizes that further search for solutions has costs</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Rational Choice vs. Bounded Rationality</h2>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Rational Choice</th>
+                <th>Bounded Rationality</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Complete information</td>
+                <td>Limited information</td>
+              </tr>
+              <tr>
+                <td>Values and facts are separate</td>
+                <td>Values and facts are intertwined</td>
+              </tr>
+              <tr>
+                <td>Goals before tools</td>
+                <td>Goals and tools considered together</td>
+              </tr>
+              <tr>
+                <td>Means and ends are separate</td>
+                <td>Means and ends are intertwined</td>
+              </tr>
+              <tr>
+                <td>Seeks technically best policy</td>
+                <td>Seeks policy with consensus</td>
+              </tr>
+              <tr>
+                <td>Comprehensive analysis</td>
+                <td>Limited analysis</td>
+              </tr>
+              <tr>
+                <td>Heavily theory-driven</td>
+                <td>More pragmatic approach</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-		<script>
-			var SLConfig = {"deck": {"id":3024912,"slug":"decision-making","title":"Decision Making","description":"","width":1280,"height":720,"margin":0.05,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/2c48f07783f8a62ba97699ab67a5a684/thumb.jpg?1696301471","view_count":0,"user":{"id":2511815,"username":"dadamsau","name":"David P. Adams","description":"","thumbnail_url":"https://media.slid.es/avatars/2511815/dadams_avatar.jpg","account_type":"lite","team_id":null,"settings":{"id":57106242,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"silver-green","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":33,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1696301451112,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"language":"en","notes":{}}};
+        <section>
+          <h2>Bounded Rationality: Example</h2>
+          <div class="example-box">
+            <div class="example-title">Case: City Homelessness Response</div>
+            <div class="two-column">
+              <div class="col">
+                <h3>Decision Context</h3>
+                <ul>
+                  <li>Rising homeless population</li>
+                  <li>Mayor facing re-election in 6 months</li>
+                  <li>Limited city budget</li>
+                  <li>Incomplete data on homeless demographics</li>
+                  <li>Multiple stakeholders with competing interests</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>Satisficing Approach</h3>
+                <ul>
+                  <li>Review 3-4 policy options (not all possible alternatives)</li>
+                  <li>Set minimum criteria: must be implementable within 4 months, cost under $2M, and address immediate shelter needs</li>
+                  <li>Select first option that meets all criteria</li>
+                  <li>Choose temporary shelter expansion despite knowing it's not the comprehensive solution that would be optimal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <!-- Incrementalism -->
+      <section>
+        <section>
+          <h2>Incrementalism</h2>
+          <div style="text-align: center; margin-bottom: 0.8em;">
+            <p>Charles Lindblom (1917-2018)</p>
+            <p>"The Science of Muddling Through" (1959)</p>
+          </div>
+          <div class="theory-card">
+            <p>Builds on Herbert Simon's work on bounded rationality</p>
+            <ul>
+              <li>Recognizes limited information processing capacity</li>
+              <li>Focuses on making small, manageable changes</li>
+              <li>Reduces risk through incremental adjustments</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Successive Limited Comparisons</h2>
+          <div class="theory-card">
+            <h3>Key Elements of Incremental Decision-Making</h3>
+            <ul>
+              <li>Compare alternatives to the <span class="highlight">status quo</span></li>
+              <li>Choose the alternative that is the <span class="highlight">least different</span> from current policy</li>
+              <li>Incremental change becomes the norm</li>
+              <li>Build on existing policies rather than creating from scratch</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Benefits of Incrementalism</h2>
+          <div class="two-column">
+            <div class="col">
+              <h3>Simplifies Decision-Making</h3>
+              <ul>
+                <li>Reduces alternatives to consider</li>
+                <li>Focuses on marginal changes</li>
+                <li>Allows reliance on feedback</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3>Manages Risk</h3>
+              <ul>
+                <li>Makes process serial and remedial</li>
+                <li>Avoids large, irreversible errors</li>
+                <li>Enables course correction</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h2>Limitations of Incrementalism</h2>
+          <div class="theory-card">
+            <h3>Not Always Appropriate</h3>
+            <ul>
+              <li>Some problems are too complex for incremental solutions</li>
+              <li>Some problems are too urgent to address incrementally</li>
+              <li>Some problems require fundamental, not incremental, change</li>
+            </ul>
+          </div>
+          <div style="margin-top: 0.8em;">
+            <h3>When "Muddling Through" Won't Work</h3>
+            <p>Some decisions require huge leaps:</p>
+            <ul>
+              <li>Moonshots & major technological initiatives</li>
+              <li>Responses to wars & national security threats</li>
+              <li>Managing pandemics & public health emergencies</li>
+              <li>Addressing economic depressions & major recessions</li>
+            </ul>
+          </div>
+        </section>
 
+        <section>
+          <h2>Incrementalism: Example</h2>
+          <div class="example-box">
+            <div class="example-title">Case: Environmental Regulation</div>
+            <div class="two-column">
+              <div class="col">
+                <h3>Status Quo</h3>
+                <ul>
+                  <li>Current emissions standard: 30 parts per million</li>
+                  <li>Industry has invested in existing compliance technology</li>
+                  <li>Environmental groups want 10ppm standard</li>
+                  <li>Economic concerns about rapid changes</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>Incremental Approach</h3>
+                <div class="policy-steps">
+                  <div class="policy-step">Year 1: Reduce to 25ppm (small change)</div>
+                  <div class="policy-step">Year 3: Reduce to 20ppm (assess impacts)</div>
+                  <div class="policy-step">Year 5: Reduce to 15ppm (if feasible)</div>
+                  <div class="policy-step">Year 7: Consider further reductions</div>
+                </div>
+                <p style="margin-top: 0.8em;"><small>Each step builds on previous experience and allows for adjustment based on feedback and new information.</small></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <!-- Dysfunctional Decision-Making -->
+      <section>
+        <section>
+          <h2>Dysfunctional Decision-Making</h2>
+          <div class="theory-card">
+            <p>Dysfunction often arises not from <span class="highlight">disagreement</span> but from <span class="highlight">problematic agreement</span>.</p>
+            <ul>
+              <li>Hesitation to disagree with the group</li>
+              <li>Difficulty speaking truth to power</li>
+              <li>Tendency to prioritize harmony over critical thinking</li>
+            </ul>
+          </div>
+          <p>Savvy administrators put safeguards in place to avoid these pitfalls.</p>
+        </section>
+        
+        <section>
+          <h2>Groupthink</h2>
+          <div class="theory-card">
+            <h3>Definition</h3>
+            <p>A mode of thinking where people prioritize <span class="highlight">group cohesion</span> and <span class="highlight">unanimity</span> over critical evaluation of facts, alternatives, and consequences.</p>
+          </div>
+          <div style="margin-top: 0.8em;">
+            <h3>Historical Examples</h3>
+            <ul>
+              <li>The Bay of Pigs Invasion (1961)</li>
+              <li>The Challenger Disaster (1986)</li>
+              <li>The Abilene Paradox</li>
+            </ul>
+          </div>
+        </section>
 
-			// Use local fonts
-			SLConfig.fonts_url = 'lib/fonts/';
-		</script>
+        <section>
+          <h2>Groupthink: Example</h2>
+          <div class="example-box">
+            <div class="example-title">Case: The Bay of Pigs Invasion (1961)</div>
+            <div class="two-column">
+              <div class="col">
+                <h3>Decision Context</h3>
+                <ul>
+                  <li>Kennedy administration planning invasion of Cuba</li>
+                  <li>High-pressure, high-stakes national security decision</li>
+                  <li>Group of like-minded advisors</li>
+                  <li>Strong leadership preference for action</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>Groupthink Symptoms</h3>
+                <ul>
+                  <li>Illusion of invulnerability</li>
+                  <li>Collective rationalization of warning signs</li>
+                  <li>Suppression of dissenting views</li>
+                  <li>Self-censorship by advisors with doubts</li>
+                  <li>Disastrous outcome: failed invasion and international embarrassment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section>
+          <h2>The Garbage Can Model</h2>
+          <div class="theory-card">
+            <h3>Michael Cohen, James March, Johan Olsen (1972)</h3>
+            <p>Decisions are made in an "organized anarchy" where problems, solutions, participants, and choice opportunities mix together.</p>
+          </div>
+          <div class="garbage-can">
+            <div class="garbage-can-item">Problems</div>
+            <div class="garbage-can-item">Solutions</div>
+            <div class="garbage-can-item">Participants</div>
+            <div class="garbage-can-item">Choice Opportunities</div>
+          </div>
+        </section>
+        
+        <section>
+          <h2>The Garbage Can Model</h2>
+          <div class="theory-card">
+            <h3>Four Streams in the Organization</h3>
+            <ol>
+              <li>Choices looking for problems</li>
+              <li>Issues looking for decision situations</li>
+              <li>Solutions looking for issues</li>
+              <li>Decision makers looking for work</li>
+            </ol>
+          </div>
+          <p style="margin-top: 0.8em;">When timing aligns these four streams, decisions happen - but not necessarily in a logical or rational way.</p>
+        </section>
 
-		<script src="lib/reveal.js"></script>
-		<script src="lib/reveal-plugins.js"></script>
-		<script src="lib/offline.js"></script>
+        <section>
+          <h2>Garbage Can Model: Example</h2>
+          <div class="example-box">
+            <div class="example-title">Case: University Curriculum Reform</div>
+            <div class="two-column">
+              <div class="col">
+                <h3>Elements in the "Garbage Can"</h3>
+                <ul>
+                  <li><strong>Problems:</strong> Declining enrollment, employer complaints about graduates' skills</li>
+                  <li><strong>Solutions:</strong> New online learning platform (purchased but unused), faculty expertise in interdisciplinary teaching</li>
+                  <li><strong>Participants:</strong> New dean seeking to make mark, faculty committee members with varying agendas</li>
+                  <li><strong>Choice Opportunity:</strong> Annual curriculum review meeting</li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3>Decision Process</h3>
+                <p>When these elements converge at the curriculum meeting, the online platform (a pre-existing solution) is suddenly matched with the enrollment problem, despite not being designed for this purpose.</p>
+                <p><small>The decision appears rational but actually resulted from the timing of streams coming together, not comprehensive analysis of alternatives.</small></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      
+      <!-- Conclusion -->
+      <section>
+        <h2>Key Takeaways on Decision-Making</h2>
+        <div class="two-column">
+          <div class="col">
+            <h3>Theoretical Models</h3>
+            <ul>
+              <li>Rational Choice
+                <ul><li><small>Optimization with complete information</small></li></ul>
+              </li>
+              <li>Bounded Rationality
+                <ul><li><small>Satisficing with limited information</small></li></ul>
+              </li>
+              <li>Incrementalism
+                <ul><li><small>Successive limited comparisons</small></li></ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Dysfunctional Models</h3>
+            <ul>
+              <li>Groupthink
+                <ul><li><small>Prioritizing unanimity over critical thinking</small></li></ul>
+              </li>
+              <li>Garbage Can Model
+                <ul><li><small>Solutions seeking problems in organized anarchy</small></li></ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 2em; text-align: center;">
+          <p class="highlight">Understanding these frameworks helps us analyze and improve decision-making in public policy contexts.</p>
+        </div>
+      </section>
+    </div>
+  </div>
 
-		<!-- Initialize the presentation -->
-		<script>
-			Reveal.initialize({
-				width: 1280,
-				height: 720,
-				margin: 0.05,
-				
-
-				hash: true,
-				controls: true,
-				progress: true,
-				mouseWheel: false,
-				showNotes: false,
-				slideNumber: false,
-				fragmentInURL: true,
-
-				autoSlide: 0,
-				autoSlideStoppable: true,
-
-				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
-
-				center: false,
-				shuffle: false,
-				loop: false,
-				rtl: false,
-				navigationMode: "default",
-
-				transition: "slide",
-				backgroundTransition: "slide",
-
-				highlight: {
-					escapeHTML: false
-				},
-
-				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
-			});
-		</script>
-
-		
-
-	</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'slide',
+      controls: true,
+      progress: true,
+      center: false,
+      plugins: []
+    });
+  </script>
+</body>
 </html>

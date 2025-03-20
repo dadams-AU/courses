@@ -1,477 +1,571 @@
 <!DOCTYPE html>
-	<html class="sl-root decks export offline loaded">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Policy Analysis"}' />
-		<title>Policy Analysis</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Policy Analysis | POSC 315</title>
+    <meta name="description" content="Public Policy Analysis | POSC 315 | Lecture Slides">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css" id="theme">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --main-color: #2c3e50;
+            --accent-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --heading-font: 'Inter', sans-serif;
+            --body-font: 'Inter', sans-serif;
+            --border-radius: 6px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-		<meta name="description" content="Public Policy Analysis | POSC 315 | Lecture 9">
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="week9.css">
-		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--body-font);
+        }
 
+        .reveal {
+            font-family: var(--body-font);
+            font-size: 36px;
+            font-weight: normal;
+            color: var(--text-color);
+        }
 
+        .reveal .slides {
+            text-align: left;
+        }
 
-	</head>
-	<body class="reveal-viewport theme-font-montserrat theme-color-grey-blue">
-		<div class="reveal">
-			<div class="slides">
-				<section data-id="50c23d079530dff411d3f5e8000dfe9e"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 257px; height: auto;" data-block-id="6c511c949151b8e950d687a86384060f">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 337px; height: auto;" data-block-id="4f9755d47d934bc60755dc97adedbe4a">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>POSC 315</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 400px; height: auto;" data-block-id="30ce5bd8d7d045567ba5b6b8235c0d46">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Week 9</h2>
-							</div>
-						</div></section><section data-id="559a81e2d5161a3e7820c5f5472d1d67"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 159px; height: auto;" data-block-id="5e42cf69954c38eeb534917832ed0b4a">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Overview</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 239px; height: auto;" data-block-id="97b3ab9ec8a397381fc8c18225410780">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>General Concepts of Policy Analysis</li>
-<li>Outputs and Outcomes</li>
-<li>Role of Policy Analysis in the Policy Process</li>
-<li>Causation</li>
-<li>Brief History of Policy Analysis</li>
-<li>Role of the Policy Analyst</li>
-<li>Modern Policy Analysis</li>
-<li>Let's Try It!</li>
-</ul>
-							</div>
-						</div></section><section data-id="f3c57d83419fac703f243850dda0c28c"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 208px; height: auto;" data-block-id="dc3c01bbbcf2959ac426027d6478c173">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>General Concepts of Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="image" style="width: 1120.4px; height: 1120.4px; left: 79.8px; top: -50.4px;" data-name="image-0f0d30" data-block-id="aa4257a958cd674b783739f7a5d7c76d"><div class="sl-block-content" style="z-index: 12;"><img class="" data-natural-width="100" data-natural-height="100" data-src="policy-analysis/f6297779828243c635fc2265863f094b.svg"></div></div></section><section data-id="a5f9774d3eddbf23f5ee8f30364824a6"><div class="sl-block" data-block-type="text" style="width: 768px; left: 257px; top: 46.5px; height: auto;" data-block-id="5ca64f26d1b79ad041a2f65b49995272">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Outputs and Outcomes</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 126.5px; height: auto;" data-block-id="2f079d4b04c09f2f5d687fb895f0286c">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<p><strong>Outputs</strong></p>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 257px; top: 175.5px; height: auto;" data-block-id="c39e7e183a3599aa7393a2ab7fdfd596">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The <strong>measurable</strong> things an agency or org. produces</li>
-<li>The effort gov't expends to address problems</li>
-<li>e.g., # of traffic signals installed, # of people served by a program, # of people arrested</li>
-<li>e.g., laws, regulations, programs, services, etc.</li>
-</ul>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 380.5px; height: auto;" data-block-id="e90a6500a7200cdf81a396e4c42b7141">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<p><strong>Outcomes</strong></p>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 429.5px; height: auto;" data-block-id="4ff13c77f43eec9dae01f2bca81c593a">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The <strong>intended</strong> or <strong>unintended</strong> consequences of gov't action</li>
-<li>The <strong>effect</strong> of gov't action on the problem</li>
-<li>Difficult to measure and hard to quantify</li>
-<li>e.g., reduction in traffic accidents, reduction in crime, reduction in poverty</li>
-</ul>
-							</div>
-						</div></section><section data-id="c360789c4edb52575ce7e5ebe4f8b093"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 104.5px; height: auto;" data-block-id="56335f8d92f7b99acff33d7397ce137a">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Policy Analysis in the Policy Process</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 254.5px; height: auto;" data-block-id="f359ea7ef44ca9e898b89a22055eb39e">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The use of analytic tools, often from operations research, statistics, and economics, in order to assess the consequences of policy alternatives—to predict outcomes from expended outputs.</li>
-<li>Useful to predict how a policy may adapt to new conditions and changing circumstances and interests. </li>
-<li>It asks, "How does the effort expended <em>cause</em> a particular outcome?"</li>
-</ul>
-							</div>
-						</div></section><section class="stack" data-id="228b4f1cd68869279d8344e7bc697d86"><section data-id="8c6a6e5ce9ef4ba8cdddb8b56d146a68" data-auto-animate=""><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 124px; height: auto;" data-block-id="37c73f590424bb01cac9012277a8a171" data-name="text-2b748e">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Causation</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 235.5px; height: auto;" data-block-id="a9aae73f3ed8351c6092ad024948c173" data-name="text-4cf48a">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>
-<strong>Causation</strong> is the relationship between cause and effect.</li>
-<li>Conditions for Cause and Effect<ul>
-<li>Cause must precede effect</li>
-<li>Cause and effect must be related</li>
-<li>No other factor can explain the relationship</li>
-</ul>
-</li>
-</ul>
-							</div>
-						</div></section><section data-auto-animate="" data-id="0b4c28cf4f132d6bd7a06418b3238e2e"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 54px; height: auto;" data-name="text-894555" data-block-id="9ce03877192a7c9e4400b9900f881e7e">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 12;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Causation</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 889px; left: 256px; top: 139px; height: auto;" data-name="text-f15805" data-block-id="7b46c3a1918137041cd682fd998a87e9">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 13;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Positive and Negative Relationships</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 243px; height: auto;" data-name="text-bfc471" data-block-id="c1cf9342367bfb2353fe23838bfece63">
-							<div class="sl-block-content" style="text-align: left; z-index: 14;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>
-<strong>Positive relationship</strong>: the higher the value of one variable, the higher the value of the other variable</li>
-<li>
-<strong>Negative relationship</strong>: the higher the value of one variable, the lower the value of the other variable</li>
-<li>
-<strong>No relationship</strong>: the value of one variable does not affect the value of the other variable</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="1fd4373eebdd773e1d8201b1e69f49b3"><section data-id="985fa0d0a8d27742120bf9c81fbe3d16"><div class="sl-block" data-block-type="text" style="width: 1028px; left: 165px; top: 50.5px; height: auto;" data-block-id="4de430578b1e1a4778e69d320603bea2">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>A Brief History of Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 147.5px; height: auto;" data-block-id="9f10d419f2a1a0c0d5bef1c1793cfd19">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>
-<p><em>Muller v. Oregon</em> (1908)</p>
-<ul>
-<li>The liberty protected by Due Process of the Fourteenth Amendment is not a bar to Oregon's compelling interest in protecting women's health through restricted working hours.</li>
-<li>What does this have to do with policy analysis?</li>
-</ul>
-</li>
-<li>
-<p>Empirical knowledge for gov't policy expanded as social science disciplines and law were professionalized in the early 20th century.</p>
-</li>
-<li>
-<p>Increase in policy advisors in the 1930s and 1940s and especially after WWII.</p>
-</li>
-</ul>
-							</div>
-						</div></section><section data-id="d9a9e67a867bb9d26e9bfc5aaafec032"><div class="sl-block" data-block-type="text" style="width: 1105px; left: 144px; top: 85px; height: auto;" data-block-id="b0ab675c665487e2c431ff9d620e7c8e">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>A Brief History of Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 188px; height: auto;" data-block-id="55ac837b97f376b78bafa74ad2154a48">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Harold Laswell on the Principles of Policy Science</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 328px; height: auto;" data-block-id="c010f9068d25c2822f90b37837742f58">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Orientation toward problem solving based in theory and empiricism</li>
-<li>Policy sciences are multidisciplinary</li>
-<li>Politics matter because <em>values matter</em>
-"[In] a democracy, decisions are made in a <em>political</em> system in which values are as important as neutrally derived facts."</li>
-</ul>
-							</div>
-						</div></section><section data-id="6843314d8e5bccaae8b9364d53b339b8"><div class="sl-block" data-block-type="text" style="width: 1072px; left: 118px; top: 131.5px; height: auto;" data-block-id="cbd7410e985631b61d01b53ce8107c93">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>A Brief History of Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 233.5px; height: auto;" data-block-id="9f65fa149b05671e227333a969bc7227">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>A Policy Science</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 318.5px; height: auto;" data-block-id="b747a0d3cd7491060ace3da7b2cb68e6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>An applied science</li>
-<li>Deals with major policy issues</li>
-<li>Requires interdisciplinary inquiry</li>
-<li>Empirical and based in sophisticated theory</li>
-<li>Dedicated to improving public policy through improved information and policy discourse</li>
-</ul>
-							</div>
-						</div></section><section data-id="a8f9ee15b3dfd0be8043eaa23c5a1fb2"><div class="sl-block" data-block-type="text" style="width: 1054px; left: 129px; top: 77.5px; height: auto;" data-block-id="9aed76e4be83cf79a9184328be5182e3">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>A Brief History of Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 181.5px; height: auto;" data-block-id="7aa6e9efe8316fc2a296670eb7184fd9">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Analysts were in high demand by the time of the Great Society programs of the 1960s.</li>
-<li>Practitioners drew from a wide range of academic disciplines, especially economics.<ul>
-<li>... for a "rational" way of making policy to overcome the "messiness, contingency, and sometimes irrationality fo politics as a system for defining problems and framing solutions."</li>
-</ul>
-</li>
-<li>Computers were employed to assist in forecasting and modeling.</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="b3a9e88d5ec1d5c279cf7f835aeb26c9"><section data-id="933824a3cd27dc19ab178d55b91a9ef9"><div class="sl-block" data-block-type="text" style="width: 972px; left: 154px; top: -35px; height: auto;" data-block-id="7d59e77ad7d0a79485d1ae026747edf9">
-							<div class="sl-block-content" style="text-align: center; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Role of the Policy Analyst</h1></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1260px; left: 10px; top: 64px; height: auto;" data-block-id="96ff0d67cfdc9e2a154b7f3c01513e75">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-<p><span style="font-size:0.7em"><strong>   Analytical Integrity                                     Responsibility to Clients                                   Adherence to One's Concept of Good</strong></span></p>
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: var(--heading-font);
+            color: var(--main-color);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6em;
+            text-transform: none;
+        }
 
-<table>
-	<tbody>
-		<tr>
-		</tr>
-		<tr>
-			<td><span style="font-size:0.7em"><strong>Objective Technician</strong><br>
-			Let analysis speak for itself. Primary focus should be predicting consequences of alternative policies.</span></td>
-			<td><span style="font-size:0.7em">Clients are necessary evils; their political fortunes should be secondary considerations. Keep distance from clients; select institutional clients whenever possible.</span></td>
-			<td><span style="font-size:0.7em">Relevant values should be identified but trade-offs among them should be left to clients. Objective advice promotes good in the long run.</span></td>
-		</tr>
-		<tr>
-			<td><span style="font-size:0.7em"><strong>Client's Advocate</strong><br>
-			Analysis rarely produces definitive conclusions. Take advantage of ambiguity to advise clients' positions.</span></td>
-			<td><span style="font-size:0.7em">Clients provide analysts with legitimacy. Loyalty should be given in return for access to privileged information and to political processes.</span></td>
-			<td><span style="font-size:0.7em">Select clients with compatible value systems; use long-term relationships to change clients' conceptions of good.</span></td>
-		</tr>
-		<tr>
-			<td><span style="font-size:0.7em"><strong>Issue Advocate</strong><br>
-			Analysis rarely produces definitive conclusions. Emphasize ambiguity and excluded values when analysis does not support advocacy.</span></td>
-			<td><span style="font-size:0.7em">Clients provide an opportunity for advocacy. Select them opportunistically; change clients to further personal policy agenda.</span></td>
-			<td><span style="font-size:0.7em">Analysis should be an instrument for progress towards ones' conception of the good society.</span></td>
-		</tr>
-	</tbody>
-</table>
-</div>
-						</div></section><section data-id="d351562c4f9cc3ba393e78d99081f9e3"><div class="sl-block" data-block-type="text" style="width: 1010px; left: 84px; top: 49px; height: auto;" data-block-id="19d4b5a2587fae999b4132a53bf80e58">
-							<div class="sl-block-content" style="text-align: center; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h1>Role of the Policy Analyst</h1></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1185px; left: 47.5px; top: 127px; height: auto;" data-block-id="de023af330b7061f403c17d840e4ad63">
-							<div class="sl-block-content" style="text-align: center; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text"><h2>Eugene Bardach's Eightfold Path</h2></div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 224px; height: auto;" data-block-id="ebd17908cb4433a50e14385a25255e0e">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ol>
-<li>Define the problem</li>
-<li>Assemble some evidence</li>
-<li>Construct the alternatives</li>
-<li>Select the criteria</li>
-<li>Project the outcomes</li>
-<li>Confront the trade-offs</li>
-<li>Decide</li>
-<li>Tell your story</li>
-</ol>
-							</div>
-						</div></section></section><section class="stack" data-id="1a4c358b97a119e91d77a8e237855ef5"><section data-id="d4fba500be379bd9be2940de803500d1"><div class="sl-block" data-block-type="text" style="width: 768px; left: 248px; top: 76px; height: auto;" data-block-id="3dc7e7dace87447ef228351025ffcf71">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Modern Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 178px; height: auto;" data-block-id="eed5b906abd18cc1da1ee3cc87c9ef8b">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Two Logics of Policy Making</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 263px; height: auto;" data-block-id="c15715cefbd1494d59424b057dfddde5">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Economic Rationality of Policy Analysts</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 813px; left: 256px; top: 341px; height: auto;" data-block-id="fafee174640c5cbd3551c934248a4bea">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Application of economic logic to political phenomena as a way to bypass the "messiness" of politics</li>
-<li>Transparent assumptions</li>
-<li>Consistent methods to compare alternatives</li>
-</ul>
-							</div>
-						</div></section><section data-id="ba31546ff176a015ef02608e974000dd"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 74.5px; height: auto;" data-block-id="a6043aa6285a0588570653c469ff6779">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Modern Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 178.5px; height: auto;" data-block-id="d8256059971c2890d97b9b4a75e98158">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Two Logics of Policy Making</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 265.5px; height: auto;" data-block-id="506c80153a0886659755a6c45e68dd76">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Political Rationality of Policy Makers</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 345.5px; height: auto;" data-block-id="8704f21584b5613e43a61a7c7fe4d7d6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Policy makers are not rational actors</li>
-<li>Strategic use of information</li>
-<li>Release favorable information and suppress unfavorable information</li>
-</ul>
-							</div>
-						</div></section><section data-id="f9396183e0af342ae95bfbe25320a40e"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 63px; height: auto;" data-block-id="26468099c2f415ef237d46c4dd280247">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Modern Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 171.5px; height: auto;" data-block-id="9a8a1d0557a9da02665ee0a0926e58ee">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Two Logics of Policy Making</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 263.5px; height: auto;" data-block-id="ab813d62e67c2b08c7e8fe3e7e02517c">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Which is Right?</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 318px; height: auto;" data-block-id="863866a639704cc0838dac0c87ac64e8">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Both are right, but they are not the same</li>
-<li>Policy makers are not rational actors, but they are not irrational either</li>
-<li>Policy makers are not always strategic, but they are not always naive either</li>
-<li>Politics is full of paradoxes and contradictions that are not amenable to economic logic</li>
-</ul>
-							</div>
-						</div></section><section data-id="101d727cfc29f8404b686a5fe9152749"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 59.5px; height: auto;" data-block-id="740b49a25a5926c00b02b02cf0c47031">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Modern Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1041px; left: 256px; top: 153.5px; height: auto;" data-block-id="f8b5e33a60f8905d382e4e1ec14fda06">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>A Need to Understand the Political Context</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 230.5px; height: auto;" data-block-id="c05ba291a46f42bbfe6eca67f640e947">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>It can explain policy outcomes that might not otherwise make sense</li>
-<li>It can help to design effective democratic institutions or refine existing ones</li>
-<li>Analysts can operate more effectively if they understand the political context</li>
-</ul>
-							</div>
-						</div></section><section data-id="d081c8300674af5de9cbbb409b2ef4f1"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 60.5px; height: auto;" data-block-id="6a6411e4026a814846b3cfdaeeed6bfd">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Modern Policy Analysis</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 174.5px; height: auto;" data-block-id="2616a72a4a2bc64a45862ea9b52f2df4">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Analysis as a Profession</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 838px; left: 256px; top: 271.5px; height: auto;" data-block-id="b3de34f04408db9c3a68631745025ba4">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The field has evolved over the past 50 years</li>
-<li>The field is now more professionalized and specialized</li>
-<li>The field is more diverse and interdisciplinary</li>
-<li>Technical skills are still essential but no longer the leading motivation driving the field</li>
-<li>Analysts are active participants in the policy process</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="4cf3a4e216fecfda9271578e118131a4"><section data-id="b31e87010994875b55439cd4a74d90b8" data-auto-animate="" data-auto-animate-easing="cubic-bezier(0.755, 0.050, 0.855, 0.060)"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 99.5px; height: auto;" data-block-id="b8901bd04f93c1e49c6790e9d0866302" data-name="text-3fe501">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 10;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>Let's Try It!</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 198.5px; height: auto;" data-block-id="dfaaf4375cc4011355012e9012352f61" data-name="text-4d95c8">
-							<div class="sl-block-content" style="text-align: left; line-height: 1.04; letter-spacing: -0.1em; font-size: 90%; z-index: 11;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>"Horse Rich and Dirt Poor"</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 280.5px; height: auto;" data-block-id="1151aeccadfaa82adfeed26c2137c024" data-name="text-1a9262">
-							<div class="sl-block-content" style="text-align: left; z-index: 12;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li style="">The problem: "Horse rich and dirt poor"</li>
-<li style="">The goals:</li>
-<li style="">The alternatives:</li>
-<li style="">The criteria:</li>
-<li style="">Observed outcomes:</li>
-<li style="">Policy performance:</li>
-</ul>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="iframe" style="width: 470px; height: 262px; left: 744px; top: 352.5px;" data-name="iframe-cf6178" data-block-id="f3dc4654849f612b5c3159a7b9bd25dc"><div class="sl-block-content" style="z-index: 13;"><iframe allowfullscreen="" allow="fullscreen; accelerometer; geolocation; gyroscope; camera; encrypted-media; microphone; midi" data-src="https://www.youtube.com/embed/q6h242vy_q8?enablejsapi=1" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation"></iframe></div></div></section><section data-auto-animate-easing="cubic-bezier(0.755, 0.050, 0.855, 0.060)" data-auto-animate="" data-id="bff763bbc2df1e4d5fabd8719c040827"><div class="sl-block" data-block-type="iframe" style="width: 1375px; height: 832px; left: -38px; top: -43.5px;" data-name="iframe-cf6178" data-block-id="d0b3c99b343036be036f95273e5b05ae"><div class="sl-block-content" style="z-index: 13;"><iframe allowfullscreen="" allow="fullscreen; accelerometer; geolocation; gyroscope; camera; encrypted-media; microphone; midi" data-src="https://www.youtube.com/embed/q6h242vy_q8?enablejsapi=1" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation"></iframe></div></div></section></section><section data-id="db155dce0b7aa244ec12f10d67a53c19"><div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 218.5px; height: auto;" data-block-id="23880d0818317f052e6b392470c48eb9">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h1>That's all for today!</h1>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 902px; left: 256px; top: 314.5px; height: auto;" data-block-id="81833e74ecc385d985d5dc38a61f4c2c">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Next Time: Guest Speaker Assemblymember Phillip Chen and book author Bill Wong</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 768px; left: 256px; top: 445.5px; height: auto;" data-block-id="df7f2caeda72234119901c76981f15ef">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Also Next Time: Review for Test Two</h3>
-							</div>
-						</div></section>
-			</div>
-		</div>
+        .reveal h1 {
+            font-size: 2.2em;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.2em;
+            margin-bottom: 0.8em;
+        }
 
-		<script>
-			var SLConfig = {"deck": {"id":3036322,"slug":"policy-analysis","title":"Policy Analysis","description":"Public Policy Analysis | POSC 315 | Lecture 9","width":1280,"height":720,"margin":0.05,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/5775028d964c0c9d63b8b70e37a2d9e8/thumb.jpg?1697496137","view_count":0,"user":{"id":2511815,"username":"dadamsau","name":"David P. Adams","description":"","thumbnail_url":"https://media.slid.es/avatars/2511815/dadams_avatar.jpg","account_type":"lite","team_id":null,"settings":{"id":57106242,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"grey-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":26,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1697496100337,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"language":"en","notes":{}}};
+        .reveal h2 {
+            font-size: 1.6em;
+        }
 
+        .reveal h3 {
+            font-size: 1.2em;
+            color: var(--accent-color);
+        }
 
-			// Use local fonts
-			SLConfig.fonts_url = 'lib/fonts/';
-		</script>
+        .reveal p {
+            margin-bottom: 1em;
+            line-height: 1.5;
+        }
 
-		<script src="lib/reveal.js"></script>
-		<script src="lib/reveal-plugins.js"></script>
-		<script src="lib/offline.js"></script>
+        .reveal ul, .reveal ol {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 1em;
+        }
 
-		<!-- Initialize the presentation -->
-		<script>
-			Reveal.initialize({
-				width: 1280,
-				height: 720,
-				margin: 0.05,
-				
+        .reveal li {
+            margin-bottom: 0.5em;
+            line-height: 1.4;
+        }
 
-				hash: true,
-				controls: true,
-				progress: true,
-				mouseWheel: false,
-				showNotes: false,
-				slideNumber: false,
-				fragmentInURL: true,
+        .reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+            margin-top: 0.8em;
+        }
 
-				autoSlide: 0,
-				autoSlideStoppable: true,
+        .card {
+            background-color: white;
+            padding: 1.5em;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 1em;
+        }
 
-				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+        }
 
-				center: false,
-				shuffle: false,
-				loop: false,
-				rtl: false,
-				navigationMode: "default",
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+        }
 
-				transition: "slide",
-				backgroundTransition: "slide",
+        .highlight-box {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 0.8em 1.2em;
+            margin: 1em 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
 
-				highlight: {
-					escapeHTML: false
-				},
+        .note {
+            font-size: 0.8em;
+            color: var(--text-light);
+            font-style: italic;
+        }
 
-				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
-			});
-		</script>
+        .icon-text {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
 
-		
+        .icon-text i {
+            color: var(--accent-color);
+        }
 
-	</body>
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 0.8em;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .comparison-table th {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: rgba(236, 240, 241, 0.5);
+        }
+
+        .steps-list {
+            counter-reset: step;
+            list-style-type: none;
+        }
+
+        .steps-list li {
+            position: relative;
+            padding-left: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .steps-list li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: var(--accent-color);
+            color: white;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Policy Analysis</h1>
+                <h2>POSC 315</h2>
+                <h3>David P. Adams, Ph.D.</h3>
+                <p class="note">Public Policy Analysis and the Art of Problem Solving</p>
+            </section>
+
+            <!-- Overview -->
+            <section>
+                <h1>Overview</h1>
+                <ul>
+                    <li>General Concepts of Policy Analysis</li>
+                    <li>Outputs vs. Outcomes: Understanding the Difference</li>
+                    <li>Role of Policy Analysis in the Policy Process</li>
+                    <li>Understanding Causation in Policy</li>
+                    <li>Brief History of Policy Analysis</li>
+                    <li>Role of the Policy Analyst</li>
+                    <li>Modern Policy Analysis Approaches</li>
+                    <li>Applied Policy Analysis: Let's Try It!</li>
+                </ul>
+            </section>
+
+            <!-- General Concepts -->
+            <section>
+                <h1>General Concepts of Policy Analysis</h1>
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-search"></i> What is Policy Analysis?</h3>
+                        <p>A systematic approach to evaluating policy alternatives for addressing public problems using data and reasoned arguments.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-bullseye"></i> Core Purpose</h3>
+                        <p>To provide decision-makers with clear, objective information about the likely consequences of policy choices.</p>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>Key Question:</strong> How can we use evidence to determine which policies are most effective at addressing public problems?</p>
+                </div>
+            </section>
+
+            <!-- Outputs and Outcomes -->
+            <section>
+                <h1>Outputs vs. Outcomes</h1>
+                <div class="grid">
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-cogs"></i> Outputs</h3>
+                        <ul>
+                            <li>The <strong>measurable things</strong> an agency or organization produces</li>
+                            <li>The tangible effort government expends</li>
+                            <li>Easy to quantify and track</li>
+                            <li><em>Examples:</em> Number of traffic signals installed, people served by a program, laws passed, regulations created</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-chart-line"></i> Outcomes</h3>
+                        <ul>
+                            <li>The <strong>actual effects</strong> of government action on society</li>
+                            <li>The <strong>intended or unintended</strong> consequences</li>
+                            <li>Often difficult to measure and quantify</li>
+                            <li><em>Examples:</em> Reduction in traffic accidents, improved health outcomes, reduction in poverty rates</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>Key Distinction:</strong> Outputs tell us what was done; outcomes tell us what difference it made.</p>
+                </div>
+            </section>
+
+            <!-- Role of Policy Analysis -->
+            <section>
+                <h1>Role of Policy Analysis in the Policy Process</h1>
+                <ul>
+                    <li>Uses systematic analytical tools from operations research, statistics, and economics</li>
+                    <li>Assesses consequences of policy alternatives</li>
+                    <li>Predicts outcomes from implemented outputs</li>
+                    <li>Helps anticipate how policies adapt to changing circumstances</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>Policy analysis answers the critical question: <strong>"How does the effort expended <em>cause</em> a particular outcome?"</strong></p>
+                </div>
+            </section>
+
+            <!-- Causation -->
+            <section>
+                <h1>Understanding Causation</h1>
+                <div class="card">
+                    <h3>What is Causation?</h3>
+                    <p>The relationship between cause and effect - a foundational concept in policy analysis.</p>
+                    <h3>Conditions for Establishing Causation:</h3>
+                    <ul>
+                        <li><strong>Temporal sequence:</strong> Cause must precede effect</li>
+                        <li><strong>Correlation:</strong> Cause and effect must be related</li>
+                        <li><strong>No spuriousness:</strong> No other factor can explain the relationship</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Causation continued -->
+            <section>
+                <h1>Understanding Causation</h1>
+                <h2>Types of Relationships</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-plus"></i> Positive Relationship</h3>
+                        <p>As one variable increases, the other also increases</p>
+                        <p><em>Example:</em> More education → Higher income</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-minus"></i> Negative Relationship</h3>
+                        <p>As one variable increases, the other decreases</p>
+                        <p><em>Example:</em> Higher cigarette taxes → Lower smoking rates</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="icon-text"><i class="fas fa-times"></i> No Relationship</h3>
+                        <p>Changes in one variable don't affect the other</p>
+                        <p><em>Example:</em> Ice cream sales → Crime rates</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History of Policy Analysis 1 -->
+            <section>
+                <h1>A Brief History of Policy Analysis</h1>
+                <h2>Early Developments</h2>
+                <ul>
+                    <li><strong>Muller v. Oregon (1908)</strong>
+                        <ul>
+                            <li>Supreme Court case that upheld state laws limiting women's working hours</li>
+                            <li>Landmark for introducing social science evidence in legal decisions</li>
+                            <li>The "Brandeis Brief" used empirical data rather than just legal precedent</li>
+                        </ul>
+                    </li>
+                    <li>Professionalization of social sciences in early 20th century</li>
+                    <li>Expansion of policy advisors during New Deal era (1930s-40s)</li>
+                    <li>Major growth after World War II with operations research techniques</li>
+                </ul>
+            </section>
+
+            <!-- History of Policy Analysis 2 -->
+            <section>
+                <h1>A Brief History of Policy Analysis</h1>
+                <h2>Harold Lasswell's Principles of Policy Science</h2>
+                <div class="card">
+                    <p>Harold Lasswell (1902-1978) was a political scientist who helped establish policy analysis as a distinct field.</p>
+                    <h3>Key Principles:</h3>
+                    <ul>
+                        <li>Problem-solving orientation based in theory and empirical evidence</li>
+                        <li>Multidisciplinary approach drawing from various fields</li>
+                        <li>Recognition that politics and values matter in decision-making</li>
+                    </ul>
+                    <p class="note">"In a democracy, decisions are made in a <em>political</em> system in which values are as important as neutrally derived facts." - Lasswell</p>
+                </div>
+            </section>
+
+            <!-- History of Policy Analysis 3 -->
+            <section>
+                <h1>A Brief History of Policy Analysis</h1>
+                <h2>A Policy Science</h2>
+                <div class="highlight-box">
+                    <h3>Characteristics of Policy Science:</h3>
+                    <ul>
+                        <li>An applied science focused on practical problem-solving</li>
+                        <li>Addresses major policy issues facing society</li>
+                        <li>Requires interdisciplinary inquiry and collaboration</li>
+                        <li>Grounded in empirical evidence and sophisticated theory</li>
+                        <li>Dedicated to improving public policy through better information</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- History of Policy Analysis 4 -->
+            <section>
+                <h1>A Brief History of Policy Analysis</h1>
+                <h2>Growth and Evolution</h2>
+                <ul>
+                    <li>Great Society programs (1960s) created high demand for policy analysts</li>
+                    <li>Economic approaches became dominant
+                        <ul>
+                            <li>Promised a "rational" approach to policymaking</li>
+                            <li>Aimed to overcome political "messiness" through technical analysis</li>
+                        </ul>
+                    </li>
+                    <li>Computer technology revolutionized forecasting and modeling</li>
+                    <li>Gradual recognition of the limits of purely technical approaches</li>
+                </ul>
+            </section>
+
+            <!-- Role of the Policy Analyst -->
+            <section>
+                <h1>Role of the Policy Analyst</h1>
+                <h2>Different Analytical Perspectives</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Role Type</th>
+                            <th>Analytical Approach</th>
+                            <th>Relationship to Clients</th>
+                            <th>Ethical Stance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Objective Technician</strong></td>
+                            <td>Let analysis speak for itself; focus on predicting consequences</td>
+                            <td>Keep distance from clients; remain independent</td>
+                            <td>Identify values but leave trade-offs to decision-makers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Client's Advocate</strong></td>
+                            <td>Use analytical ambiguity to support client's position</td>
+                            <td>Loyalty to client in exchange for access and influence</td>
+                            <td>Choose clients with compatible values</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Issue Advocate</strong></td>
+                            <td>Emphasize ambiguity when analysis doesn't support preferred policies</td>
+                            <td>Choose clients opportunistically to advance personal agenda</td>
+                            <td>Use analysis to progress toward preferred societal outcomes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Role of the Policy Analyst 2 -->
+            <section>
+                <h1>Role of the Policy Analyst</h1>
+                <h2>Eugene Bardach's Eightfold Path</h2>
+                <p>A practical framework for conducting policy analysis:</p>
+                <ol class="steps-list">
+                    <li><strong>Define the problem</strong> - Clarify the issue needing attention</li>
+                    <li><strong>Assemble evidence</strong> - Gather relevant data and information</li>
+                    <li><strong>Construct alternatives</strong> - Identify possible policy solutions</li>
+                    <li><strong>Select criteria</strong> - Determine how to evaluate alternatives</li>
+                    <li><strong>Project outcomes</strong> - Predict likely effects of each alternative</li>
+                    <li><strong>Confront trade-offs</strong> - Compare pros and cons of each option</li>
+                    <li><strong>Decide</strong> - Recommend a course of action</li>
+                    <li><strong>Tell your story</strong> - Communicate findings effectively</li>
+                </ol>
+            </section>
+
+            <!-- Modern Policy Analysis 1 -->
+            <section>
+                <h1>Modern Policy Analysis</h1>
+                <h2>Two Logics of Policy Making</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Economic Rationality of Policy Analysts</h3>
+                        <ul>
+                            <li>Application of economic logic to political phenomena</li>
+                            <li>Emphasis on transparent assumptions</li>
+                            <li>Consistent methods to compare alternatives</li>
+                            <li>Aims for objective optimization of outcomes</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Political Rationality of Policy Makers</h3>
+                        <ul>
+                            <li>Recognizes that policy makers respond to multiple incentives</li>
+                            <li>Strategic use of information to advance goals</li>
+                            <li>Selective emphasis of favorable information</li>
+                            <li>Consideration of political feasibility and support</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modern Policy Analysis 2 -->
+            <section>
+                <h1>Modern Policy Analysis</h1>
+                <h2>Bridging the Two Logics</h2>
+                <div class="highlight-box">
+                    <h3>Which is Right?</h3>
+                    <ul>
+                        <li>Both logics have validity in different contexts</li>
+                        <li>Policy makers aren't purely rational actors, but aren't irrational either</li>
+                        <li>Political considerations are legitimate, not simply barriers to overcome</li>
+                        <li>Politics contains paradoxes not easily resolved by economic logic</li>
+                    </ul>
+                </div>
+                <p>Effective policy analysis recognizes the importance and legitimacy of both perspectives.</p>
+            </section>
+
+            <!-- Modern Policy Analysis 3 -->
+            <section>
+                <h1>Modern Policy Analysis</h1>
+                <h2>Understanding the Political Context</h2>
+                <div class="card">
+                    <h3>Why Political Context Matters:</h3>
+                    <ul>
+                        <li>Explains policy outcomes that might seem irrational from a purely economic perspective</li>
+                        <li>Helps design democratic institutions that function effectively</li>
+                        <li>Enables analysts to operate more strategically and effectively</li>
+                        <li>Recognizes that values and preferences are legitimate inputs to the policy process</li>
+                    </ul>
+                </div>
+                <p>The best policy analysis combines technical rigor with political awareness.</p>
+            </section>
+
+            <!-- Modern Policy Analysis 4 -->
+            <section>
+                <h1>Modern Policy Analysis</h1>
+                <h2>Evolution as a Profession</h2>
+                <ul>
+                    <li>Significant development over the past 50 years</li>
+                    <li>Increased professionalization and specialization</li>
+                    <li>Greater diversity in approaches and disciplines</li>
+                    <li>Technical skills remain essential but are no longer the sole focus</li>
+                    <li>Recognition of analysts as active participants in the policy process</li>
+                    <li>Growing emphasis on stakeholder engagement and diverse perspectives</li>
+                </ul>
+            </section>
+
+            <!-- Let's Try It -->
+            <section>
+                <h1>Let's Try It!</h1>
+                <h2>"Horse Rich and Dirt Poor"</h2>
+                <div class="card">
+                    <h3>Policy Analysis Exercise</h3>
+                    <p>Let's apply what we've learned by analyzing the wild horse management problem:</p>
+                    <ul>
+                        <li><strong>The problem:</strong> "Horse rich and dirt poor" - Wild horse overpopulation on public lands</li>
+                        <li><strong>The goals:</strong> Sustainable population, ecosystem health, humane treatment</li>
+                        <li><strong>The alternatives:</strong> Adoption programs, fertility control, habitat expansion</li>
+                        <li><strong>The criteria:</strong> Cost, effectiveness, political feasibility, animal welfare</li>
+                        <li><strong>Observed outcomes:</strong> To be evaluated based on historical data</li>
+                        <li><strong>Policy performance:</strong> To be assessed against stated goals</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Case Study Video -->
+            <section data-background-color="#000">
+                <h2 style="color: white;">Case Study: Wild Horse Management</h2>
+                <iframe width="840" height="472" src="https://www.youtube.com/embed/q6h242vy_q8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+			
+			<section>
+				<h1>Thoughts on "Horse Rich and Dirt Poor"</h1>
+				<div class="card">
+					<h3>Policy Analysis Insights</h3>
+					<p>The wild horse overpopulation issue presents a complex policy challenge that requires balancing:</p>
+					<ul>
+						<li>Ecological sustainability of public rangelands</li>
+						<li>Economic considerations for local communities and agencies</li>
+						<li>Ethical concerns for humane treatment of animals</li>
+					</ul>
+					<p>Effective policy solutions must consider diverse stakeholder perspectives and employ a mix of strategies, including adoption programs, fertility control, and habitat expansion.</p>
+					<p>Continuous evaluation and adaptation of policies based on observed outcomes are crucial for achieving long-term success.</p>
+				</div>
+			</section>
+
+            <!-- Closing Slide -->
+            <section>
+                <h1>That's all for today!</h1>
+               
+                <p>Questions? Comments?</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/zoom/zoom.min.js"></script>
+    
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: false,
+            slideNumber: 'c/t',
+            showNotes: false,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+			width: 1920,
+			height: 1080,
+            
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+        });
+    </script>
+</body>
 </html>

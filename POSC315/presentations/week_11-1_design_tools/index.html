@@ -1,528 +1,1394 @@
 <!DOCTYPE html>
-	<html class="sl-root decks export offline loaded">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, minimal-ui">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="manifest" href='data:application/manifest+json,{"display": "standalone", "name": "Bento"}' />
-		<title>Bento</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Design and Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #2196F3;      /* Bright blue - more vibrant */
+            --secondary-color: #FF5722;    /* Deep orange - better contrast */
+            --background-color: #121212;   /* Darker gray background for better contrast */
+            --highlight-color: #FFC107;    /* Amber for highlights */
+            --text-color: #FFFFFF;         /* White text */
+            --box-bg-primary: rgba(33, 150, 243, 0.15);    /* Translucent blue */
+            --box-bg-secondary: rgba(255, 87, 34, 0.15);   /* Translucent orange */
+            --header-font: 'Ubuntu', sans-serif;
+            --body-font: 'Ubuntu', sans-serif;
+        }
 
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="week11-1.css">
-		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+        body {
+            background: var(--background-color);
+        }
 
+        .reveal {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
 
+        .reveal .slides {
+            text-align: left;
+        }
+        
+        .reveal .slides section {
+            padding: 0 40px;
+            box-sizing: border-box;
+            height: 100%;
+            overflow: visible;
+            background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+            border-radius: 8px;
+        }
 
-	</head>
-	<body class="reveal-viewport theme-font-montserrat theme-color-black-blue">
-		<div class="reveal">
-			<div class="slides">
-				<section data-id="b728b0fc8f40973098b7735ac6f86423"><div class="sl-block" data-block-type="text" style="width: 581px; left: 160px; top: 2.25px; height: auto;" data-block-id="3b3e5ce483df09f04e707f80834a475a">
-    <div class="sl-block-content" data-placeholder-tag="h1" style="z-index: 12; font-size: 170%; text-align: center; color: rgb(0, 0, 0); line-height: 0.975; letter-spacing: -0.1em; padding: 16px;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-text="Text"><h1>Policy Design and Tools</h1></div>
-</div>
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: var(--header-font);
+            color: var(--text-color);
+            text-transform: none;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5em;
+        }
 
-<div class="sl-block" data-block-type="text" style="width: 718px; left: 402px; top: 584.75px; height: auto;" data-name="text-d18e72" data-block-id="0f3a1c6befdbc324e696a4be2af9fec8">
-    <div class="sl-block-content" data-placeholder-tag="h2" style="z-index: 13; text-align: center; padding: 16px; font-size: 70%;" data-placeholder-text="Text"><h2>POSC 315 | Week 11</h2></div>
-</div>
-<div class="sl-block" data-block-type="shape" style="width: 581px; height: 513.5px; left: 160px; top: 10px;" data-name="shape-a85c0a" data-block-id="13b44a0e1924bdada12a4ca3f83f3732"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(27, 174, 225)" data-shape-stretch="true" style="z-index: 11;" data-shape-corner-radius="30px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 581 514"><rect width="581" height="513.5" rx="30" ry="30" class="shape-element" fill="rgb(27, 174, 225)"></rect></svg></div></div>
-<div class="sl-block" data-block-type="shape" style="width: 718px; height: 166.5px; left: 402px; top: 543.5px;" data-name="shape-f3b59e" data-block-id="dcd2567b25ebf0a22fb87837c7c11715"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 100, 66)" data-shape-stretch="true" style="z-index: 10;" data-shape-corner-radius="30px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 718 167"><rect width="718" height="166.5" rx="30" ry="30" class="shape-element" fill="rgb(255, 100, 66)"></rect></svg></div></div>
-<div class="sl-block" data-block-type="shape" style="width: 222px; height: 166.5px; left: 160px; top: 543.5px;" data-name="shape-c5d015" data-block-id="6066bde85af018457fdd7b6eb6cb7ae4"><a class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(255, 255, 255, 0.13)" data-shape-stretch="true" style="z-index: 18;" data-shape-corner-radius="30px" href="#/1"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 222 167"><rect width="222" height="166.5" rx="30" ry="30" class="shape-element" fill="rgba(255, 255, 255, 0.13)"></rect></svg></a></div>
-<div class="sl-block" data-block-type="shape" style="width: 359px; height: 513.5px; left: 761px; top: 10px;" data-name="shape-b7e817" data-block-id="bb7538b5c26cea0d3b18cfcf31728330"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(255, 255, 255, 0.13)" data-shape-stretch="true" style="z-index: 15;" data-shape-corner-radius="30px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 359 514"><rect width="359" height="513.5" rx="30" ry="30" class="shape-element" fill="rgba(255, 255, 255, 0.13)"></rect></svg></div></div>
-</section><section data-id="72f17bd6a5945b8d521e6d22f8d2fe65"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 200.5px; height: auto;" data-block-id="3fab19801c5cdbca4e91a5525fd8bde9">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Policy Design</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 263.5px; height: auto;" data-block-id="50bd5b1a5545beaec015b41b68b3bd30">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The process by which policies are designed, through both technical analysis and the political process, to achieve a particular goal.</li>
-<li>Occurs throughout the policy process as ideas and priorities are exchanged</li>
-<li>Decision-making about which policy designs - and which policy tools - to adopt</li>
-</ul>
-							</div>
-						</div></section><section data-id="28ce7ecdffe0241db0d7a85e035c1f2d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 172px; height: auto;" data-block-id="60b2ca97af98fd3b0e87808b99f98be1">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Policy Design and Implementation</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 235px; height: auto;" data-block-id="19895288c22e6c6abbdc60e13c57a574">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>
-<p>Choices made in design influence implementation</p>
-</li>
-<li>
-<p>Policy design continues during implementation</p>
-<ul>
-<li>Experience will chain the design</li>
-<li>Experience can change the understanding of the problem</li>
-</ul>
-</li>
-<li>
-<p>Remember, the process of translating vague legislative commands - which come from the "black box" - into rules and regulations can be quite complex.</p>
-</li>
-</ul>
-							</div>
-						</div></section><section data-id="feb12cf7eabab9d1f3c3c78f605901b8"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 226px; height: auto;" data-block-id="5f1807f7954eccb85578b4f1ec6b612b">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Five Elements of Policy Design</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 289px; height: auto;" data-block-id="ddeaa8bc465aff10772c3e6baa699812">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ol>
-<li>
-<strong>Goals</strong> - What is the policy trying to achieve?</li>
-<li>
-<strong>Causal Theory</strong> - What is the theory of change?</li>
-<li>
-<strong>Tools</strong> - What tools will be used to achieve the goals?</li>
-<li>
-<strong>Target Population</strong> - Who is the policy trying to affect?</li>
-<li>
-<strong>Implementation</strong> - How will the policy be implemented?</li>
-</ol>
-							</div>
-						</div></section><section data-id="61eb07fd59d5ce40aa9dfb7f28d276b1"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 265px; height: auto;" data-block-id="1bfea5ec9222077d05855e64815c6b7a">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Goals</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 328px; height: auto;" data-block-id="cb4bb1c061fe4606da654fd0767b93c1">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The desired outcomes of the policy</li>
-<li>Can be <em>explicitly</em> stated in the policy or <em>implicit</em> in the policy's design or legislative history</li>
-</ul>
-							</div>
-						</div></section><section class="stack" data-id="7a0bb4694f4629e95d6efb9de26db1e6"><section data-id="e8af7049b57df1053cb440568959fa41"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 206.5px; height: auto;" data-block-id="a97bf5cb659dfeb5552192c4259a1f7a">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Causal Theory</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 269.5px; height: auto;" data-block-id="86208e6fa86f992859e5ef31b279e3f3">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The theory about what causes a problem and how the policy will address it</li>
-<li>The theory of change</li>
-<li>Needed to measure the policy's success</li>
-<li>Shapes the policy tools and implementation</li>
-<li>Poor theory can lead to policy failure</li>
-</ul>
-							</div>
-						</div></section><section data-id="e33bfbfd9e85a3701b765b37138b722f"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 160px; height: auto;" data-block-id="4d325258faed038bc35eaf30e4e66414">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-<h2>Causal Theory:</h2>
+        .reveal h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
 
-<h3>Problem Definition -&gt; Policy Design</h3>
-</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 277px; height: auto;" data-block-id="3dc3de1ac35b7c2e3d98d1fbd60342fc">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Problems are something we can do something about.</li>
-<li>Remember, problems don't just exist out there in some self-evident way. They are socially constructed and defined.</li>
-<li>There are multiple ways to define a problem, and each definition implies a different solution.</li>
-<li>Whoever successfully defines the problem has a leg up in the policy process when it comes to designing the policy solution.</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="8da56a3f51a5701d142db8ec806d5416"><section data-id="599986b33b813a2fc93efb9818f10867"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 218.5px; height: auto;" data-block-id="a70d1f35c7e868b40853ad45d4d7357d">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-<h2>Policy Goals</h2>
+        .reveal h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(33, 150, 243, 0.3);
+            padding-bottom: 0.2em;
+        }
 
-<h3>from Deborah Stone's <em>Policy Paradox</em>
-</h3>
-</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 335.5px; height: auto;" data-block-id="e44e8401fb545472bd2af369493c65c9">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>
-<strong>Security</strong> - Protecting people from harm</li>
-<li>
-<strong>Liberty</strong> - Protecting people's rights</li>
-<li>
-<strong>Efficiency</strong> - Getting the most out of resources</li>
-<li>
-<strong>Equity</strong> - Fairness in the distribution of resources</li>
-</ul>
-							</div>
-						</div></section><section data-id="2b7300c260726cb0987a7604932ea8fa"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 206.5px; height: auto;" data-block-id="7f2b919f4639580cc2fe0c29d6cb6498">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Equality: A Contested Goal</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 269.5px; height: auto;" data-block-id="805d5632e8962bddc2b4988b4273e7e6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Equality in America is defined by equality of opportunity, not equality of outcome.</li>
-<li>Which do you think dominates in social democracies like Sweden? Equality of opportunity or equality of outcome?</li>
-<li>What are the implications of each?</li>
-<li>What debates continue today regarding equality?</li>
-</ul>
-							</div>
-						</div></section><section data-id="dc3bfbd278dedc69e20bb1d9a9cc0861"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 226px; height: auto;" data-block-id="c85ce4a2beb38e27cd79e07b686ab1a5">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Efficiency: A Contested Goal</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1097.34px; left: 128px; top: 289px; height: auto;" data-block-id="add3e24c25c01ea28413c6d1ab837afa">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Efficiency is a contested goal because it is often in conflict with other goals.</li>
-<li>Efficiency is often defined as the most output for the least input.</li>
-<li>Usually a means to a goal, not an end in itself.</li>
-<li>The idea is to achieve an objective with the least amount of resources.</li>
-</ul>
-							</div>
-						</div></section><section data-id="e01b6ce5d1a2638ef50f0466476f320d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 221px; height: auto;" data-block-id="c148bd780aef9831fc26e2c30df45f1e">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Efficiency: A Contested Goal</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 284px; height: auto;" data-block-id="eb4ab5a2ad43eb55d6a48a8cb997b58e">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<p>Problems of efficiency:</p>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 333px; height: auto;" data-block-id="5117ea8d6fd67193a1429039254fa5d2">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>What are the inputs and outputs?</li>
-<li>How do we measure them?</li>
-<li>What is the time frame?</li>
-<li>What is the opportunity cost?</li>
-</ul>
-							</div>
-						</div></section><section data-id="cff3fd9b52910f87170fad4a7a71204d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 265px; height: auto;" data-block-id="3e079916011feca404cc8880613a2b8a">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Efficiency: A Contested Goal</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 328px; height: auto;" data-block-id="b35e78bc7cc459b2cc207472973e719d">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-<blockquote>
-<p>A good public library is not one that owns all the books that have ever been published, but one that has used its limited funds to build up as good a collection as possible under the circumstances</p>
-</blockquote>
+        .reveal h3 {
+            font-size: 1.3em;
+            font-weight: 400;
+            color: var(--secondary-color);
+        }
+        
+        .reveal h4 {
+            font-size: 1.1em;
+            margin-bottom: 0.2em;
+        }
 
-<p>- Herbert Simon</p>
-</div>
-						</div></section><section data-id="6e8169f421fe5e985a7155417ca863a5"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 226px; height: auto;" data-block-id="32288ed28852675c9b96c2ed1d8bc454">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Efficiency: A Contested Goal</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 289px; height: auto;" data-block-id="41a02d7dd87e45d3b1847bf8b77aa943">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-<blockquote>
-<p>People who oppose certain programs will often do so because they disagree with the substance of the policy. But it is much easier—and often more successful—to claim or expose how a policy is wasteful, rather than arguing about the policy’s merits because nobody favors waste.</p>
-</blockquote>
+        .reveal ul, .reveal ol {
+            display: block;
+            margin-left: 1em;
+            margin-bottom: 0.4em;
+        }
 
-<p>- Deborah Stone</p>
-</div>
-						</div></section><section data-id="cb3b0fd574d09764d11551d183763f6c"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 226px; height: auto;" data-block-id="86c0ed577a42011cf85e107fa63d32a9">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Equity: A Contested Goal</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 289px; height: auto;" data-block-id="e5f360e5727cb462916b04b374e9a95b">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>We already talked about equity in terms of distributive justice.</li>
-<li>Equity is a contested goal because it is typically in conflict with other goals.</li>
-<li>Equity is often defined as fairness in the distribution of resources.</li>
-<li>Usually a means to a goal, not an end in itself.</li>
-</ul>
-							</div>
-						</div></section><section data-id="d13cd41c2e96a1c14542bb588678880d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 133px; height: auto;" data-block-id="e8c203c8345efe5f3876514a9a7360d4">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Security vs. Liberty: Conflicting Goals</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 196px; height: auto;" data-block-id="cad0adcbae1a1e078f28484db97389e3">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Thomas Hobbes' tradeoff:<ul>
-<li>Give up some liberties to the state, which holds the most power, so there is security.</li>
-<li>This is an authoritarian view of the state.</li>
-</ul>
-</li>
-<li>John Locke's approach:<ul>
-<li>Form a social contract wherein one surrenders some liberties to the state, which creates a government of limited power to protect reserved liberties.</li>
-<li>Democratic view of the state.</li>
-</ul>
-</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="222e52fdb21a433c8efa053f44e2acc8"><section data-id="582040ac9ca34cc8c01294300d383171"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 168.5px; height: auto;" data-block-id="10c9503bf1ec9b6e6f419a779cc907cd">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Ambiguity and Goal Conflict</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 231.5px; height: auto;" data-block-id="d24b6c64dccc0f73483f4ce77cc5c298">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Policy design reveals that goals are often ambiguous and in conflict with one another.</li>
-<li>Policy design reveals conflicts over means of achieving goals.</li>
-<li>Different policy goals can be in conflict with one another.<ul>
-<li>For example, Immigration policy versus foreign relations policy with Mexico.</li>
-</ul>
-</li>
-</ul>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 490.5px; height: auto;" data-block-id="3ea9a47feb8755d36ca5f06f3fad23d7">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<p>Conflicts are not hopeless! The are <em>complex</em>. Good policy finds a balance.</p>
-							</div>
-						</div>
-</section><section data-id="f618cb4ac51a1b4444bcfd3bb3fb9252"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 182px; height: auto;" data-block-id="5816a190456fd17c982cfb72f42187a6">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Complexity and Differing Goals</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245px; height: auto;" data-block-id="02f91329c7cd9b560c8bb69cfaf3a8c5">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<p>Is the purpose of the goal to eliminate a problem, hold steady a growing problem, or reduce the problem to a lower level? </p>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 333px; height: auto;" data-block-id="613a823e97757ed9c1ad288adb2d55a7">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>For example, is the goal of the War on Drugs to eliminate drug use, hold steady drug use, or reduce drug use to a lower level?</li>
-<li>What are the implications of each?</li>
-<li>What are the tradeoffs?</li>
-<li>What are the costs?</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="83706e909f5c7efa0e683a4804a2df78"><section data-id="9494fd86138f2813b54cdf07ff749272"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 278.5px; height: auto;" data-block-id="cf4409be344b505f77c845a2e96c3da9">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Policy Tools</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 341.5px; height: auto;" data-block-id="1a03a1cdf63e3c02bc641a5adb49138f">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>The means by which the policy will achieve its goals</li>
-<li>How government seeks a policy objective</li>
-</ul>
-							</div>
-						</div></section><section data-id="0d11659220cd9c575390c3cfb525c2e6"><div class="sl-block" data-block-type="image" data-name="image-3c39ef" style="width: 695.399px; height: 566.343px; left: 403.205px; top: 17.657px; min-width: 1px; min-height: 1px;" data-block-id="71769a354f52adcfbc3834fdd27bb629"><div class="sl-block-content" style="z-index: 10; border-style: solid; border-radius: 30px;"><img data-natural-width="1110" data-natural-height="904" style="" data-lazy-loaded="" data-src="bento-2d7e8a/27a3c8fecd6b0778b38f78b29cb24b01.png"></div></div>
-<div class="sl-block" data-block-type="text" style="width: 917.209px; left: 181.395px; top: 584px; height: auto;" data-name="text-d18e72" data-block-id="12ab0c30e970afa6e87c1e3f62f73396"><div class="sl-block-style" style="z-index: 11; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" style="z-index: 11; text-align: right; background-color: rgba(255, 255, 255, 0.13); padding: 30px; font-size: 90%; border-style: solid; border-radius: 30px;" data-placeholder-text="Text"><h2>Policy Tools</h2></div></div></div></section></section><section data-id="dc53ed8ccf4a4ff27d1c4217751b3a17"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 94px; height: auto;" data-block-id="cd4c7badbd2cfe647980fcdd5c4db4e7">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Policy Tools: Dimensions</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 157px; height: auto;" data-block-id="380b994f4f824f28b6964c73b8fcedb6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ol>
-<li>Nature of Government Activity<ol>
-<li>Money payments</li>
-<li>Provision of goods and services</li>
-<li>Legal protections</li>
-<li>Restrictions and penalties</li>
-</ol>
-</li>
-<li>Delivery System Structure<ol>
-<li>Direct</li>
-<li>Indirect</li>
-<li>Mixed</li>
-</ol>
-</li>
-<li>Degree of Centralization</li>
-<li>Degree of Detailed Administrative Activity</li>
-</ol>
-							</div>
-						</div></section><section class="stack" data-id="528302321458a9bdbacea89370332c52"><section data-id="5b280584518d949b6ce96e1c9a9d4600"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 179.5px; height: auto;" data-block-id="1d4f37efedd85e028c5e7d1d2b5993a5">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Love, Fear, and Money (Etzioni 1961)</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 242.5px; height: auto;" data-block-id="d9abd0ff276bff734dbd0ac21f848bc0">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Three basic reasons why people comply with rules, orders, or policy:<ul>
-<li>Love: Compliance out of a sense of agreement, love, or moral obligation</li>
-<li>Fear: Compliance out of a sense of fear of punishment</li>
-<li>Money: Compliance is in one's monetary or remunerative interest</li>
-</ul>
-</li>
-<li>Effective policies find a balance between low levels of fear and high levels of love and money.</li>
-</ul>
-							</div>
-						</div></section><section data-id="e742267795b3a2223e2fca100217013a"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245.5px; height: auto;" data-block-id="0b4cde4094b9a43b455a68dd8dde6ff6">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Policy Tool Considerations</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 308.5px; height: auto;" data-block-id="735a9cd015666c69824b1aba36ebfaf9">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Non-Coercive to coercive (love to fear) exist along a continuum</li>
-<li>The extent to which government will use its resources to achieve a policy goal</li>
-<li>Choosing effective tools requires a good causal theory</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="929b7fca53d756225ec34920de3e19d3"><section data-id="82cfc9ec8c3f9f1dceb7ff983067b068"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 276px; height: auto;" data-block-id="64367252c60ddd6f67eb3c82a56c9a12">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Models of Policy Tools</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 339px; height: auto;" data-block-id="470f452c9dcf0cab4fb1ca5a416b99f5">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h4>Howlett, Ramesh, and Perl</h4>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 388px; height: auto;" data-block-id="13fbb9926fabf95d3b4bb992a294c94b">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Economic and Political Tools</h3>
-							</div>
-						</div></section><section data-id="5320303e35fc399b63a185d1b69667a2"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 187px; height: auto;" data-block-id="569d427ac5a1890ab9e595b547f4b9b6">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Economic Tools</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1072.9px; left: 128px; top: 250px; height: auto;" data-block-id="22f2a01a17195ff02d190b6c6e147d4f">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Favor individual freedom and choice</li>
-<li>Tend to use non-coercive means</li>
-<li>Coercion can be used to correct economic errors, such as the income tax</li>
-<li>Makes many assumptions about what is "possible" and what is "rational"</li>
-<li>Assumes that people are rational actors</li>
-</ul>
-							</div>
-						</div></section><section data-id="42e2287fc44f92430da452cdcb9ba12d"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 182px; height: auto;" data-block-id="914c940734b34241afeef58d44130adf">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Political Tools</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245px; height: auto;" data-block-id="cb8d121b9fe3a43318efcb459c6bccd6">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-<blockquote>
-<p>"Any instrument [or tool] can theoretically accomplish any chosen aim, but governments prefer less coercive instruments unless forced by either recalcitrance on the part of the subject and/or continued social pressure for change to utilize more coercive instruments."</p>
-</blockquote>
+        .reveal li {
+            margin-bottom: 0.3em;
+            font-size: 0.95em;
+            line-height: 1.3;
+        }
 
-<p><span style="font-size:0.7em">- Howlett, Ramesh, and Perl</span></p>
-</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 473.09px; height: auto;" data-block-id="3db35fbaa566899e0fc51817050ad40b">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Preference for less coercive means, but pressure can bring desire for more coercive means</li>
-</ul>
-							</div>
-						</div></section><section data-id="b93577eef6b9bc495cb129853f99cc05"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 245.5px; height: auto;" data-block-id="6d4c1bcafac4173c472f2affde309ebb">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Tools and Choices</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 308.5px; height: auto;" data-block-id="781a2e23ddd043088ee23542a27b88f3">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Technically sound design does not trump political considerations</li>
-<li>Tools choice is constrained by resources</li>
-<li>Tools are based on behavioral assumptions about people</li>
-<li>Typically, multiple policy tools are used to achieve a policy goal</li>
-</ul>
-							</div>
-						</div></section></section><section class="stack" data-id="2115715db0800328466b6fa9df0f748e"><section data-id="a9a87ecfe367dc7638435694c1a092bb"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 217.5px; height: auto;" data-block-id="86272883b28ffd97052692764f7628e2">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>Objective and Subjective Tools</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 280.5px; height: auto;" data-block-id="eadfd0ad82bcd08fb627f5089469a807">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Objective - Rational Characteristics</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 336.5px; height: auto;" data-block-id="36b34ca622809e7bcf62eae7c8adbf49">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<p><strong>Target</strong> population (the citizens who receive the benefits or bear the costs of the policy), <strong>values</strong> being distributed, <strong>rules</strong> governing or constraining action, <strong>rationales</strong> (the justification for the policy), and <strong>assumptions</strong> about human behavior that tie all of these together.</p>
-							</div>
-						</div></section><section data-id="5d8e66bff326feb750104ba8ea7c016a"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 249px; height: auto;" data-block-id="a250bee8638a95c764e3c27ae323fea2">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Subjective - Value Characteristics</h3>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 305px; height: auto;" data-block-id="8094e08fb9e09c6581a6ced3789e63ba">
-							<div class="sl-block-content" style="text-align: left;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<ul>
-<li>Who justifiably deserves the costs and benefits of the policy?</li>
-<li>What values should be backed by the coercive powers of the state?</li>
-<li>Who (or what) should have the freedom of action promoted or constrained to uphold those values?</li>
-</ul>
-							</div>
-						</div></section></section><section data-id="dbcc8de1d4dbe5e7d9b5b5972087e3fc"><div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 300.5px; height: auto;" data-block-id="a6dce6e4617b1677577f28a61f8eb66f">
-							<div class="sl-block-content" style="text-align: left;line-height: 1.04;letter-spacing: -0.1em;font-size: 90%;" data-has-line-height="" data-has-letter-spacing="" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h2>That's it for Today</h2>
-							</div>
-						</div>
-<div class="sl-block" data-block-type="text" style="width: 1024px; left: 128px; top: 363.5px; height: auto;" data-block-id="9035489a1b5bdd02f52a212bb93dc5d7">
-							<div class="sl-block-content" style="text-align: left;font-size: 90%;" data-placeholder-tag="p" data-placeholder-text="Text">
-								<h3>Next Time: Implementation</h3>
-							</div>
-						</div></section>
-			</div>
-		</div>
+        .reveal ul ul li, .reveal ol ul li {
+            font-size: 0.9em;
+            margin-bottom: 0.2em;
+        }
 
-		<script>
-			var SLConfig = {"deck": {"id":3047204,"slug":"bento-2d7e8a","title":"Bento","description":"","width":1280,"height":720,"margin":0.05,"visibility":"self","published_at":"2023-08-29T10:22:02.470Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/ecde1cb92a05d6d2d1b0c072ba78d880/thumb.jpg?1698610664","view_count":0,"user":{"id":2511815,"username":"dadamsau","name":"David P. Adams","description":"","thumbnail_url":"https://media.slid.es/avatars/2511815/dadams_avatar.jpg","account_type":"lite","team_id":null,"settings":{"id":57106242,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":36,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1698615078517,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"language":"en","notes":{}}};
+        .reveal blockquote {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--highlight-color);
+            padding: 0.5em 1em;
+            font-style: italic;
+            margin: 0.5em 0;
+            font-size: 0.85em;
+            max-width: 90%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
+        .reveal blockquote p {
+            margin: 0;
+        }
 
-			// Use local fonts
-			SLConfig.fonts_url = 'lib/fonts/';
-		</script>
+        .title-slide {
+            text-align: center;
+            background: radial-gradient(circle, rgba(33,150,243,0.1) 0%, rgba(0,0,0,0) 70%) !important;
+        }
 
-		<script src="lib/reveal.js"></script>
-		<script src="lib/reveal-plugins.js"></script>
-		<script src="lib/offline.js"></script>
+        .title-slide h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
 
-		<!-- Initialize the presentation -->
-		<script>
-			Reveal.initialize({
-				width: 1280,
-				height: 720,
-				margin: 0.05,
-				
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px rgba(33, 150, 243, 0.2);
+            }
+            to {
+                text-shadow: 0 0 15px rgba(33, 150, 243, 0.6);
+            }
+        }
 
-				hash: true,
-				controls: true,
-				progress: true,
-				mouseWheel: false,
-				showNotes: false,
-				slideNumber: false,
-				fragmentInURL: true,
+        .title-slide h2 {
+            font-size: 1.3em;
+            color: var(--secondary-color);
+            border-bottom: none;
+        }
+        
+        .title-slide p {
+            font-size: 1.1em;
+        }
 
-				autoSlide: 0,
-				autoSlideStoppable: true,
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
 
-				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            max-height: 75vh;
+            overflow: visible;
+        }
 
-				scrollActivationWidth: null,
+        .column {
+            width: 48%;
+            font-size: 0.9em;
+        }
 
-				center: false,
-				shuffle: false,
-				loop: false,
-				rtl: false,
-				navigationMode: "default",
+        .box {
+            background: var(--box-bg-primary);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(33, 150, 243, 0.3);
+            box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
 
-				transition: "slide",
-				backgroundTransition: "slide",
+        .box:hover {
+            box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+            transform: translateY(-1px);
+        }
 
-				highlight: {
-					escapeHTML: false
-				},
+        .accent-box {
+            background: var(--box-bg-secondary);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 87, 34, 0.3);
+            box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
 
-				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
-			});
-		</script>
+        .accent-box:hover {
+            box-shadow: 0 4px 8px rgba(255, 87, 34, 0.2);
+            transform: translateY(-1px);
+        }
+        
+        .box ul, .accent-box ul {
+            margin-bottom: 0;
+        }
 
-		
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0.6em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        p {
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin-bottom: 0.5em;
+        }
+        
+        .reveal .progress {
+            color: var(--secondary-color);
+            height: 5px;
+        }
+        
+        /* Compact classes for slides with more content */
+        .compact li {
+            margin-bottom: 0.2em;
+            font-size: 0.85em;
+        }
+        
+        .compact h3 {
+            margin-bottom: 0.2em;
+            font-size: 1.2em;
+        }
+        
+        .compact h4 {
+            font-size: 1em;
+            margin-bottom: 0.15em;
+        }
+        
+        .compact .box, .compact .accent-box {
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .compact p {
+            margin-bottom: 0.25em;
+            font-size: 0.9em;
+        }
+        
+        .compact .two-column {
+            gap: 12px;
+        }
+        
+        /* Ensure content fits within slide boundaries */
+        .reveal .slides section .fragment {
+            visibility: visible;
+        }
+        
+        strong {
+            color: var(--highlight-color);
+        }
+        
+        /* Add subtle animated background */
+        .reveal::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(33, 150, 243, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255, 87, 34, 0.05) 0%, transparent 20%);
+            z-index: -1;
+            animation: backgroundShift 30s ease infinite alternate;
+        }
 
-	</body>
+        @keyframes backgroundShift {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Improved navigation controls */
+        .reveal .controls button {
+            color: var(--primary-color);
+        }
+
+        /* Better slide transitions */
+        .reveal .slides section {
+            transition: transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985), 
+                        opacity 0.4s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+        }
+
+        /* Slide number styling */
+        .reveal .slide-number {
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        /* Key points highlight box */
+        .key-points {
+            background: linear-gradient(135deg, 
+                rgba(33, 150, 243, 0.15) 0%, 
+                rgba(255, 193, 7, 0.15) 100%);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 12px 0;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .key-points h4 {
+            color: var(--highlight-color);
+            margin-top: 0;
+            font-size: 1em;
+            margin-bottom: 0.15em;
+        }
+        
+        .key-points p {
+            font-size: 0.9em;
+            margin-bottom: 0.25em;
+        }
+
+        /* Special emphasis */
+        .emphasis {
+            font-style: italic;
+            color: var(--highlight-color);
+            display: inline-block;
+            position: relative;
+        }
+
+        .emphasis::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--highlight-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s;
+        }
+
+        .emphasis:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Focus box for important concepts */
+        .focus-box {
+            border: 2px dashed var(--highlight-color);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            background: rgba(255, 193, 7, 0.05);
+        }
+
+        /* Improved list markers */
+        .reveal ul {
+            list-style: none;
+        }
+
+        .reveal ul li {
+            position: relative;
+            padding-left: 1.5em;
+        }
+
+        .reveal ul li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .reveal ol {
+            counter-reset: li;
+            list-style: none;
+        }
+
+        .reveal ol li {
+            position: relative;
+            padding-left: 1.8em;
+        }
+
+        .reveal ol li::before {
+            counter-increment: li;
+            content: counter(li) ".";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Enhanced progress bar */
+        .reveal .progress span {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        /* Citation style */
+        .citation {
+            font-size: 0.7em;
+            color: rgba(255,255,255,0.5);
+            font-style: italic;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        /* Image styling */
+        .reveal img {
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Improved transitions for fragments */
+        .reveal .slides section .fragment.fade-up {
+            opacity: 0;
+            transform: translate3d(0, 20px, 0);
+        }
+
+        .reveal .slides section .fragment.fade-up.visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Visual divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- SLIDE 1: Title -->
+            <section class="title-slide" data-transition="zoom">
+                <h1>Policy Design and Tools</h1>
+                <h2>POSC 315 | Week 11</h2>
+                <div class="divider"></div>
+                <p class="fragment fade-up">Understanding how policies are crafted to address public problems</p>
+            </section>
+
+            <!-- SLIDE 2: Policy Design -->
+            <section data-transition="fade">
+                <h2>Policy Design</h2>
+                <div class="box">
+                    <p>The process by which policies are designed, through both technical analysis and the political process, to achieve a particular goal.</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up">Occurs throughout the policy process as ideas and priorities are exchanged</li>
+                    <li class="fragment fade-up">Involves decision-making about which policy designs - and which <span class="emphasis">policy tools</span> - to adopt</li>
+                    <li class="fragment fade-up">Balances technical expertise with political feasibility</li>
+                </ul>
+                <div class="key-points fragment fade-up">
+                    <h4>Key Insight:</h4>
+                    <p>Design choices determine a policy's effectiveness, efficiency, equity, and political sustainability</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Policy Design and Implementation -->
+            <section data-transition="fade">
+                <h2>Policy Design and Implementation</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Design Influences Implementation</h3>
+                        <ul>
+                            <li>Shapes available resources</li>
+                            <li>Establishes timelines and milestones</li>
+                            <li>Determines which agencies are involved</li>
+                            <li>Sets parameters for discretion</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Implementation Informs Design</h3>
+                        <ul>
+                            <li>Experience can change the design</li>
+                            <li>Implementation reveals unforeseen obstacles</li>
+                            <li>Feedback loops may alter understanding of the problem</li>
+                            <li>Administrative agencies interpret vague legislative commands</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">The relationship between design and implementation is <span class="emphasis">iterative</span>, not linear</p>
+            </section>
+
+            <!-- SLIDE 4: Five Elements of Policy Design -->
+            <section data-transition="convex">
+                <h2>Five Elements of Policy Design</h2>
+                <ol>
+                    <li class="fragment fade-up"><strong>Goals</strong> - What is the policy trying to achieve?</li>
+                    <li class="fragment fade-up"><strong>Causal Theory</strong> - What is the theory of change?</li>
+                    <li class="fragment fade-up"><strong>Tools</strong> - What tools will be used to achieve the goals?</li>
+                    <li class="fragment fade-up"><strong>Target Population</strong> - Who is the policy trying to affect?</li>
+                    <li class="fragment fade-up"><strong>Implementation</strong> - How will the policy be implemented?</li>
+                </ol>
+                <div class="focus-box fragment fade-up">
+                    <p>These five elements must work together coherently for a policy to succeed</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Goals -->
+            <section data-transition="convex">
+                <h2>Goals</h2>
+                <div class="box">
+                    <p>The desired outcomes of the policy - what the policy is trying to achieve</p>
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Explicit Goals</h3>
+                        <ul>
+                            <li>Stated clearly in the policy text</li>
+                            <li>Found in legislative history</li>
+                            <li>Articulated in public statements</li>
+                            <li>Measurable objectives and targets</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Implicit Goals</h3>
+                        <ul>
+                            <li>Embedded in policy design choices</li>
+                            <li>Revealed through implementation priorities</li>
+                            <li>Sometimes political or symbolic</li>
+                            <li>May reflect unstated priorities</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">Multiple, sometimes <span class="emphasis">conflicting goals</span> often exist within the same policy</p>
+            </section>
+
+            <!-- SLIDE 6: Causal Theory -->
+            <section data-transition="convex">
+                <h2>Causal Theory</h2>
+                <div class="box">
+                    <p>The theory about what causes a problem and how the policy will address it</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up">Forms the foundation of policy logic - the <span class="emphasis">theory of change</span></li>
+                    <li class="fragment fade-up">Essential for measuring the policy's success</li>
+                    <li class="fragment fade-up">Shapes selection of appropriate policy tools</li>
+                    <li class="fragment fade-up">Informs implementation strategies</li>
+                    <li class="fragment fade-up">Poor theory can lead to policy failure even with perfect implementation</li>
+                </ul>
+                <div class="accent-box fragment fade-up">
+                    <p>If your causal theory is wrong, even the most well-implemented policy will fail to achieve its goals</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Causal Theory: Problem Definition -->
+            <section data-transition="convex">
+                <h2>Causal Theory:</h2>
+                <h3>Problem Definition → Policy Design</h3>
+                <div class="box">
+                    <p>Problems are socially constructed and defined - they don't simply exist "out there"</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up">Different stakeholders frame problems differently</li>
+                    <li class="fragment fade-up">Each problem definition implies a different solution</li>
+                    <li class="fragment fade-up">Whoever successfully defines the problem gains advantage in designing the solution</li>
+                    <li class="fragment fade-up">Problems must be defined as something we can do something about</li>
+                </ul>
+                <div class="two-column fragment fade-up">
+                    <div class="column box">
+                        <h4>Example: Homelessness</h4>
+                        <p>Defined as:</p>
+                        <ul>
+                            <li>Housing affordability crisis</li>
+                            <li>Mental health/addiction issue</li>
+                            <li>Economic displacement</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h4>Resulting Policy Approaches:</h4>
+                        <ul>
+                            <li>Affordable housing development</li>
+                            <li>Treatment and services</li>
+                            <li>Job programs and economic support</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: Policy Goals from Stone -->
+            <section>
+                <h2>Policy Goals</h2>
+                <h3>from Deborah Stone's <em>Policy Paradox</em></h3>
+                <div class="box">
+                    <ul>
+                        <li class="fragment fade-up"><strong>Security</strong> - Protecting people from harm</li>
+                        <li class="fragment fade-up"><strong>Liberty</strong> - Protecting people's rights</li>
+                        <li class="fragment fade-up"><strong>Efficiency</strong> - Getting the most out of resources</li>
+                        <li class="fragment fade-up"><strong>Equity</strong> - Fairness in the distribution of resources</li>
+                    </ul>
+                </div>
+                <div class="key-points fragment fade-up">
+                    <p>Stone argues these goals are inherently in tension with one another - policy design involves making trade-offs between them</p>
+                </div>
+                <div class="citation">Source: Stone, D. (2012). Policy Paradox: The Art of Political Decision Making</div>
+            </section>
+
+            <!-- SLIDE 9: Equality: A Contested Goal -->
+            <section>
+                <h2>Equality: A Contested Goal</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Equality of Opportunity</h3>
+                        <ul>
+                            <li>Dominant in American political discourse</li>
+                            <li>Everyone starts with same rules and chances</li>
+                            <li>Policy focuses on removing barriers to entry</li>
+                            <li>Minimal intervention in markets</li>
+                            <li>Examples: Anti-discrimination laws, public education</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Equality of Outcome</h3>
+                        <ul>
+                            <li>More prevalent in social democracies</li>
+                            <li>Focuses on end distribution of resources</li>
+                            <li>Policy aims to narrow gaps between groups</li>
+                            <li>More significant market interventions</li>
+                            <li>Examples: Progressive taxation, universal benefits</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">Trade-offs involve balancing individual liberty with collective welfare, and efficiency with equity</p>
+            </section>
+
+            <!-- SLIDE 10: Efficiency: A Contested Goal -->
+            <section>
+                <h2>Efficiency: A Contested Goal</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Core Concept</h3>
+                        <ul>
+                            <li>Often defined as achieving the most output for the least input</li>
+                            <li>Usually a means to a goal, not an end in itself</li>
+                            <li>The idea is to achieve an objective with the least amount of resources</li>
+                            <li>Often in conflict with other goals like equity or comprehensiveness</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Key Questions</h3>
+                        <ul>
+                            <li>How do we define and measure inputs?</li>
+                            <li>How do we define and measure outputs?</li>
+                            <li>Efficiency for whom? (Government, citizens, specific groups?)</li>
+                            <li>What timeframe are we considering? (Short vs. long-term)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-points fragment fade-up">
+                    <p>Efficiency is not neutral or objective - it depends on how we value different inputs and outputs</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: Efficiency: Problems -->
+            <section>
+                <h2>Efficiency: A Contested Goal</h2>
+                <p>Problems of efficiency:</p>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Measurement Challenges</h3>
+                        <ul>
+                            <li>What are the inputs and outputs?</li>
+                            <li>How do we measure them accurately?</li>
+                            <li>What is the appropriate time frame?</li>
+                            <li>What is the opportunity cost?</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Policy Examples</h3>
+                        <ul>
+                            <li><strong>Education:</strong> Cost per student vs. quality metrics</li>
+                            <li><strong>Healthcare:</strong> Treatment speed vs. health outcomes</li>
+                            <li><strong>Welfare:</strong> Administrative costs vs. benefits delivered</li>
+                            <li><strong>Infrastructure:</strong> Quick fixes vs. sustainable solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: Efficiency: Simon Quote -->
+            <section>
+                <h2>Efficiency: A Contested Goal</h2>
+                <blockquote>
+                    <p>A good public library is not one that owns all the books that have ever been published, but one that has used its limited funds to build up as good a collection as possible under the circumstances</p>
+                </blockquote>
+                <p>- Herbert Simon</p>
+                <div class="key-points fragment fade-up">
+                    <p>Efficiency is about making the best possible use of limited resources, not maximizing every possible outcome</p>
+                </div>
+                <div class="citation">Herbert Simon, Administrative Behavior (1947)</div>
+            </section>
+
+            <!-- SLIDE 13: Efficiency: Stone Quote -->
+            <section>
+                <h2>Efficiency: A Contested Goal</h2>
+                <blockquote>
+                    <p>People who oppose certain programs will often do so because they disagree with the substance of the policy. But it is much easier—and often more successful—to claim or expose how a policy is wasteful, rather than arguing about the policy's merits because nobody favors waste.</p>
+                </blockquote>
+                <p>- Deborah Stone</p>
+                <div class="accent-box fragment fade-up">
+                    <p>Efficiency arguments can be strategic and political, not just technical</p>
+                </div>
+                <div class="citation">Stone, D. (2012). Policy Paradox: The Art of Political Decision Making</div>
+            </section>
+
+            <!-- SLIDE 14: Equity: A Contested Goal -->
+            <section>
+                <h2>Equity: A Contested Goal</h2>
+                <div class="box">
+                    <p>Equity is fairness in the distribution of resources, opportunities, and outcomes</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up">Often in tension with efficiency and sometimes with liberty</li>
+                    <li class="fragment fade-up">Different conceptions of what counts as "fair"</li>
+                    <li class="fragment fade-up">Contested views on whether process or outcomes matter more</li>
+                    <li class="fragment fade-up">Disagreement about which inequities require intervention</li>
+                </ul>
+                <div class="two-column fragment fade-up">
+                    <div class="column box">
+                        <h3>Forms of Equity</h3>
+                        <ul>
+                            <li>Horizontal equity (treating similar cases similarly)</li>
+                            <li>Vertical equity (treating different cases differently)</li>
+                            <li>Intergenerational equity</li>
+                            <li>Procedural vs. substantive equity</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Policy Approaches</h3>
+                        <ul>
+                            <li>Universal programs</li>
+                            <li>Targeted interventions</li>
+                            <li>Redistributive policies</li>
+                            <li>Procedural safeguards</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 15: Security vs. Liberty -->
+            <section>
+                <h2>Security vs. Liberty: Conflicting Goals</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Thomas Hobbes' tradeoff:</h3>
+                        <ul>
+                            <li>Give up some liberties to the state, which holds the most power, so there is security</li>
+                            <li>This is an authoritarian view of the state</li>
+                            <li>Emphasizes security as prerequisite for all other rights</li>
+                            <li>Views human nature as requiring strong control</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>John Locke's approach:</h3>
+                        <ul>
+                            <li>Form a social contract wherein one surrenders some liberties to create a government of limited power</li>
+                            <li>Democratic view of the state</li>
+                            <li>Sees liberty as fundamental natural right</li>
+                            <li>Government exists primarily to protect rights</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-points fragment fade-up">
+                    <p>These competing philosophical traditions continue to shape contemporary policy debates</p>
+                </div>
+            </section>
+            
+            <!-- SLIDE 16: Security vs. Liberty - Modern Applications -->
+            <section>
+                <h2>Security vs. Liberty: Modern Applications</h2>
+                <p>This fundamental tension plays out in numerous policy areas:</p>
+                <ul>
+                    <li class="fragment fade-up"><strong>National Security:</strong> Surveillance vs. privacy rights</li>
+                    <li class="fragment fade-up"><strong>Public Health:</strong> Mandatory measures vs. individual choice</li>
+                    <li class="fragment fade-up"><strong>Gun Control:</strong> Public safety vs. individual rights to bear arms</li>
+                    <li class="fragment fade-up"><strong>Internet Regulation:</strong> Protection from harm vs. free speech</li>
+                </ul>
+                <p class="fragment fade-up">Policy design must navigate this enduring tension between collective security and individual liberty</p>
+                <div class="box fragment fade-up">
+                    <p>The design question is not <em>whether</em> to limit liberty for security, but <em>how much</em> and <em>in what ways</em> to balance these competing goods</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 17: Ambiguity and Goal Conflict -->
+            <section>
+                <h2>Ambiguity and Goal Conflict</h2>
+                <div class="box">
+                    <p>Policy design reveals that goals are often ambiguous and in conflict with one another</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up">Different stakeholders prioritize different goals</li>
+                    <li class="fragment fade-up">Policy design reveals conflicts over means of achieving goals</li>
+                    <li class="fragment fade-up">Different policy goals can be in conflict with one another
+                        <ul>
+                            <li>For example: Immigration policy versus foreign relations policy with Mexico</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="accent-box fragment fade-up">
+                    <p>Conflicts are not hopeless! They are <em>complex</em>. Good policy finds a balance.</p>
+                    <p>Policy ambiguity can sometimes be <em>strategic</em> - allowing coalitions to form around different interpretations</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 18: Goal Conflicts - Real World Examples -->
+            <section class="compact">
+                <h2>Goal Conflicts - Real World Examples</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Environmental Policy</h3>
+                        <ul>
+                            <li>Environmental protection vs. economic growth</li>
+                            <li>Carbon reduction vs. energy affordability</li>
+                            <li>Conservation vs. resource development</li>
+                            <li>Local impacts vs. global benefits</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Healthcare Policy</h3>
+                        <ul>
+                            <li>Universal access vs. cost containment</li>
+                            <li>Quality of care vs. efficiency</li>
+                            <li>Patient choice vs. standardized treatments</li>
+                            <li>Prevention vs. treatment funding</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">Successful policies acknowledge these tensions rather than ignoring them</p>
+                <div class="key-points fragment fade-up">
+                    <p>The most effective policies don't eliminate conflicts - they manage them transparently</p>
+                </div>
+            </section>
+            
+            <!-- SLIDE 19: Balancing Competing Goals -->
+            <section>
+                <h2>Balancing Competing Goals</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Common Trade-offs</h3>
+                        <ul>
+                            <li><strong>Efficiency vs. Equity:</strong> Cost-effectiveness vs. fair distribution</li>
+                            <li><strong>Security vs. Liberty:</strong> Protection vs. freedom</li>
+                            <li><strong>Speed vs. Deliberation:</strong> Quick action vs. careful planning</li>
+                            <li><strong>Standardization vs. Flexibility:</strong> Consistency vs. adaptability</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Balancing Strategies</h3>
+                        <ul>
+                            <li>Prioritization - which goal takes precedence?</li>
+                            <li>Compromise - finding middle ground</li>
+                            <li>Sequencing - different goals at different stages</li>
+                            <li>Compensation - offsetting negative impacts</li>
+                            <li>Mixed strategies - different approaches for different segments</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fragment fade-up focus-box">
+                    <p>Policy design is not about eliminating all tensions, but making thoughtful choices about trade-offs</p>
+                </div>
+            </section>
+            
+            <!-- SLIDE 20: Case Study in Balancing Competing Goals -->
+            <section class="compact">
+                <h2>Case Study: Balancing Competing Goals</h2>
+                <h3>Healthcare Policy Example</h3>
+                <div class="two-column">
+                    <div class="column box">
+                        <h4>Competing Goals</h4>
+                        <ul>
+                            <li><strong>Universal Access:</strong> Everyone gets healthcare</li>
+                            <li><strong>Quality:</strong> High standards of care</li>
+                            <li><strong>Cost Control:</strong> Affordable for society</li>
+                            <li><strong>Provider Autonomy:</strong> Medical judgment</li>
+                            <li><strong>Patient Choice:</strong> Selection of providers/treatments</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h4>Balancing Approaches</h4>
+                        <ul>
+                            <li><strong>Tiered Systems:</strong> Basic universal coverage with optional supplements</li>
+                            <li><strong>Quality Metrics:</strong> Performance-based payments</li>
+                            <li><strong>Managed Care:</strong> Coordinated services with oversight</li>
+                            <li><strong>Public-Private Mix:</strong> Different sectors handle different aspects</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">Policy designers must explicitly address these tensions rather than ignoring them</p>
+            </section>
+
+            <!-- SLIDE 21: Complexity and Differing Goals -->
+            <section class="compact">
+                <h2>Complexity and Differing Goals</h2>
+                <p>Is the purpose of the goal to eliminate a problem, hold steady a growing problem, or reduce the problem to a lower level?</p>
+                <div class="box">
+                    <h3>War on Drugs Example</h3>
+                    <ul>
+                        <li><strong>Elimination:</strong> Zero tolerance, maximum enforcement, severe penalties</li>
+                        <li><strong>Holding Steady:</strong> Targeted enforcement, education campaigns</li>
+                        <li><strong>Reduction:</strong> Harm reduction strategies, treatment over punishment</li>
+                    </ul>
+                </div>
+                <p class="fragment fade-up">Each approach implies different tools, resources, timeframes, and metrics for success</p>
+                <p class="fragment fade-up">Policy design requires explicit decisions about goal threshold levels</p>
+            </section>
+            
+            <!-- SLIDE 22: Scalability of Policy Goals -->
+            <section class="compact">
+                <h2>Scalability of Policy Goals</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Goal Intensity Questions</h3>
+                        <ul>
+                            <li>How much change is needed?</li>
+                            <li>What is politically feasible?</li>
+                            <li>What is administratively possible?</li>
+                            <li>What resources are available?</li>
+                            <li>What is the timeframe?</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Target Setting Example</h3>
+                        <ul>
+                            <li>Ambitious: Carbon neutrality by 2030</li>
+                            <li>Moderate: 50% emissions reduction by 2035</li>
+                            <li>Minimal: Stabilize emissions by 2040</li>
+                            <li>Each target demands different policy tools</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">Policy designers must balance ambition with feasibility when setting targets</p>
+            </section>
+
+            <!-- SLIDE 23: Policy Tools -->
+            <section data-transition="zoom">
+                <h2>Policy Tools</h2>
+                <div class="box">
+                    <p>The means by which the policy will achieve its goals</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up">How government seeks a policy objective</li>
+                    <li class="fragment fade-up">The interface between the government's intentions and actual implementation outcomes</li>
+                    <li class="fragment fade-up">Range from direct provision to market incentives to regulations</li>
+                </ul>
+                <div class="accent-box fragment fade-up">
+                    <p>The selection of appropriate policy tools is crucial for successful implementation</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 24: Policy Tools: Dimensions -->
+            <section>
+                <h2>Policy Tools: Dimensions</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Nature of Government Activity</h3>
+                        <ul>
+                            <li>Money payments</li>
+                            <li>Provision of goods and services</li>
+                            <li>Legal protections</li>
+                            <li>Restrictions and penalties</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Delivery System Structure</h3>
+                        <ul>
+                            <li><strong>Direct:</strong> Government provides service</li>
+                            <li><strong>Indirect:</strong> Third parties deliver</li>
+                            <li><strong>Mixed:</strong> Combination of approaches</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="two-column fragment fade-up">
+                    <div class="column box">
+                        <h3>Degree of Centralization</h3>
+                        <ul>
+                            <li>Federal control</li>
+                            <li>State/local authority</li>
+                            <li>Shared responsibility</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Administrative Complexity</h3>
+                        <ul>
+                            <li>Simple, standardized processes</li>
+                            <li>Complex, customized approaches</li>
+                            <li>Multiple layers of oversight</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 25: Love, Fear, and Money -->
+            <section data-transition="concave">
+                <h2>Love, Fear, and Money (Etzioni 1961)</h2>
+                <div class="box">
+                    <p>Three basic reasons why people comply with rules, orders, or policy:</p>
+                </div>
+                <ul>
+                    <li class="fragment fade-up"><strong class="highlight">Love:</strong> Compliance out of a sense of agreement, love, or moral obligation</li>
+                    <li class="fragment fade-up"><strong class="highlight">Fear:</strong> Compliance out of a sense of fear of punishment</li>
+                    <li class="fragment fade-up"><strong class="highlight">Money:</strong> Compliance is in one's monetary or remunerative interest</li>
+                </ul>
+                <div class="key-points fragment fade-up">
+                    <p>Effective policies find a balance between low levels of fear and high levels of love and money</p>
+                </div>
+                <div class="citation">Source: Etzioni, A. (1961). A Comparative Analysis of Complex Organizations</div>
+            </section>
+            
+            <!-- SLIDE 26: Love, Fear, and Money - Applications -->
+            <section data-transition="concave">
+                <h2>Love, Fear, and Money - Applications</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Policy Examples</h3>
+                        <ul>
+                            <li><strong>Love:</strong> Public campaigns that appeal to moral duty (recycling, blood donation)</li>
+                            <li><strong>Fear:</strong> Traffic fines, criminal penalties, business regulations</li>
+                            <li><strong>Money:</strong> Tax incentives, subsidies, grants, economic benefits</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Trade-offs</h3>
+                        <ul>
+                            <li>Fear-based tools are often immediately effective but create resistance</li>
+                            <li>Love-based tools create sustainable behavior but take time to develop</li>
+                            <li>Money-based tools work well but can be expensive and create dependency</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="focus-box fragment fade-up">
+                    <p>Different policy domains may require different compliance mechanisms</p>
+                </div>
+            </section>
+            
+            <!-- SLIDE 27: Balancing Compliance Mechanisms -->
+            <section data-transition="concave">
+                <h2>Balancing Compliance Mechanisms</h2>
+                <p>Policy designers must consider:</p>
+                <ul>
+                    <li class="fragment fade-up">Cultural context - what motivates the target population?</li>
+                    <li class="fragment fade-up">Time horizon - immediate compliance vs. long-term sustainability</li>
+                    <li class="fragment fade-up">Resource constraints - economic tools require budgets</li>
+                    <li class="fragment fade-up">Political feasibility - coercive tools face more resistance</li>
+                    <li class="fragment fade-up">Administrative capacity - can the implementing agency enforce?</li>
+                </ul>
+                <div class="accent-box fragment fade-up">
+                    <p><em>The most effective policies typically employ a mix of all three mechanisms tailored to context and goals</em></p>
+                </div>
+            </section>
+
+            <!-- SLIDE 28: Policy Tool Considerations -->
+            <section>
+                <h2>Policy Tool Considerations</h2>
+                <div class="box">
+                    <ul>
+                        <li>Non-Coercive to coercive (love to fear) exist along a continuum</li>
+                        <li>The extent to which government will use its resources to achieve a policy goal</li>
+                        <li>Choosing effective tools requires a good causal theory</li>
+                    </ul>
+                </div>
+                <div class="two-column fragment fade-up">
+                    <div class="column box">
+                        <h3>Questions to Ask</h3>
+                        <ul>
+                            <li>What behavior needs to change?</li>
+                            <li>Who needs to take action?</li>
+                            <li>What might motivate compliance?</li>
+                            <li>What tools are politically feasible?</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Tool Selection Criteria</h3>
+                        <ul>
+                            <li>Effectiveness</li>
+                            <li>Efficiency</li>
+                            <li>Equity</li>
+                            <li>Enforceability</li>
+                            <li>Political acceptability</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 29: Models of Policy Tools -->
+            <section>
+                <h2>Models of Policy Tools</h2>
+                <h4>Howlett, Ramesh, and Perl</h4>
+                <h3>Economic and Political Tools</h3>
+                <div class="box">
+                    <p>Policy tools represent the specific instruments governments use to implement policies and achieve policy goals.</p>
+                    <p>They range from direct service provision to market incentives to regulations.</p>
+                </div>
+                <div class="key-points fragment fade-up">
+                    <p>The choice of tools reflects both technical considerations and political values</p>
+                </div>
+                <div class="citation">Source: Howlett, M., Ramesh, M., & Perl, A. (2009). Studying Public Policy: Policy Cycles and Policy Subsystems</div>
+            </section>
+
+            <!-- SLIDE 30: Economic Tools -->
+            <section>
+                <h2>Economic Tools</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Characteristics</h3>
+                        <ul>
+                            <li>Favor individual freedom and choice</li>
+                            <li>Tend to use non-coercive means</li>
+                            <li>Makes many assumptions about what is "possible" and what is "rational"</li>
+                            <li>Assumes that people are rational actors</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Examples</h3>
+                        <ul>
+                            <li><strong>Subsidies:</strong> Agriculture, energy, housing</li>
+                            <li><strong>Tax incentives:</strong> R&D credits, mortgage deductions</li>
+                            <li><strong>Vouchers:</strong> Education, housing, healthcare</li>
+                            <li><strong>User fees:</strong> Parks, highways, utilities</li>
+                            <li><strong>Market creation:</strong> Cap and trade systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SLIDE 31: Economic Tools Trade-offs -->
+            <section>
+                <h2>Economic Tools: Trade-offs</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Advantages</h3>
+                        <ul>
+                            <li>Preserve individual choice and market mechanisms</li>
+                            <li>Often more politically palatable than regulations</li>
+                            <li>Can harness market efficiency for public goals</li>
+                            <li>Allow flexible responses by target populations</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Disadvantages</h3>
+                        <ul>
+                            <li>May not work when markets are imperfect</li>
+                            <li>Can be captured by special interests</li>
+                            <li>Benefits may be unequally distributed</li>
+                            <li>Effectiveness depends on accurate pricing</li>
+                            <li>May have unintended consequences</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-points fragment fade-up">
+                    <p>Economic tools work best when markets function well and policy goals align with individual self-interest</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 32: Political Tools -->
+            <section class="compact">
+                <h2>Political Tools</h2>
+                <blockquote>
+                    "Any instrument [or tool] can theoretically accomplish any chosen aim, but governments prefer less coercive instruments unless forced by either recalcitrance on the part of the subject and/or continued social pressure for change to utilize more coercive instruments."
+                </blockquote>
+                <p><span style="font-size:0.7em">- Howlett, Ramesh, and Perl</span></p>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Political Tool Examples:</h3>
+                        <ul>
+                            <li><strong>Regulations:</strong> Command-and-control rules</li>
+                            <li><strong>Direct provision:</strong> Government services</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <ul>
+                            <li><strong>Information:</strong> Public campaigns</li>
+                            <li><strong>Public enterprises:</strong> State-owned entities</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="citation">Source: Howlett, M., Ramesh, M., & Perl, A. (2009). Studying Public Policy: Policy Cycles and Policy Subsystems</div>
+            </section>
+
+            <!-- SLIDE 33: Tools and Choices -->
+            <section class="compact">
+                <h2>Tools and Choices</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Key Considerations</h3>
+                        <ul>
+                            <li>Technically sound design ≠ political viability</li>
+                            <li>Resources constrain available options</li>
+                            <li>Behavioral assumptions matter</li>
+                            <li>Multiple tools typically needed</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Tool Selection Factors</h3>
+                        <ul>
+                            <li>Administrative capacity</li>
+                            <li>Organizational culture</li>
+                            <li>Past policy experiences</li>
+                            <li>Political support/opposition</li>
+                            <li>Time constraints</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">The most successful policies use complementary tools that address different aspects of the problem</p>
+            </section>
+
+            <!-- SLIDE 34: Objective and Subjective Tools -->
+            <section>
+                <h2>Objective and Subjective Tools</h2>
+                <h3>Objective - Rational Characteristics</h3>
+                <div class="box">
+                    <ul>
+                        <li><strong>Target population:</strong> The citizens who receive the benefits or bear the costs of the policy</li>
+                        <li><strong>Values:</strong> What is being distributed or promoted</li>
+                        <li><strong>Rules:</strong> Guidelines governing or constraining action</li>
+                        <li><strong>Rationales:</strong> The justification for the policy</li>
+                        <li><strong>Assumptions:</strong> Behavioral theories that tie all of these together</li>
+                    </ul>
+                </div>
+                <p class="fragment fade-up">These represent the technical elements of policy design - the "mechanics" of how policies function</p>
+            </section>
+
+            <!-- SLIDE 35: Subjective - Value Characteristics -->
+            <section>
+                <h2>Objective and Subjective Tools</h2>
+                <h3>Subjective - Value Characteristics</h3>
+                <div class="box">
+                    <ul>
+                        <li>Who justifiably deserves the costs and benefits of the policy?</li>
+                        <li>What values should be backed by the coercive powers of the state?</li>
+                        <li>Who (or what) should have the freedom of action promoted or constrained to uphold those values?</li>
+                    </ul>
+                </div>
+                <p class="fragment fade-up">These represent the normative and political dimensions of policy design</p>
+            </section>
+            
+            <!-- SLIDE 36: The Interplay Between Objective and Subjective Elements -->
+            <section>
+                <h2>Objective and Subjective Elements: Interplay</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Climate Policy Example</h3>
+                        <p><strong>Objective elements:</strong></p>
+                        <ul>
+                            <li>Carbon pricing mechanisms</li>
+                            <li>Emissions targets and timelines</li>
+                            <li>Reporting requirements</li>
+                            <li>Enforcement structures</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <p><strong>Subjective elements:</strong></p>
+                        <ul>
+                            <li>Intergenerational justice concerns</li>
+                            <li>Distribution of transition costs</li>
+                            <li>Rights of affected communities</li>
+                            <li>Balance between global and local interests</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fragment fade-up">Effective policy design requires attention to both dimensions</p>
+            </section>
+            
+            <!-- SLIDE 37: Integrating Policy Design Elements -->
+            <section>
+                <h2>Integrating Policy Design Elements</h2>
+                <ul>
+                    <li class="fragment fade-up">Goals must be clearly articulated but may require flexibility</li>
+                    <li class="fragment fade-up">Causal theories should be evidence-based but acknowledge uncertainties</li>
+                    <li class="fragment fade-up">Tools should match both the technical aspects of the problem and reflect societal values</li>
+                    <li class="fragment fade-up">Target populations must be precisely defined while considering equity implications</li>
+                    <li class="fragment fade-up">Implementation plans need to address both administrative capacity and political sustainability</li>
+                </ul>
+                <div class="box fragment fade-up">
+                    <p>The art of policy design lies in synthesizing technical expertise with democratic values</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 38: Policy Design in Practice -->
+            <section>
+                <h2>Policy Design in Practice</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h3>Challenges</h3>
+                        <ul>
+                            <li>Incomplete information</li>
+                            <li>Value conflicts</li>
+                            <li>Resource constraints</li>
+                            <li>Political pressures</li>
+                            <li>Implementation complexities</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h3>Strategies</h3>
+                        <ul>
+                            <li>Pilot programs</li>
+                            <li>Phased implementation</li>
+                            <li>Adaptive management</li>
+                            <li>Inclusive design processes</li>
+                            <li>Evidence-based approaches</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-points fragment fade-up">
+                    <p>Policy design is iterative, not linear - it requires ongoing learning and adaptation</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 39: Conclusion -->
+            <section class="title-slide" data-transition="zoom">
+                <h2>That's it for Today</h2>
+                <h3>Next Time: Implementation</h3>
+                <p>We'll explore how policy designs translate into real-world action</p>
+                <div class="divider"></div>
+                <div class="key-points">
+                    <p>Remember: Good policy design balances technical effectiveness with political feasibility and democratic values</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom/zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'fade', // Default transition
+            transitionSpeed: 'default',
+            center: false,
+            controls: true,
+            progress: true,
+            width: 1280, // Set for widescreen
+            height: 720, // Set for widescreen
+            margin: 0.04, // Reduced margin for better use of space
+            minScale: 0.2,
+            maxScale: 2.0,
+            // Enable keyboard shortcuts
+            keyboard: true,
+            // Add plugins
+            plugins: [RevealZoom, RevealNotes, RevealHighlight],
+            // Configure plugin settings
+            highlight: {
+                highlightOnLoad: true
+            }
+        });
+        
+        // Add specific transitions for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add .compact class to slides with more content
+            const denseSlides = [
+                18, 20, 21, 22, 32, 33
+            ];
+            
+            // Apply compact class to all slides with two-column layout for better fit
+            document.querySelectorAll('.two-column').forEach(function(element) {
+                if (!element.closest('section').classList.contains('compact')) {
+                    element.closest('section').classList.add('compact');
+                }
+            });
+            
+            denseSlides.forEach(function(index) {
+                if (Reveal.getSlides()[index]) {
+                    Reveal.getSlides()[index].classList.add('compact');
+                }
+            });
+            
+            // Enhance fragments with animations
+            document.querySelectorAll('.fragment').forEach(function(fragment) {
+                // Add random delay to create staggered effect
+                const delay = Math.random() * 0.3; // Random delay between 0 and 0.3s
+                fragment.style.transitionDelay = delay + 's';
+            });
+            
+            // Create a subtle hover effect for clickable elements
+            document.querySelectorAll('.box, .accent-box').forEach(function(element) {
+                element.addEventListener('mouseover', function() {
+                    this.style.transform = 'translateY(-3px)';
+                    this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.2)';
+                });
+                element.addEventListener('mouseout', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+</body>
 </html>

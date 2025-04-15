@@ -39,7 +39,7 @@
             padding: 0 40px;
             box-sizing: border-box;
             height: 100%;
-            overflow: visible;
+            overflow: auto; /* Changed from visible to auto to handle overflow */
             background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
             border-radius: 8px;
         }
@@ -86,8 +86,8 @@
 
         .reveal li {
             margin-bottom: 0.3em;
-            font-size: 0.95em;
-            line-height: 1.3;
+            font-size: 0.9em; /* Slightly reduced from 0.95em */
+            line-height: 1.2; /* Reduced from 1.3 */
         }
 
         .reveal ul ul li, .reveal ol ul li {
@@ -150,22 +150,21 @@
         .two-column {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 15px; /* Reduced from 20px */
             width: 100%;
-            max-height: 75vh;
-            overflow: visible;
+            max-height: 70vh; /* Reduced from 75vh */
         }
 
         .column {
             width: 48%;
-            font-size: 0.9em;
+            font-size: 0.85em; /* Reduced from 0.9em */
         }
 
         .box {
             background: var(--box-bg-primary);
             border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 12px;
+            padding: 10px; /* Reduced from 12px */
+            margin-bottom: 10px; /* Reduced from 12px */
             border: 1px solid rgba(33, 150, 243, 0.3);
             box-shadow: 0 3px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
@@ -179,8 +178,8 @@
         .accent-box {
             background: var(--box-bg-secondary);
             border-radius: 8px;
-            padding: 12px;
-            margin-bottom: 12px;
+            padding: 10px; /* Reduced from 12px */
+            margin-bottom: 10px; /* Reduced from 12px */
             border: 1px solid rgba(255, 87, 34, 0.3);
             box-shadow: 0 3px 4px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
@@ -204,9 +203,9 @@
         }
         
         p {
-            font-size: 0.9em;
-            line-height: 1.4;
-            margin-bottom: 0.5em;
+            font-size: 0.85em; /* Reduced from 0.9em */
+            line-height: 1.3; /* Reduced from 1.4 */
+            margin-bottom: 0.4em; /* Reduced from 0.5em */
         }
         
         .reveal .progress {
@@ -216,32 +215,67 @@
         
         /* Compact classes for slides with more content */
         .compact li {
-            margin-bottom: 0.2em;
-            font-size: 0.85em;
+            margin-bottom: 0.1em; /* Reduced from 0.2em */
+            font-size: 0.8em; /* Reduced from 0.85em */
+            line-height: 1.2; /* Added */
         }
         
         .compact h3 {
-            margin-bottom: 0.2em;
-            font-size: 1.2em;
+            margin-bottom: 0.15em; /* Reduced from 0.2em */
+            font-size: 1.15em; /* Reduced from 1.2em */
         }
         
         .compact h4 {
-            font-size: 1em;
-            margin-bottom: 0.15em;
+            font-size: 0.95em; /* Reduced from 1em */
+            margin-bottom: 0.1em; /* Reduced from 0.15em */
         }
         
         .compact .box, .compact .accent-box {
-            padding: 8px;
-            margin-bottom: 8px;
+            padding: 6px; /* Reduced from 8px */
+            margin-bottom: 6px; /* Reduced from 8px */
         }
         
         .compact p {
-            margin-bottom: 0.25em;
-            font-size: 0.9em;
+            margin-bottom: 0.2em; /* Reduced from 0.25em */
+            font-size: 0.8em; /* Reduced from 0.9em */
         }
         
         .compact .two-column {
-            gap: 12px;
+            gap: 10px; /* Reduced from 12px */
+        }
+        
+        /* Super compact for very dense slides */
+        .super-compact li {
+            margin-bottom: 0;
+            font-size: 0.75em;
+            line-height: 1.1;
+        }
+        
+        .super-compact .box, .super-compact .accent-box {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .super-compact h3 {
+            font-size: 1.1em;
+            margin-bottom: 0.1em;
+        }
+        
+        .super-compact p {
+            font-size: 0.75em;
+            margin-bottom: 0.15em;
+        }
+        
+        .super-compact .two-column {
+            gap: 8px;
+        }
+        
+        /* Split slide for content that needs to be broken up */
+        .split-slide {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         /* Ensure content fits within slide boundaries */
@@ -302,8 +336,8 @@
                 rgba(33, 150, 243, 0.15) 0%, 
                 rgba(255, 193, 7, 0.15) 100%);
             border-radius: 8px;
-            padding: 10px;
-            margin: 12px 0;
+            padding: 8px; /* Reduced from 10px */
+            margin: 10px 0; /* Reduced from 12px */
             border: 1px solid rgba(255, 193, 7, 0.3);
             box-shadow: 0 3px 6px rgba(0,0,0,0.15);
         }
@@ -311,13 +345,13 @@
         .key-points h4 {
             color: var(--highlight-color);
             margin-top: 0;
-            font-size: 1em;
-            margin-bottom: 0.15em;
+            font-size: 0.95em; /* Reduced from 1em */
+            margin-bottom: 0.1em; /* Reduced from 0.15em */
         }
         
         .key-points p {
-            font-size: 0.9em;
-            margin-bottom: 0.25em;
+            font-size: 0.85em; /* Reduced from 0.9em */
+            margin-bottom: 0.2em; /* Reduced from 0.25em */
         }
 
         /* Special emphasis */
@@ -350,8 +384,8 @@
         .focus-box {
             border: 2px dashed var(--highlight-color);
             border-radius: 10px;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 12px; /* Reduced from 15px */
+            margin: 12px 0; /* Reduced from 15px */
             background: rgba(255, 193, 7, 0.05);
         }
 
@@ -362,7 +396,7 @@
 
         .reveal ul li {
             position: relative;
-            padding-left: 1.5em;
+            padding-left: 1.2em; /* Reduced from 1.5em */
         }
 
         .reveal ul li::before {
@@ -380,7 +414,7 @@
 
         .reveal ol li {
             position: relative;
-            padding-left: 1.8em;
+            padding-left: 1.5em; /* Reduced from 1.8em */
         }
 
         .reveal ol li::before {
@@ -399,11 +433,11 @@
 
         /* Citation style */
         .citation {
-            font-size: 0.7em;
+            font-size: 0.65em; /* Reduced from 0.7em */
             color: rgba(255,255,255,0.5);
             font-style: italic;
             text-align: right;
-            margin-top: 10px;
+            margin-top: 8px; /* Reduced from 10px */
         }
 
         /* Image styling */
@@ -427,7 +461,32 @@
         .divider {
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-            margin: 15px 0;
+            margin: 12px 0; /* Reduced from 15px */
+        }
+        
+        /* Added: scale down content for better fit */
+        .scale-down {
+            transform: scale(0.95);
+            transform-origin: top left;
+        }
+        
+        /* Added: slides that need to be vertically centered */
+        .center-vertically {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        /* Added: make compact lists even more compact for dense slides */
+        .tighter-list li {
+            margin-bottom: 0 !important;
+            line-height: 1.1 !important;
+        }
+        
+        /* Added: auto-height for two-column layouts to prevent overflow */
+        .auto-height {
+            max-height: none !important;
         }
     </style>
 </head>
@@ -446,18 +505,19 @@
             <section data-transition="fade">
                 <h2>Policy Design</h2>
                 <div class="box">
-                    <p>The process by which policies are designed, through both technical analysis and the political process, to achieve a particular goal.</p>
+                    <p>The process by which policies are designed—through technical analysis and political negotiation—to achieve a public goal.</p>
                 </div>
                 <ul>
-                    <li class="fragment fade-up">Occurs throughout the policy process as ideas and priorities are exchanged</li>
-                    <li class="fragment fade-up">Involves decision-making about which policy designs - and which <span class="emphasis">policy tools</span> - to adopt</li>
-                    <li class="fragment fade-up">Balances technical expertise with political feasibility</li>
+                    <li class="fragment fade-up">Occurs across the policy process, not just at the beginning</li>
+                    <li class="fragment fade-up">Involves selecting policy tools to pursue goals</li>
+                    <li class="fragment fade-up">Balances <em>technical feasibility</em> with <em>political acceptability</em></li>
                 </ul>
                 <div class="key-points fragment fade-up">
                     <h4>Key Insight:</h4>
-                    <p>Design choices determine a policy's effectiveness, efficiency, equity, and political sustainability</p>
+                    <p>Every design choice involves trade-offs—between values, goals, and outcomes</p>
                 </div>
             </section>
+            
 
             <!-- SLIDE 3: Policy Design and Implementation -->
             <section data-transition="fade">
@@ -547,7 +607,7 @@
                 </div>
             </section>
 
-            <!-- SLIDE 7: Causal Theory: Problem Definition -->
+            <!-- SLIDE 7: Causal Theory: Problem Definition (Split into two slides) -->
             <section data-transition="convex">
                 <h2>Causal Theory:</h2>
                 <h3>Problem Definition → Policy Design</h3>
@@ -560,7 +620,12 @@
                     <li class="fragment fade-up">Whoever successfully defines the problem gains advantage in designing the solution</li>
                     <li class="fragment fade-up">Problems must be defined as something we can do something about</li>
                 </ul>
-                <div class="two-column fragment fade-up">
+            </section>
+            
+            <!-- NEW SLIDE: Causal Theory Example --> 
+            <section data-transition="convex">
+                <h2>Problem Definition Example</h2>
+                <div class="two-column">
                     <div class="column box">
                         <h4>Example: Homelessness</h4>
                         <p>Defined as:</p>
@@ -578,6 +643,9 @@
                             <li>Job programs and economic support</li>
                         </ul>
                     </div>
+                </div>
+                <div class="key-points">
+                    <p>The way we define the problem shapes the solutions we consider</p>
                 </div>
             </section>
 
@@ -605,7 +673,7 @@
                 <div class="two-column">
                     <div class="column box">
                         <h3>Equality of Opportunity</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Dominant in American political discourse</li>
                             <li>Everyone starts with same rules and chances</li>
                             <li>Policy focuses on removing barriers to entry</li>
@@ -615,7 +683,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Equality of Outcome</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>More prevalent in social democracies</li>
                             <li>Focuses on end distribution of resources</li>
                             <li>Policy aims to narrow gaps between groups</li>
@@ -633,7 +701,7 @@
                 <div class="two-column">
                     <div class="column box">
                         <h3>Core Concept</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Often defined as achieving the most output for the least input</li>
                             <li>Usually a means to a goal, not an end in itself</li>
                             <li>The idea is to achieve an objective with the least amount of resources</li>
@@ -642,7 +710,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Key Questions</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>How do we define and measure inputs?</li>
                             <li>How do we define and measure outputs?</li>
                             <li>Efficiency for whom? (Government, citizens, specific groups?)</li>
@@ -662,7 +730,7 @@
                 <div class="two-column">
                     <div class="column box">
                         <h3>Measurement Challenges</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>What are the inputs and outputs?</li>
                             <li>How do we measure them accurately?</li>
                             <li>What is the appropriate time frame?</li>
@@ -671,7 +739,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Policy Examples</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li><strong>Education:</strong> Cost per student vs. quality metrics</li>
                             <li><strong>Healthcare:</strong> Treatment speed vs. health outcomes</li>
                             <li><strong>Welfare:</strong> Administrative costs vs. benefits delivered</li>
@@ -713,16 +781,17 @@
                 <div class="box">
                     <p>Equity is fairness in the distribution of resources, opportunities, and outcomes</p>
                 </div>
-                <ul>
-                    <li class="fragment fade-up">Often in tension with efficiency and sometimes with liberty</li>
-                    <li class="fragment fade-up">Different conceptions of what counts as "fair"</li>
-                    <li class="fragment fade-up">Contested views on whether process or outcomes matter more</li>
-                    <li class="fragment fade-up">Disagreement about which inequities require intervention</li>
+                <ul class="tighter-list">
+                    <li>Often in tension with efficiency and sometimes with liberty</li>
+                    <li>Different conceptions of what counts as "fair"</li>
+                    <li>Contested views on whether process or outcomes matter more</li>
+                    <li>Disagreement about which inequities require intervention</li>
                 </ul>
-                <div class="two-column fragment fade-up">
+                <!-- Split the two columns to make them more readable -->
+                <div class="two-column">
                     <div class="column box">
                         <h3>Forms of Equity</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Horizontal equity (treating similar cases similarly)</li>
                             <li>Vertical equity (treating different cases differently)</li>
                             <li>Intergenerational equity</li>
@@ -731,7 +800,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Policy Approaches</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Universal programs</li>
                             <li>Targeted interventions</li>
                             <li>Redistributive policies</li>
@@ -741,13 +810,13 @@
                 </div>
             </section>
 
-            <!-- SLIDE 15: Security vs. Liberty -->
-            <section>
+            <!-- SLIDE 15: Security vs. Liberty (Compact for better fit) -->
+            <section class="compact">
                 <h2>Security vs. Liberty: Conflicting Goals</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Thomas Hobbes' tradeoff:</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Give up some liberties to the state, which holds the most power, so there is security</li>
                             <li>This is an authoritarian view of the state</li>
                             <li>Emphasizes security as prerequisite for all other rights</li>
@@ -756,7 +825,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>John Locke's approach:</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Form a social contract wherein one surrenders some liberties to create a government of limited power</li>
                             <li>Democratic view of the state</li>
                             <li>Sees liberty as fundamental natural right</li>
@@ -779,7 +848,6 @@
                     <li class="fragment fade-up"><strong>Gun Control:</strong> Public safety vs. individual rights to bear arms</li>
                     <li class="fragment fade-up"><strong>Internet Regulation:</strong> Protection from harm vs. free speech</li>
                 </ul>
-                <p class="fragment fade-up">Policy design must navigate this enduring tension between collective security and individual liberty</p>
                 <div class="box fragment fade-up">
                     <p>The design question is not <em>whether</em> to limit liberty for security, but <em>how much</em> and <em>in what ways</em> to balance these competing goods</p>
                 </div>
@@ -792,56 +860,53 @@
                     <p>Policy design reveals that goals are often ambiguous and in conflict with one another</p>
                 </div>
                 <ul>
-                    <li class="fragment fade-up">Different stakeholders prioritize different goals</li>
-                    <li class="fragment fade-up">Policy design reveals conflicts over means of achieving goals</li>
-                    <li class="fragment fade-up">Different policy goals can be in conflict with one another
+                    <li>Different stakeholders prioritize different goals</li>
+                    <li>Policy design reveals conflicts over means of achieving goals</li>
+                    <li>Different policy goals can be in conflict with one another
                         <ul>
                             <li>For example: Immigration policy versus foreign relations policy with Mexico</li>
                         </ul>
                     </li>
                 </ul>
-                <div class="accent-box fragment fade-up">
+                <div class="accent-box">
                     <p>Conflicts are not hopeless! They are <em>complex</em>. Good policy finds a balance.</p>
                     <p>Policy ambiguity can sometimes be <em>strategic</em> - allowing coalitions to form around different interpretations</p>
                 </div>
             </section>
 
-            <!-- SLIDE 18: Goal Conflicts - Real World Examples -->
+            <!-- SLIDE 18-19: Goal Conflicts - Real World Examples (Split into two slides) -->
             <section class="compact">
                 <h2>Goal Conflicts - Real World Examples</h2>
-                <div class="two-column">
-                    <div class="column box">
-                        <h3>Environmental Policy</h3>
-                        <ul>
-                            <li>Environmental protection vs. economic growth</li>
-                            <li>Carbon reduction vs. energy affordability</li>
-                            <li>Conservation vs. resource development</li>
-                            <li>Local impacts vs. global benefits</li>
-                        </ul>
-                    </div>
-                    <div class="column accent-box">
-                        <h3>Healthcare Policy</h3>
-                        <ul>
-                            <li>Universal access vs. cost containment</li>
-                            <li>Quality of care vs. efficiency</li>
-                            <li>Patient choice vs. standardized treatments</li>
-                            <li>Prevention vs. treatment funding</li>
-                        </ul>
-                    </div>
+                <h3>Environmental Policy</h3>
+                <div class="box">
+                    <ul class="tighter-list">
+                        <li>Environmental protection vs. economic growth</li>
+                        <li>Carbon reduction vs. energy affordability</li>
+                        <li>Conservation vs. resource development</li>
+                        <li>Local impacts vs. global benefits</li>
+                    </ul>
                 </div>
-                <p class="fragment fade-up">Successful policies acknowledge these tensions rather than ignoring them</p>
-                <div class="key-points fragment fade-up">
+                <h3>Healthcare Policy</h3>
+                <div class="accent-box">
+                    <ul class="tighter-list">
+                        <li>Universal access vs. cost containment</li>
+                        <li>Quality of care vs. efficiency</li>
+                        <li>Patient choice vs. standardized treatments</li>
+                        <li>Prevention vs. treatment funding</li>
+                    </ul>
+                </div>
+                <div class="key-points">
                     <p>The most effective policies don't eliminate conflicts - they manage them transparently</p>
                 </div>
             </section>
             
-            <!-- SLIDE 19: Balancing Competing Goals -->
+            <!-- SLIDE 20: Balancing Competing Goals -->
             <section>
                 <h2>Balancing Competing Goals</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Common Trade-offs</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li><strong>Efficiency vs. Equity:</strong> Cost-effectiveness vs. fair distribution</li>
                             <li><strong>Security vs. Liberty:</strong> Protection vs. freedom</li>
                             <li><strong>Speed vs. Deliberation:</strong> Quick action vs. careful planning</li>
@@ -850,7 +915,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Balancing Strategies</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Prioritization - which goal takes precedence?</li>
                             <li>Compromise - finding middle ground</li>
                             <li>Sequencing - different goals at different stages</li>
@@ -864,8 +929,8 @@
                 </div>
             </section>
             
-            <!-- SLIDE 20: Case Study in Balancing Competing Goals -->
-            <section class="compact">
+            <!-- SLIDE 21: Case Study in Balancing Competing Goals (Made more compact) -->
+            <section class="super-compact">
                 <h2>Case Study: Balancing Competing Goals</h2>
                 <h3>Healthcare Policy Example</h3>
                 <div class="two-column">
@@ -889,32 +954,31 @@
                         </ul>
                     </div>
                 </div>
-                <p class="fragment fade-up">Policy designers must explicitly address these tensions rather than ignoring them</p>
+                <p>Policy designers must explicitly address these tensions rather than ignoring them</p>
             </section>
 
-            <!-- SLIDE 21: Complexity and Differing Goals -->
+            <!-- SLIDE 22-23: Complexity and Differing Goals (Split into two slides) -->
             <section class="compact">
                 <h2>Complexity and Differing Goals</h2>
                 <p>Is the purpose of the goal to eliminate a problem, hold steady a growing problem, or reduce the problem to a lower level?</p>
                 <div class="box">
                     <h3>War on Drugs Example</h3>
-                    <ul>
+                    <ul class="tighter-list">
                         <li><strong>Elimination:</strong> Zero tolerance, maximum enforcement, severe penalties</li>
                         <li><strong>Holding Steady:</strong> Targeted enforcement, education campaigns</li>
                         <li><strong>Reduction:</strong> Harm reduction strategies, treatment over punishment</li>
                     </ul>
                 </div>
-                <p class="fragment fade-up">Each approach implies different tools, resources, timeframes, and metrics for success</p>
-                <p class="fragment fade-up">Policy design requires explicit decisions about goal threshold levels</p>
+                <p>Each approach implies different tools, resources, timeframes, and metrics for success</p>
             </section>
             
-            <!-- SLIDE 22: Scalability of Policy Goals -->
+            <!-- NEW SLIDE: Continuation of previous slide -->
             <section class="compact">
                 <h2>Scalability of Policy Goals</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Goal Intensity Questions</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>How much change is needed?</li>
                             <li>What is politically feasible?</li>
                             <li>What is administratively possible?</li>
@@ -924,7 +988,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Target Setting Example</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Ambitious: Carbon neutrality by 2030</li>
                             <li>Moderate: 50% emissions reduction by 2035</li>
                             <li>Minimal: Stabilize emissions by 2040</li>
@@ -932,10 +996,38 @@
                         </ul>
                     </div>
                 </div>
-                <p class="fragment fade-up">Policy designers must balance ambition with feasibility when setting targets</p>
+                <p>Policy designers must balance ambition with feasibility when setting targets</p>
             </section>
 
-            <!-- SLIDE 23: Policy Tools -->
+            <section>
+                <h2>Policy Design Framework</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h4>Core Elements</h4>
+                        <ul class="tighter-list">
+                            <li><strong>Goals:</strong> What the policy is trying to achieve</li>
+                            <li><strong>Causal Theory:</strong> Why the proposed solution will work</li>
+                            <li><strong>Tools:</strong> The instruments used to achieve goals</li>
+                            <li><strong>Implementation:</strong> How the policy is carried out</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h4>Cross-Cutting Themes</h4>
+                        <ul class="tighter-list">
+                            <li><strong>Equity:</strong> Who benefits or bears costs?</li>
+                            <li><strong>Efficiency:</strong> Are we using resources well?</li>
+                            <li><strong>Political Feasibility:</strong> Can it gain support?</li>
+                            <li><strong>Administrative Capacity:</strong> Can it be implemented?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-points">
+                    <p>Design is the intersection of logic, values, and institutional capacity</p>
+                </div>
+            </section>
+
+
+            <!-- SLIDE 24: Policy Tools -->
             <section data-transition="zoom">
                 <h2>Policy Tools</h2>
                 <div class="box">
@@ -950,50 +1042,62 @@
                     <p>The selection of appropriate policy tools is crucial for successful implementation</p>
                 </div>
             </section>
-
-            <!-- SLIDE 24: Policy Tools: Dimensions -->
+            
             <section>
-                <h2>Policy Tools: Dimensions</h2>
+                <h2>Policy Tool Typology</h2>
+                <h4>Schneider & Ingram (1990)</h4>
                 <div class="two-column">
                     <div class="column box">
-                        <h3>Nature of Government Activity</h3>
-                        <ul>
-                            <li>Money payments</li>
-                            <li>Provision of goods and services</li>
-                            <li>Legal protections</li>
-                            <li>Restrictions and penalties</li>
+                        <ul class="tighter-list">
+                            <li><strong>Authority tools:</strong> Rules backed by sanctions (e.g., mandates)</li>
+                            <li><strong>Incentive tools:</strong> Rewards or penalties (e.g., taxes, subsidies)</li>
                         </ul>
                     </div>
                     <div class="column accent-box">
-                        <h3>Delivery System Structure</h3>
-                        <ul>
-                            <li><strong>Direct:</strong> Government provides service</li>
-                            <li><strong>Indirect:</strong> Third parties deliver</li>
-                            <li><strong>Mixed:</strong> Combination of approaches</li>
+                        <ul class="tighter-list">
+                            <li><strong>Capacity tools:</strong> Build ability to comply (e.g., training, funding)</li>
+                            <li><strong>Symbolic tools:</strong> Signal intent or values (e.g., proclamations)</li>
                         </ul>
                     </div>
                 </div>
-                <div class="two-column fragment fade-up">
-                    <div class="column box">
-                        <h3>Degree of Centralization</h3>
-                        <ul>
-                            <li>Federal control</li>
-                            <li>State/local authority</li>
-                            <li>Shared responsibility</li>
-                        </ul>
-                    </div>
-                    <div class="column accent-box">
-                        <h3>Administrative Complexity</h3>
-                        <ul>
-                            <li>Simple, standardized processes</li>
-                            <li>Complex, customized approaches</li>
-                            <li>Multiple layers of oversight</li>
-                        </ul>
-                    </div>
+                <div class="key-points fragment fade-up">
+                    <p>Most policies use a mix of tools, each reflecting assumptions about how people behave</p>
                 </div>
             </section>
 
-            <!-- SLIDE 25: Love, Fear, and Money -->
+            <!-- SLIDE 25: Policy Tools: Dimensions -->
+            <section>
+                <h2>Dimensions of Policy Tools</h2>
+                <div class="two-column">
+                    <div class="column box">
+                        <h4>Type of Activity</h4>
+                        <ul class="tighter-list">
+                            <li>Money (grants, payments)</li>
+                            <li>Services, protections, restrictions</li>
+                        </ul>
+                        <h4>Delivery System</h4>
+                        <ul class="tighter-list">
+                            <li>Direct (govt) vs. Indirect (nonprofits, contractors)</li>
+                        </ul>
+                    </div>
+                    <div class="column accent-box">
+                        <h4>Centralization</h4>
+                        <ul class="tighter-list">
+                            <li>Federal, state, or shared</li>
+                        </ul>
+                        <h4>Complexity</h4>
+                        <ul class="tighter-list">
+                            <li>Simple vs. layered or customized</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-points">
+                    <p>Effective tools match the problem’s nature, target population, and administrative context</p>
+                </div>
+            </section>
+            
+
+            <!-- SLIDE 26: Love, Fear, and Money -->
             <section data-transition="concave">
                 <h2>Love, Fear, and Money (Etzioni 1961)</h2>
                 <div class="box">
@@ -1010,13 +1114,13 @@
                 <div class="citation">Source: Etzioni, A. (1961). A Comparative Analysis of Complex Organizations</div>
             </section>
             
-            <!-- SLIDE 26: Love, Fear, and Money - Applications -->
+            <!-- SLIDE 27: Love, Fear, and Money - Applications -->
             <section data-transition="concave">
                 <h2>Love, Fear, and Money - Applications</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Policy Examples</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li><strong>Love:</strong> Public campaigns that appeal to moral duty (recycling, blood donation)</li>
                             <li><strong>Fear:</strong> Traffic fines, criminal penalties, business regulations</li>
                             <li><strong>Money:</strong> Tax incentives, subsidies, grants, economic benefits</li>
@@ -1024,7 +1128,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Trade-offs</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Fear-based tools are often immediately effective but create resistance</li>
                             <li>Love-based tools create sustainable behavior but take time to develop</li>
                             <li>Money-based tools work well but can be expensive and create dependency</li>
@@ -1036,23 +1140,23 @@
                 </div>
             </section>
             
-            <!-- SLIDE 27: Balancing Compliance Mechanisms -->
+            <!-- SLIDE 28: Balancing Compliance Mechanisms -->
             <section data-transition="concave">
                 <h2>Balancing Compliance Mechanisms</h2>
                 <p>Policy designers must consider:</p>
-                <ul>
-                    <li class="fragment fade-up">Cultural context - what motivates the target population?</li>
-                    <li class="fragment fade-up">Time horizon - immediate compliance vs. long-term sustainability</li>
-                    <li class="fragment fade-up">Resource constraints - economic tools require budgets</li>
-                    <li class="fragment fade-up">Political feasibility - coercive tools face more resistance</li>
-                    <li class="fragment fade-up">Administrative capacity - can the implementing agency enforce?</li>
+                <ul class="tighter-list">
+                    <li>Cultural context - what motivates the target population?</li>
+                    <li>Time horizon - immediate compliance vs. long-term sustainability</li>
+                    <li>Resource constraints - economic tools require budgets</li>
+                    <li>Political feasibility - coercive tools face more resistance</li>
+                    <li>Administrative capacity - can the implementing agency enforce?</li>
                 </ul>
-                <div class="accent-box fragment fade-up">
+                <div class="accent-box">
                     <p><em>The most effective policies typically employ a mix of all three mechanisms tailored to context and goals</em></p>
                 </div>
             </section>
 
-            <!-- SLIDE 28: Policy Tool Considerations -->
+            <!-- SLIDE 29: Policy Tool Considerations -->
             <section>
                 <h2>Policy Tool Considerations</h2>
                 <div class="box">
@@ -1062,10 +1166,10 @@
                         <li>Choosing effective tools requires a good causal theory</li>
                     </ul>
                 </div>
-                <div class="two-column fragment fade-up">
+                <div class="two-column">
                     <div class="column box">
                         <h3>Questions to Ask</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>What behavior needs to change?</li>
                             <li>Who needs to take action?</li>
                             <li>What might motivate compliance?</li>
@@ -1074,7 +1178,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Tool Selection Criteria</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Effectiveness</li>
                             <li>Efficiency</li>
                             <li>Equity</li>
@@ -1085,54 +1189,52 @@
                 </div>
             </section>
 
-            <!-- SLIDE 29: Models of Policy Tools -->
+            <!-- SLIDE 30: Models of Policy Tools -->
             <section>
                 <h2>Models of Policy Tools</h2>
                 <h4>Howlett, Ramesh, and Perl</h4>
-                <h3>Economic and Political Tools</h3>
                 <div class="box">
                     <p>Policy tools represent the specific instruments governments use to implement policies and achieve policy goals.</p>
                     <p>They range from direct service provision to market incentives to regulations.</p>
                 </div>
-                <div class="key-points fragment fade-up">
+                <div class="key-points">
                     <p>The choice of tools reflects both technical considerations and political values</p>
                 </div>
                 <div class="citation">Source: Howlett, M., Ramesh, M., & Perl, A. (2009). Studying Public Policy: Policy Cycles and Policy Subsystems</div>
             </section>
 
-            <!-- SLIDE 30: Economic Tools -->
+                    
+            <!-- SLIDE 31-32: Economic Tools (Split into two slides) -->
             <section>
                 <h2>Economic Tools</h2>
-                <div class="two-column">
-                    <div class="column box">
-                        <h3>Characteristics</h3>
-                        <ul>
-                            <li>Favor individual freedom and choice</li>
-                            <li>Tend to use non-coercive means</li>
-                            <li>Makes many assumptions about what is "possible" and what is "rational"</li>
-                            <li>Assumes that people are rational actors</li>
-                        </ul>
-                    </div>
-                    <div class="column accent-box">
-                        <h3>Examples</h3>
-                        <ul>
-                            <li><strong>Subsidies:</strong> Agriculture, energy, housing</li>
-                            <li><strong>Tax incentives:</strong> R&D credits, mortgage deductions</li>
-                            <li><strong>Vouchers:</strong> Education, housing, healthcare</li>
-                            <li><strong>User fees:</strong> Parks, highways, utilities</li>
-                            <li><strong>Market creation:</strong> Cap and trade systems</li>
-                        </ul>
-                    </div>
+                <div class="box">
+                    <h3>Characteristics</h3>
+                    <ul class="tighter-list">
+                        <li>Favor individual freedom and choice</li>
+                        <li>Tend to use non-coercive means</li>
+                        <li>Makes many assumptions about what is "possible" and what is "rational"</li>
+                        <li>Assumes that people are rational actors</li>
+                    </ul>
+                </div>
+                <div class="accent-box">
+                    <h3>Examples</h3>
+                    <ul class="tighter-list">
+                        <li><strong>Subsidies:</strong> Agriculture, energy, housing</li>
+                        <li><strong>Tax incentives:</strong> R&D credits, mortgage deductions</li>
+                        <li><strong>Vouchers:</strong> Education, housing, healthcare</li>
+                        <li><strong>User fees:</strong> Parks, highways, utilities</li>
+                        <li><strong>Market creation:</strong> Cap and trade systems</li>
+                    </ul>
                 </div>
             </section>
             
-            <!-- SLIDE 31: Economic Tools Trade-offs -->
+            <!-- SLIDE 32: Economic Tools Trade-offs -->
             <section>
                 <h2>Economic Tools: Trade-offs</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Advantages</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Preserve individual choice and market mechanisms</li>
                             <li>Often more politically palatable than regulations</li>
                             <li>Can harness market efficiency for public goals</li>
@@ -1141,7 +1243,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Disadvantages</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>May not work when markets are imperfect</li>
                             <li>Can be captured by special interests</li>
                             <li>Benefits may be unequally distributed</li>
@@ -1150,12 +1252,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="key-points fragment fade-up">
+                <div class="key-points">
                     <p>Economic tools work best when markets function well and policy goals align with individual self-interest</p>
                 </div>
             </section>
 
-            <!-- SLIDE 32: Political Tools -->
+            <!-- SLIDE 33: Political Tools -->
             <section class="compact">
                 <h2>Political Tools</h2>
                 <blockquote>
@@ -1165,13 +1267,13 @@
                 <div class="two-column">
                     <div class="column box">
                         <h3>Political Tool Examples:</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li><strong>Regulations:</strong> Command-and-control rules</li>
                             <li><strong>Direct provision:</strong> Government services</li>
                         </ul>
                     </div>
                     <div class="column accent-box">
-                        <ul>
+                        <ul class="tighter-list">
                             <li><strong>Information:</strong> Public campaigns</li>
                             <li><strong>Public enterprises:</strong> State-owned entities</li>
                         </ul>
@@ -1180,13 +1282,13 @@
                 <div class="citation">Source: Howlett, M., Ramesh, M., & Perl, A. (2009). Studying Public Policy: Policy Cycles and Policy Subsystems</div>
             </section>
 
-            <!-- SLIDE 33: Tools and Choices -->
+            <!-- SLIDE 34: Tools and Choices -->
             <section class="compact">
                 <h2>Tools and Choices</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Key Considerations</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Technically sound design ≠ political viability</li>
                             <li>Resources constrain available options</li>
                             <li>Behavioral assumptions matter</li>
@@ -1195,7 +1297,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Tool Selection Factors</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Administrative capacity</li>
                             <li>Organizational culture</li>
                             <li>Past policy experiences</li>
@@ -1204,15 +1306,15 @@
                         </ul>
                     </div>
                 </div>
-                <p class="fragment fade-up">The most successful policies use complementary tools that address different aspects of the problem</p>
+                <p>The most successful policies use complementary tools that address different aspects of the problem</p>
             </section>
 
-            <!-- SLIDE 34: Objective and Subjective Tools -->
+            <!-- SLIDE 35: Objective and Subjective Tools -->
             <section>
                 <h2>Objective and Subjective Tools</h2>
                 <h3>Objective - Rational Characteristics</h3>
                 <div class="box">
-                    <ul>
+                    <ul class="tighter-list">
                         <li><strong>Target population:</strong> The citizens who receive the benefits or bear the costs of the policy</li>
                         <li><strong>Values:</strong> What is being distributed or promoted</li>
                         <li><strong>Rules:</strong> Guidelines governing or constraining action</li>
@@ -1220,10 +1322,10 @@
                         <li><strong>Assumptions:</strong> Behavioral theories that tie all of these together</li>
                     </ul>
                 </div>
-                <p class="fragment fade-up">These represent the technical elements of policy design - the "mechanics" of how policies function</p>
+                <p>These represent the technical elements of policy design - the "mechanics" of how policies function</p>
             </section>
 
-            <!-- SLIDE 35: Subjective - Value Characteristics -->
+            <!-- SLIDE 36: Subjective - Value Characteristics -->
             <section>
                 <h2>Objective and Subjective Tools</h2>
                 <h3>Subjective - Value Characteristics</h3>
@@ -1234,17 +1336,17 @@
                         <li>Who (or what) should have the freedom of action promoted or constrained to uphold those values?</li>
                     </ul>
                 </div>
-                <p class="fragment fade-up">These represent the normative and political dimensions of policy design</p>
+                <p>These represent the normative and political dimensions of policy design</p>
             </section>
             
-            <!-- SLIDE 36: The Interplay Between Objective and Subjective Elements -->
+            <!-- SLIDE 37: The Interplay Between Objective and Subjective Elements -->
             <section>
                 <h2>Objective and Subjective Elements: Interplay</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Climate Policy Example</h3>
                         <p><strong>Objective elements:</strong></p>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Carbon pricing mechanisms</li>
                             <li>Emissions targets and timelines</li>
                             <li>Reporting requirements</li>
@@ -1253,7 +1355,7 @@
                     </div>
                     <div class="column accent-box">
                         <p><strong>Subjective elements:</strong></p>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Intergenerational justice concerns</li>
                             <li>Distribution of transition costs</li>
                             <li>Rights of affected communities</li>
@@ -1261,31 +1363,31 @@
                         </ul>
                     </div>
                 </div>
-                <p class="fragment fade-up">Effective policy design requires attention to both dimensions</p>
+                <p>Effective policy design requires attention to both dimensions</p>
             </section>
             
-            <!-- SLIDE 37: Integrating Policy Design Elements -->
+            <!-- SLIDE 38: Integrating Policy Design Elements -->
             <section>
                 <h2>Integrating Policy Design Elements</h2>
-                <ul>
-                    <li class="fragment fade-up">Goals must be clearly articulated but may require flexibility</li>
-                    <li class="fragment fade-up">Causal theories should be evidence-based but acknowledge uncertainties</li>
-                    <li class="fragment fade-up">Tools should match both the technical aspects of the problem and reflect societal values</li>
-                    <li class="fragment fade-up">Target populations must be precisely defined while considering equity implications</li>
-                    <li class="fragment fade-up">Implementation plans need to address both administrative capacity and political sustainability</li>
+                <ul class="tighter-list">
+                    <li>Goals must be clearly articulated but may require flexibility</li>
+                    <li>Causal theories should be evidence-based but acknowledge uncertainties</li>
+                    <li>Tools should match both the technical aspects of the problem and reflect societal values</li>
+                    <li>Target populations must be precisely defined while considering equity implications</li>
+                    <li>Implementation plans need to address both administrative capacity and political sustainability</li>
                 </ul>
-                <div class="box fragment fade-up">
+                <div class="box">
                     <p>The art of policy design lies in synthesizing technical expertise with democratic values</p>
                 </div>
             </section>
 
-            <!-- SLIDE 38: Policy Design in Practice -->
+            <!-- SLIDE 39: Policy Design in Practice -->
             <section>
                 <h2>Policy Design in Practice</h2>
                 <div class="two-column">
                     <div class="column box">
                         <h3>Challenges</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Incomplete information</li>
                             <li>Value conflicts</li>
                             <li>Resource constraints</li>
@@ -1295,7 +1397,7 @@
                     </div>
                     <div class="column accent-box">
                         <h3>Strategies</h3>
-                        <ul>
+                        <ul class="tighter-list">
                             <li>Pilot programs</li>
                             <li>Phased implementation</li>
                             <li>Adaptive management</li>
@@ -1304,91 +1406,155 @@
                         </ul>
                     </div>
                 </div>
-                <div class="key-points fragment fade-up">
+                <div class="key-points">
                     <p>Policy design is iterative, not linear - it requires ongoing learning and adaptation</p>
                 </div>
             </section>
 
-            <!-- SLIDE 39: Conclusion -->
+            <section>
+                <h2>Apply the Framework</h2>
+                <div class="box">
+                    <p>Use these design questions to strengthen your policy process paper:</p>
+                </div>
+                <ul>
+                    <li>What are the policy's stated and unstated goals?</li>
+                    <li>What is the causal logic? Why will this work?</li>
+                    <li>What tool(s) are used, and why?</li>
+                    <li>Who is the target population?</li>
+                    <li>How is the policy implemented?</li>
+                    <li>What trade-offs are present—between equity, efficiency, and feasibility?</li>
+                </ul>
+                <div class="accent-box">
+                    <p><em>Show that you’ve thought through these design choices—not just what the policy does, but how and why</em></p>
+                </div>
+            </section>
+            
+
+            <!-- SLIDE 40: Conclusion -->
             <section class="title-slide" data-transition="zoom">
                 <h2>That's it for Today</h2>
                 <h3>Next Time: Implementation</h3>
                 <p>We'll explore how policy designs translate into real-world action</p>
                 <div class="divider"></div>
                 <div class="key-points">
-                    <p>Remember: Good policy design balances technical effectiveness with political feasibility and democratic values</p>
+                <p>Remember: Good policy design balances technical effectiveness with political feasibility and democratic values</p>
                 </div>
             </section>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom/zoom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
-    <script>
-        Reveal.initialize({
-            hash: true,
-            slideNumber: 'c/t',
-            transition: 'fade', // Default transition
-            transitionSpeed: 'default',
-            center: false,
-            controls: true,
-            progress: true,
-            width: 1280, // Set for widescreen
-            height: 720, // Set for widescreen
-            margin: 0.04, // Reduced margin for better use of space
-            minScale: 0.2,
-            maxScale: 2.0,
-            // Enable keyboard shortcuts
-            keyboard: true,
-            // Add plugins
-            plugins: [RevealZoom, RevealNotes, RevealHighlight],
-            // Configure plugin settings
-            highlight: {
-                highlightOnLoad: true
-            }
-        });
+            </div>
+            </div>
+            
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom/zoom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'fade', // Default transition
+      transitionSpeed: 'default',
+      center: false,
+      controls: true,
+      progress: true,
+      width: 1280, // Set for widescreen
+      height: 720, // Set for widescreen
+      margin: 0.04, // Reduced margin for better use of space
+      minScale: 0.2,
+      maxScale: 1.5,
+      // Enable keyboard shortcuts
+      keyboard: true,
+      // Add plugins
+      plugins: [RevealZoom, RevealNotes, RevealHighlight],
+      // Configure plugin settings
+      highlight: {
+        highlightOnLoad: true
+      },
+      // Ensure slides fit on screen
+      disableLayout: false
+    });
+    
+    // Initialize slide adjustments after DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add .compact class to slides with more content
+      const denseSlides = [
+        15, 17, 18, 20, 21, 22, 27, 29, 31, 32, 33, 34
+      ];
+      
+      // Add super-compact class to extremely dense slides
+      const superDenseSlides = [
+        21, 33
+      ];
+      
+      // Apply compact class to all slides with two-column layout for better fit
+      document.querySelectorAll('.two-column').forEach(function(element) {
+        if (!element.closest('section').classList.contains('compact') && 
+            !element.closest('section').classList.contains('super-compact')) {
+          element.closest('section').classList.add('compact');
+        }
+      });
+      
+      denseSlides.forEach(function(index) {
+        const slide = Reveal.getSlides()[index];
+        if (slide && !slide.classList.contains('super-compact')) {
+          slide.classList.add('compact');
+        }
+      });
+      
+      superDenseSlides.forEach(function(index) {
+        if (Reveal.getSlides()[index]) {
+          Reveal.getSlides()[index].classList.add('super-compact');
+          Reveal.getSlides()[index].classList.remove('compact'); // Remove compact if present
+        }
+      });
+      
+      // Make blockquotes fit better
+      document.querySelectorAll('blockquote').forEach(function(blockquote) {
+        blockquote.closest('section').classList.add('compact');
+      });
+      
+      // Check for overflow and apply scaling
+      Reveal.addEventListener('slidechanged', function(event) {
+        // Get current slide
+        const currentSlide = event.currentSlide;
         
-        // Add specific transitions for sections
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add .compact class to slides with more content
-            const denseSlides = [
-                18, 20, 21, 22, 32, 33
-            ];
-            
-            // Apply compact class to all slides with two-column layout for better fit
-            document.querySelectorAll('.two-column').forEach(function(element) {
-                if (!element.closest('section').classList.contains('compact')) {
-                    element.closest('section').classList.add('compact');
-                }
-            });
-            
-            denseSlides.forEach(function(index) {
-                if (Reveal.getSlides()[index]) {
-                    Reveal.getSlides()[index].classList.add('compact');
-                }
-            });
-            
-            // Enhance fragments with animations
-            document.querySelectorAll('.fragment').forEach(function(fragment) {
-                // Add random delay to create staggered effect
-                const delay = Math.random() * 0.3; // Random delay between 0 and 0.3s
-                fragment.style.transitionDelay = delay + 's';
-            });
-            
-            // Create a subtle hover effect for clickable elements
-            document.querySelectorAll('.box, .accent-box').forEach(function(element) {
-                element.addEventListener('mouseover', function() {
-                    this.style.transform = 'translateY(-3px)';
-                    this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.2)';
-                });
-                element.addEventListener('mouseout', function() {
-                    this.style.transform = '';
-                    this.style.boxShadow = '';
-                });
-            });
+        // Reset transforms
+        currentSlide.style.transform = '';
+        
+        // Get dimensions
+        const slideHeight = currentSlide.offsetHeight;
+        const containerHeight = document.querySelector('.reveal').offsetHeight;
+        
+        // Check if slide content exceeds container height
+        if (slideHeight > containerHeight * 0.85) {
+          // Calculate scale factor (with some margin)
+          const scaleFactor = (containerHeight * 0.85) / slideHeight;
+          // Apply scale transform if needed
+          if (scaleFactor < 1) {
+            currentSlide.style.transform = `scale(${scaleFactor})`;
+            currentSlide.style.transformOrigin = 'top left';
+          }
+        }
+      });
+      
+      // Enhance fragments with animations
+      document.querySelectorAll('.fragment').forEach(function(fragment) {
+        // Add random delay to create staggered effect
+        const delay = Math.random() * 0.3; // Random delay between 0 and 0.3s
+        fragment.style.transitionDelay = delay + 's';
+      });
+      
+      // Create a subtle hover effect for clickable elements
+      document.querySelectorAll('.box, .accent-box').forEach(function(element) {
+        element.addEventListener('mouseover', function() {
+          this.style.transform = 'translateY(-3px)';
+          this.style.boxShadow = '0 6px 12px rgba(0,0,0,0.2)';
         });
-    </script>
-</body>
-</html>
+        element.addEventListener('mouseout', function() {
+          this.style.transform = '';
+          this.style.boxShadow = '';
+        });
+      });
+    });
+  </script>
+  </body>
+  </html>

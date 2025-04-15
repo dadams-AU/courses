@@ -1,0 +1,479 @@
+:root {
+    --primary-color: #2196F3;      /* Bright blue - more vibrant */
+    --secondary-color: #FF5722;    /* Deep orange - better contrast */
+    --background-color: #121212;   /* Darker gray background for better contrast */
+    --highlight-color: #FFC107;    /* Amber for highlights */
+    --text-color: #FFFFFF;         /* White text */
+    --box-bg-primary: rgba(33, 150, 243, 0.15);    /* Translucent blue */
+    --box-bg-secondary: rgba(255, 87, 34, 0.15);   /* Translucent orange */
+    --header-font: 'Ubuntu', sans-serif;
+    --body-font: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: var(--background-color);
+}
+
+.reveal {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal .slides section {
+    padding: 0 40px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: visible; /* Changed from visible to auto to handle overflow */
+    background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+    border-radius: 8px;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-family: var(--header-font);
+    color: var(--text-color);
+    text-transform: none;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5em;
+}
+
+.reveal h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.reveal h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(33, 150, 243, 0.3);
+    padding-bottom: 0.2em;
+}
+
+.reveal h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.reveal h4 {
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+}
+
+.reveal ul, .reveal ol {
+    display: block;
+    margin-left: 1em;
+    margin-bottom: 0.4em;
+}
+
+.reveal li {
+    margin-bottom: 0.3em;
+    font-size: 0.9em; /* Slightly reduced from 0.95em */
+    line-height: 1.2; /* Reduced from 1.3 */
+}
+
+.reveal ul ul li, .reveal ol ul li {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+}
+
+.reveal blockquote {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--highlight-color);
+    padding: 0.5em 1em;
+    font-style: italic;
+    margin: 0.5em 0;
+    font-size: 0.85em;
+    max-width: 90%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.reveal blockquote p {
+    margin: 0;
+}
+
+.title-slide {
+    text-align: center;
+    background: radial-gradient(circle, rgba(33,150,243,0.1) 0%, rgba(0,0,0,0) 70%) !important;
+}
+
+.title-slide h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(33, 150, 243, 0.2);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(33, 150, 243, 0.6);
+    }
+}
+
+.title-slide h2 {
+    font-size: 1.3em;
+    color: var(--secondary-color);
+    border-bottom: none;
+}
+
+.title-slide p {
+    font-size: 1.1em;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Reduced from 20px */
+    width: 100%;
+    max-height: 70vh; /* Reduced from 75vh */
+}
+
+.column {
+    width: 48%;
+    font-size: 0.85em; /* Reduced from 0.9em */
+}
+
+.box {
+    background: var(--box-bg-primary);
+    border-radius: 8px;
+    padding: 10px; /* Reduced from 12px */
+    margin-bottom: 10px; /* Reduced from 12px */
+    border: 1px solid rgba(33, 150, 243, 0.3);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+    transform: translateY(-1px);
+}
+
+.accent-box {
+    background: var(--box-bg-secondary);
+    border-radius: 8px;
+    padding: 10px; /* Reduced from 12px */
+    margin-bottom: 10px; /* Reduced from 12px */
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.accent-box:hover {
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.2);
+    transform: translateY(-1px);
+}
+
+.box ul, .accent-box ul {
+    margin-bottom: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.6em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+p {
+    font-size: 0.85em; /* Reduced from 0.9em */
+    line-height: 1.3; /* Reduced from 1.4 */
+    margin-bottom: 0.4em; /* Reduced from 0.5em */
+}
+
+.reveal .progress {
+    color: var(--secondary-color);
+    height: 5px;
+}
+
+/* Compact classes for slides with more content */
+.compact li {
+    margin-bottom: 0.1em; /* Reduced from 0.2em */
+    font-size: 0.8em; /* Reduced from 0.85em */
+    line-height: 1.2; /* Added */
+}
+
+.compact h3 {
+    margin-bottom: 0.15em; /* Reduced from 0.2em */
+    font-size: 1.15em; /* Reduced from 1.2em */
+}
+
+.compact h4 {
+    font-size: 0.95em; /* Reduced from 1em */
+    margin-bottom: 0.1em; /* Reduced from 0.15em */
+}
+
+.compact .box, .compact .accent-box {
+    padding: 6px; /* Reduced from 8px */
+    margin-bottom: 6px; /* Reduced from 8px */
+}
+
+.compact p {
+    margin-bottom: 0.2em; /* Reduced from 0.25em */
+    font-size: 0.8em; /* Reduced from 0.9em */
+}
+
+.compact .two-column {
+    gap: 10px; /* Reduced from 12px */
+}
+
+/* Super compact for very dense slides */
+.super-compact li {
+    margin-bottom: 0;
+    font-size: 0.75em;
+    line-height: 1.1;
+}
+
+.super-compact .box, .super-compact .accent-box {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.super-compact h3 {
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+}
+
+.super-compact p {
+    font-size: 0.75em;
+    margin-bottom: 0.15em;
+}
+
+.super-compact .two-column {
+    gap: 8px;
+}
+
+/* Split slide for content that needs to be broken up */
+.split-slide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ensure content fits within slide boundaries */
+.reveal .slides section .fragment {
+    visibility: visible;
+}
+
+strong {
+    color: var(--highlight-color);
+}
+
+/* Add subtle animated background */
+.reveal::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(33, 150, 243, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(255, 87, 34, 0.05) 0%, transparent 20%);
+    z-index: -1;
+    animation: backgroundShift 30s ease infinite alternate;
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Improved navigation controls */
+.reveal .controls button {
+    color: var(--primary-color);
+}
+
+/* Better slide transitions */
+.reveal .slides section {
+    transition: transform 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985), 
+                opacity 0.4s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/* Slide number styling */
+.reveal .slide-number {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Key points highlight box */
+.key-points {
+    background: linear-gradient(135deg, 
+        rgba(33, 150, 243, 0.15) 0%, 
+        rgba(255, 193, 7, 0.15) 100%);
+    border-radius: 8px;
+    padding: 8px; /* Reduced from 10px */
+    margin: 10px 0; /* Reduced from 12px */
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.key-points h4 {
+    color: var(--highlight-color);
+    margin-top: 0;
+    font-size: 0.95em; /* Reduced from 1em */
+    margin-bottom: 0.1em; /* Reduced from 0.15em */
+}
+
+.key-points p {
+    font-size: 0.85em; /* Reduced from 0.9em */
+    margin-bottom: 0.2em; /* Reduced from 0.25em */
+}
+
+/* Special emphasis */
+.emphasis {
+    font-style: italic;
+    color: var(--highlight-color);
+    display: inline-block;
+    position: relative;
+}
+
+.emphasis::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--highlight-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.emphasis:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Focus box for important concepts */
+.focus-box {
+    border: 2px dashed var(--highlight-color);
+    border-radius: 10px;
+    padding: 12px; /* Reduced from 15px */
+    margin: 12px 0; /* Reduced from 15px */
+    background: rgba(255, 193, 7, 0.05);
+}
+
+/* Improved list markers */
+.reveal ul {
+    list-style: none;
+}
+
+.reveal ul li {
+    position: relative;
+    padding-left: 1.2em; /* Reduced from 1.5em */
+}
+
+.reveal ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.reveal ol {
+    counter-reset: li;
+    list-style: none;
+}
+
+.reveal ol li {
+    position: relative;
+    padding-left: 1.5em; /* Reduced from 1.8em */
+}
+
+.reveal ol li::before {
+    counter-increment: li;
+    content: counter(li) ".";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Enhanced progress bar */
+.reveal .progress span {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Citation style */
+.citation {
+    font-size: 0.65em; /* Reduced from 0.7em */
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+    text-align: right;
+    margin-top: 8px; /* Reduced from 10px */
+}
+
+/* Image styling */
+.reveal img {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Improved transitions for fragments */
+.reveal .slides section .fragment.fade-up {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+}
+
+.reveal .slides section .fragment.fade-up.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Visual divider */
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    margin: 12px 0; /* Reduced from 15px */
+}
+
+/* Added: scale down content for better fit */
+.scale-down {
+    transform: scale(1);
+    transform-origin: top left;
+}
+
+/* Added: slides that need to be vertically centered */
+.center-vertically {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Added: make compact lists even more compact for dense slides */
+.tighter-list li {
+    margin-bottom: 0 !important;
+    line-height: 1.1 !important;
+}
+
+/* Added: auto-height for two-column layouts to prevent overflow */
+.auto-height {
+    max-height: none !important;
+}

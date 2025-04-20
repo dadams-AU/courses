@@ -1,892 +1,233 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-
   <title>Policy Implementation</title>
-
-  <meta name="description" content="POSC 315 Implementation Lecture">
-  <meta name="author" content="David P. Adams, Ph.D.">
-
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
-  <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/zenburn.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style>
+    html, body, .reveal, .reveal .slides { height: 100%; }
+    .reveal { background-color: #fdf6e3; color: #073642; }
+    .reveal h1, .reveal h2, .reveal h3 { font-family: 'Helvetica Neue', Arial, sans-serif; }
+    .reveal h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+    .reveal h2 { font-size: 1.5em; }
+    .reveal li { margin-bottom: 0.5em; line-height: 1.4; }
+    .small-note { font-size: 0.8em; color: #586e75; }
 
-  <!-- highlight Theme -->
-  
-  <link rel="stylesheet" href="libs/highlight.js/11.3.1/styles/monokai.min.css">
-  
-	
-		
-	<link rel="stylesheet" href="libs/reveal.js/4.3.1/plugin/chalkboard/style.css">
-	
-	
-	
-	
-
-
-
-  <!-- Revealjs Theme -->
-  
-  <link rel="stylesheet" href="libs/reveal.js/4.3.1/theme/black.css" id="theme">
-  
-  
-  <link rel="stylesheet" href="libs/styles/week12-1.css">
-  <link rel="stylesheet" href="libs/styles/tasklist.css">
-	<link rel="stylesheet" href="libs/styles/iota.css">
-	<link rel="stylesheet" href="libs/styles/layout.css">
-
-
-  <!-- Revealjs Theme -->
-  
-
-   <!-- css list -->
-	
-
-   
-
+    /* Scrollable slides */
+    .reveal .slides section,
+    .reveal .slides section > section {
+      overflow-y: auto;
+      max-height: 100%;
+      padding: 1.5em;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
-
 <body>
-
-   
-
   <div class="reveal">
-
-    <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
-      
-
-
-    
-        <section >
-            
-            <h1>Implementation</h1>
-<h2>POSC 315 Week 11-2</h2>
-<h3>Implementation in the Policy Process</h3>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h1>Implementation</h1>
-<h4>The the process by which policies enacted by the legislative and executive branches are carried out by the bureaucracy and the courts.</h4>
-<ul>
-<li>
-<p>A policy is generally useless if it is not implemented.</p>
-</li>
-<li>
-<p>Implementation battles are also where significant power and debate can occur.</p>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h1>Implementation Basics</h1>
-<h2>Possibly the most critical stage of the policy process.</h2>
-<ul>
-<li>
-<p>Policies are not self-executing.</p>
-</li>
-<li>
-<p>Often determines the success or failure of a policy.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h2>Governmental Agency Characteristics</h2>
-<ul>
-<li>
-<p>Bureaucrats have <strong>discretion</strong> in how they implement policies.</p>
-</li>
-<li>
-<p>Bureaucrats are not completely unbiased nor are they free to do whatever they want.</p>
-</li>
-<li>
-<p>Responsible for <em>translating</em> goals and intent of policy into action.</p>
-</li>
-</ul>
-
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-        <section >
-            
-            <h1>Implementation Studies:</h1>
-<h1>Four Generations</h1>
-
-            </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h2>1960s-1970s: The First Generation</h2>
-<ul>
-<li>
-<p>Theory came from case studies of specific programs.</p>
-<ul>
-<li>
-<p>Derthic’s <em>New Towns in Town</em> (1969)</p>
-</li>
-<li>
-<p>Pressman and Wildavsky’s <em>Implementation</em> (1973)</p>
-</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h2>1960s-1970s: The First Generation Lessons</h2>
-<ul>
-<li>
-<p>Needed commitment in the executive branch.</p>
-</li>
-<li>
-<p>Consider local needs and preferences in policy design.</p>
-</li>
-<li>
-<p>Consider and adapt to local conditions.</p>
-</li>
-<li>
-<p>There is no “one” best way to implement a policy.</p>
-</li>
-<li>
-<p>Complexity of Joint Action</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h3>The Complexity of Joint Action</h3>
-                <h4>(Bardach 1977)</h4>
-<ol>
-<li>
-<p>Simple and straightforward is often complex and convoluted.</p>
-</li>
-<li>
-<p>Different perspectives and different measures of success.</p>
-</li>
-<li>
-<p>Diverse implementers: agreement on the means but not always on the ends.</p>
-</li>
-<li>
-<p>All depends on <em>interorganizational relationships</em>.</p>
-</li>
-</ol>
-
-            </section>
-        
-            <section >
-                <h4><strong>Interorganizational Relationships</strong></h4>
-<p>Organizations have:</p>
-<ul>
-<li>
-<p>Incompatible goals</p>
-</li>
-<li>
-<p>Preferences for other policies</p>
-</li>
-<li>
-<p>Simultaneous commitments to other projects</p>
-</li>
-<li>
-<p>Dependence on others who are slow to act</p>
-</li>
-<li>
-<p>Differences of opinion on leadership</p>
-</li>
-<li>
-<p>Agreement coupled with lack of power.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4><strong>Interorganizational Relationships</strong></h4>
-<p><em>When a policy or program depends on so many actors, there are numerous possibilities for disagreement and delay.</em></p>
-
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h2>1980s-1990s: The Second Generation</h2>
-<ul>
-<li>
-<p>Theoretical development and empirical testing.</p>
-</li>
-<li>
-<p>An <em>era of theorizing</em>.</p>
-<ul>
-<li>Systems-like models of implementation.</li>
-<li>Bottom-up and top-down models.</li>
-</ul>
-</li>
-<li>
-<p>Strength: first attempts at creating some kind of unified theory of implementation.</p>
-</li>
-<li>
-<p>Weakness: too much emphasis on the rationality of the process.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h3>Top-Down Models</h3>
-<ul>
-<li>Assumptions:
-<ul>
-<li>
-<p>Policy is a rational process.</p>
-<ul>
-<li>clear goals, tools, and policy statements.</li>
-</ul>
-</li>
-<li>
-<p>Policy is a linear process.</p>
-</li>
-<li>
-<p>Policy is a hierarchical process.</p>
-</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Top-Down Models Advantages</h4>
-<ul>
-<li>
-<p>Clear goals and objectives.</p>
-</li>
-<li>
-<p>Overhead democracy: accountability to the public through elected officials and appointed bureaucrats.</p>
-</li>
-<li>
-<p>Clear lines of authority and responsibility:</p>
-<ul>
-<li>Clear credit for success or failure, i.e., there is someone to praise or blame.</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Top-Down Models Disadvantages</h4>
-<ul>
-<li>
-<p>Policy is not a rational process.</p>
-<ul>
-<li>Incrementalism and fragmented authority complicate this</li>
-</ul>
-</li>
-<li>
-<p>Emphasis on goals at the top and not on workers on the ground.</p>
-</li>
-<li>
-<p>Intergovernmental cooperation is often more difficult than expected.</p>
-</li>
-<li>
-<p>Implementers may circumvent the policy-makers’ intent.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Top-Down Model Example: The Forest Service</h4>
-<ul>
-<li>
-<p>The Forest Service is a top-down organization.</p>
-</li>
-<li>
-<p>Are the goals always clear?</p>
-<ul>
-<li>The forest service has multiple goals: recreation, conservation, and resource extraction.</li>
-<li>The goals are often in conflict.</li>
-<li>The goals are often vague.</li>
-</ul>
-</li>
-<li>
-<p>What goal is the most important?</p>
-</li>
-<li>
-<p>How do you measure success?</p>
-</li>
-<li>
-<p>How do you measure failure?</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Top-Down Model: Other Flaws</h4>
-<ul>
-<li>
-<p>Failure to consider the role of the courts.</p>
-</li>
-<li>
-<p>Doesn’t always account for federalism</p>
-<ul>
-<li>Federal officials can set guidelines better than they can hard rules</li>
-<li>Local officials engage in “strategic delay”</li>
-</ul>
-</li>
-<li>
-<p>Most policies are based on multiple statutes and regulations.</p>
-</li>
-<li>
-<p>But… federal officials can impose roles on who implements and apply sanctions and rewards to promote a particular implementation design.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h3>Bottom-Up Models</h3>
-<ul>
-<li>Assumptions:
-<ul>
-<li>
-<p>Emphasis is placed on where the government meets the people.</p>
-</li>
-<li>
-<p><strong>Backward mapping</strong>: starts with policy targets and works backward to identify which implementers and policy tools might affect behavioral change.</p>
-</li>
-<li>
-<p>Policy design considers the abilities and motivations of the lowest-level implementers, the street-level bureaucrats or the engaged target population.</p>
-</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Bottom-Up Models Advantages</h4>
-<ul>
-<li>
-<p>Emphasis on the people who actually implement the policy.</p>
-<ul>
-<li>Implementation begins with the service deliverers and the target groups</li>
-</ul>
-</li>
-<li>
-<p>Recognizes goals are ambiguous and that there are multiple goals.</p>
-</li>
-<li>
-<p>Allows for <strong>administrative discretion</strong>, acknowledging that one size doesn’t fit all.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Bottom-Up Models Advantages</h4>
-<ul>
-<li>
-<p>Policy is likely to reflect community needs and preferences.</p>
-</li>
-<li>
-<p>Does not require a single statute or “policy.”</p>
-</li>
-<li>
-<p>Better accommodates a pluralistic society and a network of actors.</p>
-</li>
-<li>
-<p>Better accommodates federalism.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Bottom-Up Models Disadvantages</h4>
-<ul>
-<li>
-<p>Overemphasizes the <strong>agency</strong> of the implementers.</p>
-</li>
-<li>
-<p>Discretion and differentially designated authority can create ambiguous goals and accomplishments.</p>
-</li>
-<li>
-<p>Street-level bureaucrats may subvert the intent of the policy and elected officials’ goals.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Bottom-Up Models Disadvantages</h4>
-<ul>
-<li>Doesn’t fully recognize power differences among interest groups and coalitions, even though they are participants.
-<ul>
-<li>Assumes that all groups have equal power and influence.
-<ul>
-<li>“Policies without publics” (Sabatier and Mazmanian 1980) often means low mobilization and low participation.</li>
-<li>Target groups often lack power and influence.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h2>Let’s Have Fun with a 2nd Generation Policy</h2>
-<h3>Drive 55 and Stay Alive!</h3>
-<ul>
-<li>
-<p><a href="https://youtu.be/fqdFFAErG64">The National Maximum Speed Law (NMSL) in 1974.</a></p>
-</li>
-<li>
-<p>The NMSL required states to adopt a maximum speed limit of 55 mph.</p>
-</li>
-<li>
-<p>The NMSL was repealed in 1995.</p>
-</li>
-</ul>
-
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h2>2000s: The Third Generation</h2>
-<ul>
-<li>
-<p>Realizes implementation is communication between policymakers and implementers</p>
-</li>
-<li>
-<p>Recognizes the importance of the <strong>policy network</strong>.</p>
-</li>
-<li>
-<p>Synthesizes the top-down and bottom-up models.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h3>Third Generation Propositions:</h3>
-<h4>Success</h4>
-<ol>
-<li>
-<p>Implementation is a process of communication between policymakers and implementers.</p>
-</li>
-<li>
-<p>Success comes from sufficient resources, clear goals, and a supportive political environment.</p>
-</li>
-</ol>
-
-            </section>
-        
-            <section >
-                <h4>Improvement:</h4>
-<ol>
-<li>
-<p>Strategic delay on the part of the states allows for <strong>policy learning</strong> and <strong>policy diffusion</strong></p>
-</li>
-<li>
-<p>This can lead to innovation and improvement as states learn from each other.</p>
-</li>
-</ol>
-
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h2>2010s: The Fourth Generation</h2>
-<ul>
-<li>
-<p>The fourth Generation is still being developed.</p>
-</li>
-<li>
-<p>It is a synthesis of the first three eras – particularly an outgrowth of the 3rd Generation.</p>
-</li>
-<li>
-<p>The general trend is to move away from long-term causal relationships and toward a more dynamic and interactive process.</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h3>Fourth Generation Propositions:</h3>
-<ul>
-<li>
-<p>Move to <strong>program implementation</strong> focus instead of the policy implementation orientation of previous generations.</p>
-</li>
-<li>
-<p>Other disciplines have moved away from the linear model of policy implementation to a more dynamic and interactive process of programs</p>
-<ul>
-<li>health, environment, education, and social welfare, planning, etc.</li>
-</ul>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <h4>Program Implementation</h4>
-<ul>
-<li>
-<p>The programmatic focus is less on broad theories and more on <em>what works for a particular program</em>.</p>
-</li>
-<li>
-<p>Geared toward the practical considerations of making programs more effective.</p>
-</li>
-<li>
-<p>The core disciplines of political science and public administration are still focused on comprehensive causal frameworks of policy implementation.</p>
-</li>
-</ul>
-
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-        <section >
-            
-            <h1>Implementation Summary</h1>
-<ul>
-<li>
-<p>Implementation is the process by which policies enacted by the legislative and executive branches are carried out by the bureaucracy and the courts.</p>
-</li>
-<li>
-<p>Implementation is a critical stage of the policy process.</p>
-</li>
-<li>
-<p>Implementation studies have gone through four generations of development.</p>
-</li>
-</ul>
-
-            </section>
-    
-
-
-
-    
-        <section >
-            
-            <h1>Next Time</h1>
-<h2>Policy Failure and Learning</h2>
-
-            </section>
-    
+      <!-- Cover -->
+      <section>
+        <h1>Implementation</h1>
+        <h2>POSC 315 • Week 11–2</h2>
+        <p><em>Transforming Policy into Practice</em></p>
+      </section>
+
+      <!-- Agenda -->
+      <section>
+        <h2>Today's Agenda</h2>
+        <ul>
+          <li>Learning Objectives</li>
+          <li>Why Implementation Matters</li>
+          <li>Generations of Implementation Theory</li>
+          <li>Case Studies &amp; Activities</li>
+          <li>Challenges &amp; Best Practices</li>
+          <li>Q&amp;A / Discussion</li>
+        </ul>
+      </section>
+
+      <!-- Objectives -->
+      <section>
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Explain why implementation is critical in the policy cycle.</li>
+          <li>Differentiate among four generations of implementation scholarship.</li>
+          <li>Analyze real-world examples of policy rollout successes and failures.</li>
+          <li>Identify strategies to improve implementation outcomes.</li>
+        </ul>
+      </section>
+
+      <!-- Why it matters -->
+      <section>
+        <h2>Why Implementation Matters</h2>
+        <ul>
+          <li>Policy → Action gap: legislation alone doesn't change outcomes.</li>
+          <li>Frontline discretion shapes how rules affect communities.</li>
+          <li>Opportunity for stakeholder influence &amp; conflict.</li>
+        </ul>
+      </section>
+
+      <!-- Quick Poll -->
+      <section>
+        <h2>Quick Poll</h2>
+        <p>Think of a recent policy or program—why do you think it has succeeded or failed in implementation?</p>
+        <p class="small-note">(Take 2 minutes to jot down your thoughts. We'll discuss.)</p>
+      </section>
+
+      <!-- First Generation -->
+      <section>
+        <h2>1st Generation: Case Study Foundations</h2>
+        <ul>
+          <li>Period: 1960s–70s</li>
+          <li>Key Works: Derthick's <em>New Towns in Town</em>; Pressman &amp; Wildavsky's <em>Implementation</em>.</li>
+          <li>Lessons:
+            <ul>
+              <li>Executive commitment is vital.</li>
+              <li>Design must reflect local needs &amp; capacity.</li>
+              <li>Joint action complexity across agencies.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Activity: Mapping Actors</h3>
+        <p>In pairs, map the key organizations involved in a public health campaign (e.g., vaccination drive). Identify potential points of conflict.</p>
+        <p class="small-note">(5 minutes.)</p>
+      </section>
+
+      <!-- Second Generation -->
+      <section>
+        <h2>2nd Generation: Theory Building</h2>
+        <ul>
+          <li>1980s–90s: Rise of top-down &amp; bottom-up models.</li>
+          <li>Sought unified theory but over-relied on rationality assumptions.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Top‑Down Models</h3>
+        <ul>
+          <li>Hierarchical control &gt; clear goals.</li>
+          <li>Pros: accountability, clear authority.</li>
+          <li>Cons: ignores frontline realities, federalism.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Bottom‑Up Models</h3>
+        <ul>
+          <li>Begins with street‑level implementers and target groups.</li>
+          <li>Pros: local adaptation, discretion.</li>
+          <li>Cons: variable outcomes, power imbalances.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Case Study: National Speed Limit (1974–95)</h3>
+        <ul>
+          <li>Federal mandate: 55 mph to save fuel &amp; improve safety.</li>
+          <li>States implemented to avoid funding loss.</li>
+          <li>Outcomes varied; repealed amid differing local priorities.</li>
+          <li><p><a href="https://youtu.be/A_c7V2o6BqI?si=3sOjY2R2FT5HNA12">The National Maximum Speed Law (NMSL) in 1974.</a></p></li>
+        </ul>
+      </section>
+
+      <!-- Third Generation -->
+      <section>
+        <h2>3rd Generation: Networks &amp; Dialogue</h2>
+        <ul>
+          <li>Early 2000s: Synthesizes top‑down &amp; bottom‑up.</li>
+          <li>Focus on policy networks, communication flow.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Core Propositions</h3>
+        <ol>
+          <li>Implementation = continuous dialogue between policymakers &amp; implementers.</li>
+          <li>Success = resources + clear goals + supportive environment.</li>
+          <li>Strategic delay fosters learning &amp; diffusion.</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Discussion</h3>
+        <p>How can we foster effective communication channels between Capitol Hill staff and frontline caseworkers?</p>
+      </section>
+
+      <!-- Fourth Generation -->
+      <section>
+        <h2>4th Generation: Program Focus</h2>
+        <ul>
+          <li>2010s–Present: Dynamic, interactive program implementation.</li>
+          <li>Tailored, practical approaches for specific sectors.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Program Implementation Principles</h3>
+        <ul>
+          <li>Iterative feedback loops with stakeholders.</li>
+          <li>Rapid cycle evaluation to adjust tactics.</li>
+          <li>Emphasis on evidence-based best practices.</li>
+        </ul>
+      </section>
+
+      <!-- Best Practices -->
+      <section>
+        <h2>Best Practices for Successful Implementation</h2>
+        <ul>
+          <li>Build coalitions across agencies.</li>
+          <li>Invest in training for frontline staff.</li>
+          <li>Set measurable milestones &amp; monitor progress.</li>
+          <li>Engage community feedback loops.</li>
+        </ul>
+      </section>
+
+      <!-- Common Pitfalls -->
+      <section>
+        <h2>Common Pitfalls</h2>
+        <ul>
+          <li>Unrealistic timelines &amp; budgets.</li>
+          <li>Poor communication among stakeholders.</li>
+          <li>Failure to adapt to local context.</li>
+          <li>Neglecting evaluation &amp; learning processes.</li>
+        </ul>
+      </section>
+
+      <!-- Summary -->
+      <section>
+        <h1>Key Takeaways</h1>
+        <ul>
+          <li>Implementation bridges policy design to real-world impact.</li>
+          <li>The field has evolved through four generations.</li>
+          <li>Success hinges on communication, resources, and adaptability.</li>
+        </ul>
+      </section>
+
+      <!-- Next -->
+      <section>
+        <h1>Next Time</h1>
+        <h2>Policy Failure &amp; Organizational Learning</h2>
+      </section>
 
     </div>
-
-
   </div>
 
-  <div class="line top"></div>
-  <div class="line bottom"></div>
-  <div class="line left"></div>
-  <div class="line right"></div>
-
-  <script src="libs/reveal.js/4.3.1/reveal.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/math/math.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/fullscreen/plugin.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/animate/plugin.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/animate/svg.min.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/plugin.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/Chart.min.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/d3/d3.v3.min.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/d3.patch.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/d3/queue.v1.min.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/d3/topojson.v1.min.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/anything/function-plot.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/customcontrols/plugin.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/embed-tweet/plugin.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/chart/chart.min.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/chart/plugin.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/verticator/verticator.js"></script>
-
-<script src="libs/reveal.js/4.3.1/plugin/zoom/zoom.js"></script>
-<script src="libs/reveal.js/4.3.1/plugin/search/search.js"></script>
-
-<script src="libs/reveal.js/4.3.1/plugin/chalkboard/plugin.js"></script>
-
-<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/plugin.js"></script>  -->
-<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/recorder.js"></script>-->
-<!--	<script src="libs/reveal.js/4.3.1/plugin/audio-slideshow/RecordRTC.js"></script>-->
-
-  
-
-<script>
-  const printPlugins = [
-      RevealNotes,
-      RevealHighlight,
-      RevealMath.MathJax3,
-      RevealAnimate,
-      RevealChalkboard, 
-			RevealEmbedTweet,
-			RevealChart,
-		];
-
-		const plugins =  [...printPlugins,
-		RevealZoom, 
-		RevealSearch, 
-				RevealMarkdown, 
-				
-				RevealFullscreen,
-				RevealAnything,
-				//RevealAudioSlideshow,
-				//RevealAudioRecorder,
-				
-				// poll
-				// question
-				// seminar
-				Verticator 
-				 ]
-
-
-		// Also available as an ES module, see:
-		// https://revealjs.com/initialization/
-		Reveal.initialize({
-			controls: true,
-      controlsTutorial: true,
-      controlsLayout: 'bottom-right',
-      controlsBackArrows: 'faded',
-      progress: true,
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
       slideNumber: true,
-      //#showSlideNumber "all" "print" "speaker"
-      hash: true, //# hash: false,
-      //# respondToHashChanges: true,
-      //# history: false,
-      keyboard: true,
-      //#keyboardCondition: null,
-      overview: true,
+      progress: true,
       center: true,
-      touch: true,
-      loop: false,
-      rtl: false,
-      //#navigationMode: 'default', linear grid
-      shuffle: false,
-      fragments: true,
-      fragmentInURL: false,
-      embedded: false,
-      help: true,
-      //#pause: true
-      showNotes: false,
-      autoPlayMedia: false, // TODO fix this to a nullable value
-      //#preloadIframes: null. true false
-      //#autoAnimate: true
-      //#autoAnimateMatcher: null,
-      //#autoAnimateEasing: 'ease',
-      //autoAnimateDuration: 1.0,
-      //#autoAnimateUnmatched: true
-      //#autoAnimateStyles: []
-      autoSlide: 0, // TODO fix this to a falseable value
-      autoSlideStoppable: true,
-      autoSlideMethod: '0',
-      defaultTiming: 120,
-      mouseWheel: false,
-      //#previewLinks: false
-      //#postMessage: true, // TODO : this can cause issues with the vscode api ???
-      //#postMessageEvents: false,
-      //#focusBodyOnPageVisibilityChange: true,
-      transition: 'slide',
-      transitionSpeed: 'default',
-      backgroundTransition: 'fade',
-      //#pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
-      //#pdfSeparateFragments: true,
-      //#pdfPageHeightOffset: -1,
-      viewDistance: 3,
-      //#mobileViewDistance: 2,
-      display: 'block',
-      //#hideInactiveCursor: true,
-      //#hideCursorTime: 5000
-
-      // Parallax Background
-      parallaxBackgroundImage: '../backgrounds/purple.jpg',
-      parallaxBackgroundSize: '2100px 1320px',
-      parallaxBackgroundHorizontal: 200,
-      parallaxBackgroundVertical: 150,
-
-      //Presentation Size
-      width: 1280,
-			height: 720,
-			margin: 0.04,
-      minScale: 0.2,
-      maxScale: 2,
-      disableLayout: false,
-
-      audio: {
-        prefix: 'audio/', // audio files are stored in the "audio" folder
-        suffix: '.ogg', // audio files have the ".ogg" ending
-        textToSpeechURL: null, // the URL to the text to speech converter
-        defaultNotes: false, // use slide notes as default for the text to speech converter
-        defaultText: false, // use slide text as default for the text to speech converter
-        advance: 0, // advance to next slide after given time in milliseconds after audio has played, use negative value to not advance
-        autoplay: false, // automatically start slideshow
-        defaultDuration: 5, // default duration in seconds if no audio is available
-        defaultAudios: true, // try to play audios with names such as audio/1.2.ogg
-        playerOpacity: 0.05, // opacity value of audio player if unfocused
-        playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls
-        startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
-      },
-      
-      chalkboard: { // font-awesome.min.css must be available
-        //src: "chalkboard/chalkboard.json",
-        storage: "chalkboard-demo",
-      },
-      
-			customcontrols: {
-					controls: [
-      						{
-						  id: 'toggle-overview',
-						  title: 'Toggle overview (O)',
-						  icon: '<i class="fa fa-th"></i>',
-						  action: 'Reveal.toggleOverview();'
-						}
-						,
-      {
-        icon: '<i class="fa fa-pen-square"></i>',
-        title: 'Toggle chalkboard (B)',
-        action: 'RevealChalkboard.toggleChalkboard();'
-      },
-      {
-        icon: '<i class="fa fa-pen"></i>',
-        title: 'Toggle notes canvas (C)',
-        action: 'RevealChalkboard.toggleNotesCanvas();'
-      }
-      
-				]
-			},
-			chart: {
-					defaults: { 
-						color: 'lightgray', // color of labels
-						scale: { 
-							beginAtZero: true, 
-							ticks: { stepSize: 1 },
-							grid: { color: "lightgray" } , // color of grid lines
-						},
-					},
-					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
-					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
-					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
-					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
-			},
-			math: {
-				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-				config: 'TeX-AMS_HTML-full',
-				// pass other options into `MathJax.Hub.Config()`
-				TeX: { Macros: { RR: "{\\bf R}" } }
-				},
-				anything: [ 
-				{
-		className: "plot",
-		defaults: {width:500, height: 500, grid:true},
-		initialize: (function(container, options){ options.target = "#"+container.id; functionPlot(options) })
-	 },
-	 {
-		className: "chart",  
-		initialize: (function(container, options){ container.chart = new Chart(container.getContext("2d"), options);  })
-	 },
-	 {
-		className: "anything",
-		initialize: (function(container, options){ if (options && options.initialize) { options.initialize(container)} })
-	 },
-					],
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: (window.location.search.match(/print-pdf/gi) ? printPlugins : plugins ) 
-		});
-			
-
-
-	    // Change chalkboard theme : 
-		function changeTheme(input) {
-			var config = {};
-			config.theme = input.value;
-			Reveal.getPlugin("RevealChalkboard").configure(config);
-			input.blur();
-		}
-
-		// // Handle the message inside the webview
-        // window.addEventListener('message', event => {
-
-        //     const message = event.data; // The JSON data our extension sent
-
-        //     switch (message.command) {
-        //         case 'refactor':
-        //             Reveal.toggleHelp();
-        //     }
-        // });
-
-		if (window.location.search.match(/print-pdf-now/gi)) {
-      		setTimeout(() => {
-				window.print();
-			  }, 2500);
-			
-    }
-</script>
-
+      transition: 'fade',
+      dependencies: [
+        { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js' },
+        { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js', async: true }
+      ]
+    });
+  </script>
 </body>
-
 </html>

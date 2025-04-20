@@ -2,10 +2,10 @@
 """
 convert_html_to_md_and_pdf.py
 
-Recursively finds every `index.html` file under a given directory, converts it to Markdown and PDF
-using Pandoc, and writes the outputs to a separate directory preserving subdirectory structure.
+Recursively finds every `index.html` file under a given directory, converts it to Markdown (with YAML front matter)
+and PDF using Pandoc, then writes the outputs to a separate directory preserving subdirectory structure.
 
-The generated Markdown files retain `index.md` names, while PDFs are named after their containing
+The Markdown files have `index.md` names (with YAML prepended), while PDFs are named after their containing
 folder (e.g., `foldername.pdf`).
 
 Usage:
@@ -18,7 +18,7 @@ Requirements:
 Example:
     python convert_html_to_md_and_pdf.py --root ./site --out ./converted
 
-This will process all `index.html` files under `./site`, producing `index.md` and
+This will process all `index.html` files under `./site`, producing `index.md` (with YAML) and
 `<foldername>.pdf` in `./converted/<relative_path>/`.
 """
 import os
@@ -27,6 +27,24 @@ import argparse
 import logging
 import sys
 
+# YAML front matter to prepend to each Markdown file
+YAML_HEADER = """---
+fontsize: 10pt
+geometry: margin=1in
+mainfont: "DejaVu Sans"
+output:
+  pdf_document:
+    latex_engine: xelatex
+header-includes:
+  - \\usepackage{fancyhdr}
+  - \\pagestyle{fancy}
+  - \\fancyhf{}
+  - \\fancyhead[L]{\\textbf{POSC 315 | Week 11}}
+  - \\fancyhead[R]{\\textbf{Policy Design and Tools}}
+  - \\fancyfoot[C]{\\thepage}
+  - \\setlength{\\headheight}{15pt}
+---
+"""
 
 def check_pandoc():
     """Ensure Pandoc is available on PATH, exit if not."""
@@ -37,8 +55,18 @@ def check_pandoc():
         sys.exit(1)
 
 
+def prepend_yaml(md_path: str) -> None:
+    """Prepend YAML_HEADER to the markdown file if not already present."""
+    with open(md_path, 'r+', encoding='utf-8') as f:
+        content = f.read()
+        if not content.startswith('---'):
+            f.seek(0, 0)
+            f.write(YAML_HEADER + '\n' + content)
+            logging.info(f"Prepended YAML to: {md_path}")
+
+
 def convert_file(html_path: str, md_path: str, pdf_path: str) -> None:
-    """Convert a single HTML file to Markdown and PDF."""
+    """Convert HTML to Markdown (with YAML) and then to PDF."""
     # Convert to Markdown
     try:
         subprocess.run([
@@ -50,16 +78,20 @@ def convert_file(html_path: str, md_path: str, pdf_path: str) -> None:
         logging.info(f"Markdown generated: {md_path}")
     except subprocess.CalledProcessError as e:
         logging.error(f"Failed to convert to Markdown: {html_path}: {e}")
+        return
 
-    # Convert to PDF
+    # Prepend YAML front matter
+    prepend_yaml(md_path)
+
+    # Convert Markdown (with YAML) to PDF
     try:
         subprocess.run([
-            'pandoc', html_path,
+            'pandoc', md_path,
             '-o', pdf_path
         ], check=True)
         logging.info(f"PDF generated: {pdf_path}")
     except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to convert to PDF: {html_path}: {e}")
+        logging.error(f"Failed to convert to PDF: {md_path}: {e}")
 
 
 def main(root_dir: str, output_dir: str) -> None:
@@ -91,7 +123,7 @@ def main(root_dir: str, output_dir: str) -> None:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description="Convert all index.html files in subdirectories to Markdown and PDF"
+        description="Convert all index.html files to Markdown with YAML and PDF."
     )
     parser.add_argument(
         '--root', '-r',

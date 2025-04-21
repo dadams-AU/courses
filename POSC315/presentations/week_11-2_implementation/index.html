@@ -14,18 +14,112 @@
     html, body, .reveal, .reveal .slides { height: 100%; }
     .reveal { background-color: #fdf6e3; color: #073642; }
     .reveal h1, .reveal h2, .reveal h3 { font-family: 'Helvetica Neue', Arial, sans-serif; }
-    .reveal h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-    .reveal h2 { font-size: 1.5em; }
-    .reveal li { margin-bottom: 0.5em; line-height: 1.4; }
-    .small-note { font-size: 0.8em; color: #586e75; }
-
-    /* Scrollable slides */
+    .reveal h1 { font-size: 2.5em; margin: 0.3em 0; }
+    .reveal h2 { font-size: 1.7em; font-weight: bold; margin: 0.3em 0; }
+    .reveal h3 { font-size: 1.3em; color: #2aa198; margin: 0.3em 0; }
+    .reveal li { margin-bottom: 0.3em; line-height: 1.3; font-size: 0.9em; }
+    .small-note { font-size: 0.75em; color: #586e75; }
+    
+    /* Title styling */
+    .title-slide h1 { 
+      font-size: 3em; 
+      font-weight: bold; 
+      color: #d33682; 
+      margin-bottom: 0.2em; 
+    }
+    
+    .title-slide h2 { 
+      font-size: 1.6em; 
+      color: #268bd2; 
+      margin-bottom: 0.3em;
+    }
+    
+    .title-slide em { 
+      font-size: 1.1em; 
+      color: #6c71c4; 
+      font-style: italic; 
+    }
+    
+    /* Section headings */
+    .section-highlight { 
+      color: #2aa198; 
+      font-weight: bold; 
+    }
+    
+    /* Key points styling */
+    .key-point {
+      font-weight: bold;
+      color: #cb4b16;
+    }
+    
+    /* Activity boxes */
+    .activity-box {
+      background-color: #eee8d5;
+      padding: 0.8em;
+      border-left: 4px solid #268bd2;
+      margin: 0.7em 0;
+    }
+    
+    /* Generation styling */
+    .generation-title {
+      font-size: 1.8em;
+      color: #d33682;
+      font-weight: bold;
+    }
+    
+    /* Lists enhancement */
+    .reveal ul, .reveal ol {
+      margin-left: 0.8em;
+    }
+    
+    /* Emphasis on period */
+    .period {
+      color: #b58900;
+      font-weight: bold;
+    }
+    
+    /* Works citation */
+    .works-citation {
+      font-style: italic;
+      color: #657b83;
+      font-size: 0.9em;
+    }
+    
+    /* Links enhancement */
+    .reveal a {
+      color: #268bd2;
+      font-weight: bold;
+    }
+    
+    /* Case study box */
+    .case-study {
+      background-color: rgba(108, 113, 196, 0.1);
+      padding: 0.8em;
+      border-radius: 8px;
+      margin: 0.5em 0;
+    }
+    
+    /* Best practices and pitfalls */
+    .best-practice { color: #859900; }
+    .pitfall { color: #dc322f; }
+    
+    /* Slides prevent overflow */
     .reveal .slides section,
     .reveal .slides section > section {
-      overflow-y: auto;
-      max-height: 100%;
-      padding: 1.5em;
+      padding: 1em 2em;
       box-sizing: border-box;
+      height: 100%;
+    }
+    
+    /* Remove scroll and ensure content fits */
+    .reveal .slides {
+      overflow: hidden;
+    }
+    
+    /* Nested lists */
+    .reveal ul ul {
+      font-size: 0.9em;
+      margin-left: 0.7em;
     }
   </style>
 </head>
@@ -34,9 +128,9 @@
     <div class="slides">
 
       <!-- Cover -->
-      <section>
+      <section class="title-slide">
         <h1>Implementation</h1>
-        <h2>POSC 315 • Week 11–2</h2>
+        <h2>POSC 315 • Week 11–2</h2>
         <p><em>Transforming Policy into Practice</em></p>
       </section>
 
@@ -44,8 +138,8 @@
       <section>
         <h2>Today's Agenda</h2>
         <ul>
-          <li>Learning Objectives</li>
-          <li>Why Implementation Matters</li>
+          <li><span class="section-highlight">Learning Objectives</span></li>
+          <li><span class="key-point">Why Implementation Matters</span></li>
           <li>Generations of Implementation Theory</li>
           <li>Case Studies &amp; Activities</li>
           <li>Challenges &amp; Best Practices</li>
@@ -57,10 +151,10 @@
       <section>
         <h2>Learning Objectives</h2>
         <ul>
-          <li>Explain why implementation is critical in the policy cycle.</li>
-          <li>Differentiate among four generations of implementation scholarship.</li>
-          <li>Analyze real-world examples of policy rollout successes and failures.</li>
-          <li>Identify strategies to improve implementation outcomes.</li>
+          <li><strong>Explain</strong> why implementation is critical in the policy cycle.</li>
+          <li><strong>Differentiate</strong> among four generations of implementation scholarship.</li>
+          <li><strong>Analyze</strong> real-world examples of policy rollout successes and failures.</li>
+          <li><strong>Identify</strong> strategies to improve implementation outcomes.</li>
         </ul>
       </section>
 
@@ -68,120 +162,137 @@
       <section>
         <h2>Why Implementation Matters</h2>
         <ul>
-          <li>Policy → Action gap: legislation alone doesn't change outcomes.</li>
-          <li>Frontline discretion shapes how rules affect communities.</li>
-          <li>Opportunity for stakeholder influence &amp; conflict.</li>
+          <li><span class="key-point">Policy → Action gap:</span> legislation alone doesn't change outcomes.</li>
+          <li><span class="key-point">Frontline discretion</span> shapes how rules affect communities.</li>
+          <li><span class="key-point">Opportunity</span> for stakeholder influence &amp; conflict.</li>
         </ul>
       </section>
 
       <!-- Quick Poll -->
       <section>
         <h2>Quick Poll</h2>
-        <p>Think of a recent policy or program—why do you think it has succeeded or failed in implementation?</p>
-        <p class="small-note">(Take 2 minutes to jot down your thoughts. We'll discuss.)</p>
+        <div class="activity-box">
+          <p><strong>Think of a recent policy or program—why do you think it has succeeded or failed in implementation?</strong></p>
+          <p class="small-note">(Take 2 minutes to jot down your thoughts. We'll discuss.)</p>
+        </div>
       </section>
 
       <!-- First Generation -->
       <section>
-        <h2>1st Generation: Case Study Foundations</h2>
+        <h2 class="generation-title">1st Generation: Case Study Foundations</h2>
         <ul>
-          <li>Period: 1960s–70s</li>
-          <li>Key Works: Derthick's <em>New Towns in Town</em>; Pressman &amp; Wildavsky's <em>Implementation</em>.</li>
-          <li>Lessons:
-            <ul>
-              <li>Executive commitment is vital.</li>
-              <li>Design must reflect local needs &amp; capacity.</li>
-              <li>Joint action complexity across agencies.</li>
-            </ul>
-          </li>
+          <li><span class="period">Period: 1960s–70s</span></li>
+          <li>Key Works: <span class="works-citation">Derthick's <em>New Towns in Town</em>; Pressman &amp; Wildavsky's <em>Implementation</em>.</span></li>
         </ul>
       </section>
+      
+      <section>
+        <h3>1st Generation Lessons</h3>
+        <ul>
+          <li>Executive commitment is vital.</li>
+          <li>Design must reflect local needs &amp; capacity.</li>
+          <li>Joint action complexity across agencies.</li>
+        </ul>
+      </section>
+      
       <section>
         <h3>Activity: Mapping Actors</h3>
-        <p>In pairs, map the key organizations involved in a public health campaign (e.g., vaccination drive). Identify potential points of conflict.</p>
-        <p class="small-note">(5 minutes.)</p>
+        <div class="activity-box">
+          <p><strong>In pairs, map the key organizations involved in a public health campaign (e.g., vaccination drive). Identify potential points of conflict.</strong></p>
+          <p class="small-note">(5 minutes.)</p>
+        </div>
       </section>
 
       <!-- Second Generation -->
       <section>
-        <h2>2nd Generation: Theory Building</h2>
+        <h2 class="generation-title">2nd Generation: Theory Building</h2>
         <ul>
-          <li>1980s–90s: Rise of top-down &amp; bottom-up models.</li>
-          <li>Sought unified theory but over-relied on rationality assumptions.</li>
+          <li><span class="period">1980s–90s:</span> Rise of top-down &amp; bottom-up models.</li>
+          <li>Sought <strong>unified theory</strong> but over-relied on rationality assumptions.</li>
         </ul>
       </section>
+      
       <section>
         <h3>Top‑Down Models</h3>
         <ul>
-          <li>Hierarchical control &gt; clear goals.</li>
-          <li>Pros: accountability, clear authority.</li>
-          <li>Cons: ignores frontline realities, federalism.</li>
+          <li><span class="key-point">Hierarchical control</span> &gt; clear goals.</li>
+          <li><span class="best-practice">Pros:</span> accountability, clear authority.</li>
+          <li><span class="pitfall">Cons:</span> ignores frontline realities, federalism.</li>
         </ul>
       </section>
+      
       <section>
         <h3>Bottom‑Up Models</h3>
         <ul>
-          <li>Begins with street‑level implementers and target groups.</li>
-          <li>Pros: local adaptation, discretion.</li>
-          <li>Cons: variable outcomes, power imbalances.</li>
+          <li>Begins with <span class="key-point">street‑level implementers</span> and target groups.</li>
+          <li><span class="best-practice">Pros:</span> local adaptation, discretion.</li>
+          <li><span class="pitfall">Cons:</span> variable outcomes, power imbalances.</li>
         </ul>
       </section>
+      
       <section>
         <h3>Case Study: National Speed Limit (1974–95)</h3>
-        <ul>
-          <li>Federal mandate: 55 mph to save fuel &amp; improve safety.</li>
-          <li>States implemented to avoid funding loss.</li>
-          <li>Outcomes varied; repealed amid differing local priorities.</li>
-          <li><p><a href="https://youtu.be/A_c7V2o6BqI?si=3sOjY2R2FT5HNA12">The National Maximum Speed Law (NMSL) in 1974.</a></p></li>
-        </ul>
+        <div class="case-study">
+          <ul>
+            <li><strong>Federal mandate:</strong> 55 mph to save fuel &amp; improve safety.</li>
+            <li><strong>States implemented</strong> to avoid funding loss.</li>
+            <li><strong>Outcomes varied;</strong> repealed amid differing local priorities.</li>
+            <li><p><a href="https://youtu.be/A_c7V2o6BqI?si=3sOjY2R2FT5HNA12">The National Maximum Speed Law (NMSL) in 1974.</a></p></li>
+          </ul>
+        </div>
       </section>
 
       <!-- Third Generation -->
       <section>
-        <h2>3rd Generation: Networks &amp; Dialogue</h2>
+        <h2 class="generation-title">3rd Generation: Networks &amp; Dialogue</h2>
         <ul>
-          <li>Early 2000s: Synthesizes top‑down &amp; bottom‑up.</li>
-          <li>Focus on policy networks, communication flow.</li>
+          <li><span class="period">Early 2000s:</span> Synthesizes top‑down &amp; bottom‑up.</li>
+          <li>Focus on <span class="key-point">policy networks</span>, communication flow.</li>
         </ul>
       </section>
+      
       <section>
         <h3>Core Propositions</h3>
         <ol>
-          <li>Implementation = continuous dialogue between policymakers &amp; implementers.</li>
-          <li>Success = resources + clear goals + supportive environment.</li>
-          <li>Strategic delay fosters learning &amp; diffusion.</li>
+          <li>Implementation = <strong>continuous dialogue</strong> between policymakers &amp; implementers.</li>
+          <li>Success = <strong>resources + clear goals + supportive environment</strong>.</li>
+          <li><strong>Strategic delay</strong> fosters learning &amp; diffusion.</li>
         </ol>
       </section>
+      
       <section>
         <h3>Discussion</h3>
-        <p>How can we foster effective communication channels between Capitol Hill staff and frontline caseworkers?</p>
+        <div class="activity-box">
+          <p><strong>How can we foster effective communication channels between Capitol Hill staff and frontline caseworkers?</strong></p>
+        </div>
       </section>
 
       <!-- Fourth Generation -->
       <section>
-        <h2>4th Generation: Program Focus</h2>
+        <h2 class="generation-title">4th Generation: Program Focus</h2>
         <ul>
-          <li>2010s–Present: Dynamic, interactive program implementation.</li>
-          <li>Tailored, practical approaches for specific sectors.</li>
+          <li><span class="period">2010s–Present:</span> Dynamic, interactive program implementation.</li>
+          <li>Tailored, <span class="key-point">practical approaches</span> for specific sectors.</li>
         </ul>
       </section>
+      
       <section>
         <h3>Program Implementation Principles</h3>
         <ul>
-          <li>Iterative feedback loops with stakeholders.</li>
-          <li>Rapid cycle evaluation to adjust tactics.</li>
-          <li>Emphasis on evidence-based best practices.</li>
+          <li><strong>Iterative feedback loops</strong> with stakeholders.</li>
+          <li><strong>Rapid cycle evaluation</strong> to adjust tactics.</li>
+          <li>Emphasis on <span class="key-point">evidence-based best practices</span>.</li>
         </ul>
       </section>
 
       <!-- Best Practices -->
       <section>
-        <h2>Best Practices for Successful Implementation</h2>
+        <h2>Best Practices for Implementation</h2>
         <ul>
-          <li>Build coalitions across agencies.</li>
-          <li>Invest in training for frontline staff.</li>
-          <li>Set measurable milestones &amp; monitor progress.</li>
-          <li>Engage community feedback loops.</li>
+          <li class="best-practice">Build coalitions across agencies</li>
+          <li class="best-practice">Invest in frontline staff training</li>
+          <li class="best-practice">Set measurable milestones</li>
+          <li class="best-practice">Engage community feedback</li>
         </ul>
       </section>
 
@@ -189,10 +300,10 @@
       <section>
         <h2>Common Pitfalls</h2>
         <ul>
-          <li>Unrealistic timelines &amp; budgets.</li>
-          <li>Poor communication among stakeholders.</li>
-          <li>Failure to adapt to local context.</li>
-          <li>Neglecting evaluation &amp; learning processes.</li>
+          <li class="pitfall">Unrealistic timelines &amp; budgets</li>
+          <li class="pitfall">Poor communication</li>
+          <li class="pitfall">Failure to adapt locally</li>
+          <li class="pitfall">Neglecting evaluation</li>
         </ul>
       </section>
 
@@ -200,16 +311,16 @@
       <section>
         <h1>Key Takeaways</h1>
         <ul>
-          <li>Implementation bridges policy design to real-world impact.</li>
-          <li>The field has evolved through four generations.</li>
-          <li>Success hinges on communication, resources, and adaptability.</li>
+          <li><strong>Implementation bridges</strong> policy design to real-world impact.</li>
+          <li>The field has evolved through <span class="key-point">four generations</span>.</li>
+          <li>Success hinges on <strong>communication, resources, and adaptability</strong>.</li>
         </ul>
       </section>
 
       <!-- Next -->
       <section>
         <h1>Next Time</h1>
-        <h2>Policy Failure &amp; Organizational Learning</h2>
+        <h2 style="color: #d33682;">Policy Failure &amp; Organizational Learning</h2>
       </section>
 
     </div>

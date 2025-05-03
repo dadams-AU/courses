@@ -40,60 +40,123 @@
     }
   </script>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="https://dadams.io/index.html">
-        <img src="dadams.png" alt="dadams logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://dadams.io/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://hss.fullerton.edu/paj/contact_us/Faculty/d_adams%20.aspx">CSUF</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="https://courses.dadams.io">Course Resources</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://syllabi.dadams.io">Syllabus Repository</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://dadams.io/contact">Contact</a>
-          </li>
-        </ul>
-        <div class="theme-toggle" id="themeToggle">
-          <i class="fas fa-sun sun"></i>
-          <i class="fas fa-moon moon"></i>
-          <span class="toggle-thumb"></span>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+  </svg>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8 animate-fade-in">
-          <i class="fas fa-chalkboard fa-3x mb-4"></i>
-          <h1 class="display-5 fw-bold mb-4">Spring 2025 Courses</h1>
-          <p class="lead mb-4">Welcome to the digital hub of my Spring 2025 courses. Here you'll find slide decks, handouts, and other essential resources for your academic journey.</p>
-          <div class="d-flex justify-content-center gap-3">
-            <a href="https://discord.gg/pKjbtWydxm" class="btn btn-lg discord-btn">
-              <i class="fa-brands fa-discord me-2"></i> Join Discord
-            </a>
-            <a href="https://dadams.io/contact" class="btn btn-lg btn-light">Contact Me</a>
+  <!-- Navigation Bar -->
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" aria-label="Home">
+          <img class="lazy-image image-placeholder" data-src="dadams.png" alt="David P. Adams logo" style="height: 10px; width: auto;" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="https://dadams.io/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="research.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="courses.html">Teaching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resume.html">C.V.</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="https://hss.fullerton.edu/paj/contact_us/Faculty/d_adams%20.aspx" title="CSUF Faculty Profile" target="_blank" rel="noopener">
+                <i class="fa-solid fa-building me-1"></i>CSUF
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="https://courses.dadams.io" title="Class Resources">
+                <i class="fa-solid fa-graduation-cap me-1"></i>Class Resources
+              </a>
+            </li>
+          </ul>
+          <div class="dropdown bd-mode-toggle ms-3">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+                    id="bd-theme"
+                    type="button"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    aria-label="Toggle theme (auto)">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em" aria-hidden="true"><use href="#circle-half"></use></svg>
+              <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+                  Light
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                  Auto
+                  <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   </section>
+
+<!-- Hero Section -->
+<section class="hero-section pt-5">
+  <div class="container pt-4">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8 animate-fade-in">
+        <i class="fas fa-chalkboard fa-3x mb-4"></i>
+        <h1 class="display-5 fw-bold mb-4">Spring 2025 Courses</h1>
+        <p class="lead mb-4">Welcome to the digital hub of my Spring 2025 courses. Here you'll find slide decks, handouts, and other essential resources for your academic journey.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="https://discord.gg/pKjbtWydxm" class="btn btn-lg discord-btn">
+            <i class="fa-brands fa-discord me-2"></i> Join Discord
+          </a>
+          <a href="https://dadams.io/contact" class="btn btn-lg btn-light">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Course Quick Links -->
   <section class="py-5">
@@ -580,166 +643,32 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-          <a href="https://dadams.io">
-            <img src="dadams.png" alt="David Adams" style="height: 50px;">
-          </a>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex justify-content-center mx-3">
+          <a href="https://www.linkedin.com/in/dadamscsuf/" class="mx-3" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in fa-xl social-icons"></i></a>
+          <a href="https://discordapp.com/users/740691766277177346" class="mx-3" aria-label="Discord Profile"><i class="fa-brands fa-discord fa-xl social-icons"></i></a>
+          <a href="https://github.com/dadams-AU" class="mx-3" aria-label="GitHub Profile"><i class="fa-brands fa-github fa-xl social-icons"></i></a>
+          <a href="https://www.librarything.com/profile/dadamsAU" class="mx-3" aria-label="LibraryThing Profile"><i class="fa-solid fa-book fa-xl social-icons"></i></a>
+          <a href="https://www.x.com/dadamsAU" class="mx-3" aria-label="X Profile"><i class="fa-brands fa-x-twitter fa-xl social-icons"></i></a>
+          <a href="https://bsky.app/profile/dadams.io" class="mx-3" aria-label="Bluesky Profile"><i class="fa-brands fa-bluesky fa-xl social-icons"></i></a>
         </div>
-        <div class="col-md-4 text-center mb-3 mb-md-0">
-          <a href="termsofuse.html" class="text-decoration-none secondary-blue">
-            Terms of Use
-          </a>
-        </div>
-        <div class="col-md-4 text-center text-md-end">
-          <span class="secondary-blue">&copy; 2025 David Prescott Adams</span>
-        </div>
+        <p style="color: #5E81AC;">Copyright &copy; 2025 David Prescott Adams</p>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Theme toggling
-    document.getElementById('themeToggle').addEventListener('click', function() {
-      const htmlEl = document.documentElement;
-      if (htmlEl.getAttribute('data-bs-theme') === 'dark') {
-        htmlEl.setAttribute('data-bs-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        htmlEl.setAttribute('data-bs-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-    
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-bs-theme', savedTheme);
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'dark');
-    }
-    
-    // Toggle individual weeks
-    const toggleButtons = document.querySelectorAll('.toggle-week-btn');
-    toggleButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        const targetContent = document.getElementById(targetId);
-        
-        if (targetContent.classList.contains('collapsed')) {
-          targetContent.classList.remove('collapsed');
-          this.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        } else {
-          targetContent.classList.add('collapsed');
-          this.innerHTML = '<i class="fas fa-chevron-down"></i>';
-        }
-      });
-    });
-    
-    // Toggle all weeks
-    const toggleAllBtn = document.getElementById('toggleAllWeeks');
-    let allExpanded = false;
-    
-    toggleAllBtn.addEventListener('click', function() {
-      const weekContents = document.querySelectorAll('.week-content');
-      
-      if (allExpanded) {
-        // Collapse all weeks
-        weekContents.forEach(content => {
-          content.classList.add('collapsed');
-        });
-        
-        // Update all toggle buttons
-        toggleButtons.forEach(button => {
-          button.innerHTML = '<i class="fas fa-chevron-down"></i>';
-        });
-        
-        // Update the toggle all button text
-        toggleAllBtn.textContent = 'Expand All Weeks';
-        allExpanded = false;
-      } else {
-        // Expand all weeks
-        weekContents.forEach(content => {
-          content.classList.remove('collapsed');
-        });
-        
-        // Update all toggle buttons
-        toggleButtons.forEach(button => {
-          button.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        });
-        
-        // Update the toggle all button text
-        toggleAllBtn.textContent = 'Collapse All Weeks';
-        allExpanded = true;
-      }
-    });
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          // Expand the week content if it's collapsed
-          const weekId = targetId.replace('#', '') + '-content';
-          const weekContent = document.getElementById(weekId);
-          
-          if (weekContent && weekContent.classList.contains('collapsed')) {
-            weekContent.classList.remove('collapsed');
-            const button = document.querySelector(`[data-target="${weekId}"]`);
-            if (button) {
-              button.innerHTML = '<i class="fas fa-chevron-up"></i>';
-            }
-          }
-          
-          // Scroll to the target with offset for fixed header
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-          
-          // Update active state in sidebar
-          document.querySelectorAll('.list-group-item').forEach(item => {
-            item.classList.remove('active');
-          });
-          
-          anchor.classList.add('active');
-        }
-      });
-    });
-    
-    // Animation on scroll
-    function animateOnScroll() {
-      const animatedElements = document.querySelectorAll('.animate-slide-in');
-      
-      animatedElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        
-        if (rect.top <= windowHeight * 0.85 && rect.bottom >= 0) {
-          el.style.opacity = '1';
-          el.style.transform = 'translateX(0)';
-        }
-      });
-    }
-    
-    // Set initial state for animated elements
-    document.querySelectorAll('.animate-slide-in').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateX(-20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateOnScroll);
-  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

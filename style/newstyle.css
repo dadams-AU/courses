@@ -1,6 +1,6 @@
 /* CSS Variables for Theme Customization */
 :root {
-  /* Color System */
+  /* Color System - Primary Colors */
   --primary-blue: #2563eb;
   --primary-blue-dark: #1d4ed8;
   --primary-blue-light: #3b82f6;
@@ -57,32 +57,48 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-[data-bs-theme="dark"] {
+body.dark-theme {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.auto-theme {
+  /* Theme applied based on system preference */
+}
+
+/* Dark theme styles */
+[data-bs-theme="dark"].dark-theme,
+body.dark-theme {
   --bs-body-bg: var(--dark-bg);
   --bs-body-color: var(--dark-text);
 }
 
-[data-bs-theme="dark"] .bg-dark {
+[data-bs-theme="dark"] .bg-dark,
+.dark-theme .bg-dark {
   background-color: var(--dark-bg-alt) !important;
 }
 
-[data-bs-theme="dark"] .card {
+[data-bs-theme="dark"] .card,
+.dark-theme .card {
   background-color: var(--dark-card-bg);
   border-color: var(--dark-border);
 }
 
-[data-bs-theme="dark"] .list-group-item {
+[data-bs-theme="dark"] .list-group-item,
+.dark-theme .list-group-item {
   background-color: var(--dark-card-bg);
   color: var(--dark-text);
   border-color: var(--dark-border);
 }
 
-[data-bs-theme="dark"] .list-group-item.active {
+[data-bs-theme="dark"] .list-group-item.active,
+.dark-theme .list-group-item.active {
   background-color: var(--primary-blue);
   border-color: var(--primary-blue);
 }
 
-[data-bs-theme="dark"] .list-group-item:hover:not(.active) {
+[data-bs-theme="dark"] .list-group-item:hover:not(.active),
+.dark-theme .list-group-item:hover:not(.active) {
   background-color: var(--dark-bg-alt);
 }
 
@@ -103,19 +119,23 @@ body {
   color: var(--primary-blue-light);
 }
 
-[data-bs-theme="dark"] .primary-blue {
+[data-bs-theme="dark"] .primary-blue,
+.dark-theme .primary-blue {
   color: var(--primary-blue-light);
 }
 
-[data-bs-theme="dark"] .primary-green {
+[data-bs-theme="dark"] .primary-green,
+.dark-theme .primary-green {
   color: var(--primary-green-light);
 }
 
-[data-bs-theme="dark"] .secondary-green {
+[data-bs-theme="dark"] .secondary-green,
+.dark-theme .secondary-green {
   color: var(--primary-green-light);
 }
 
-[data-bs-theme="dark"] .secondary-blue {
+[data-bs-theme="dark"] .secondary-blue,
+.dark-theme .secondary-blue {
   color: var(--primary-blue-light);
 }
 
@@ -127,7 +147,13 @@ body {
 
 .navbar-brand img {
   height: 40px;
-  transition: transform 0.3s ease;
+  min-height: 50px;
+  min-width: 120px;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  transition: none !important;
+  filter: none !important;
+  transform: none !important;
 }
 
 .navbar-brand:hover img {
@@ -279,7 +305,8 @@ body {
   margin-bottom: 0.75rem;
 }
 
-[data-bs-theme="dark"] .lecture-card .card-title {
+[data-bs-theme="dark"] .lecture-card .card-title,
+.dark-theme .lecture-card .card-title {
   color: var(--primary-blue-light);
 }
 
@@ -360,62 +387,73 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Theme Toggle */
-.theme-toggle {
-  width: 60px;
-  height: 30px;
-  background-color: #e9ecef;
-  border-radius: 30px;
-  padding: 2px;
+/* Theme Toggle - Bootstrap Dropdown Style */
+.dropdown.bd-mode-toggle {
   position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-block;
 }
 
-[data-bs-theme="dark"] .theme-toggle {
-  background-color: #495057;
+#bd-theme {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0.5rem !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: var(--radius-md) !important;
+  transition: all 0.2s ease !important;
 }
 
-.theme-toggle .sun {
-  color: #ff9800;
-  font-size: 16px;
-  margin-left: 7px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+#bd-theme:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
 }
 
-.theme-toggle .moon {
-  color: #f8f9fa;
-  font-size: 14px;
-  margin-right: 7px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.dropdown-menu {
+  border-radius: var(--radius-md);
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
 }
 
-[data-bs-theme="dark"] .theme-toggle .sun {
-  opacity: 0;
+.dropdown-item {
+  padding: 0.65rem 1.5rem;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
-[data-bs-theme="dark"] .theme-toggle .moon {
-  opacity: 1;
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: rgba(5, 150, 105, 0.1);
+  transform: translateX(5px);
 }
 
-.theme-toggle .toggle-thumb {
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  background-color: white;
-  border-radius: 50%;
-  left: 2px;
-  transition: left 0.3s ease, background-color 0.3s ease;
+[data-bs-theme="dark"] .dropdown-menu,
+.dark-theme .dropdown-menu {
+  background-color: var(--dark-bg-alt);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
-[data-bs-theme="dark"] .theme-toggle .toggle-thumb {
-  left: 32px;
-  background-color: #212529;
+[data-bs-theme="dark"] .dropdown-item,
+.dark-theme .dropdown-item {
+  color: var(--dark-text);
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover,
+[data-bs-theme="dark"] .dropdown-item:focus,
+.dark-theme .dropdown-item:hover,
+.dark-theme .dropdown-item:focus {
+  background-color: rgba(59, 130, 246, 0.15);
+}
+
+.dropdown-divider {
+  margin: 0.5rem 0;
+  opacity: 0.1;
+}
+
+.dropdown-item.active {
+  background-color: var(--primary-blue-light);
+  color: white;
 }
 
 /* Footer */
@@ -427,9 +465,79 @@ body {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-[data-bs-theme="dark"] .footer {
+[data-bs-theme="dark"] .footer,
+.dark-theme .footer {
   background-color: var(--dark-bg-alt);
   border-color: var(--dark-border);
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-green), var(--primary-blue));
+  opacity: 0.8;
+}
+
+footer p {
+  margin-top: var(--spacing-md);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+footer:hover p {
+  opacity: 1;
+}
+
+/* Social Icons */
+.social-icons {
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: inline-block;
+}
+
+.social-icons:hover {
+  color: var(--primary-green-light);
+  transform: translateY(-5px) scale(1.1);
+}
+
+.social-icons::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-green-light);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.social-icons:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+[data-bs-theme="dark"] .social-icons,
+.dark-theme .social-icons {
+  color: var(--primary-green-light);
+}
+
+[data-bs-theme="dark"] .social-icons:hover,
+.dark-theme .social-icons:hover {
+  color: var(--primary-green);
+}
+
+[data-bs-theme="dark"] .social-icons::after,
+.dark-theme .social-icons::after {
+  background-color: var(--primary-green);
 }
 
 /* Animations */
@@ -477,4 +585,62 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
+}
+
+/* Fix for logo in dark mode */
+.dark-theme .navbar-brand img,
+[data-bs-theme="dark"] .navbar-brand img {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)) !important;
+}
+
+/* Fix for placeholder dimensions for the logo */
+.navbar-brand .image-placeholder {
+  background-color: transparent !important;
+  animation: none !important;
+}
+
+/* Ensure logo is loaded at highest priority */
+.navbar-brand img.lazy-image {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+/* Add to newstyle.css */
+
+/* Theme Toggle Icons */
+#bd-theme svg {
+  filter: brightness(1.5);
+  fill: #ffffff;
+}
+
+.dropdown-item svg.bi {
+  fill: currentColor;
+}
+
+.dropdown-item.active svg.bi {
+  fill: currentColor;
+}
+
+.dropdown-item:hover svg.bi {
+  fill: var(--primary-blue);
+}
+
+.dark-theme .dropdown-item:hover svg.bi,
+[data-bs-theme="dark"] .dropdown-item:hover svg.bi {
+  fill: var(--primary-blue-light);
+}
+
+/* Active theme icon */
+.dropdown-item.active svg.bi {
+  fill: var(--primary-blue);
+}
+
+.dark-theme .dropdown-item.active svg.bi,
+[data-bs-theme="dark"] .dropdown-item.active svg.bi {
+  fill: var(--primary-blue-light);
+}
+
+/* Ensure checkmark icon is displayed on active item */
+.dropdown-item.active svg.bi.ms-auto {
+  display: inline-block !important;
 }

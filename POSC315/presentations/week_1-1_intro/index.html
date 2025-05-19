@@ -6,11 +6,39 @@
     <title>Introduction to Public Policy</title>
     
     <!-- Core RevealJS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/moon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/night.min.css">
     
     <!-- Custom Styling -->
     <style>
+        :root {
+            --primary-color: #3498db;
+            --accent-color: #f39c12;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+        
+        .reveal {
+            font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+        }
+        
+        .reveal .slides {
+            text-align: left;
+        }
+        
+        .reveal h1, .reveal h2 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            text-transform: none;
+        }
+        
+        .reveal h3, .reveal h4 {
+            color: var(--light-color);
+            font-weight: 500;
+            text-transform: none;
+        }
+        
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -32,20 +60,40 @@
         
         blockquote {
             background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-left: 4px solid #666;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-
-        .reveal .slides {
-            text-align: left;
+        
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
         }
-
-        .reveal h1, .reveal h2, .reveal h3 {
-            margin-bottom: 0.5em;
+        
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
         }
-
-        .fragment {
-            opacity: 1;
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .topic-card {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        .img-container {
+            text-align: center;
+            margin: 1rem 0;
         }
     </style>
 </head>
@@ -54,129 +102,134 @@
     <div class="slides">
   
       <!-- Title Slide -->
-      <section data-background="https://via.placeholder.com/1920x1080/004/fff?text=Public+Policy" data-background-opacity="0.3">
-        <h1>Introduction to Public Policy</h1>
-        <h3>POSC 315-01</h3>
-        <h4>Week 1-1</h4>
-        <h5>David P. Adams, Ph.D.</h5>
+      <section data-background-gradient="radial-gradient(circle, #1a4a6e, #0c2233)" data-transition="zoom">
+        <h1 style="font-size: 2.5em; margin-bottom: 0.3em;">Introduction to Public Policy</h1>
+        <h3>POSC 315</h3>
+        <h4>Department of Political Science</h4>
+        <div style="position: absolute; bottom: 20px; right: 20px; font-size: 0.6em; opacity: 0.7;">
+          Navigate: Space / Arrow Keys / Swipe
+        </div>
       </section>
   
       <!-- Learning Objectives -->
-      <section>
+      <section data-background-color="#0e2439">
         <h2>Course Learning Objectives</h2>
         <ul>
-          <li class="fragment">Understand fundamental concepts and theories in public policy</li>
-          <li class="fragment">Analyze the policy-making process and key stakeholders</li>
-          <li class="fragment">Evaluate real-world policy cases and their impacts</li>
-          <li class="fragment">Develop skills in policy analysis and research</li>
-          <li class="fragment">Apply theoretical frameworks to current policy challenges</li>
+          <li class="fragment fade-up">Understand <span class="highlight">fundamental concepts</span> and theories in public policy</li>
+          <li class="fragment fade-up">Analyze the <span class="highlight">policy-making process</span> and key stakeholders</li>
+          <li class="fragment fade-up">Evaluate <span class="highlight">real-world policy cases</span> and their impacts</li>
+          <li class="fragment fade-up">Develop skills in <span class="highlight">policy analysis</span> and research</li>
+          <li class="fragment fade-up">Apply <span class="highlight">theoretical frameworks</span> to current policy challenges</li>
         </ul>
       </section>
   
       <!-- Opening Activity -->
-      <section>
+      <section data-background-color="#0e2439">
         <h2>Opening Activity</h2>
-        <div class="fragment">
+        <div class="card fragment fade-up">
           <h3>Quick Poll</h3>
           <p>What policy issue matters most to you right now?</p>
-          <ul>
-            <li>Climate Change</li>
-            <li>Education</li>
-            <li>Healthcare</li>
-            <li>Economy</li>
-            <li>Immigration</li>
-            <li>Other</li>
-          </ul>
+          <div class="three-column" style="margin-top: 1em;">
+            <div>
+              <p>• Climate Change<br>• Education</p>
+            </div>
+            <div>
+              <p>• Healthcare<br>• Economy</p>
+            </div>
+            <div>
+              <p>• Immigration<br>• Other</p>
+            </div>
+          </div>
         </div>
       </section>
   
-      <!-- Contact Information -->
-      <section>
-        <h2>Getting in Touch</h2>
-        <div class="two-column">
-          <div>
-            <h3>Office Hours</h3>
-            <p>📅 Tuesdays & Thursdays</p>
-            <p>🕒 9:30-11:00am</p>
-          </div>
-          <div>
-            <h3>Contact Methods</h3>
-            <p>📧 dpadams@fullerton.edu</p>
-            <p>📱 657-278-4770</p>
-            <p>🌐 dadams.io</p>
-          </div>
-        </div>
-        <div class="fragment">
-          <p>Schedule appointments: <a href="https://dadams.io/appointments">https://dadams.io/appointments</a></p>
-        </div>
-      </section>
-  
-      <!-- About Me -->
-      <section data-auto-animate>
-        <section>
-          <h2>About Your Instructor</h2>
-          <img src="https://via.placeholder.com/150" alt="Professor Photo" style="border-radius: 50%;">
-          <p>Dr. David P. Adams</p>
-        </section>
-  
-        <section data-auto-animate>
-          <h3>Education Journey</h3>
-          <ul>
-            <li class="fragment">B.S. Political Science - Kennesaw State University</li>
-            <li class="fragment">M.P.A. Public Administration - Auburn University</li>
-            <li class="fragment">Ph.D. Public Policy and Administration - Auburn University</li>
-          </ul>
-        </section>
-  
-        <section data-auto-animate>
-          <h3>Research Focus Areas</h3>
-          <div class="grid">
-            <div class="fragment">🌍 Environmental Policy</div>
-            <div class="fragment">⚡ Energy Policy</div>
-            <div class="fragment">🤝 Collaborative Governance</div>
-            <div class="fragment">📊 Policy Process Theory</div>
-            <div class="fragment">📈 Policy Outcomes</div>
-          </div>
-        </section>
-      </section>
-  
-      <!-- Course Overview -->
-      <section>
+      <!-- About the Course -->
+      <section data-background-color="#0e2439">
         <section>
           <h2>Course Overview</h2>
-          <p>Understanding how public policy shapes our daily lives</p>
+          <p class="fragment fade-up">Understanding how public policy shapes our daily lives</p>
+          <div class="img-container fragment fade-up">
+            <img src="/api/placeholder/600/320" alt="Policy cycle diagram" />
+          </div>
         </section>
   
         <section>
           <h3>Key Topics</h3>
-          <ul>
-            <li class="fragment">Policy Formation Process</li>
-            <li class="fragment">Stakeholder Analysis</li>
-            <li class="fragment">Policy Implementation</li>
-            <li class="fragment">Policy Evaluation</li>
-            <li class="fragment">Current Policy Challenges</li>
-          </ul>
+          <div class="grid">
+            <div class="topic-card fragment fade-up">
+              <h4>Policy Formation</h4>
+              <p>Understanding how issues reach the agenda</p>
+            </div>
+            <div class="topic-card fragment fade-up">
+              <h4>Stakeholder Analysis</h4>
+              <p>Mapping key actors and interests</p>
+            </div>
+            <div class="topic-card fragment fade-up">
+              <h4>Implementation</h4>
+              <p>From paper to practice</p>
+            </div>
+            <div class="topic-card fragment fade-up">
+              <h4>Evaluation</h4>
+              <p>Measuring policy success</p>
+            </div>
+          </div>
         </section>
   
         <section>
           <h3>Assessment Methods</h3>
-          <ul>
-            <li class="fragment">Policy Analysis Term Paper (<a href="termpaperslides.pdf">Instruction Slides</a>)</li>
-            <li class="fragment">Reading Quizzes</li>
-            <li class="fragment">Exam I</li>
-            <li class="fragment">Exam II</li>
-            <li class="fragment">Class Participation</li>
-          </ul>
+          <div class="two-column">
+            <div>
+              <ul>
+                <li class="fragment fade-up">Policy Analysis Term Paper</li>
+                <li class="fragment fade-up">Reading Quizzes</li>
+                <li class="fragment fade-up">Exam I</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li class="fragment fade-up">Exam II</li>
+                <li class="fragment fade-up">Class Participation</li>
+                <li class="fragment fade-up">Policy Presentation</li>
+              </ul>
+            </div>
+          </div>
         </section>
       </section>
 
+      <!-- Research Focus -->
+      <section data-background-color="#0e2439">
+        <h2>Public Policy Research Focus Areas</h2>
+        <div class="grid">
+          <div class="card fragment fade-up">
+            <h3>🌍</h3>
+            <p>Environmental Policy</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h3>⚡</h3>
+            <p>Energy Policy</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h3>🤝</h3>
+            <p>Collaborative Governance</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h3>📊</h3>
+            <p>Policy Process Theory</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h3>📈</h3>
+            <p>Policy Outcomes</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Guiding Question -->
-      <section data-background="#f0f0f0">
+      <section data-background="radial-gradient(circle, #1a4a6e, #0c2233)">
         <h2>Guiding Question</h2>
-        <blockquote class="fragment">
-          <p>How does policy change happen?</p>
+        <blockquote class="fragment fade-up">
+          <p style="font-size: 1.5em;">How does policy change happen?</p>
         </blockquote>
-        <div class="fragment">
+        <div class="fragment fade-up">
           <p>Consider:</p>
           <ul>
             <li>What motivates policy change?</li>
@@ -186,13 +239,13 @@
         </div>
       </section>
   
-      <!-- Todays Question -->
-      <section data-background="#f1f1f1">
-        <h2>Todays Question</h2>
-        <blockquote class="fragment">
-          <p>Can we do <em>anything</em> without governmental policy or governmental intrusion in our lives?</p>
+      <!-- Today's Question -->
+      <section data-background="radial-gradient(circle, #1a4a6e, #0c2233)">
+        <h2>Today's Question</h2>
+        <blockquote class="fragment fade-up">
+          <p style="font-size: 1.5em;">Can we do <em>anything</em> without governmental policy or governmental intrusion in our lives?</p>
         </blockquote>
-        <div class="fragment">
+        <div class="fragment fade-up">
           <p>Consider:</p>
           <ul>
             <li>Your morning routine</li>
@@ -203,9 +256,9 @@
       </section>
   
       <!-- Homework Assignment -->
-      <section>
+      <section data-background-color="#0e2439">
         <h2>Policy Perspective Interview</h2>
-        <div class="fragment">
+        <div class="card fragment fade-up">
           <h3>Assignment Details:</h3>
           <ol>
             <li>Interview someone about their views on policy & politics</li>
@@ -222,20 +275,20 @@
       </section>
   
       <!-- Resources -->
-      <section>
+      <section data-background-color="#0e2439">
         <h2>Course Resources</h2>
         <div class="three-column">
-          <div class="fragment">
+          <div class="card fragment fade-up">
             <h3>Required Materials</h3>
             <p>📚 Birkland's "<em>Introduction to the Policy Process</em>"</p>
             <p>💻 Canvas Access</p>
           </div>
-          <div class="fragment">
-            <h3>Research Tools</h3> <!-- library and government websites-->
+          <div class="card fragment fade-up">
+            <h3>Research Tools</h3>
             <p>🔍 Library Databases</p>
             <p>📊 Government Data</p>
           </div>
-          <div class="fragment">
+          <div class="card fragment fade-up">
             <h3>Support Services</h3>
             <p>📝 Writing Center</p>
             <p>🤝 Student Success Center</p>
@@ -244,42 +297,55 @@
       </section>
   
       <!-- Next Steps -->
-      <section>
+      <section data-background-gradient="radial-gradient(circle, #1a4a6e, #0c2233)">
         <h2>Getting Started</h2>
         <ul>
-          <li class="fragment">✅ Review Canvas course page</li>
-          <li class="fragment">📖 Read Chapter 1 of Birkland</li>
-          <li class="fragment">🎤 Complete policy perspective interview</li>
-          <li class="fragment">📝 Prepare discussion points for next class</li>
+          <li class="fragment fade-up">✅ Review Canvas course page</li>
+          <li class="fragment fade-up">📖 Read Chapter 1 of Birkland</li>
+          <li class="fragment fade-up">🎤 Complete policy perspective interview</li>
+          <li class="fragment fade-up">📝 Prepare discussion points for next class</li>
         </ul>
-        <div class="fragment">
+        <div class="fragment fade-up" style="margin-top: 1.5em;">
           <h3>Next Class Preview:</h3>
           <p>Overview of Public Policy</p>
         </div>
       </section>
   
+      <!-- Thank You Slide -->
+      <section data-background-gradient="linear-gradient(to bottom, #1a4a6e, #0c2233)">
+        <h1>Questions?</h1>
+        <p class="fragment fade-up">POSC 315: Introduction to Public Policy</p>
+      </section>
+  
     </div>
   </div>
 
-    <!-- RevealJS Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
-    <script>
-        Reveal.initialize({
-            hash: true,
-            slideNumber: true,
-            center: false,
-            progress: true,
-            controls: true,
-            touch: true,
-            fragments: true,
-            fragmentInURL: true,
-            transition: 'slide',
-            width: 1200,
-            height: 700,
-            margin: 0.04,
-            minScale: 0.2,
-            maxScale: 2.0
-        });
-    </script>
+  <!-- RevealJS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      center: false,
+      progress: true,
+      controls: true,
+      controlsTutorial: true,
+      touch: true,
+      fragments: true,
+      fragmentInURL: true,
+      transition: 'slide',
+      transitionSpeed: 'fast',
+      backgroundTransition: 'fade',
+      width: 1200,
+      height: 700,
+      margin: 0.04,
+      minScale: 0.2,
+      maxScale: 2.0,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
 </body>
 </html>

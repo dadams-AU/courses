@@ -49,6 +49,37 @@ const updateThemeIcon = (theme) => {
         checkmark.classList.add('d-none');
       }
     });
+
+    // Chevron icon toggle for main course sections (POSC 315 and POSC 315 Asynchronous)
+    const mainCollapsibleSectionIds = ['#posc315-content', '#posc315-async-content'];
+
+    mainCollapsibleSectionIds.forEach(sectionIdSelector => {
+      const collapsibleElement = document.querySelector(sectionIdSelector);
+      if (collapsibleElement) {
+        // data-bs-target uses the selector as is (e.g. "#posc315-content")
+        const toggleButton = document.querySelector(`[data-bs-target="${sectionIdSelector}"]`);
+        if (toggleButton) {
+          collapsibleElement.addEventListener('shown.bs.collapse', function () {
+            // When shown, icon should be up
+            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
+          });
+          collapsibleElement.addEventListener('hidden.bs.collapse', function () {
+            // When hidden, icon should be down
+            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
+          });
+
+          // Set initial icon state based on whether the section is initially shown or hidden
+          // The HTML has "fa-chevron-down" and "show" class by default.
+          // This means it's expanded but shows a "down" arrow.
+          // To make it consistent with "toggle-week-btn" behavior (up when open, down when closed):
+          if (collapsibleElement.classList.contains('show')) {
+            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
+          } else {
+            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
+          }
+        }
+      }
+    });
     
     targetEl.setAttribute('aria-pressed', 'true');
     targetEl.classList.add('active');
@@ -153,6 +184,33 @@ const updateThemeIcon = (theme) => {
         // Update the toggle all button text
         toggleAllBtn.textContent = 'Collapse All Weeks';
         allExpanded = true;
+      }
+    });
+
+    // Chevron icon toggle for main course sections (POSC 315 and POSC 315 Asynchronous)
+    // This should be run after the DOM is loaded. For consistency with other event listeners in this script,
+    // it's placed at the top level. Ideally, all DOM-dependent scripts should be in DOMContentLoaded.
+    const mainCollapsibleSectionIds = ['#posc315-content', '#posc315-async-content'];
+
+    mainCollapsibleSectionIds.forEach(sectionIdSelector => {
+      const collapsibleElement = document.querySelector(sectionIdSelector);
+      if (collapsibleElement) {
+        const toggleButton = document.querySelector(`[data-bs-target="${sectionIdSelector}"]`);
+        if (toggleButton) {
+          collapsibleElement.addEventListener('shown.bs.collapse', function () {
+            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
+          });
+          collapsibleElement.addEventListener('hidden.bs.collapse', function () {
+            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
+          });
+
+          // Set initial icon state
+          if (collapsibleElement.classList.contains('show')) {
+            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
+          } else {
+            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
+          }
+        }
       }
     });
     

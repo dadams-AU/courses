@@ -260,24 +260,19 @@ body.dark-theme {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Week Navigation */
-.course-nav {
-  position: sticky;
-  top: 80px;
-  padding-top: 1rem;
+.course-header h2 .btn-link {
+  color: white;
+  text-decoration: none; /* Remove underline */
+  padding: 0; /* Remove default button padding if it misaligns text */
+  font-size: inherit; /* Inherit h2 font size */
+  font-weight: inherit; /* Inherit h2 font weight */
+  text-align: left; /* Ensure it aligns with the h2's original text alignment */
 }
 
-.course-nav .list-group-item {
-  border-radius: var(--radius-md);
-  margin-bottom: 0.5rem;
-  transition: all 0.2s ease;
-  border-left: 3px solid transparent;
-}
-
-.course-nav .list-group-item:hover,
-.course-nav .list-group-item.active {
-  border-left-color: var(--primary-blue);
-  transform: translateX(5px);
+.course-header h2 .btn-link:hover,
+.course-header h2 .btn-link:focus {
+  color: white; /* Keep white on hover/focus */
+  text-decoration: none; /* Keep underline removed */
 }
 
 /* Lecture Cards */
@@ -557,16 +552,6 @@ footer:hover p {
 
 .animate-slide-in {
   animation: slideIn 0.5s ease forwards;
-}
-
-/* Week content visibility */
-.week-content {
-  display: block;
-  transition: opacity 0.5s ease, height 0.5s ease;
-}
-
-.week-content.collapsed {
-  display: none;
 }
 
 /* Mobile optimizations */

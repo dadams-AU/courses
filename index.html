@@ -207,6 +207,7 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-4 col-md-6 animate-fade-in" style="animation-delay: 0.3s;"> <div class="card course-card h-100"> <div class="card-header"> <h2 class="m-0 fs-3">POSC 320 Asynchronous</h2> </div> <div class="card-body d-flex flex-column"> <h3 class="fs-4 mb-3">Introduction to Public Administration</h3> <p class="flex-grow-1">Course materials for asynchronous Introduction to Public Administration.</p> <div class="d-flex gap-2 mt-3"> <a href="#posc320-async" class="btn btn-primary">View Materials</a> <!-- Add syllabus/handouts button later if needed --> </div> </div> </div> </div>
       </div>
     </div>
   </section>
@@ -218,40 +219,20 @@
         <h2 class="m-0">POSC 315: Introduction to Public Policy</h2>
         <div class="d-flex align-items-center">
           <a href="/POSC315/315handouts.html" class="btn btn-light me-2">View All Handouts</a>
-          <button id="toggleAllWeeks" class="btn btn-light me-2">Expand All Weeks</button>
-          <button class="btn btn-sm btn-outline-primary main-section-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#posc315-content" aria-expanded="true" aria-controls="posc315-content">
-            <i class="fas fa-chevron-down"></i>
+          <button class="btn btn-sm btn-outline-primary main-section-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#posc315-content" aria-expanded="false" aria-controls="posc315-content">
+            <i class="fas fa-chevron-right"></i>
           </button>
         </div>
       </div>
-      <div class="collapse show" id="posc315-content">
+      <div class="collapse" id="posc315-content">
         <div class="row g-4">
-        <!-- Sidebar navigation -->
-        <div class="col-lg-3 d-none d-lg-block">
-          <div class="course-nav">
-            <div class="list-group">
-              <a href="#week1" class="list-group-item list-group-item-action active">Week 1</a>
-              <a href="#week2" class="list-group-item list-group-item-action">Week 2</a>
-              <a href="#week3" class="list-group-item list-group-item-action">Week 3</a>
-              <a href="#week4" class="list-group-item list-group-item-action">Week 4</a>
-              <a href="#week6" class="list-group-item list-group-item-action">Week 6</a>
-              <a href="#week7" class="list-group-item list-group-item-action">Week 7</a>
-              <a href="#week9" class="list-group-item list-group-item-action">Week 9</a>
-              <a href="#week11" class="list-group-item list-group-item-action">Week 11</a>
-              <a href="#week12" class="list-group-item list-group-item-action">Week 12</a>
-            </div>
-          </div>
-        </div>
         
         <!-- Main content -->
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <!-- Week 1 -->
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week1">
               <h3 class="m-0 primary-blue">Week 1</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week1-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
             <div class="week-content mt-4" id="week1-content">
               <div class="row g-4">
@@ -291,11 +272,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week2">
               <h3 class="m-0 primary-blue">Week 2</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week2-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week2-content">
+            <div class="week-content mt-4" id="week2-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -333,11 +311,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week3">
               <h3 class="m-0 primary-blue">Week 3</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week3-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week3-content">
+            <div class="week-content mt-4" id="week3-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -375,11 +350,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week4">
               <h3 class="m-0 primary-blue">Week 4</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week4-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week4-content">
+            <div class="week-content mt-4" id="week4-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -417,11 +389,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week6">
               <h3 class="m-0 primary-blue">Week 6</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week6-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week6-content">
+            <div class="week-content mt-4" id="week6-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -459,11 +428,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week7">
               <h3 class="m-0 primary-blue">Week 7</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week7-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week7-content">
+            <div class="week-content mt-4" id="week7-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -501,11 +467,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week9">
               <h3 class="m-0 primary-blue">Week 9</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week9-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week9-content">
+            <div class="week-content mt-4" id="week9-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -543,11 +506,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week11">
               <h3 class="m-0 primary-blue">Week 11</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week11-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week11-content">
+            <div class="week-content mt-4" id="week11-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -585,11 +545,8 @@
           <div class="week-section mb-5">
             <div class="d-flex align-items-center" id="week12">
               <h3 class="m-0 primary-blue">Week 12</h3>
-              <button class="btn btn-sm btn-outline-primary ms-3 toggle-week-btn" data-target="week12-content">
-                <i class="fas fa-chevron-down"></i>
-              </button>
             </div>
-            <div class="week-content mt-4 collapsed" id="week12-content">
+            <div class="week-content mt-4" id="week12-content">
               <div class="row g-4">
                 <div class="col-md-6 animate-slide-in">
                   <div class="card lecture-card">
@@ -636,11 +593,11 @@
         <div> <!-- This new div will group buttons -->
           <a href="POSC315_asynch/posc315_async_handouts.html" class="btn btn-light me-2">View All Handouts</a>
         </div>
-        <button class="btn btn-sm btn-outline-primary ms-3 main-section-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#posc315-async-content" aria-expanded="true" aria-controls="posc315-async-content">
-          <i class="fas fa-chevron-up"></i>
+        <button class="btn btn-sm btn-outline-primary ms-3 main-section-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#posc315-async-content" aria-expanded="false" aria-controls="posc315-async-content">
+          <i class="fas fa-chevron-right"></i>
         </button>
       </div>
-      <div class="collapse show" id="posc315-async-content">
+      <div class="collapse" id="posc315-async-content">
         <div class="row g-4 mb-4">
             <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
               <div class="card lecture-card h-100">
@@ -814,14 +771,24 @@
   <!-- POSC 521 Section -->
   <section id="posc521" class="py-5 mt-4">
     <div class="container">
-      <div class="course-header">
-        <h2 class="m-0">POSC 521: MPA Capstone - Public Administration Theory</h2>
-        <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2024-25%20Spring/POSC521_2025_Spring.pdf" class="btn btn-light">View Syllabus</a>
+      <div class="course-header d-flex justify-content-between align-items-center">
+        <h2 class="m-0">
+          <button class="btn btn-link text-start w-100" type="button" data-bs-toggle="collapse" data-bs-target="#posc521-content" aria-expanded="false" aria-controls="posc521-content">
+            POSC 521: MPA Capstone - Public Administration Theory
+          </button>
+        </h2>
+        <div>
+          <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2024-25%20Spring/POSC521_2025_Spring.pdf" class="btn btn-light me-2">View Syllabus</a>
+          <button class="btn btn-sm btn-outline-primary main-section-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#posc521-content" aria-expanded="false" aria-controls="posc521-content">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
       
-      <div class="row g-4">
-        <div class="col-md-8">
-          <div class="card h-100">
+      <div class="collapse" id="posc521-content">
+        <div class="row g-4">
+          <div class="col-md-8">
+            <div class="card h-100">
             <div class="card-body">
               <h3 class="card-title primary-blue">Course Overview</h3>
               <p class="card-text">This capstone course synthesizes the knowledge and skills developed throughout the MPA program, with a focus on public administration theory and its practical applications.</p>
@@ -840,6 +807,32 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSC 320 Asynchronous Section -->
+  <section id="posc320-async" class="py-5 mt-4">
+    <div class="container">
+      <div class="course-header d-flex justify-content-between align-items-center">
+        <h2 class="m-0">
+          <button class="btn btn-link text-start w-100" type="button" data-bs-toggle="collapse" data-bs-target="#posc320-async-content" aria-expanded="false" aria-controls="posc320-async-content">
+            POSC 320 Asynchronous: Introduction to Public Administration
+          </button>
+        </h2>
+        <div>
+          <!-- Placeholder for a syllabus button if needed in the future -->
+          <!-- <a href="#" class="btn btn-light me-2">View Syllabus</a> -->
+          <button class="btn btn-sm btn-outline-primary main-section-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#posc320-async-content" aria-expanded="false" aria-controls="posc320-async-content">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="collapse" id="posc320-async-content">
+        <div class="pt-4"> <!-- Added padding top for spacing when expanded -->
+          <p><em>Course content for POSC 320 Asynchronous will be added here. This section is ready for slide materials.</em></p>
+          <!-- Future content (e.g., lecture cards) will go here -->
         </div>
       </div>
     </div>

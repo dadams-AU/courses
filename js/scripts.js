@@ -50,32 +50,34 @@ const updateThemeIcon = (theme) => {
       }
     });
 
-    // Chevron icon toggle for main course sections (POSC 315 and POSC 315 Asynchronous)
-    const mainCollapsibleSectionIds = ['#posc315-content', '#posc315-async-content'];
+    // Chevron icon toggle for main course sections
+    const mainCollapsibleSectionIds = ['#posc315-content', '#posc315-async-content', '#posc521-content', '#posc320-async-content'];
 
     mainCollapsibleSectionIds.forEach(sectionIdSelector => {
       const collapsibleElement = document.querySelector(sectionIdSelector);
       if (collapsibleElement) {
-        // data-bs-target uses the selector as is (e.g. "#posc315-content")
-        const toggleButton = document.querySelector(`[data-bs-target="${sectionIdSelector}"]`);
-        if (toggleButton) {
-          collapsibleElement.addEventListener('shown.bs.collapse', function () {
-            // When shown, icon should be up
-            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-          });
-          collapsibleElement.addEventListener('hidden.bs.collapse', function () {
-            // When hidden, icon should be down
-            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
-          });
+        // Find the specific icon button associated with this collapsible section
+        const iconToggleButton = document.querySelector(`.main-section-toggle-btn[data-bs-target="${sectionIdSelector}"]`);
+        if (iconToggleButton) {
+          const icon = iconToggleButton.querySelector('i.fas'); // Get the <i> element
+          if (icon) {
+            collapsibleElement.addEventListener('shown.bs.collapse', function () {
+              icon.classList.remove('fa-chevron-right');
+              icon.classList.add('fa-chevron-down');
+            });
+            collapsibleElement.addEventListener('hidden.bs.collapse', function () {
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-right');
+            });
 
-          // Set initial icon state based on whether the section is initially shown or hidden
-          // The HTML has "fa-chevron-down" and "show" class by default.
-          // This means it's expanded but shows a "down" arrow.
-          // To make it consistent with "toggle-week-btn" behavior (up when open, down when closed):
-          if (collapsibleElement.classList.contains('show')) {
-            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-          } else {
-            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
+            // Set initial icon state based on whether the section is initially shown or hidden
+            if (collapsibleElement.classList.contains('show')) {
+              icon.classList.remove('fa-chevron-right');
+              icon.classList.add('fa-chevron-down');
+            } else {
+              icon.classList.remove('fa-chevron-down');
+              icon.classList.add('fa-chevron-right');
+            }
           }
         }
       }
@@ -132,87 +134,6 @@ const updateThemeIcon = (theme) => {
       });
     });
     
-    // Toggle individual weeks
-    const toggleButtons = document.querySelectorAll('.toggle-week-btn');
-    toggleButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        const targetContent = document.getElementById(targetId);
-        
-        if (targetContent.classList.contains('collapsed')) {
-          targetContent.classList.remove('collapsed');
-          this.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        } else {
-          targetContent.classList.add('collapsed');
-          this.innerHTML = '<i class="fas fa-chevron-down"></i>';
-        }
-      });
-    });
-    
-    // Toggle all weeks
-    const toggleAllBtn = document.getElementById('toggleAllWeeks');
-    let allExpanded = false;
-    
-    toggleAllBtn.addEventListener('click', function() {
-      const weekContents = document.querySelectorAll('.week-content');
-      
-      if (allExpanded) {
-        // Collapse all weeks
-        weekContents.forEach(content => {
-          content.classList.add('collapsed');
-        });
-        
-        // Update all toggle buttons
-        toggleButtons.forEach(button => {
-          button.innerHTML = '<i class="fas fa-chevron-down"></i>';
-        });
-        
-        // Update the toggle all button text
-        toggleAllBtn.textContent = 'Expand All Weeks';
-        allExpanded = false;
-      } else {
-        // Expand all weeks
-        weekContents.forEach(content => {
-          content.classList.remove('collapsed');
-        });
-        
-        // Update all toggle buttons
-        toggleButtons.forEach(button => {
-          button.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        });
-        
-        // Update the toggle all button text
-        toggleAllBtn.textContent = 'Collapse All Weeks';
-        allExpanded = true;
-      }
-    });
-
-    // Chevron icon toggle for main course sections (POSC 315 and POSC 315 Asynchronous)
-    // This should be run after the DOM is loaded. For consistency with other event listeners in this script,
-    // it's placed at the top level. Ideally, all DOM-dependent scripts should be in DOMContentLoaded.
-    const mainCollapsibleSectionIds = ['#posc315-content', '#posc315-async-content'];
-
-    mainCollapsibleSectionIds.forEach(sectionIdSelector => {
-      const collapsibleElement = document.querySelector(sectionIdSelector);
-      if (collapsibleElement) {
-        const toggleButton = document.querySelector(`[data-bs-target="${sectionIdSelector}"]`);
-        if (toggleButton) {
-          collapsibleElement.addEventListener('shown.bs.collapse', function () {
-            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-          });
-          collapsibleElement.addEventListener('hidden.bs.collapse', function () {
-            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
-          });
-
-          // Set initial icon state
-          if (collapsibleElement.classList.contains('show')) {
-            toggleButton.innerHTML = '<i class="fas fa-chevron-up"></i>';
-          } else {
-            toggleButton.innerHTML = '<i class="fas fa-chevron-down"></i>';
-          }
-        }
-      }
-    });
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -223,17 +144,6 @@ const updateThemeIcon = (theme) => {
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          // Expand the week content if it's collapsed
-          const weekId = targetId.replace('#', '') + '-content';
-          const weekContent = document.getElementById(weekId);
-          
-          if (weekContent && weekContent.classList.contains('collapsed')) {
-            weekContent.classList.remove('collapsed');
-            const button = document.querySelector(`[data-target="${weekId}"]`);
-            if (button) {
-              button.innerHTML = '<i class="fas fa-chevron-up"></i>';
-            }
-          }
           
           // Scroll to the target with offset for fixed header
           window.scrollTo({
@@ -241,12 +151,6 @@ const updateThemeIcon = (theme) => {
             behavior: 'smooth'
           });
           
-          // Update active state in sidebar
-          document.querySelectorAll('.list-group-item').forEach(item => {
-            item.classList.remove('active');
-          });
-          
-          anchor.classList.add('active');
         }
       });
     });

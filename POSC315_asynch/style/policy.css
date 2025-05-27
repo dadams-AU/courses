@@ -204,17 +204,6 @@ html {
   padding-left: var(--spacing-lg);
 }
 
-.reveal ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  background-color: var(--primary);
-}
-
 .reveal ol {
   counter-reset: item;
   list-style-type: none;

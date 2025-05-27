@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="David P. Adams, Ph.D." />
+  <title>POSC 315: Policy Writing Project</title>
+  <style>
+    html {
+      font-family: Noto Sans;
+      font-size: 11pt;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: blue;
+    }
+    a:visited {
+      color: blue;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  
+  
+  
+  
+  
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">POSC 315: Policy Writing Project</h1>
+<p class="author">David P. Adams, Ph.D.</p>
+<p class="date">Summer 2025</p>
+</header>
+<h2 id="paper-overview">Paper Overview</h2>
+<p>This writing project guides you through the applied analysis of a
+real-world policy problem. Over five weeks, you will complete structured
+assignments that build toward a final policy memo, a key professional
+writing product in the field of public policy.</p>
+<h3 id="project-timeline-and-deliverables">Project Timeline and
+Deliverables</h3>
+<h4 id="week-1-policy-problem-proposal">Week 1: Policy Problem
+Proposal</h4>
+<h5 id="due-friday-may-30-10-of-final-grade"><strong>Due Friday, May
+30</strong> <em>(10% of Final Grade)</em></h5>
+<ul>
+<li><p>Write a 1–2 page memo identifying a policy problem.</p></li>
+<li><p>Include:</p>
+<ul>
+<li>Clear description of the problem and why it matters.</li>
+<li>Brief overview of key policy actors and institutions involved.</li>
+</ul></li>
+<li><p>Submit via 48Canvas by 11:59 PM.</p></li>
+</ul>
+<h4 id="week-25-cumulative-policy-memo-development">Week 2–5: Cumulative
+Policy Memo Development</h4>
+<h5
+id="important-for-weeks-2-through-5-you-must-turn-on-track-changes-in-word-or-suggesting-mode-in-google-docs-as-you-revise-and-expand-your-memo-each-week.-this-allows-me-to-see-the-evolution-of-your-thinking-and-writing-across-draftsnot-just-the-final-product"><strong>Important:</strong>
+For Weeks 2 through 5, you must turn on <strong>Track Changes</strong>
+(in Word) or <strong>Suggesting mode</strong> (in Google Docs) as you
+revise and expand your memo each week. This allows me to see the
+evolution of your thinking and writing across drafts—not just the final
+product</h5>
+<h5
+id="make-sure-you-are-always-working-in-the-same-document-file-throughout-this-process.">Make
+sure you are always working in the same document file throughout this
+process.</h5>
+<p>Each week you will build on your memo as follows:</p>
+<ul>
+<li><p><strong>Week 2 (June 6):</strong> Add a Problem Definition
+section (2–3 pages)</p>
+<ul>
+<li>Define your policy problem with background context, stakeholders,
+and data.</li>
+<li>Explain why the issue requires public policy intervention.</li>
+</ul></li>
+<li><p><strong>Week 3 (June 13):</strong> Add a Policy Alternatives
+section</p>
+<ul>
+<li>Present at least three alternatives and include an evaluation
+matrix.</li>
+<li>Explain criteria used to assess the options.</li>
+</ul></li>
+<li><p><strong>Week 4 (June 20):</strong> Submit a full draft policy
+memo (4–5 pages)</p>
+<ul>
+<li>Include Executive Summary, Problem Definition, Alternatives, and a
+preliminary Recommendation.</li>
+<li>Submit with tracked changes showing edits made so far.</li>
+</ul></li>
+<li><p><strong>Week 5 (June 26):</strong> Submit the final revised memo
+(5–7 pages) and a 1–2 page Reflection</p>
+<ul>
+<li>Incorporate feedback using tracked changes.</li>
+<li>Write a brief reflection on what you learned and how your thinking
+evolved.</li>
+</ul></li>
+</ul>
+<p>This approach mirrors professional policy writing, which evolves
+iteratively.</p>
+<h3 id="formatting-guidelines">Formatting Guidelines</h3>
+<ul>
+<li>All written work should be double-spaced, 12-point font, and
+submitted as PDF or Word documents through Canvas.</li>
+<li>Policy memos should follow a professional structure with clear
+headings.</li>
+</ul>
+<h3 id="revision-and-feedback-process">Revision and Feedback
+Process</h3>
+<p>You will receive feedback on your <strong>Draft Policy Memo</strong>
+during Week 4. When submitting your <strong>Final Policy Memo</strong>
+in Week 5, you are required to:</p>
+<ul>
+<li><p><strong>Submit your memo with tracked changes turned on</strong>,
+showing how you revised the draft based on feedback.</p></li>
+<li><p>If you are using <strong>Microsoft Word</strong>:</p>
+<ul>
+<li>Go to the <strong>Review</strong> tab and select <strong>Track
+Changes</strong> before making revisions.</li>
+<li>Save your document as a <code>.docx</code> file with tracked changes
+visible.</li>
+</ul></li>
+<li><p>If you are using <strong>Google Docs</strong>:</p>
+<ul>
+<li>Select <strong>Editing &gt; Suggesting</strong> mode from the
+top-right dropdown.</li>
+<li>Share your document or download as <code>.docx</code> with
+suggestions visible.</li>
+</ul></li>
+</ul>
+<p>This allows me to see how your thinking and writing evolved, and
+ensures credit is given for incorporating feedback.</p>
+<h3 id="submission-instructions">Submission Instructions</h3>
+<p>For the <strong>Final Policy Memo and Reflection (Due June
+26):</strong></p>
+<ul>
+<li><p>Submit two files to Canvas:</p>
+<ol type="1">
+<li>A clean, final version of your policy memo (PDF or Word).</li>
+<li>A version of your memo <strong>with tracked changes or suggestions
+visible</strong> (Word or Google Docs format).</li>
+</ol></li>
+<li><p>Submit your 1–2 page reflection as a separate document.</p></li>
+</ul>
+<h3 id="late-work-policy">Late Work Policy</h3>
+<p>Due to the accelerated format of the course, late assignments are
+generally not accepted unless prior arrangements are made.</p>
+<p>If you anticipate needing an extension, please communicate with me as
+soon as possible. Extensions will only be granted in exceptional
+circumstances and must be requested at least 24 hours before the due
+date.</p>
+<h3 id="academic-integrity">Academic Integrity</h3>
+<p>All work submitted must be your own. Plagiarism or academic
+dishonesty will not be tolerated and will result in a failing grade for
+the assignment and potentially the course. This includes the use of AI
+tools to generate content without proper attribution. Follow the
+university’s academic integrity guidelines and ensure that all sources
+are properly cited. See course <a
+href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20315%20Intro%20Policy/2025%20Summer/posc315_summer_2025.pdf">syllabus</a>
+for more details, especially regarding the use of AI tools.</p>
+<h2 id="sample-policy-memo-structure">Sample Policy Memo Structure</h2>
+<p>A policy memo is a professional document used to analyze a policy
+problem and recommend solutions. Use clear headings and concise
+language. Avoid academic jargon.</p>
+<h3 id="header"><strong>Header</strong></h3>
+<ul>
+<li>To: [Intended Audience – e.g., City Manager, Policy Director]</li>
+<li>From: [Your Name]</li>
+<li>Date: [Submission Date]</li>
+<li>Subject: [Clear and Concise Title of the Memo]</li>
+</ul>
+<h3 id="executive-summary-12-1-page"><strong>Executive Summary (1/2 – 1
+page)</strong></h3>
+<ul>
+<li>Briefly summarize the policy problem, key findings, and your
+recommendation.</li>
+<li>This should be clear enough for a reader to understand the issue and
+your proposed solution without reading the full memo.</li>
+</ul>
+<h3 id="problem-definition-1-2-pages"><strong>Problem Definition (1 – 2
+pages)</strong></h3>
+<ul>
+<li>Clearly describe the policy problem. Situate it in its broader
+policy context and history. Use relevant academic literature, legal
+frameworks, and empirical data to clarify how the problem has emerged
+and evolved over time.</li>
+<li>Explain why the issue is urgent or significant. Is it affecting
+marginalized communities, imposing economic costs, generating political
+controversy, or worsening over time?</li>
+<li>Identify who is directly affected by the problem and how. Include
+stakeholders such as government agencies, nonprofits, advocacy groups,
+businesses, or the public.</li>
+<li>Consider relevant policy dimensions—legal, administrative, ethical,
+political, and economic—and how they influence the framing and urgency
+of the issue.</li>
+<li>Support your analysis with at least two academic sources. You might
+draw from policy studies, public administration literature, or empirical
+social science research.</li>
+<li>Incorporate relevant data and contextual background. Where
+appropriate, you may use charts, statistics, or historical references to
+support your case.</li>
+</ul>
+<p>This section should lay the analytical foundation for evaluating
+policy alternatives.</p>
+<h3 id="policy-alternatives-1-2-pages"><strong>Policy Alternatives (1 –
+2 pages)</strong></h3>
+<ul>
+<li><p>Present at least three policy alternatives.</p></li>
+<li><p>Use a table or matrix to summarize options and evaluation
+criteria. For example:</p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 23%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Alternative</th>
+<th>Cost</th>
+<th>Effectiveness</th>
+<th>Public Acceptance</th>
+<th>Feasibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Increased Roundups</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Moderate</td>
+</tr>
+<tr class="even">
+<td>Fertility Control</td>
+<td>Low</td>
+<td>High (Long-Term)</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Adoption Incentives</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Discuss pros and cons of each alternative based on feasibility,
+cost, equity, effectiveness, and political viability.</p></li>
+</ul>
+<h3 id="recommendation-1-page"><strong>Recommendation (1
+page)</strong></h3>
+<ul>
+<li>Recommend the best policy alternative.</li>
+<li>Justify your recommendation using evidence from your evaluation
+criteria.</li>
+<li>Address potential challenges to implementation.</li>
+</ul>
+<h3 id="conclusion-short"><strong>Conclusion (Short)</strong></h3>
+<ul>
+<li>Restate the importance of addressing the problem.</li>
+<li>Highlight the benefits of your recommended policy.</li>
+</ul>
+<h3 id="references-as-needed"><strong>References (As
+Needed)</strong></h3>
+<ul>
+<li>List any sources used, using a consistent citation format (APA or
+Chicago preferred).</li>
+</ul>
+<p><em>Optional Appendices: Include additional data tables, figures, or
+supplemental material if necessary.</em></p>
+<h2 id="sample-policy-memo">Sample Policy Memo</h2>
+<p><strong>To:</strong> Director, Bureau of Land Management (BLM)</p>
+<p><strong>From:</strong> Jordan Taylor</p>
+<p><strong>Date:</strong> June 21, 2025</p>
+<p><strong>Subject:</strong> Managing Overpopulation Under the Wild
+Free-Roaming Horses and Burros Act</p>
+<h3 id="executive-summary">Executive Summary</h3>
+<p>The Bureau of Land Management (BLM) faces a growing challenge under
+the Wild Free-Roaming Horses and Burros Act of 1971. The current
+population of wild horses and burros on public rangelands has exceeded
+sustainable levels, leading to ecological degradation and rising
+management costs. This memo evaluates three policy alternatives to
+address overpopulation and recommends expanding fertility control
+programs as the most cost-effective and publicly acceptable
+solution.</p>
+<h3 id="problem-definition">Problem Definition</h3>
+<p>The Wild Free-Roaming Horses and Burros Act (1971) mandates the
+protection of wild horses and burros as “living symbols of the historic
+and pioneer spirit of the West.” However, current herd sizes far exceed
+the Appropriate Management Levels (AML) established by BLM scientists,
+leading to significant environmental, fiscal, and policy challenges.</p>
+<p>Research has shown that unmanaged horse populations can cause
+long-term damage to arid ecosystems, particularly by overgrazing native
+plant species and compacting soil near riparian zones (Beever and
+Brussard 2000). This contributes to biodiversity loss and alters natural
+fire regimes. The U.S. Government Accountability Office (2021) also
+reported that the cost of maintaining off-range holding facilities has
+escalated to unsustainable levels, now comprising the majority of the
+Wild Horse and Burro Program budget.</p>
+<p>Stakeholders affected include environmental groups concerned with
+ecosystem health, ranchers who lease public lands for grazing, animal
+welfare advocates demanding humane treatment, and federal agencies
+balancing ecological stewardship with legal mandates. The issue is
+politically contentious, shaped by diverging values and regional
+economic interests (Nie 2003).</p>
+<p>Given the increasing financial burden and ecological risks, the
+status quo is widely viewed as untenable. Addressing this challenge
+requires a nuanced understanding of both ecological science and public
+policy—grounded in evidence and sensitive to public opinion and
+political feasibility.</p>
+<h3 id="policy-alternatives">Policy Alternatives</h3>
+<p>Building on ecological and fiscal concerns, this section evaluates
+three primary strategies that have been considered in the policy
+literature (Garrott and Oli 2013; Rutberg et al. 2017).</p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 23%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Alternative</th>
+<th>Cost</th>
+<th>Effectiveness</th>
+<th>Public Acceptance</th>
+<th>Feasibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Increased Roundups</td>
+<td>High</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Moderate</td>
+</tr>
+<tr class="even">
+<td>Fertility Control</td>
+<td>Low</td>
+<td>High (Long-Term)</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Adoption Incentives</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li><p><strong>Increased Roundups</strong></p>
+<ul>
+<li><em>Pros:</em> Provides immediate relief to overgrazed rangelands.
+Historically used and logistically feasible with existing
+infrastructure.</li>
+<li><em>Cons:</em> Extremely costly over time due to long-term holding;
+public outcry over animal welfare; does not address root cause of
+overpopulation.</li>
+</ul></li>
+<li><p><strong>Fertility Control Programs (e.g., PZP
+Vaccine)</strong></p>
+<ul>
+<li><em>Pros:</em> Evidence-based and endorsed by wildlife biologists;
+cost-effective long-term strategy; high public approval; aligns with
+humane treatment goals (Turner et al. 2002).</li>
+<li><em>Cons:</em> Requires sustained funding and logistical
+coordination; biological efficacy depends on repeated application.</li>
+</ul></li>
+<li><p><strong>Adoption Incentives</strong></p>
+<ul>
+<li><em>Pros:</em> Promotes public engagement and reduces herd size
+through private ownership; supported by animal welfare
+organizations.</li>
+<li><em>Cons:</em> Historically limited impact; low demand for adoption;
+potential welfare issues if adopted animals are not properly cared
+for.</li>
+</ul></li>
+</ol>
+<p>These alternatives are evaluated in the matrix above, drawing on
+feasibility, cost, equity, public support, and implementation
+complexity.</p>
+<h3 id="recommendation">Recommendation</h3>
+<p>I recommend expanding fertility control programs using the PZP
+vaccine. This approach addresses the root cause of overpopulation
+humanely and cost-effectively. Although results are gradual, this policy
+aligns with public sentiment, reduces long-term management costs, and
+mitigates environmental degradation.</p>
+<p>Implementation should include:</p>
+<ul>
+<li>Increased funding for field application teams.</li>
+<li>Public education campaigns to build support.</li>
+<li>Annual monitoring to track program effectiveness.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Without immediate policy adjustments, overpopulation will continue to
+strain federal budgets and damage public rangelands. Fertility control
+programs provide a sustainable and publicly acceptable solution that
+fulfills the BLM’s obligations under the Wild Free-Roaming Horses and
+Burros Act.</p>
+<h3 id="references">References</h3>
+<p>Beever, Erik A., and Peter F. Brussard. 2000. “Examining Ecological
+Consequences of Feral Horse Grazing Using Exclosures.” <em>Western North
+American Naturalist</em> 60(3): 236–254.</p>
+<p>Garrott, Robert A., and Madan K. Oli. 2013. “A Critical Crossroad for
+the Bureau of Land Management’s Wild Horse Program.” <em>BioScience</em>
+63(7): 563–568.</p>
+<p>Nie, Martin. 2003. <em>Governance and the Politics of Wild
+Horses</em>. Washington, DC: Island Press.</p>
+<p>Rutberg, Allen T., et al. 2017. “Fertility Control in Wild Horse
+Populations: A Review of the Biological and Economic Arguments.”
+<em>Wildlife Society Bulletin</em> 41(1): 1–10.</p>
+<p>Turner, John W., Jr., I. Kirk Liu, and A. T. Rutberg. 2002.
+“Immunocontraception Limits Foal Production in Free-Roaming Feral Horses
+in Nevada.” <em>Journal of Wildlife Management</em> 66(2): 478–486.</p>
+<p>Bureau of Land Management. 2024. <em>Wild Horse and Burro Program
+Statistics</em>. U.S. Department of the Interior. <a
+href="https://www.blm.gov/programs/wild-horse-and-burro/about-the-program/program-data">https://www.blm.gov/programs/wild-horse-and-burro/about-the-program/program-data</a>.</p>
+<p>The Humane Society of the United States. 2023. <em>Fertility Control
+and Wild Horse Management</em>. <a
+href="https://www.humanesociety.org/resources/fertility-control-wild-horses">https://www.humanesociety.org/resources/fertility-control-wild-horses</a>.</p>
+<p>Congressional Research Service. 2022. <em>Wild Horse and Burro
+Management: Policy Challenges</em>. <a
+href="https://crsreports.congress.gov/product/pdf/R/R47281">https://crsreports.congress.gov/product/pdf/R/R47281</a>.</p>
+</body>
+</html>

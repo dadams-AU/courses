@@ -249,7 +249,7 @@ html {
 }
 
 .reveal blockquote::before {
-  content: """;
+  content: "“";
   font-family: Georgia, serif;
   font-size: 4em;
   position: absolute;

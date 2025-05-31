@@ -9,12 +9,11 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,600">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
   
   <style>
 :root {
   --primary-blue: #2563eb;
-  --primary-green: #059669;
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --text-primary: #0f172a;
@@ -90,27 +89,6 @@ body {
   padding: 4rem 0;
 }
 
-.course-card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-}
-
-.course-card .card-header {
-  background: linear-gradient(135deg, var(--primary-blue), #1d4ed8);
-  color: white;
-  font-weight: 600;
-  padding: 1.25rem;
-  border-bottom: none;
-}
-
 .course-section {
   background: var(--bg-secondary);
   border-radius: 12px;
@@ -122,12 +100,14 @@ body {
 .course-section h2 {
   color: var(--primary-blue);
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .lecture-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .lecture-item {
@@ -143,23 +123,25 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.lecture-item h4 {
+.lecture-item h5 {
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .lecture-item p {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 .btn-primary {
   background: var(--primary-blue);
   border: none;
   border-radius: 6px;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -173,11 +155,49 @@ body {
   color: var(--primary-blue);
   border: 1px solid var(--primary-blue);
   background: transparent;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .btn-outline-primary:hover {
   background: var(--primary-blue);
   color: white;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.quick-link-card {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.quick-link-card:hover {
+  background: #1d4ed8;
+  transform: translateY(-4px);
+  color: white;
+  text-decoration: none;
+}
+
+.quick-link-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.quick-link-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
 }
 
 .footer {
@@ -198,8 +218,13 @@ body {
     padding: 1rem;
   }
   
-  .lecture-grid {
+  .lecture-grid,
+  .quick-links {
     grid-template-columns: 1fr;
+  }
+  
+  .quick-link-card {
+    padding: 1rem;
   }
 }
   </style>
@@ -256,223 +281,26 @@ body {
     </div>
   </section>
 
-  <!-- Course Quick Links -->
+  <!-- Quick Links -->
   <section class="py-5">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6">
-          <div class="card course-card h-100">
-            <div class="card-header">
-              <h3 class="m-0">POSC 315</h3>
-            </div>
-            <div class="card-body">
-              <h4 class="fs-5 mb-3">Introduction to Public Policy</h4>
-              <a href="#posc315" class="btn btn-primary">View Materials</a>
-            </div>
-          </div>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 4: Official Theory Legis</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/4_1_officialtheory_legis.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.1s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 4: Official Exec Jud</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/4_2_official_exec_jud.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 5: Unofficial Actors</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/5_1_unofficialactors.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.1s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 5: Actor Interaction</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/5_2_actor_interaction.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 6: Agenda Setting Problem</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/6_1_agendasetting_problem.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.1s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 6: Agenda Levels</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/6_2_agenda_levels.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 6: Agenda Power</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/6_3_agenda_power.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.1s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 6: Agenda Wrapup</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/6_4_agenda_wrapup.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 7: Types Why</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/7_1_types_why.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.1s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 7: Types Reg Const</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/7_2_types_reg_const.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4 mb-4">
-            <div class="col-md-6 animate-slide-in" style="animation-delay: 0.0s;">
-              <div class="card lecture-card h-100">
-                <div class="card-body d-flex">
-                  <div class="card-icon">
-                    <i class="fa-solid fa-person-chalkboard"></i>
-                  </div>
-                  <div>
-                    <h4 class="card-title">Lecture 7: Types Alt</h4>
-                    <p class="card-text">Asynchronous lecture content.</p>
-                    <a href="POSC315_asynch/lectures_md/7_3_types_alt.pdf" class="btn btn-sm btn-primary mt-auto">View Lecture</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6">
-          <div class="card course-card h-100">
-            <div class="card-header">
-              <h3 class="m-0">POSC 315 Async</h3>
-            </div>
-            <div class="card-body">
-              <h4 class="fs-5 mb-3">Public Policy (Asynchronous)</h4>
-              <a href="#posc315-async" class="btn btn-primary">View Materials</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6">
-          <div class="card course-card h-100">
-            <div class="card-header">
-              <h3 class="m-0">POSC 521</h3>
-            </div>
-            <div class="card-body">
-              <h4 class="fs-5 mb-3">MPA Capstone</h4>
-              <a href="#posc521" class="btn btn-primary">View Materials</a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-6">
-          <div class="card course-card h-100">
-            <div class="card-header">
-              <h3 class="m-0">POSC 320 Async</h3>
-            </div>
-            <div class="card-body">
-              <h4 class="fs-5 mb-3">Public Administration</h4>
-              <a href="#posc320-async" class="btn btn-primary">View Materials</a>
-            </div>
-          </div>
-        </div>
+      <div class="quick-links">
+        <a href="#posc315" class="quick-link-card">
+          <h4>POSC 315</h4>
+          <p>Introduction to Public Policy</p>
+        </a>
+        <a href="#posc315-async" class="quick-link-card">
+          <h4>POSC 315 Async</h4>
+          <p>Public Policy (Asynchronous)</p>
+        </a>
+        <a href="#posc320-async" class="quick-link-card">
+          <h4>POSC 320 Async</h4>
+          <p>Public Administration</p>
+        </a>
+        <a href="#posc521" class="quick-link-card">
+          <h4>POSC 521</h4>
+          <p>MPA Capstone</p>
+        </a>
       </div>
     </div>
   </section>
@@ -481,102 +309,102 @@ body {
   <section id="posc315" class="py-4">
     <div class="container">
       <div class="course-section">
-        <h2>POSC 315: Introduction to Public Policy</h2>
+        <h2><i class="fas fa-book me-2"></i>POSC 315: Introduction to Public Policy</h2>
         <div class="lecture-grid">
           <div class="lecture-item">
-            <h4>Week 1: Introduction</h4>
+            <h5>Week 1: Introduction</h5>
             <p>Course introduction and syllabus</p>
             <a href="POSC315/presentations/week_1-1_intro/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 1: Overview</h4>
+            <h5>Week 1: Overview</h5>
             <p>American political values and policy concepts</p>
             <a href="POSC315/presentations/week_1-2_overview/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 2: Policy Process</h4>
+            <h5>Week 2: Policy Process</h5>
             <p>Policy process elements and conceptualization</p>
             <a href="POSC315/presentations/week_2-1_elements/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 2: Process Theories</h4>
+            <h5>Week 2: Process Theories</h5>
             <p>Incrementalism and Three Streams Model</p>
             <a href="POSC315/presentations/week_2-2_process_theories/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 3: History & Structure</h4>
+            <h5>Week 3: History & Structure</h5>
             <p>Institutional elements of U.S. policy making</p>
             <a href="POSC315/presentations/week_3-1_history_structure/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 3: Official Actors</h4>
+            <h5>Week 3: Official Actors</h5>
             <p>Legislators, executives, bureaucrats, judges</p>
             <a href="POSC315/presentations/week_3-2_official_actors/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 4: Unofficial Actors I</h4>
+            <h5>Week 4: Unofficial Actors I</h5>
             <p>Media, interest groups, think tanks</p>
             <a href="POSC315/presentations/week_4-1_unofficial_actors_i/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 4: Individuals & MLK</h4>
+            <h5>Week 4: Individuals & MLK</h5>
             <p>Individual actors and Letter from Birmingham Jail</p>
             <a href="POSC315/presentations/week_4-2_unofficial_actors_ii/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 6: Agenda Setting</h4>
+            <h5>Week 6: Agenda Setting</h5>
             <p>Group dynamics and political power</p>
             <a href="POSC315/presentations/week_6-1_agenda_setting/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 6: Policy Types</h4>
+            <h5>Week 6: Policy Types</h5>
             <p>Policy typologies and political behavior</p>
             <a href="POSC315/presentations/week_6-2_types/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 7: Decision-Making I</h4>
+            <h5>Week 7: Decision-Making I</h5>
             <p>Rational and dysfunctional decision-making</p>
             <a href="POSC315/presentations/week_7-1_decisions_i/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 7: Decision-Making II</h4>
+            <h5>Week 7: Decision-Making II</h5>
             <p>Decision-making theories continued</p>
             <a href="POSC315/presentations/week_7-2_decisions_ii/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 9: Policy Analysis I</h4>
+            <h5>Week 9: Policy Analysis I</h5>
             <p>Policy analysis fundamentals</p>
             <a href="POSC315/presentations/week_9-1_analysis_i/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 9: Policy Analysis II</h4>
+            <h5>Week 9: Policy Analysis II</h5>
             <p>Analysis methodologies and applications</p>
             <a href="POSC315/presentations/week_9-2_analysis_ii/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 11: Design & Tools</h4>
+            <h5>Week 11: Design & Tools</h5>
             <p>Policy design and implementation tools</p>
             <a href="POSC315/presentations/week_11-1_design_tools/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 11: Implementation</h4>
+            <h5>Week 11: Implementation</h5>
             <p>Implementation challenges and strategies</p>
             <a href="POSC315/presentations/week_11-2_implementation/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 12: Failure & Learning</h4>
+            <h5>Week 12: Failure & Learning</h5>
             <p>Policy failures and lessons learned</p>
             <a href="POSC315/presentations/week_12-1_failure_learning/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h4>Week 12: Evaluation</h4>
+            <h5>Week 12: Evaluation</h5>
             <p>Policy evaluation and science connections</p>
             <a href="POSC315/presentations/week_12-2_eval_science/index.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
         </div>
-        <div class="mt-3">
-          <a href="/POSC315/315handouts.html" class="btn btn-outline-primary">View All Handouts</a>
-        </div>
+        <a href="/POSC315/315handouts.html" class="btn btn-outline-primary">
+          <i class="fas fa-file-alt me-1"></i>View All Handouts
+        </a>
       </div>
     </div>
   </section>
@@ -585,67 +413,77 @@ body {
   <section id="posc315-async" class="py-4">
     <div class="container">
       <div class="course-section">
-        <h2>POSC 315 Asynchronous</h2>
+        <h2><i class="fas fa-laptop me-2"></i>POSC 315 Asynchronous</h2>
         <div class="lecture-grid">
           <div class="lecture-item">
-            <h4>Lecture 0: Introduction</h4>
+            <h5>Lecture 0: Introduction</h5>
             <p>Course introduction</p>
             <a href="POSC315_asynch/lectures/lecture_0_introduction/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 1-1: Overview A</h4>
+            <h5>Lecture 1-1: Overview A</h5>
             <p>Policy overview part A</p>
             <a href="POSC315_asynch/lectures/lecture_1-1_overview_a/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 1-2: Overview B</h4>
+            <h5>Lecture 1-2: Overview B</h5>
             <p>Policy overview part B</p>
             <a href="POSC315_asynch/lectures/lecture_1-2_overview_b/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 1-3: Overview C</h4>
+            <h5>Lecture 1-3: Overview C</h5>
             <p>Policy overview part C</p>
             <a href="POSC315_asynch/lectures/lecture_1-3_overivew_c/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 2-1: Process Models</h4>
+            <h5>Lecture 2-1: Process Models</h5>
             <p>Policy process models</p>
             <a href="POSC315_asynch/lectures/lecture_2-1_processmodels/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 2-2: Environments</h4>
+            <h5>Lecture 2-2: Environments</h5>
             <p>Policy environments</p>
             <a href="POSC315_asynch/lectures/lecture_2-2_environments/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 2-3: Change</h4>
+            <h5>Lecture 2-3: Change</h5>
             <p>Policy change dynamics</p>
             <a href="POSC315_asynch/lectures/lecture_2-3_change/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 3-1: History & Structure</h4>
+            <h5>Lecture 3-1: History & Structure</h5>
             <p>Historical and structural foundations</p>
             <a href="POSC315_asynch/lectures/lecture_3-1_historyadnstructure/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 3-2: Federalism</h4>
+            <h5>Lecture 3-2: Federalism</h5>
             <p>Federalism in policy making</p>
             <a href="POSC315_asynch/lectures/lecture_3-2_federalism/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 4-1: Official Actors Theory</h4>
+            <h5>Lecture 4-1: Official Actors Theory</h5>
             <p>Theories of official actors</p>
             <a href="POSC315_asynch/lectures/lecture_4-1_officalactors_theory/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h4>Lecture 4-2: Official Actors</h4>
+            <h5>Lecture 4-2: Official Actors</h5>
             <p>Official actors in practice</p>
             <a href="POSC315_asynch/lectures/lecture_4-2_officalactors_actors/index.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
         </div>
-        <div class="mt-3">
-          <a href="POSC315_asynch/posc315_async_handouts.html" class="btn btn-outline-primary">View All Handouts</a>
-        </div>
+        <a href="POSC315_asynch/posc315_async_handouts.html" class="btn btn-outline-primary">
+          <i class="fas fa-file-alt me-1"></i>View All Handouts
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- POSC 320 Async -->
+  <section id="posc320-async" class="py-4">
+    <div class="container">
+      <div class="course-section">
+        <h2><i class="fas fa-laptop me-2"></i>POSC 320 Asynchronous: Introduction to Public Administration</h2>
+        <p class="text-muted"><em>Course materials will be added here.</em></p>
       </div>
     </div>
   </section>
@@ -654,25 +492,21 @@ body {
   <section id="posc521" class="py-4">
     <div class="container">
       <div class="course-section">
-        <h2>POSC 521: MPA Capstone</h2>
+        <h2><i class="fas fa-graduation-cap me-2"></i>POSC 521: MPA Capstone</h2>
         <p>This capstone course synthesizes MPA program knowledge through theory exploration and practical application.</p>
         <div class="mt-3">
-          <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2024-25%20Spring/POSC521_2025_Spring.pdf" class="btn btn-primary me-2">View Syllabus</a>
-          <a href="https://www.zotero.org/dpadams/collections/2B4LA498" class="btn btn-outline-primary">Course Bibliography</a>
+          <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/POSC%20521%20MPA%20Capstone/2024-25%20Spring/POSC521_2025_Spring.pdf" class="btn btn-primary me-2">
+            <i class="fas fa-file-pdf me-1"></i>View Syllabus
+          </a>
+          <a href="https://www.zotero.org/dpadams/collections/2B4LA498" class="btn btn-outline-primary">
+            <i class="fas fa-book me-1"></i>Course Bibliography
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- POSC 320 Async -->
-  <section id="posc320-async" class="py-4">
-    <div class="container">
-      <div class="course-section">
-        <h2>POSC 320 Asynchronous: Introduction to Public Administration</h2>
-        <p class="text-muted"><em>Course materials will be added here.</em></p>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Footer -->
   <footer class="footer">

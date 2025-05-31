@@ -1,0 +1,341 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{tikz}
+
+% Setup for faculty images
+\newlength{\imageheight}
+\setlength{\imageheight}{3.5cm}
+
+% Define CSUF brand colors
+\definecolor{titanblue}{HTML}{00244E}
+\definecolor{mediumblue}{HTML}{0F3F8C}
+\definecolor{skyblue}{HTML}{EBFBFF}
+\definecolor{titanorange}{HTML}{FF7900}
+\definecolor{titangray}{HTML}{F5F5F5}
+\definecolor{titantext}{HTML}{222222}
+
+% Customize metropolis theme colors
+\setbeamercolor{normal text}{fg=titantext, bg=white}
+\setbeamercolor{alerted text}{fg=titanorange}
+\setbeamercolor{example text}{fg=mediumblue}
+
+% Title page colors
+\setbeamercolor{title}{fg=titanblue, bg=white}
+\setbeamercolor{subtitle}{fg=mediumblue, bg=white}
+\setbeamercolor{institute}{fg=titanorange, bg=white}
+\setbeamercolor{date}{fg=titanblue, bg=white}
+
+% Frame title colors
+\setbeamercolor{frametitle}{fg=white, bg=titanblue}
+\setbeamercolor{framesubtitle}{fg=mediumblue, bg=white}
+
+% Block environment colors
+\setbeamercolor{block title}{fg=white, bg=titanblue}
+\setbeamercolor{block body}{fg=titantext, bg=skyblue!10}
+
+% Item colors
+\setbeamercolor{itemize item}{fg=titanorange}
+\setbeamercolor{itemize subitem}{fg=mediumblue}
+\setbeamercolor{itemize subsubitem}{fg=titanblue}
+
+% Footer and header colors
+\setbeamercolor{footer}{fg=titantext}
+\setbeamercolor{header}{fg=titanblue}
+
+% Customize fonts
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+
+% Simple title page template
+\defbeamertemplate*{title page}{customized}[1][]
+{
+\vspace{1cm}
+ {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+\vspace{0.5cm}
+ {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+\vspace{0.5cm}
+ {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}
+\vfill
+ {\insertinstitute\par}
+}
+
+% Add progress bar
+\makeatletter
+\setbeamertemplate{headline}{%
+\begin{beamercolorbox}[wd=\paperwidth,ht=0.4cm,dp=0cm]{titanblue}%
+\begin{tikzpicture}
+\fill[titanorange] (0,0) rectangle (\the\paperwidth*\insertframenumber/\inserttotalframenumber,0.4cm);
+\end{tikzpicture}%
+\end{beamercolorbox}%
+}
+\makeatother
+
+\begin{document}
+
+\title{Understanding Politics and Public Policy}
+\subtitle{Foundations and Core Concepts\\POSC 315: Introduction to Public Policy\\Lecture 1 (Part 1 of 3)}
+\date{Summer 2025}
+\institute{California State University, Fullerton}
+
+\maketitle
+
+% Course Theme
+\begin{frame}
+\frametitle{Theme of the Course}
+\framesubtitle{American Political Values}
+
+\begin{block}{}
+\begin{enumerate}
+\item Individualism
+\item Equality
+\item Community
+\item Patriotism
+\item Rule of Law
+\item Diversity
+\item Distrust of Government
+\end{enumerate}
+\end{block}
+
+\end{frame}
+
+% Opening Questions
+\begin{frame}
+\frametitle{Let's start with a couple of questions:}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{}
+\centering
+\textcolor{mediumblue}{\textbf{Why do we have programs for reduced cost or free school lunches?}}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{}
+\centering
+\textcolor{titanblue}{\textbf{Why is the primary responsibility for educating children and policing people left to state and local governments?}}
+\end{block}
+\end{column}
+\end{columns}
+
+\vspace{1cm}
+\pause
+\centering
+These questions help us understand \textbf{values} and \textbf{priorities} in policy choices.
+
+\end{frame}
+
+% Introduction
+\begin{frame}
+\frametitle{Introduction}
+
+\begin{itemize}
+\item<1-> We seek to understand and find solutions for public problems.
+
+\item<2-> We have many theories about how the policy process works.
+\begin{itemize}
+\item Many are \emph{interdisciplinary}.
+\end{itemize}
+
+\item<3-> We will focus on the \emph{politics} of policy.
+\begin{itemize}
+\item How do we get from a problem to a solution?
+\item How do we get from a solution to a policy?
+\item How do we get from a policy to a program?
+\item How do we get from a program to an outcome?
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+% Different Views
+\begin{frame}
+\frametitle{Different Views Across the Political Landscape}
+
+\begin{alertblock}{}
+Across the political landscape, we have many different views about:
+\end{alertblock}
+
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{1. Problem Definition}
+What things are problems that need solving?
+\end{block}
+
+\vspace{0.3cm}
+
+\begin{block}{3. Intervention Selection}
+Is a government program the best way to solve those problems?
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{2. Solution Identification}
+What are the solutions to those problems?
+\end{block}
+
+\vspace{0.3cm}
+
+\begin{block}{4. Implementation Strategy}
+What are the best ways to implement solutions?
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Defining Politics - Question
+\begin{frame}
+\frametitle{Politics and Public Policy Definitions}
+
+\begin{block}{}
+\centering
+\textcolor{mediumblue}{\textbf{How did your friend, family member, or other person respond when you asked them to define politics?}}
+
+\vspace{0.5cm}
+
+\textcolor{titanblue}{\textbf{What about policy?}}
+\end{block}
+
+\vspace{1cm}
+\pause
+\centering
+Let's compare your responses with academic definitions...
+
+\end{frame}
+
+% Politics Definition
+\begin{frame}
+\frametitle{Politics and the Policy Process}
+
+\begin{block}{Politics}
+\begin{itemize}
+\item<1-> The process of making \textbf{collective decisions}, usually by governments, to allocate public resources and to create and enforce rules for the operation of society.
+
+\item<2-> How we organize and govern ourselves; the \textbf{art and science of government}.
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Public Policy Definition
+\begin{frame}
+\frametitle{Politics and the Policy Process}
+
+\begin{block}{Public Policy}
+\begin{itemize}
+\item<1-> The \textbf{course of action} the government takes in response to an issue or problem.
+
+\item<2-> Public policy is political because it takes place in the \emph{public sphere}.
+
+\item<3-> Public policy addresses problems that are public or problems that some members of society think \emph{should} be public.
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% What is Public?
+\begin{frame}
+\frametitle{What is Public?}
+
+\pause
+\begin{itemize}
+\item Public versus Private come to us from the Latin \emph{publicus} and \emph{privatus}, from Ancient Rome
+\item Publicus means ``of the people'' or ``of the state''
+\item Privatus means ``individual'' or ``personal''
+\end{itemize}
+
+\end{frame}
+
+% Public vs Private Table
+\begin{frame}
+\frametitle{What is Public?}
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Public (publicus)} & \textbf{Private (privatus)} \\
+\hline
+\pause
+Polis -- the State & The Household -- private business \\
+\hline
+\pause
+Freedom & Necessity \\
+\hline
+\pause
+Equality & Inequality \\
+\hline
+\pause
+Immortality & Mortality \\
+\hline
+\pause
+Open & Closed \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{1cm}
+\pause
+\centering
+These distinctions begin to collapse from the 19th century onward.
+
+\end{frame}
+
+% Reflection Activity
+\begin{frame}
+\frametitle{Reflection Activity}
+\framesubtitle{Consider how the boundaries between ``public'' and ``private'' have blurred in modern society.}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{Think About:}
+\begin{itemize}
+\item Social media platforms
+\item Healthcare decisions
+\item Education choices
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{Questions:}
+\begin{itemize}
+\item Where do you see the public/private boundary shifting?
+\item How might these shifts affect policy decisions?
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Conclusion
+\begin{frame}
+\frametitle{Key Takeaways}
+
+\begin{block}{}
+\begin{itemize}
+\item \textbf{Politics:} The process of making collective decisions about public resources and rules
+\item \textbf{Public Policy:} Government's course of action in response to public issues
+\item \textbf{Public vs. Private:} Historically distinct spheres that are increasingly blurred
+\item \textbf{Policy Process:} The path from problem identification to outcome evaluation
+\end{itemize}
+\end{block}
+
+\pause
+\vspace{1cm}
+\begin{center}
+\textbf{Coming Up Next}
+
+In Part 2, we'll explore the history of political thought and how it shapes modern policy approaches.
+\end{center}
+
+\end{frame}
+
+\end{document}

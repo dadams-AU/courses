@@ -1,0 +1,383 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{tikz}
+
+% Setup for faculty images
+\newlength{\imageheight}
+\setlength{\imageheight}{3.5cm}
+
+% Define CSUF brand colors
+\definecolor{titanblue}{HTML}{00244E}
+\definecolor{mediumblue}{HTML}{0F3F8C}
+\definecolor{skyblue}{HTML}{EBFBFF}
+\definecolor{titanorange}{HTML}{FF7900}
+\definecolor{titangray}{HTML}{F5F5F5}
+\definecolor{titantext}{HTML}{222222}
+
+% Additional colors for variety
+\definecolor{accentcolor}{HTML}{E74C3C}
+\definecolor{successcolor}{HTML}{27AE60}
+
+% Customize metropolis theme colors
+\setbeamercolor{normal text}{fg=titantext, bg=white}
+\setbeamercolor{alerted text}{fg=titanorange}
+\setbeamercolor{example text}{fg=mediumblue}
+
+% Title page colors
+\setbeamercolor{title}{fg=titanblue, bg=white}
+\setbeamercolor{subtitle}{fg=mediumblue, bg=white}
+\setbeamercolor{institute}{fg=titanorange, bg=white}
+\setbeamercolor{date}{fg=titanblue, bg=white}
+
+% Frame title colors
+\setbeamercolor{frametitle}{fg=white, bg=titanblue}
+\setbeamercolor{framesubtitle}{fg=mediumblue, bg=white}
+
+% Block environment colors
+\setbeamercolor{block title}{fg=white, bg=titanblue}
+\setbeamercolor{block body}{fg=titantext, bg=skyblue!10}
+
+% Item colors
+\setbeamercolor{itemize item}{fg=titanorange}
+\setbeamercolor{itemize subitem}{fg=mediumblue}
+\setbeamercolor{itemize subsubitem}{fg=titanblue}
+
+% Footer and header colors
+\setbeamercolor{footer}{fg=titantext}
+\setbeamercolor{header}{fg=titanblue}
+
+% Customize fonts
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+
+% Simple title page template
+\defbeamertemplate*{title page}{customized}[1][]
+{
+\vspace{1cm}
+ {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+\vspace{0.5cm}
+ {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+\vspace{0.5cm}
+ {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}
+\vfill
+ {\insertinstitute\par}
+}
+
+% Add progress bar
+\makeatletter
+\setbeamertemplate{headline}{%
+\begin{beamercolorbox}[wd=\paperwidth,ht=0.4cm,dp=0cm]{titanblue}%
+\begin{tikzpicture}
+\fill[titanorange] (0,0) rectangle (\the\paperwidth*\insertframenumber/\inserttotalframenumber,0.4cm);
+\end{tikzpicture}%
+\end{beamercolorbox}%
+}
+\makeatother
+
+\begin{document}
+
+\title{Policy as Value Delivery}
+\subtitle{Pursuing the Common Good\\POSC 315: Introduction to Public Policy\\Lecture 1 (Part 3 of 3)}
+\date{Summer 2025}
+\institute{California State University, Fullerton}
+
+\maketitle
+
+% Policy for the Common Good
+\begin{frame}
+\frametitle{Policy for the Common Good}
+
+\begin{block}{}
+Policy is a tool governments use to address public problems and improve society. It reflects collective decisions about priorities and values.
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.32\textwidth}
+\begin{block}{1. Policy as Meaning-Making}
+\pause
+Defines how society understands and prioritizes public issues
+\end{block}
+\end{column}
+
+\begin{column}{0.32\textwidth}
+\begin{block}{2. Policy as Action}
+\pause
+A deliberate statement by government outlining what it will do---or choose not to do---about a specific problem
+\end{block}
+\end{column}
+
+\begin{column}{0.32\textwidth}
+\begin{block}{3. Policy as Value Delivery}
+\pause
+Determines how goods, services, and opportunities are distributed and regulated
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Policy Reveals Values (Part 1)
+\begin{frame}
+\frametitle{Policy Reveals Values}
+
+\begin{quotation}
+``Policies are revealed through texts, practices, symbols, and discourses that define and deliver values including goods and services as well as regulations, incomes, status, and other positively or negatively valued attributes.''
+
+\vspace{0.5cm}
+\hfill --- Deborah Stone
+\end{quotation}
+
+\end{frame}
+
+% Policy Reveals Values (Part 2)
+\begin{frame}
+\frametitle{Every Policy Choice Reflects Values}
+
+\pause
+\begin{block}{How Values Shape Policy}
+\begin{itemize}
+\item Choices about who benefits
+\item Decisions about resource allocation
+\item Judgments about what problems deserve attention
+\item Determinations of acceptable solutions
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Change: The Basic Tension in Policy
+\begin{frame}
+\frametitle{Change: The Basic Tension in Policy}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{How does policy change happen?}
+\pause
+\begin{itemize}
+\item Through manipulation of existing norms?
+\item Through building relationships and coalitions?
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{How does social learning occur?}
+\pause
+\begin{itemize}
+\item By adapting to new evidence or ideas?
+\item By responding to societal needs?
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\pause
+\vspace{0.3cm}
+
+\begin{block}{What happens when change occurs outside government?}
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\textbf{Grassroots Movements}
+\begin{itemize}
+\item Bottom-up pressure for change
+\item Community-based solutions
+\end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{Non-governmental Organizations}
+\begin{itemize}
+\item Complementary service delivery
+\item Advocacy and agenda-setting
+\end{itemize}
+\end{column}
+\end{columns}
+\end{block}
+
+\end{frame}
+
+% Key Elements of Effective Policy
+\begin{frame}
+\frametitle{Key Elements of Effective Policy}
+\framesubtitle{Participation, Observation, and Capacity Building}
+
+\begin{columns}
+\begin{column}{0.32\textwidth}
+\begin{block}{Participation}
+\pause
+\begin{itemize}
+\item Who participates in the policy process?
+\item Who is excluded?
+\item How can participation become more meaningful?
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.32\textwidth}
+\begin{block}{Observation}
+\pause
+\begin{itemize}
+\item How do we know what is happening?
+\item How do we evaluate what works and what doesn't?
+\item How do we identify problems effectively?
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.32\textwidth}
+\begin{block}{Capacity Building}
+\pause
+\begin{itemize}
+\item How do we empower individuals and communities to engage?
+\item How do we enhance the ability to implement solutions?
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% The Common Will
+\begin{frame}
+\frametitle{The Common Will}
+
+\begin{block}{}
+\centering
+Policy is an attempt to translate the popular will into a political reality.
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item<1-> In a liberal democracy, the popular will is expressed through elections; it is derived from the people.
+\item<2-> When advocates convince the government to make a policy, one can claim the government does so in the \emph{public interest}.
+\end{itemize}
+
+\end{frame}
+
+% The Public Interest
+\begin{frame}
+\frametitle{The Public Interest}
+\framesubtitle{The assumed broader desires and needs of the public, in whose name policy is made.}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{Characteristics}
+\begin{itemize}
+\item<1-> The public interest is a contested concept
+\item<2-> The public interest is a political concept
+\item<3-> The public interest is a moral concept
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Challenges}
+\begin{itemize}
+\item<4-> Who gets to define it?
+\item<5-> Advocates claim \emph{their} preferences are in the public interest
+\item<6-> When something goes wrong, we claim the government is not acting in the public interest
+\item<7-> It changes over time
+\end{itemize}
+\end{alertblock}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Case Study Activity
+\begin{frame}
+\frametitle{Case Study: School Lunch Programs}
+\framesubtitle{Consider our opening question about school lunch programs through the lens of public interest}
+
+\begin{block}{}
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\textbf{Arguments For:}
+\begin{itemize}
+\item Ensures no child goes hungry
+\item Improves educational outcomes
+\item Reduces inequality
+\item Supports working families
+\end{itemize}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{Arguments Against:}
+\begin{itemize}
+\item Parent responsibility
+\item Cost to taxpayers
+\item Potential inefficiency
+\item Individual choice concerns
+\end{itemize}
+\end{column}
+\end{columns}
+
+\vspace{0.5cm}
+\centering
+What values are revealed by each perspective? Who defines ``public interest'' here?
+\end{block}
+
+\end{frame}
+
+% Key Takeaways
+\begin{frame}
+\frametitle{Key Takeaways}
+
+\begin{itemize}
+\item \textbf{Politics and Policy:} Tools for solving public problems and shaping society
+\item \textbf{Values Matter:} Public policy reflects societal priorities, values, and decisions
+\item \textbf{Active Engagement:} Understanding these concepts empowers meaningful participation in governance
+\item \textbf{Our Journey:} This course will deepen your grasp of theory, practice, and the dynamics of policy creation
+\end{itemize}
+
+\vspace{1cm}
+
+\begin{quotation}
+``The future depends on what we do in the present.''
+
+\vspace{0.3cm}
+\hfill --- Mahatma Gandhi
+\end{quotation}
+
+\end{frame}
+
+% Looking Ahead
+\begin{frame}
+\frametitle{Looking Ahead}
+\framesubtitle{Next Week's Topics}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{Policy Process Models}
+\begin{itemize}
+\item The stages model
+\item Multiple streams framework
+\item Punctuated equilibrium
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{Policy Actors}
+\begin{itemize}
+\item Government officials
+\item Interest groups
+\item Citizens and communities
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\vspace{1cm}
+\centering
+Please complete the assigned readings before next week's lectures
+
+\end{frame}
+
+\end{document}

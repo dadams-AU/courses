@@ -1,0 +1,411 @@
+\documentclass[10pt]{beamer}
+\usetheme{metropolis}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+% Setup for faculty images
+\newlength{\imageheight}
+\setlength{\imageheight}{3.5cm}
+
+% Define CSUF brand colors
+\definecolor{titanblue}{HTML}{00244E}
+\definecolor{mediumblue}{HTML}{0F3F8C}
+\definecolor{skyblue}{HTML}{EBFBFF}
+\definecolor{titanorange}{HTML}{FF7900}
+\definecolor{titangray}{HTML}{F5F5F5}
+\definecolor{titantext}{HTML}{222222}
+
+% Additional colors for variety
+\definecolor{successcolor}{HTML}{27AE60}
+\definecolor{infocolor}{HTML}{3498DB}
+\definecolor{accentcolor}{HTML}{9B59B6}
+
+% Customize metropolis theme colors
+\setbeamercolor{normal text}{fg=titantext, bg=white}
+\setbeamercolor{alerted text}{fg=titanorange}
+\setbeamercolor{example text}{fg=mediumblue}
+
+% Title page colors
+\setbeamercolor{title}{fg=titanblue, bg=white}
+\setbeamercolor{subtitle}{fg=mediumblue, bg=white}
+\setbeamercolor{institute}{fg=titanorange, bg=white}
+\setbeamercolor{date}{fg=titanblue, bg=white}
+
+% Frame title colors
+\setbeamercolor{frametitle}{fg=white, bg=titanblue}
+\setbeamercolor{framesubtitle}{fg=mediumblue, bg=white}
+
+% Block environment colors
+\setbeamercolor{block title}{fg=white, bg=titanblue}
+\setbeamercolor{block body}{fg=titantext, bg=skyblue!10}
+
+% Example block colors
+\setbeamercolor{block title example}{fg=white, bg=successcolor}
+\setbeamercolor{block body example}{fg=titantext, bg=successcolor!10}
+
+% Alert block colors
+\setbeamercolor{block title alerted}{fg=white, bg=infocolor}
+\setbeamercolor{block body alerted}{fg=titantext, bg=infocolor!10}
+
+% Item colors
+\setbeamercolor{itemize item}{fg=titanorange}
+\setbeamercolor{itemize subitem}{fg=mediumblue}
+\setbeamercolor{itemize subsubitem}{fg=titanblue}
+
+% Footer and header colors
+\setbeamercolor{footer}{fg=titantext}
+\setbeamercolor{header}{fg=titanblue}
+
+% Customize fonts
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+
+% Simple title page template
+\defbeamertemplate*{title page}{customized}[1][]
+{
+\vspace{1cm}
+ {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+\vspace{0.5cm}
+ {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+\vspace{0.5cm}
+ {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}
+\vfill
+ {\insertinstitute\par}
+}
+
+% Add progress bar
+\makeatletter
+\setbeamertemplate{headline}{%
+\begin{beamercolorbox}[wd=\paperwidth,ht=0.4cm,dp=0cm]{titanblue}%
+\begin{tikzpicture}
+\fill[titanorange] (0,0) rectangle (\the\paperwidth*\insertframenumber/\inserttotalframenumber,0.4cm);
+\end{tikzpicture}%
+\end{beamercolorbox}%
+}
+\makeatother
+
+\begin{document}
+
+\title{Historical and Structural Contexts}
+\subtitle{The Foundation of the Policy Process\\POSC 315: Introduction to Public Policy\\Lecture 3.1}
+\date{Summer 2025}
+\institute{California State University, Fullerton}
+
+\maketitle
+
+% Why Study Policy Structures?
+\begin{frame}
+\frametitle{Why Study Policy Structures?}
+
+\begin{block}{}
+\textbf{Why does it take so long to make or change policy?}
+
+Why do some big problems stick around for decades? Today we look at the structures that shape---and often slow down---public policy in the U.S.
+\end{block}
+
+\end{frame}
+
+% Institutions: The Rules of the Game
+\begin{frame}
+\frametitle{Institutions: The Rules of the Game}
+
+\begin{block}{}
+Institutions are the \textbf{rules and organizations} that determine who gets to decide, what's allowed, and what's not.
+
+They include laws, agencies, and even unwritten norms that shape our lives.
+\end{block}
+
+\end{frame}
+
+% Examples: Rules & Institutions
+\begin{frame}
+\frametitle{Rules \& Institutions: Examples}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{Rules}
+\pause
+\begin{itemize}
+\item Constitution
+\item Laws
+\item Regulations
+\item Norms
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{Institutions}
+\pause
+\begin{itemize}
+\item Supreme Court
+\item Congress
+\item Executive Branch
+\item Civil Society
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Formal vs Informal Institutions
+\begin{frame}
+\frametitle{Types of Institutions}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{Formal Institutions}
+\pause
+\begin{itemize}
+\item Government Agencies
+\item Courts
+\item Schools
+\item Police
+\item Corporations
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{Informal Institutions}
+\pause
+\begin{itemize}
+\item Family
+\item Religion
+\item Media
+\item Traditions
+\item Social Norms
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% The Constitution: A Living Document
+\begin{frame}
+\frametitle{The Constitution: A Living Document}
+
+\begin{itemize}
+\item<1-> \textbf{Vague by design}: open to interpretation.
+\item<2-> \textbf{Elasticity}: allows adaptation over time.
+\item<3-> \textbf{Longevity}: still the foundation after 200+ years.
+\end{itemize}
+
+\pause
+\vspace{1cm}
+\begin{alertblock}{Think about it:}
+Why did the framers make it so flexible?
+\end{alertblock}
+
+\end{frame}
+
+% Separation of Powers
+\begin{frame}
+\frametitle{Separation of Powers}
+
+\begin{alertblock}{Key Concept}
+\textbf{Separation of Powers} divides government into branches to prevent one group from taking too much control.
+\end{alertblock}
+
+\pause
+\vspace{0.5cm}
+
+\begin{exampleblock}{Checks \& Balances}
+Each branch can limit the powers of the others. No branch rules alone.
+\end{exampleblock}
+
+\pause
+\vspace{0.5cm}
+
+\centering
+\emph{What happens when these checks break down?} \pause \emph{You get gridlock---or sometimes, runaway power.}
+
+\end{frame}
+
+% Branch: Legislative
+\begin{frame}
+\frametitle{Branch: Legislative}
+
+\pause
+\begin{block}{\textcolor{titanblue}{Legislative}}
+\begin{itemize}
+\item Makes laws
+\item Controls budget
+\item Declares war
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Branch: Executive
+\begin{frame}
+\frametitle{Branch: Executive}
+
+\pause
+\begin{block}{\textcolor{mediumblue}{Executive}}
+\begin{itemize}
+\item Enforces laws
+\item Commander-in-Chief
+\item Handles foreign policy
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Branch: Judicial
+\begin{frame}
+\frametitle{Branch: Judicial}
+
+\pause
+\begin{block}{\textcolor{accentcolor}{Judicial}}
+\begin{itemize}
+\item Interprets laws
+\item Reviews cases
+\item Checks constitutionality
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+% Where Policy Gets Made: Key Powers
+\begin{frame}
+\frametitle{Where Policy Gets Made: Key Powers}
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{block}{Article I, Section 8}
+\pause
+\begin{itemize}
+\item Taxation
+\item Commerce
+\item Defense
+\item Naturalization
+\item Intellectual Property
+\end{itemize}
+
+\vspace{0.3cm}
+\textcolor{titanblue}{\textbf{Necessary \& Proper Clause}}
+\end{block}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{block}{Amendments}
+\pause
+\begin{itemize}
+\item 10th: Powers reserved to states
+\item 14th: Equal protection, due process
+\end{itemize}
+
+\vspace{0.3cm}
+\textcolor{mediumblue}{\textbf{Who decides? Sometimes: the courts.}}
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Policy Restraint: Why the System is Slow
+\begin{frame}
+\frametitle{Policy Restraint: Why the System is Slow}
+
+\begin{block}{}
+The U.S. system is full of \textbf{roadblocks}---and that's on purpose. Federalism, separation of powers, bicameralism, judicial review, and the amendment process all slow things down.
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{columns}
+\begin{column}{0.32\textwidth}
+\pause
+\begin{center}
+\textcolor{titanblue}{\textbf{Federalism}}
+\end{center}
+
+\pause
+\begin{center}
+\textcolor{titanblue}{\textbf{Judicial Review}}
+\end{center}
+\end{column}
+
+\begin{column}{0.32\textwidth}
+\pause
+\begin{center}
+\textcolor{titanblue}{\textbf{Bicameralism}}
+\end{center}
+
+\pause
+\begin{center}
+\textcolor{titanblue}{\textbf{Checks \& Balances}}
+\end{center}
+\end{column}
+
+\begin{column}{0.32\textwidth}
+\pause
+\begin{center}
+\textcolor{titanblue}{\textbf{Amendments}}
+\end{center}
+
+\pause
+\begin{center}
+\textcolor{titanblue}{\textbf{Separation of Powers}}
+\end{center}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+% Incrementalism: Change by Inches
+\begin{frame}
+\frametitle{Incrementalism: Change by Inches}
+
+\begin{alertblock}{Definition}
+Most policy change is gradual---think evolution, not revolution.
+\end{alertblock}
+
+\vspace{0.5cm}
+
+\begin{itemize}
+\item<1-> \textbf{Minor Changes}: Small tweaks to existing policies
+\item<2-> \textbf{Extensions}: Extending policies to new groups  
+\item<3-> \textbf{Modifications}: Adjusting for new circumstances
+\end{itemize}
+
+\pause
+\vspace{1cm}
+
+\centering
+\emph{Example: Legalizing marijuana---state by state, year by year.}
+
+\end{frame}
+
+% Big Takeaways
+\begin{frame}
+\frametitle{Big Takeaways}
+
+\begin{itemize}
+\item<1-> Policy change is slow---by design.
+\item<2-> Institutions structure what's possible and what's not.
+\item<3-> Most change is incremental, not sweeping.
+\item<4-> Crises can sometimes speed things up.
+\end{itemize}
+
+\end{frame}
+
+% Discussion
+\begin{frame}
+\frametitle{Discussion}
+
+\begin{block}{}
+Where have you seen policy structures slow down or speed up change?
+
+Can you think of a recent policy change that happened quickly? What made it possible?
+\end{block}
+
+\end{frame}
+
+\end{document}

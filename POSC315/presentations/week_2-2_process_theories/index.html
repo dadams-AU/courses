@@ -3,10 +3,8 @@
 <head>
     <title>Introduction to Policy Process Theories</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/solarized.min.css">
-    <style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/moon.css">    <style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: #fdf6e3;
@@ -235,13 +233,19 @@
             </section>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
     <script>
+        // Reduce base font size for smaller text throughout the slides
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.reveal').style.fontSize = '1.4em';
+        });
+
         Reveal.initialize({
             hash: true,
             transition: 'slide',
             slideNumber: true,
-            width: 1920,
-            height: 1080,
+            width: 1280,
+            height: 720,
             margin: 0.1,
             center: true,
             maxScale: 1,

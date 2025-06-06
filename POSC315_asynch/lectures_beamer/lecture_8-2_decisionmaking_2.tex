@@ -5,6 +5,8 @@
 \usepackage{calc}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing, patterns}
+\usepackage[sfdefault]{FiraSans}
+\usepackage[scaled]{FiraMono}
 
 % Setup for faculty images
 \newlength{\imageheight}
@@ -63,12 +65,13 @@
  {\insertinstitute\par}
 }
 
-% Add progress bar
+% Add progress bar - FIXED VERSION
 \makeatletter
 \setbeamertemplate{headline}{%
 \begin{beamercolorbox}[wd=\paperwidth,ht=0.4cm,dp=0cm]{titanblue}%
 \begin{tikzpicture}
-\fill[titanorange] (0,0) rectangle (\the\paperwidth*\insertframenumber/\inserttotalframenumber,0.4cm);
+\pgfmathsetmacro{\progress}{\insertframenumber/\inserttotalframenumber}
+\fill[titanorange] (0,0) rectangle (\progress*\paperwidth,0.4cm);
 \end{tikzpicture}%
 \end{beamercolorbox}%
 }
@@ -87,16 +90,15 @@
 \begin{frame}{Where We Are}
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
-% Define styles
-\tikzstyle{completed} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!20]
-\tikzstyle{current} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick]
-\tikzstyle{future} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!10]
+% Better sized boxes to accommodate text
+\node[rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, draw=mediumblue, fill=mediumblue!20] (part1) at (0,0) {};
+\node[rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, draw=titanorange, fill=titanorange!20, thick] (part2) at (0,-2.5) {};
+\node[rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, draw=mediumblue, fill=mediumblue!10] (part3) at (0,-5) {};
 
-% Nodes
-\node (part1) [completed] {Part 1: Introduction \& Rational Choice};
-\node (part2) [current, below of=part1] {Part 2: Bounded Rationality \& Incrementalism};
-\node (part3) [future, below of=part2] {Part 3: Dysfunctional Decision-Making};
-
+% Text positioned properly within boxes
+\node[font=\small\bfseries] at (part1.center) {Part 1: Introduction \& Rational Choice};
+\node[font=\small\bfseries] at (part2.center) {Part 2: Bounded Rationality \& Incrementalism};
+\node[font=\small\bfseries] at (part3.center) {Part 3: Dysfunctional Decision-Making};
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -104,17 +106,15 @@
 \begin{frame}{Recap: Rational Choice Theory}
 \begin{center}
 \begin{tikzpicture}[node distance=1.5cm]
-\tikzstyle{element} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=skyblue!15]
-
-\node (perfect) [element] {Perfect Information};
-\node (optimize) [element, right of=perfect, xshift=1cm] {Optimization};
-\node (comprehensive) [element, right of=optimize, xshift=1cm] {Comprehensive Analysis};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15] (perfect) at (0,0) {Perfect Information};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15] (optimize) at (4,0) {Optimization};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15] (comprehensive) at (8,0) {Comprehensive Analysis};
 
 \draw[-, thick] (perfect) -- (optimize);
 \draw[-, thick] (optimize) -- (comprehensive);
 
+% Added missing semicolon here
 \node[below=1cm of optimize] {\textbf{But what if these assumptions don't hold?}};
-
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -134,6 +134,7 @@
 \begin{block}{Key Quote}
 ``The capacity of the human mind for formulating and solving complex problems is very small compared with the size of the problems whose solution is required for objectively rational behavior in the real world.''
 \end{block}
+\end{frame}
 
 \begin{frame}{Core Concepts in Bounded Rationality}
 \begin{columns}
@@ -160,22 +161,19 @@ Bounded rationality recognizes that human rationality is limited:
 \vspace{0.5cm}
 \begin{center}
 \begin{tikzpicture}[node distance=1cm]
-\tikzstyle{constraint} = [ellipse, minimum width=2.8cm, minimum height=0.8cm, text centered, draw=titanorange, fill=titanorange!10]
+\node[circle, minimum size=1.5cm, draw=titanblue, fill=skyblue!20, thick, font=\footnotesize, align=center] (center) at (0,0) {\textbf{Bounded\\Rationality}};
 
-\node (center) [circle, minimum size=1.5cm, draw=titanblue, fill=skyblue!20, thick] {\footnotesize \textbf{Bounded\\Rationality}};
+\node[ellipse, minimum width=2.8cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (info) at (-2.5,2) {Limited\\Information};
+\node[ellipse, minimum width=2.8cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (time) at (2.5,2) {Limited\\Time};
+\node[ellipse, minimum width=2.8cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (cognitive) at (-3,0) {Limited Cognitive\\Capacity};
+\node[ellipse, minimum width=2.8cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (resources) at (3,0) {Limited\\Resources};
+\node[ellipse, minimum width=2.8cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (processing) at (-2.5,-2) {Limited Information\\Processing};
+\node[ellipse, minimum width=2.8cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (priorities) at (2.5,-2) {Competing\\Priorities};
 
-\node (info) [constraint, above left of=center, xshift=-1cm, yshift=0.5cm] {\footnotesize Limited\\Information};
-\node (time) [constraint, above right of=center, xshift=1cm, yshift=0.5cm] {\footnotesize Limited\\Time};
-\node (cognitive) [constraint, left of=center, xshift=-1.5cm] {\footnotesize Limited Cognitive\\Capacity};
-\node (resources) [constraint, right of=center, xshift=1.5cm] {\footnotesize Limited\\Resources};
-\node (processing) [constraint, below left of=center, xshift=-1cm, yshift=-0.5cm] {\footnotesize Limited Information\\Processing};
-\node (priorities) [constraint, below right of=center, xshift=1cm, yshift=-0.5cm] {\footnotesize Competing\\Priorities};
-
-% Draw arrows
-\foreach \node in {info, time, cognitive, resources, processing, priorities} {
-    \draw[-, thick] (\node) -- (center);
+% Draw arrows - FIXED \foreach variable
+\foreach \nodename in {info, time, cognitive, resources, processing, priorities} {
+    \draw[-, thick] (\nodename) -- (center);
 }
-
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -184,12 +182,11 @@ Bounded rationality recognizes that human rationality is limited:
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
 % Create equation-like layout
-\node (satisfy) [rectangle, rounded corners, minimum width=2cm, minimum height=1cm, text centered, draw=mediumblue, fill=skyblue!20] {\textbf{Satisfy}};
-\node (plus) [right of=satisfy, xshift=-0.5cm] {\huge +};
-\node (suffice) [rectangle, rounded corners, minimum width=2cm, minimum height=1cm, text centered, draw=mediumblue, fill=skyblue!20, right of=plus, xshift=-0.5cm] {\textbf{Suffice}};
-\node (equals) [right of=suffice, xshift=-0.5cm] {\huge =};
-\node (satisfice) [rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick, right of=equals, xshift=-0.2cm] {\textbf{Satisfice}};
-
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=1cm, draw=mediumblue, fill=skyblue!20] (satisfy) at (0,0) {\textbf{Satisfy}};
+\node (plus) at (2.5,0) {\huge +};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=1cm, draw=mediumblue, fill=skyblue!20] (suffice) at (5,0) {\textbf{Suffice}};
+\node (equals) at (7.5,0) {\huge =};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm, draw=titanorange, fill=titanorange!20, thick] (satisfice) at (10.5,0) {\textbf{Satisfice}};
 \end{tikzpicture}
 \end{center}
 
@@ -235,7 +232,6 @@ Bounded rationality recognizes that human rationality is limited:
 \node[align=center] at (7.5,2.5) {\footnotesize Goals and tools together};
 \node[align=center] at (7.5,1.5) {\footnotesize Limited analysis};
 \node[align=center] at (7.5,0.5) {\footnotesize Seeks policy with consensus};
-
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -255,7 +251,7 @@ Bounded rationality recognizes that human rationality is limited:
 \item Multiple stakeholders with competing interests
 \end{itemize}
 \end{column}
-\begin{column}{0.5\textwidth}
+<begin{column}{0.5\textwidth}
 \textbf{Satisficing Approach}
 \begin{itemize}
 \item Review 3-4 policy options (not all possible alternatives)
@@ -293,19 +289,16 @@ Builds on Herbert Simon's work on bounded rationality
 \begin{frame}{Successive Limited Comparisons}
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
-\tikzstyle{statusquo} = [circle, minimum size=2cm, text centered, draw=titanblue, fill=skyblue!20, thick]
-\tikzstyle{alternative} = [rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=mediumblue!10]
-
 % Central status quo
-\node (sq) [statusquo] {\textbf{Status\\Quo}};
+\node[circle, minimum size=2cm, draw=titanblue, fill=skyblue!20, thick, font=\small, align=center] (sq) at (0,0) {\textbf{Status\\Quo}};
 
 % Alternatives around it
-\node (alt1) [alternative, above of=sq, yshift=0.5cm] {\footnotesize Alternative 1};
-\node (alt2) [alternative, above right of=sq, xshift=0.5cm, yshift=0.5cm] {\footnotesize Alternative 2};
-\node (alt3) [alternative, right of=sq, xshift=1cm] {\footnotesize Alternative 3};
-\node (alt4) [alternative, below right of=sq, xshift=0.5cm, yshift=-0.5cm] {\footnotesize Alternative 4};
-\node (alt5) [alternative, below of=sq, yshift=-0.5cm] {\footnotesize Alternative 5};
-\node (alt6) [alternative, left of=sq, xshift=-1cm] {\footnotesize Alternative 6};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize] (alt1) at (0,2.5) {Alternative 1};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize] (alt2) at (2,1.5) {Alternative 2};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize] (alt3) at (2.5,0) {Alternative 3};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize] (alt4) at (2,-1.5) {Alternative 4};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize] (alt5) at (0,-2.5) {Alternative 5};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize] (alt6) at (-2.5,0) {Alternative 6};
 
 % Arrows showing small distances
 \foreach \alt in {alt1, alt2, alt3, alt4, alt5, alt6} {
@@ -314,7 +307,6 @@ Builds on Herbert Simon's work on bounded rationality
 
 % Highlight chosen alternative
 \draw[titanorange, thick, dashed] (alt2.north west) rectangle (alt2.south east);
-
 \end{tikzpicture}
 \end{center}
 
@@ -350,18 +342,15 @@ Builds on Herbert Simon's work on bounded rationality
 \vspace{1cm}
 \begin{center}
 \begin{tikzpicture}[node distance=1.5cm]
-\tikzstyle{step} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=skyblue!15]
-
-\node (step1) [step] {Small\\Change};
-\node (step2) [step, right of=step1] {Assess\\Results};
-\node (step3) [step, right of=step2] {Adjust\\Course};
-\node (step4) [step, right of=step3] {Next Small\\Change};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize, align=center] (step1) at (0,0) {Small\\Change};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize, align=center] (step2) at (2.5,0) {Assess\\Results};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize, align=center] (step3) at (5,0) {Adjust\\Course};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize, align=center] (step4) at (7.5,0) {Next Small\\Change};
 
 \draw[-, thick] (step1) -- (step2);
 \draw[-, thick] (step2) -- (step3);
 \draw[-, thick] (step3) -- (step4);
 \draw[-, thick] (step4) to [bend right=45] (step1);
-
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -401,20 +390,17 @@ Some decisions require huge leaps:
 \item Economic concerns about rapid changes
 \end{itemize}
 \end{column}
-\begin{column}{0.5\textwidth}
+<begin{column}{0.5\textwidth}
 \begin{center}
 \begin{tikzpicture}[node distance=0.8cm]
-\tikzstyle{policystep} = [rectangle, rounded corners, minimum width=3cm, minimum height=0.6cm, text centered, draw=mediumblue, fill=skyblue!15]
-
-\node (year1) [policystep] {\footnotesize Year 1: Reduce to 25ppm};
-\node (year3) [policystep, below of=year1] {\footnotesize Year 3: Reduce to 20ppm};
-\node (year5) [policystep, below of=year3] {\footnotesize Year 5: Reduce to 15ppm};
-\node (year7) [policystep, below of=year5] {\footnotesize Year 7: Consider further};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=0.6cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize] (year1) at (0,0) {Year 1: Reduce to 25ppm};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=0.6cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize] (year3) at (0,-1) {Year 3: Reduce to 20ppm};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=0.6cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize] (year5) at (0,-2) {Year 5: Reduce to 15ppm};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=0.6cm, draw=mediumblue, fill=skyblue!15, font=\footnotesize] (year7) at (0,-3) {Year 7: Consider further};
 
 \draw[-, thick] (year1) -- (year3);
 \draw[-, thick] (year3) -- (year5);
 \draw[-, thick] (year5) -- (year7);
-
 \end{tikzpicture}
 \end{center}
 
@@ -427,16 +413,13 @@ Some decisions require huge leaps:
 \begin{frame}{Three Models Compared}
 \begin{center}
 \begin{tikzpicture}[node distance=3cm]
-\tikzstyle{model} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=2cm, text centered, draw=titanblue, align=center]
-
-\node (rational) [model, fill=mediumblue!10] {\textbf{Rational\\Choice}\\[0.3cm]\footnotesize Complete info\\Optimization\\Comprehensive};
-\node (bounded) [model, fill=mediumblue!20, right of=rational] {\textbf{Bounded\\Rationality}\\[0.3cm]\footnotesize Limited info\\Satisficing\\Consensus};
-\node (incremental) [model, fill=mediumblue!30, right of=bounded] {\textbf{Incrementalism}\\[0.3cm]\footnotesize Small changes\\Status quo\\Serial process};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=2cm, draw=titanblue, align=center, fill=mediumblue!10] (rational) at (0,0) {\textbf{Rational\\Choice}\\[0.3cm]\footnotesize Complete info\\Optimization\\Comprehensive};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=2cm, draw=titanblue, align=center, fill=mediumblue!20] (bounded) at (4,0) {\textbf{Bounded\\Rationality}\\[0.3cm]\footnotesize Limited info\\Satisficing\\Consensus};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=2cm, draw=titanblue, align=center, fill=mediumblue!30] (incremental) at (8,0) {\textbf{Incrementalism}\\[0.3cm]\footnotesize Small changes\\Status quo\\Serial process};
 
 % Decision complexity arrow
-\draw[very thick, titanorange] ([yshift=-1cm]rational.south) -- ([yshift=-1cm]incremental.south);
-\node[below] at ([yshift=-1.3cm]bounded.south) {\footnotesize Increasing practical applicability};
-
+\draw[very thick, titanorange] (0,-2) -- (8,-2);
+\node[below] at (4,-2.5) {\footnotesize Increasing practical applicability};
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -445,23 +428,23 @@ Some decisions require huge leaps:
 \begin{center}
 \begin{tikzpicture}[scale=0.85]
 % Create decision tree
-\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=titanblue, fill=skyblue!20] (start) at (0,0) {\textbf{Policy Decision}};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=titanblue, fill=skyblue!20, font=\small, align=center] (start) at (0,0) {\textbf{Policy Decision}};
 
 % First branch - information availability
-\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=mediumblue!10] (complete) at (-3,-2) {\footnotesize Complete\\Information?};
-\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=mediumblue!10] (limited) at (3,-2) {\footnotesize Limited\\Information?};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize, align=center] (complete) at (-3,-2) {Complete\\Information?};
+\node[rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw=mediumblue, fill=mediumblue!10, font=\footnotesize, align=center] (limited) at (3,-2) {Limited\\Information?};
 
 % Second branch - urgency
-\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=titanorange, fill=titanorange!10] (urgent) at (-5,-4) {\footnotesize Urgent?};
-\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=titanorange, fill=titanorange!10] (routine) at (-1,-4) {\footnotesize Routine?};
-\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=titanorange, fill=titanorange!10] (consensus) at (1,-4) {\footnotesize Need\\Consensus?};
-\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=titanorange, fill=titanorange!10] (incremental) at (5,-4) {\footnotesize Small\\Change?};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize] (urgent) at (-5,-4) {Urgent?};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize] (routine) at (-1,-4) {Routine?};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (consensus) at (1,-4) {Need\\Consensus?};
+\node[rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, draw=titanorange, fill=titanorange!10, font=\footnotesize, align=center] (incremental) at (5,-4) {Small\\Change?};
 
 % Final recommendations
-\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, text centered, draw=mediumblue, fill=mediumblue!20] (rc1) at (-5,-5.5) {\tiny Rational\\Choice};
-\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, text centered, draw=mediumblue, fill=mediumblue!20] (rc2) at (-1,-5.5) {\tiny Rational\\Choice};
-\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, text centered, draw=mediumblue, fill=mediumblue!20] (br) at (1,-5.5) {\tiny Bounded\\Rationality};
-\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, text centered, draw=mediumblue, fill=mediumblue!20] (inc) at (5,-5.5) {\tiny Incrementalism};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, draw=mediumblue, fill=mediumblue!20, font=\tiny, align=center] (rc1) at (-5,-5.5) {Rational\\Choice};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, draw=mediumblue, fill=mediumblue!20, font=\tiny, align=center] (rc2) at (-1,-5.5) {Rational\\Choice};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, draw=mediumblue, fill=mediumblue!20, font=\tiny, align=center] (br) at (1,-5.5) {Bounded\\Rationality};
+\node[rectangle, rounded corners, minimum width=1.8cm, minimum height=0.6cm, draw=mediumblue, fill=mediumblue!20, font=\tiny, align=center] (inc) at (5,-5.5) {Incrementalism};
 
 % Draw connections
 \draw[-] (start) -- (complete);
@@ -474,7 +457,6 @@ Some decisions require huge leaps:
 \draw[-] (routine) -- (rc2);
 \draw[-] (consensus) -- (br);
 \draw[-] (incremental) -- (inc);
-
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -482,13 +464,11 @@ Some decisions require huge leaps:
 \begin{frame}{Key Takeaways: Alternative Models}
 \begin{center}
 \begin{tikzpicture}[node distance=1.5cm]
-\tikzstyle{takeaway} = [rectangle, rounded corners, minimum width=7cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!10]
-
-\node (t1) [takeaway] {\textbf{Bounded Rationality} acknowledges human cognitive limitations};
-\node (t2) [takeaway, below of=t1] {\textbf{Satisficing} can be more practical than optimizing};
-\node (t3) [takeaway, below of=t2] {\textbf{Incrementalism} reduces risk through small changes};
-\node (t4) [takeaway, below of=t3] {Different situations call for different approaches};
-
+% Added missing semicolons to all nodes
+\node[rectangle, rounded corners, minimum width=7cm, minimum height=1cm, draw=titanorange, fill=titanorange!10, align=center] (t1) at (0,0) {\textbf{Bounded Rationality} acknowledges human cognitive limitations};
+\node[rectangle, rounded corners, minimum width=7cm, minimum height=1cm, draw=titanorange, fill=titanorange!10, align=center] (t2) at (0,-1.8) {\textbf{Satisficing} can be more practical than optimizing};
+\node[rectangle, rounded corners, minimum width=7cm, minimum height=1cm, draw=titanorange, fill=titanorange!10, align=center] (t3) at (0,-3.6) {\textbf{Incrementalism} reduces risk through small changes};
+\node[rectangle, rounded corners, minimum width=7cm, minimum height=1cm, draw=titanorange, fill=titanorange!10, align=center] (t4) at (0,-5.4) {Different situations call for different approaches};
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -496,14 +476,14 @@ Some decisions require huge leaps:
 \begin{frame}{Looking Ahead}
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
-\tikzstyle{progressCompleted} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!20]
-\tikzstyle{progressNext} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick]
+\node[rectangle, rounded corners, minimum width=4.5cm, minimum height=2cm, draw=mediumblue, fill=mediumblue!20] (current) at (0,0) {};
+\node[rectangle, rounded corners, minimum width=4.5cm, minimum height=2cm, draw=titanorange, fill=titanorange!20, thick] (part3) at (6.5,0) {};
 
-\node (current) [progressCompleted] {\textbf{Parts 1 \& 2 Complete}\\Rational Models};
-\node (part3) [progressNext, right of=current, xshift=2.5cm] {\textbf{Coming Next}\\Dysfunctional\\Decision-Making};
+% Text positioned properly within boxes
+\node[font=\small\bfseries] at (current.center) {Parts 1 \& 2 Complete\\[0.2cm]\footnotesize Rational Models};
+\node[font=\small\bfseries] at (part3.center) {Coming Next\\[0.2cm]\footnotesize Dysfunctional\\Decision-Making};
 
 \draw[-, thick, titanorange] (current) -- (part3);
-
 \end{tikzpicture}
 \end{center}
 

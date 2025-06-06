@@ -1,0 +1,37 @@
+% Custom TikZ embellishments for POSC 315 Beamer slides
+\usepackage{tikz}
+\usetikzlibrary{shadows,arrows.meta,positioning,shapes.multipart}
+
+% Boxed text for emphasis
+\newcommand{\tikzbox}[2][]{
+  \begin{tikzpicture}
+    \node[draw=mediumblue, fill=skyblue!20, thick, rounded corners, inner sep=10pt, text width=0.9\textwidth,#1] {#2};
+  \end{tikzpicture}
+}
+
+% Horizontal divider with arrow
+\newcommand{\tikzdivider}{
+  \begin{center}
+  \begin{tikzpicture}
+    \draw[->, thick, titanorange] (0,0) -- (3,0);
+  \end{tikzpicture}
+  \end{center}
+}
+
+% Highlighted comparison row (e.g., for causation slides)
+\newcommand{\relationrow}[2]{
+  \begin{tikzpicture}
+    \node[draw=none, fill=titangray!50, rounded corners, text width=0.9\textwidth, inner sep=8pt] {
+      \textbf{#1} \hfill #2
+    };
+  \end{tikzpicture}
+}
+
+% Framed callout block
+\newcommand{\callout}[1]{
+  \begin{tikzpicture}
+    \node[draw=titanorange, fill=white, thick, rounded corners, inner sep=10pt, text width=0.9\textwidth] {
+      \textit{#1}
+    };
+  \end{tikzpicture}
+}

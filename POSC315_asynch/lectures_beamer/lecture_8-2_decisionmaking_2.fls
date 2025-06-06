@@ -1,0 +1,12 @@
+PWD /Users/dpadams/Repos/courses/POSC315_asynch/lectures_beamer
+INPUT /usr/local/texlive/2025basic/texmf.cnf
+INPUT /usr/local/texlive/2025basic/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2025basic/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/dpadams/Repos/courses/POSC315_asynch/lectures_beamer/lecture_8-2_decisionmaking_2.tex
+OUTPUT lecture_8-2_decisionmaking_2.log
+INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamer.cls
+INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamer.cls
+INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty

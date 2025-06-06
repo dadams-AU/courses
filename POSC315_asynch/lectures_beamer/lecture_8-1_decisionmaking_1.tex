@@ -81,8 +81,7 @@
 
 \title{Understanding Politics and Public Policy}
 \subtitle{Foundations and Core Concepts\\POSC 315: Introduction to Public Policy\\Lecture 8-1\\Decision Making (Part 1 of 3)}
-\author{Dr. David P. Adams}
-\date{Summer 2025}
+\date{David P. Adams, Ph.D.}
 \institute{California State University, Fullerton}
 
 \maketitle
@@ -90,20 +89,20 @@
 \begin{frame}{Today's Focus}
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
-% Simple boxes without line breaks - use separate text below
-\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=titanorange, fill=titanorange!20, thick] (part1) at (0,0) {};
-\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=mediumblue, fill=mediumblue!10] (part2) at (0,-2.5) {};
-\node[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=mediumblue, fill=mediumblue!10] (part3) at (0,-5) {};
+% Larger boxes to accommodate text properly
+\node[rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, draw=titanorange, fill=titanorange!20, thick] (part1) at (0,0) {};
+\node[rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, draw=mediumblue, fill=mediumblue!10] (part2) at (0,-2.5) {};
+\node[rectangle, rounded corners, minimum width=5cm, minimum height=1.5cm, draw=mediumblue, fill=mediumblue!10] (part3) at (0,-5) {};
 
-% Add text outside nodes
-\node[font=\small\bfseries] at (part1) {Part 1};
-\node[font=\footnotesize] at (part1.south) [yshift=-3mm] {Introduction \& Rational Choice};
+% Better positioned text inside boxes
+\node[font=\small\bfseries] at (part1.north) [yshift=-2mm] {Part 1};
+\node[font=\footnotesize] at (part1.south) [yshift=2mm] {Introduction \& Rational Choice};
 
-\node[font=\small\bfseries] at (part2) {Part 2};
-\node[font=\footnotesize] at (part2.south) [yshift=-3mm] {Bounded Rationality \& Incrementalism};
+\node[font=\small\bfseries] at (part2.north) [yshift=-2mm] {Part 2};
+\node[font=\footnotesize] at (part2.south) [yshift=2mm] {Bounded Rationality \& Incrementalism};
 
-\node[font=\small\bfseries] at (part3) {Part 3};
-\node[font=\footnotesize] at (part3.south) [yshift=-3mm] {Dysfunctional Decision-Making};
+\node[font=\small\bfseries] at (part3.north) [yshift=-2mm] {Part 3};
+\node[font=\footnotesize] at (part3.south) [yshift=2mm] {Dysfunctional Decision-Making};
 
 % Arrows
 \draw[->] (part1) -- (part2);
@@ -123,10 +122,10 @@
 
 % Add text
 \node[font=\footnotesize] at (agenda) {Agenda};
-\node[font=\footnotesize] at (agenda.south) [yshift=-2mm] {Setting};
+\node[font=\footnotesize] at (agenda.south) [yshift=2mm] {Setting};
 
 \node[font=\footnotesize] at (decision) {Decision-};
-\node[font=\footnotesize] at (decision.south) [yshift=-2mm] {Making};
+\node[font=\footnotesize] at (decision.south) [yshift=2mm] {Making};
 
 \node[font=\footnotesize] at (implement) {Implementation};
 \node[font=\footnotesize] at (evaluate) {Evaluation};
@@ -176,20 +175,20 @@ Three primary theoretical frameworks to understand how decisions are made in pol
 \vspace{1cm}
 \begin{center}
 \begin{tikzpicture}[node distance=3.5cm]
-% Boxes
-\node[rectangle, rounded corners, minimum width=2.8cm, minimum height=2cm, draw=mediumblue, fill=mediumblue!10] (rational) at (0,0) {};
-\node[rectangle, rounded corners, minimum width=2.8cm, minimum height=2cm, draw=mediumblue, fill=mediumblue!20] (bounded) at (4,0) {};
-\node[rectangle, rounded corners, minimum width=2.8cm, minimum height=2cm, draw=mediumblue, fill=mediumblue!10] (incremental) at (8,0) {};
+% Better sized boxes for text
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=2.5cm, draw=mediumblue, fill=mediumblue!10] (rational) at (0,0) {};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=2.5cm, draw=mediumblue, fill=mediumblue!20] (bounded) at (4,0) {};
+\node[rectangle, rounded corners, minimum width=3cm, minimum height=2.5cm, draw=mediumblue, fill=mediumblue!10] (incremental) at (8,0) {};
 
-% Text
-\node[font=\small\bfseries] at (rational.north) [yshift=-3mm] {Rational Choice};
-\node[font=\footnotesize, text width=2.5cm, align=center] at (rational.south) [yshift=5mm] {Optimizing decisions based on complete information};
+% Better positioned text
+\node[font=\small\bfseries] at (rational.north) [yshift=-4mm] {Rational Choice};
+\node[font=\footnotesize, text width=2.8cm, align=center] at (rational.center) [yshift=-3mm] {Optimizing decisions based on complete information};
 
-\node[font=\small\bfseries] at (bounded.north) [yshift=-3mm] {Bounded Rationality};
-\node[font=\footnotesize, text width=2.5cm, align=center] at (bounded.south) [yshift=5mm] {Satisficing with limited information \& capacity};
+\node[font=\small\bfseries] at (bounded.north) [yshift=-4mm] {Bounded Rationality};
+\node[font=\footnotesize, text width=2.8cm, align=center] at (bounded.center) [yshift=-3mm] {Satisficing with limited information \& capacity};
 
-\node[font=\small\bfseries] at (incremental.north) [yshift=-3mm] {Incrementalism};
-\node[font=\footnotesize, text width=2.5cm, align=center] at (incremental.south) [yshift=5mm] {Making small changes from the status quo};
+\node[font=\small\bfseries] at (incremental.north) [yshift=-4mm] {Incrementalism};
+\node[font=\footnotesize, text width=2.8cm, align=center] at (incremental.center) [yshift=-3mm] {Making small changes from the status quo};
 \end{tikzpicture}
 \end{center}
 \end{frame}
@@ -228,7 +227,7 @@ Rational Choice depends on the existence of a perfectly rational actor:
 \node[font=\bfseries] at (info) {Complete and Perfect Information};
 
 % Detail text below top box
-\node[font=\footnotesize, text width=8cm, align=center] at (0,1) {About problems $\bullet$ About causes and effects \\ About consequences of alternatives $\bullet$ About consequences of inaction};
+\node[font=\footnotesize, text width=8cm, align=center] at (0,.5) {About problems $\bullet$ About causes and effects \\ About consequences of alternatives $\bullet$ About consequences of inaction};
 
 % Bottom box
 \node[rectangle, rounded corners, minimum width=8cm, minimum height=1.2cm, draw=titanblue, fill=skyblue!15] (calc) at (0,-1) {};
@@ -320,7 +319,7 @@ After comprehensive analysis, the highest-scoring option is selected as it provi
 
 % Headers
 \node at (1,5.5) {\footnotesize \textbf{Alternatives}};
-\node at (3,5.5) {\footnotesize \textbf{Effectiveness}};
+\node at (3,5.5) {\footnotesize \textbf{Effect.}};
 \node at (4.5,5.5) {\footnotesize \textbf{Cost}};
 \node at (6,5.5) {\footnotesize \textbf{Time}};
 \node at (7.5,5.5) {\footnotesize \textbf{Score}};
@@ -349,7 +348,7 @@ After comprehensive analysis, the highest-scoring option is selected as it provi
 \begin{frame}{Key Takeaways: Rational Choice}
 \begin{columns}
 \begin{column}{0.45\textwidth}
-\begin{block}{\centering\textbf{Strengths}}
+\begin{block}{\textbf{Strengths}}
 \vspace{0.3cm}
 \begin{itemize}
 \item Comprehensive analysis
@@ -359,7 +358,7 @@ After comprehensive analysis, the highest-scoring option is selected as it provi
 \end{block}
 \end{column}
 \begin{column}{0.45\textwidth}
-\begin{block}{\centering\textbf{Limitations}}
+\begin{block}{\textbf{Limitations}}
 \vspace{0.3cm}
 \begin{itemize}
 \item Perfect information unrealistic
@@ -374,17 +373,17 @@ After comprehensive analysis, the highest-scoring option is selected as it provi
 \begin{frame}{Looking Ahead}
 \begin{center}
 \begin{tikzpicture}
-% Simple boxes with external text
-\node[rectangle, rounded corners, minimum width=4cm, minimum height=1.5cm, draw=mediumblue, fill=mediumblue!20] (current) at (0,0) {};
-\node[rectangle, rounded corners, minimum width=4cm, minimum height=1.5cm, draw=titanorange, fill=titanorange!20, thick] (part2) at (6,0) {};
+% Better sized boxes
+\node[rectangle, rounded corners, minimum width=4.5cm, minimum height=2cm, draw=mediumblue, fill=mediumblue!20] (current) at (0,0) {};
+\node[rectangle, rounded corners, minimum width=4.5cm, minimum height=2cm, draw=titanorange, fill=titanorange!20, thick] (part2) at (6.5,0) {};
 
-% Text
-\node[font=\small\bfseries] at (current.north) [yshift=-3mm] {Part 1 Complete};
-\node[font=\footnotesize] at (current.south) [yshift=3mm] {Introduction \& Rational Choice};
+% Properly centered text
+\node[font=\small\bfseries] at (current.north) [yshift=-4mm] {Part 1 Complete};
+\node[font=\footnotesize] at (current.south) [yshift=4mm] {Introduction \& Rational Choice};
 
-\node[font=\small\bfseries] at (part2.north) [yshift=-3mm] {Coming Next};
-\node[font=\footnotesize] at (part2.center) [yshift=-2mm] {Bounded Rationality};
-\node[font=\footnotesize] at (part2.south) [yshift=3mm] {Incrementalism};
+\node[font=\small\bfseries] at (part2.north) [yshift=-4mm] {Coming Next};
+\node[font=\footnotesize] at (part2.center) [yshift=1mm] {Bounded Rationality};
+\node[font=\footnotesize] at (part2.south) [yshift=4mm] {Incrementalism};
 
 \draw[->, thick, titanorange] (current) -- (part2);
 \end{tikzpicture}

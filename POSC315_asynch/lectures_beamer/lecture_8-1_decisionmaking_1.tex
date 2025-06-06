@@ -70,7 +70,8 @@
 \setbeamertemplate{headline}{%
 \begin{beamercolorbox}[wd=\paperwidth,ht=0.4cm,dp=0cm]{titanblue}%
 \begin{tikzpicture}
-\fill[titanorange] (0,0) rectangle (\the\paperwidth*\insertframenumber/\inserttotalframenumber,0.4cm);
+\pgfmathsetmacro{\progress}{\insertframenumber/\inserttotalframenumber}
+\fill[titanorange] (0,0) rectangle (\progress*\paperwidth,0.4cm);
 \end{tikzpicture}%
 \end{beamercolorbox}%
 }
@@ -90,13 +91,15 @@
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
 % Define styles
-\tikzstyle{current} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick]
-\tikzstyle{future} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!10]
+\tikzset{
+    current/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick},
+    future/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!10}
+}
 
 % Nodes
 \node (part1) [current] {Part 1: Introduction \& Rational Choice};
-\node (part2) [future, below of=part1] {Part 2: Bounded Rationality \& Incrementalism};
-\node (part3) [future, below of=part2] {Part 3: Dysfunctional Decision-Making};
+\node (part2) [future, below=of part1] {Part 2: Bounded Rationality \& Incrementalism};
+\node (part3) [future, below=of part2] {Part 3: Dysfunctional Decision-Making};
 
 % Arrows
 \draw[->] (part1) -- (part2);
@@ -109,15 +112,17 @@
 \begin{center}
 \begin{tikzpicture}[node distance=2.5cm]
 % Define styles
-\tikzstyle{stage} = [rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, text centered, draw=mediumblue, fill=skyblue!20]
-\tikzstyle{highlight} = [rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!30, thick]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzset{
+    stage/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, text centered, draw=mediumblue, fill=skyblue!20},
+    highlight/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!30, thick},
+    arrow/.style={thick,->,>=stealth}
+}
 
 % Nodes
 \node (agenda) [stage] {Agenda\\Setting};
-\node (decision) [highlight, right of=agenda] {Decision-\\Making};
-\node (implement) [stage, right of=decision] {Implementation};
-\node (evaluate) [stage, right of=implement] {Evaluation};
+\node (decision) [highlight, right=of agenda] {Decision-\\Making};
+\node (implement) [stage, right=of decision] {Implementation};
+\node (evaluate) [stage, right=of implement] {Evaluation};
 
 % Arrows
 \draw[arrow] (agenda) -- (decision);
@@ -164,11 +169,13 @@ Three primary theoretical frameworks to understand how decisions are made in pol
 \vspace{1cm}
 \begin{center}
 \begin{tikzpicture}[node distance=3cm]
-\tikzstyle{theory} = [rectangle, rounded corners, minimum width=2.8cm, minimum height=1.5cm, text centered, draw=mediumblue]
+\tikzset{
+    theory/.style={rectangle, rounded corners, minimum width=2.8cm, minimum height=1.5cm, text centered, draw=mediumblue}
+}
 
 \node (rational) [theory, fill=mediumblue!10] {\textbf{Rational Choice}\\{\footnotesize Optimizing decisions based on complete information}};
-\node (bounded) [theory, fill=mediumblue!20, right of=rational] {\textbf{Bounded Rationality}\\{\footnotesize Satisficing with limited information \& capacity}};
-\node (incremental) [theory, fill=mediumblue!10, right of=bounded] {\textbf{Incrementalism}\\{\footnotesize Making small changes from the status quo}};
+\node (bounded) [theory, fill=mediumblue!20, right=of rational] {\textbf{Bounded Rationality}\\{\footnotesize Satisficing with limited information \& capacity}};
+\node (incremental) [theory, fill=mediumblue!10, right=of bounded] {\textbf{Incrementalism}\\{\footnotesize Making small changes from the status quo}};
 
 \end{tikzpicture}
 \end{center}
@@ -203,28 +210,15 @@ Rational Choice depends on the existence of a perfectly rational actor:
 \vspace{0.5cm}
 \begin{center}
 \begin{tikzpicture}[node distance=1.5cm]
-\tikzstyle{req} = [rectangle, rounded corners, minimum width=5cm, minimum height=1cm, text centered, draw=titanblue, fill=skyblue!15]
+\tikzset{
+    req/.style={rectangle, rounded corners, minimum width=5cm, minimum height=1cm, text centered, draw=titanblue, fill=skyblue!15}
+}
 
 \node (info) [req] {\textbf{Complete and Perfect Information}};
-\node (calc) [req, below of=info] {\textbf{Perfect Calculation Ability}};
+\node (infodetail) [below=of info, node distance=1.2cm] {\parbox{8cm}{\centering\footnotesize About problems $\bullet$ About causes and effects\\About consequences of alternatives $\bullet$ About consequences of inaction}};
 
-% Detail boxes
-\node (infodetail) [below of=info, yshift=-0.3cm] {
-\begin{minipage}{8cm}
-\centering
-\footnotesize
-About problems $\bullet$ About causes and effects\\
-About consequences of alternatives $\bullet$ About consequences of inaction
-\end{minipage}
-};
-
-\node (calcdetail) [below of=calc, yshift=-0.3cm] {
-\begin{minipage}{8cm}
-\centering
-\footnotesize
-Can accurately weigh all costs and benefits
-\end{minipage}
-};
+\node (calc) [req, below=of infodetail, node distance=1.5cm] {\textbf{Perfect Calculation Ability}};
+\node (calcdetail) [below=of calc, node distance=1.2cm] {\parbox{8cm}{\centering\footnotesize Can accurately weigh all costs and benefits}};
 
 \end{tikzpicture}
 \end{center}
@@ -252,14 +246,16 @@ Can accurately weigh all costs and benefits
 \begin{frame}{Six Steps to Rational Choice}
 \begin{center}
 \begin{tikzpicture}[node distance=0.8cm]
-\tikzstyle{step} = [rectangle, rounded corners, minimum width=8cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=skyblue!10]
+\tikzset{
+    step/.style={rectangle, rounded corners, minimum width=8cm, minimum height=0.8cm, text centered, draw=mediumblue, fill=skyblue!10}
+}
 
 \node (step1) [step] {1. \textcolor{titanorange}{\textbf{Define the problem}} - What exactly are we trying to solve?};
-\node (step2) [step, below of=step1] {2. \textcolor{titanorange}{\textbf{Identify decision criteria}} - What factors matter in making this decision?};
-\node (step3) [step, below of=step2] {3. \textcolor{titanorange}{\textbf{Weight the criteria}} - How important is each factor?};
-\node (step4) [step, below of=step3] {4. \textcolor{titanorange}{\textbf{Generate alternatives}} - What are all possible solutions?};
-\node (step5) [step, below of=step4] {5. \textcolor{titanorange}{\textbf{Rate alternatives}} - How does each solution perform on each criterion?};
-\node (step6) [step, below of=step5] {6. \textcolor{titanorange}{\textbf{Compute optimal decision}} - Which solution maximizes benefits?};
+\node (step2) [step, below=of step1] {2. \textcolor{titanorange}{\textbf{Identify decision criteria}} - What factors matter in making this decision?};
+\node (step3) [step, below=of step2] {3. \textcolor{titanorange}{\textbf{Weight the criteria}} - How important is each factor?};
+\node (step4) [step, below=of step3] {4. \textcolor{titanorange}{\textbf{Generate alternatives}} - What are all possible solutions?};
+\node (step5) [step, below=of step4] {5. \textcolor{titanorange}{\textbf{Rate alternatives}} - How does each solution perform on each criterion?};
+\node (step6) [step, below=of step5] {6. \textcolor{titanorange}{\textbf{Compute optimal decision}} - Which solution maximizes benefits?};
 
 \end{tikzpicture}
 \end{center}
@@ -340,19 +336,21 @@ After comprehensive analysis, the highest-scoring option is selected as it provi
 \begin{frame}{Key Takeaways: Rational Choice}
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
-\tikzstyle{pro} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1.2cm, text centered, draw=mediumblue, fill=mediumblue!10]
-\tikzstyle{con} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1.2cm, text centered, draw=titanorange, fill=titanorange!10]
+\tikzset{
+    pro/.style={rectangle, rounded corners, minimum width=3.5cm, minimum height=1.2cm, text centered, draw=mediumblue, fill=mediumblue!10},
+    con/.style={rectangle, rounded corners, minimum width=3.5cm, minimum height=1.2cm, text centered, draw=titanorange, fill=titanorange!10}
+}
 
 \node (prohead) [pro] {\textbf{Strengths}};
-\node (conhead) [con, right of=prohead, xshift=2cm] {\textbf{Limitations}};
+\node (conhead) [con, right=of prohead, xshift=2cm] {\textbf{Limitations}};
 
-\node (pro1) [pro, below of=prohead, yshift=-0.5cm] {\footnotesize Comprehensive analysis};
-\node (pro2) [pro, below of=pro1, yshift=-0.5cm] {\footnotesize Maximizes benefits};
-\node (pro3) [pro, below of=pro2, yshift=-0.5cm] {\footnotesize Systematic approach};
+\node (pro1) [pro, below=of prohead, yshift=-0.5cm] {\footnotesize Comprehensive analysis};
+\node (pro2) [pro, below=of pro1, yshift=-0.5cm] {\footnotesize Maximizes benefits};
+\node (pro3) [pro, below=of pro2, yshift=-0.5cm] {\footnotesize Systematic approach};
 
-\node (con1) [con, below of=conhead, yshift=-0.5cm] {\footnotesize Perfect information unrealistic};
-\node (con2) [con, below of=con1, yshift=-0.5cm] {\footnotesize Time and resource intensive};
-\node (con3) [con, below of=con2, yshift=-0.5cm] {\footnotesize Difficult to predict outcomes};
+\node (con1) [con, below=of conhead, yshift=-0.5cm] {\footnotesize Perfect information unrealistic};
+\node (con2) [con, below=of con1, yshift=-0.5cm] {\footnotesize Time and resource intensive};
+\node (con3) [con, below=of con2, yshift=-0.5cm] {\footnotesize Difficult to predict outcomes};
 
 \end{tikzpicture}
 \end{center}
@@ -361,11 +359,13 @@ After comprehensive analysis, the highest-scoring option is selected as it provi
 \begin{frame}{Looking Ahead}
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
-\tikzstyle{completed} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!20]
-\tikzstyle{next} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick]
+\tikzset{
+    completed/.style={rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, draw=mediumblue, fill=mediumblue!20},
+    next/.style={rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, draw=titanorange, fill=titanorange!20, thick}
+}
 
 \node (current) [completed] {\textbf{Part 1 Complete}\\Introduction \& Rational Choice};
-\node (part2) [next, right of=current, xshift=2cm] {\textbf{Coming Next}\\Bounded Rationality\\Incrementalism};
+\node (part2) [next, right=of current, xshift=2cm] {\textbf{Coming Next}\\Bounded Rationality\\Incrementalism};
 
 \draw[->, thick, titanorange] (current) -- (part2);
 

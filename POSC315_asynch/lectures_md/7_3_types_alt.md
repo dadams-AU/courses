@@ -64,29 +64,24 @@ Provide intangible benefits; appeal to values or identity.
 
 ---
 
-## Liberal vs. Conservative Policy Frames
+## Liberal versus Conservative Policy Frame
 
-<div class="two-column">
-<div class="column">
-<h3>Liberal View</h3>
 <div class="definition">
-Government <em>can</em> solve social problems and achieve goals.
+<strong>Liberal View:</strong> Government <em>can</em> solve social problems and achieve goals.
 </div>
-<ul>
-    <li>Supports active government intervention.</li>
-    <li>Focus on equality, social justice, and public welfare.</li>
-    <li>Examples: Expanding healthcare, environmental regulation.</li>
-</ul>
-</div>
-<div class="column">
-<h3>Conservative View</h3>
+
+- Supports active government intervention.
+- Focus on equality, social justice, and public welfare.
+- <em>Examples:</em> Expanding healthcare, environmental regulation.
+
+---
+
+## Liberal verses Conservative Policy Frame
+
 <div class="definition">
-Government <em>is</em> the problem; individuals and markets solve most problems.
+<strong>Conservative View:</strong> Government <em>is</em> the problem; individuals and markets solve most problems.
 </div>
-<ul>
-    <li>Prefers minimal government intervention.</li>
-    <li>Focus on personal responsibility, free markets, and traditional values.</li>
-    <li>Examples: Tax cuts, deregulation, school choice.</li>
-</ul>
-</div>
-</div>
+
+- Prefers minimal government intervention.
+- Focus on personal responsibility, free markets, and traditional values.
+- <em>Examples:</em> Tax cuts, deregulation, school choice.

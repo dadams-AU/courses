@@ -6,13 +6,15 @@ backgroundColor: #fefefe
 ---
 
 # Policy Design and Tools
-## POSC 315 | Week 11 - Part 2: Goal Conflicts and Trade-offs
+
+## Part 2: Goal Conflicts and Trade-offs
 
 ---
 
 ## Equality: A Contested Goal
 
-### Equality of Opportunity:
+### Equality of Opportunity
+
 - Dominant in American political discourse
 - Everyone starts with same rules and chances
 - Policy focuses on removing barriers to entry
@@ -21,7 +23,8 @@ backgroundColor: #fefefe
 
 ---
 
-### Equality of Outcome:
+### Equality of Outcome
+
 - More prevalent in social democracies
 - Focuses on end distribution of resources
 - Policy aims to narrow gaps between groups
@@ -34,7 +37,8 @@ backgroundColor: #fefefe
 
 ## Efficiency: A Contested Goal
 
-### Core Concept:
+### Core Concept
+
 - Often defined as achieving the most output for the least input
 - Usually a means to a goal, not an end in itself
 - The idea is to achieve an objective with the least amount of resources
@@ -44,7 +48,8 @@ backgroundColor: #fefefe
 
 ## Efficiency: Key Considerations
 
-### Key Questions:
+### Key Questions
+
 - How do we define and measure inputs?
 - How do we define and measure outputs?
 - Efficiency for whom? (Government, citizens, specific groups?)
@@ -72,13 +77,12 @@ backgroundColor: #fefefe
 - **Welfare:** Administrative costs vs. the value and reach of benefits delivered.
 - **Infrastructure:** Quick, low-cost repairs vs. durable, long-term solutions.
 
-
 ---
 
 ## Efficiency: Herbert Simon's Perspective
 
 > "A good public library is not one that owns all the books that have ever been published, but one that has used its limited funds to build up as good a collection as possible under the circumstances"
-> 
+>
 > *- Herbert Simon*
 
 **Efficiency is about making the best possible use of limited resources, not maximizing every possible outcome**
@@ -90,7 +94,7 @@ backgroundColor: #fefefe
 ## Efficiency: Political Dimensions
 
 > "People who oppose certain programs will often do so because they disagree with the substance of the policy. But it is much easier—and often more successful—to claim or expose how a policy is wasteful, rather than arguing about the policy's merits because nobody favors waste."
-> 
+>
 > *- Deborah Stone*
 
 **Efficiency arguments can be strategic and political, not just technical**
@@ -104,7 +108,8 @@ backgroundColor: #fefefe
 **Definition:**  
 Equity is fairness in the distribution of resources, opportunities, and outcomes. It is a central but highly debated goal in policy design.
 
-### Why Equity Is Contested:
+### Why Equity Is Contested
+
 - Competing ideas of what is "fair"
 - Tension with other goals like efficiency and liberty
 - Disagreement over whether to focus on equal processes or equal outcomes
@@ -114,7 +119,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 ## Forms and Dimensions of Equity
 
-### Key Types:
+### Key Types
+
 - **Horizontal Equity:** Treating similar cases similarly (e.g., equal tax rates for people with equal income)
 - **Vertical Equity:** Treating different cases differently to account for relevant differences (e.g., progressive taxation)
 - **Intergenerational Equity:** Fairness between current and future generations (e.g., climate policy)
@@ -124,7 +130,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 ## Policy Approaches to Advancing Equity
 
-### Common Strategies:
+### Common Strategies
+
 - **Universal Programs:** Benefits or services provided to all (e.g., public education)
 - **Targeted Interventions:** Focused support for disadvantaged groups (e.g., affirmative action)
 - **Redistributive Policies:** Shifting resources to reduce disparities (e.g., progressive taxes, social welfare)
@@ -137,6 +144,7 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 ## Security vs. Liberty: Conflicting Goals
 
 ### Thomas Hobbes' Tradeoff
+
 - Individuals surrender significant liberties to a powerful sovereign in exchange for security and order
 - The state wields broad authority to prevent chaos and violence
 - Security is seen as the foundation for all other rights and freedoms
@@ -145,6 +153,7 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 ---
 
 ### John Locke's Approach
+
 - Individuals enter a social contract, giving up only limited liberties to form a government with restricted powers
 - The state’s primary role is to protect fundamental natural rights—life, liberty, and property
 - Liberty is considered an inherent right, not granted by the state
@@ -171,7 +180,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 **Policy goals are often ambiguous and may conflict with each other.**
 
-### Why Ambiguity and Conflict Arise:
+### Why Ambiguity and Conflict Arise
+
 - Stakeholders value different goals and interpret them in various ways
 - Disagreements can occur over both the ends (goals) and the means (methods)
 - Example: Immigration policy may conflict with foreign relations goals
@@ -185,12 +195,12 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 - Ambiguity can be useful, enabling broad coalitions by allowing multiple interpretations
 - Transparent discussion of trade-offs helps build legitimacy and support
 
-
 ---
 
 ## Goal Conflicts - Real World Examples
 
-### Environmental Policy:
+### Environmental Policy
+
 - Environmental protection vs. economic growth
 - Carbon reduction vs. energy affordability
 - Conservation vs. resource development
@@ -198,7 +208,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 ---
 
-### Healthcare Policy:
+### Healthcare Policy
+
 - Universal access vs. cost containment
 - Quality of care vs. efficiency
 - Patient choice vs. standardized treatments
@@ -254,7 +265,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 **Question:** Is the purpose of the goal to eliminate a problem, hold steady a growing problem, or reduce the problem to a lower level?
 
-### War on Drugs Example:
+### War on Drugs Example
+
 - **Elimination:** Zero tolerance, maximum enforcement, severe penalties
 - **Holding Steady:** Targeted enforcement, education campaigns
 - **Reduction:** Harm reduction strategies, treatment over punishment
@@ -265,7 +277,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 ## Scalability of Policy Goals
 
-### Goal Intensity Questions:
+### Goal Intensity Questions
+
 - How much change is needed?
 - What is politically feasible?
 - What is administratively possible?
@@ -276,7 +289,8 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 
 ## Scalability of Policy Goals
 
-### Target Setting Example:
+### Target Setting Example
+
 - **Ambitious:** Carbon neutrality by 2030
 - **Moderate:** 50% emissions reduction by 2035
 - **Minimal:** Stabilize emissions by 2040
@@ -289,6 +303,7 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 ## Policy Design Framework: Core Elements
 
 ### Core Elements
+
 - **Goals:** What is the policy trying to achieve?
 - **Causal Theory:** Why will the proposed solution address the problem?
 - **Tools:** What instruments or mechanisms will be used to reach the goals?
@@ -299,6 +314,7 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 ## Policy Design Framework: Cross-Cutting Themes
 
 ### Cross-Cutting Themes
+
 - **Equity:** Who benefits from or bears the costs of the policy?
 - **Efficiency:** Are resources being used in the best possible way?
 - **Political Feasibility:** Can the policy gain sufficient political and public support?
@@ -311,6 +327,7 @@ Equity is fairness in the distribution of resources, opportunities, and outcomes
 ## Next Up: Part 3 - Policy Tools and Implementation
 
 In the final presentation, we'll explore:
+
 - Different types of policy tools
 - How to select appropriate tools
 - The role of compliance mechanisms

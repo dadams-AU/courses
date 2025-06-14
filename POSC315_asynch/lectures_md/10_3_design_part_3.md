@@ -6,7 +6,8 @@ backgroundColor: #fefefe
 ---
 
 # Policy Design and Tools
-## POSC 315 | Week 11 - Part 3: Policy Tools and Implementation
+
+## Part 3: Policy Tools and Implementation
 
 ---
 
@@ -14,7 +15,8 @@ backgroundColor: #fefefe
 
 **Definition:** The means by which the policy will achieve its goals
 
-### Key Characteristics:
+### Key Characteristics
+
 - How government seeks a policy objective
 - The interface between the government's intentions and actual implementation outcomes
 - Range from direct provision to market incentives to regulations
@@ -24,6 +26,7 @@ backgroundColor: #fefefe
 ---
 
 ## Policy Tool Typology
+
 ### Schneider & Ingram (1990)
 
 **Four Categories of Tools:**
@@ -38,6 +41,7 @@ backgroundColor: #fefefe
 ---
 
 ## Dimensions of Policy Tools
+
 | **Dimension**        | **Options/Examples**                        |
 |----------------------|---------------------------------------------|
 | **Type of Activity** | Money (grants, payments); Services, protections, restrictions |
@@ -50,6 +54,7 @@ backgroundColor: #fefefe
 ---
 
 ## Love, Fear, and Money
+
 ### Etzioni (1961)
 
 **Three basic reasons why people comply with rules, orders, or policy:**
@@ -65,9 +70,11 @@ backgroundColor: #fefefe
 ---
 
 ---
+
 ## Love, Fear, and Money: Applications
 
 ### Policy Examples
+
 - **Love:** Public campaigns appealing to moral duty (e.g., recycling, blood donation)
 - **Fear:** Enforcement through traffic fines, criminal penalties, business regulations
 - **Money:** Use of tax incentives, subsidies, grants, or direct economic benefits
@@ -100,7 +107,8 @@ backgroundColor: #fefefe
 
 ## Policy Tool Considerations
 
-### Key Principles:
+### Key Principles
+
 - Non-Coercive to coercive (love to fear) exist along a continuum
 - The extent to which government will use its resources to achieve a policy goal
 - Choosing effective tools requires a good causal theory
@@ -109,7 +117,8 @@ backgroundColor: #fefefe
 
 ## Policy Tool Considerations
 
-### Questions to Ask:
+### Questions to Ask
+
 - What behavior needs to change?
 - Who needs to take action?
 - What might motivate compliance?
@@ -119,7 +128,8 @@ backgroundColor: #fefefe
 
 ## Policy Tool Considerations
 
-### Tool Selection Criteria:
+### Tool Selection Criteria
+
 - Effectiveness
 - Efficiency
 - Equity
@@ -129,6 +139,7 @@ backgroundColor: #fefefe
 ---
 
 ## Models of Policy Tools
+
 ### Howlett, Ramesh, and Perl
 
 **Policy tools represent the specific instruments governments use to implement policies and achieve policy goals.**
@@ -141,7 +152,7 @@ backgroundColor: #fefefe
 
 ---
 
-## Economic Tools Characteristics:
+## Economic Tools Characteristics
 
 - Favor individual freedom and choice
 - Tend to use non-coercive means
@@ -150,7 +161,7 @@ backgroundColor: #fefefe
 
 ---
 
-## Economic Tools Examples:
+## Economic Tools Examples
 
 - **Subsidies:** Agriculture, energy, housing
 - **Tax incentives:** R&D credits, mortgage deductions
@@ -162,7 +173,8 @@ backgroundColor: #fefefe
 
 ## Economic Tools: Trade-offs
 
-### Advantages:
+### Advantages
+
 - Preserve individual choice and market mechanisms
 - Often more politically palatable than regulations
 - Can harness market efficiency for public goals
@@ -172,7 +184,8 @@ backgroundColor: #fefefe
 
 ## Economic Tools: Trade-offs
 
-### Disadvantages:
+### Disadvantages
+
 - May not work when markets are imperfect
 - Can be captured by special interests
 - Benefits may be unequally distributed
@@ -186,12 +199,13 @@ backgroundColor: #fefefe
 ## Political Tools
 
 > "Any instrument [or tool] can theoretically accomplish any chosen aim, but governments prefer less coercive instruments unless forced by either recalcitrance on the part of the subject and/or continued social pressure for change to utilize more coercive instruments."
-> 
+>
 > *- Howlett, Ramesh, and Perl*
 
 ---
 
-### Political Tool Examples:
+### Political Tool Examples
+
 - **Regulations:** Command-and-control rules
 - **Direct provision:** Government services
 - **Information:** Public campaigns
@@ -203,7 +217,8 @@ backgroundColor: #fefefe
 
 ## Tools and Choices
 
-### Key Considerations:
+### Key Considerations
+
 - Technically sound design ≠ political viability
 - Resources constrain available options
 - Behavioral assumptions matter
@@ -213,7 +228,8 @@ backgroundColor: #fefefe
 
 ## Tools and Choices
 
-### Tool Selection Factors:
+### Tool Selection Factors
+
 - Administrative capacity
 - Organizational culture
 - Past policy experiences
@@ -226,7 +242,8 @@ backgroundColor: #fefefe
 
 ## Objective and Subjective Tools
 
-### Objective - Rational Characteristics:
+### Objective - Rational Characteristics
+
 - **Target population:** The citizens who receive the benefits or bear the costs of the policy
 - **Values:** What is being distributed or promoted
 - **Rules:** Guidelines governing or constraining action
@@ -239,7 +256,8 @@ backgroundColor: #fefefe
 
 ## Subjective - Value Characteristics
 
-### Key Questions:
+### Key Questions
+
 - Who justifiably deserves the costs and benefits of the policy?
 - What values should be backed by the coercive powers of the state?
 - Who (or what) should have the freedom of action promoted or constrained to uphold those values?
@@ -250,7 +268,7 @@ backgroundColor: #fefefe
 
 ## Objective and Subjective Elements: Interplay
 
-### Climate Policy Example:
+### Climate Policy Example
 
 | **Objective Elements**                | **Subjective Elements**                      |
 |----------------------------------------|----------------------------------------------|
@@ -265,7 +283,8 @@ backgroundColor: #fefefe
 
 ## Integrating Policy Design Elements
 
-### Key Principles:
+### Key Principles
+
 - Goals must be clearly articulated but may require flexibility
 - Causal theories should be evidence-based but acknowledge uncertainties
 - Tools should match both the technical aspects of the problem and reflect societal values
@@ -293,6 +312,7 @@ backgroundColor: #fefefe
 ## Conclusion
 
 ### That's it for Today
+
 **Next Time: Implementation**
 
 We'll explore how policy designs translate into real-world action

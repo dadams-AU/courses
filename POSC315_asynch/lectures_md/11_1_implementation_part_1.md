@@ -6,7 +6,9 @@ backgroundColor: #fefefe
 ---
 
 # Implementation
+
 ## POSC 315 • Introduction to Public Policy - Part 1
+
 *Transforming Policy into Practice*
 
 ---
@@ -34,7 +36,8 @@ backgroundColor: #fefefe
 
 ## Why Implementation Matters
 
-### The Reality Gap:
+### The Reality Gap
+
 - **Policy → Action gap:** legislation alone doesn't change outcomes
 - **Frontline discretion** shapes how rules affect communities
 - **Opportunity** for stakeholder influence & conflict
@@ -48,6 +51,7 @@ Implementation is where policy meets reality.
 ### Period: 1960s–70s
 
 **Key Works:**
+
 - Derthick's *New Towns in Town*
 - Pressman & Wildavsky's *Implementation*
 
@@ -57,7 +61,8 @@ Implementation is where policy meets reality.
 
 ## 1st Generation Lessons
 
-### Key Discoveries:
+### Key Discoveries
+
 - **Executive commitment** is vital
 - **Design must reflect** local needs & capacity
 - **Joint action complexity** across agencies creates challenges
@@ -71,19 +76,22 @@ These early studies revealed implementation as a distinct field of study.
 ### Period: 1980s–90s
 
 **Characteristics:**
+
 - Rise of **top-down & bottom-up** models
-- Sought **unified theory** 
+- Sought **unified theory**
 - Over-relied on rationality assumptions
 
 ---
 
 ## Top-Down Models
 
-### Approach:
+### Approach
+
 - **Hierarchical control** → clear goals
 - Emphasis on central authority and compliance
 
-### Trade-offs:
+### Trade-offs
+
 - **Pros:** Accountability, clear authority
 - **Cons:** Ignores frontline realities, federalism
 
@@ -91,11 +99,13 @@ These early studies revealed implementation as a distinct field of study.
 
 ## Bottom-Up Models
 
-### Approach:
+### Approach
+
 - Begins with **street-level implementers** and target groups
 - Uses **Backward Mapping** from desired outcomes
 
-### Trade-offs:
+### Trade-offs
+
 - **Pros:** Local adaptation, discretion
 - **Cons:** Variable outcomes, power imbalances
 
@@ -103,7 +113,8 @@ These early studies revealed implementation as a distinct field of study.
 
 ## Case Study: National Speed Limit (1974–95)
 
-### The Policy:
+### The Policy
+
 - **Federal mandate:** 55 mph to save fuel & improve safety
 - **States implemented** to avoid funding loss
 - **Outcomes varied** across states
@@ -124,6 +135,7 @@ These early studies revealed implementation as a distinct field of study.
 ## Part 1 Summary
 
 **Key Points:**
+
 - Implementation emerged as distinct field in 1960s-70s
 - Early case studies revealed complexity of joint action
 - 2nd generation developed competing theoretical models
@@ -134,6 +146,7 @@ These early studies revealed implementation as a distinct field of study.
 ## Next: Part 2 - Modern Implementation Theory
 
 **Coming up:**
+
 - 3rd Generation: Networks & Dialogue
 - 4th Generation: Program Focus
 - Best Practices & Common Pitfalls

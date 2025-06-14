@@ -6,7 +6,8 @@ backgroundColor: #fefefe
 ---
 
 # Policy Design and Tools
-## POSC 315 | Week 11 - Part 1: Foundations and Goals
+
+## Part 1: Foundations and Goals
 
 ---
 
@@ -14,7 +15,8 @@ backgroundColor: #fefefe
 
 **Definition:** The process by which policies are designed—through technical analysis and political negotiation—to achieve a public goal.
 
-### Key Characteristics:
+### Key Characteristics
+
 - Occurs across the policy process, not just at the beginning
 - Involves selecting policy tools to pursue goals
 - Balances *technical feasibility* with *political acceptability*
@@ -26,6 +28,7 @@ backgroundColor: #fefefe
 ## Policy Design and Implementation
 
 ### How Design Shapes Implementation
+
 - Determines available resources and constraints
 - Sets timelines, milestones, and accountability
 - Assigns roles to agencies and actors
@@ -34,6 +37,7 @@ backgroundColor: #fefefe
 ---
 
 ### How Implementation Shapes Design
+
 - Reveals practical challenges and unintended effects
 - Generates feedback that can prompt design changes
 - Highlights gaps between policy intent and outcomes
@@ -59,7 +63,8 @@ backgroundColor: #fefefe
 
 **Definition:** The desired outcomes of the policy - what the policy is trying to achieve
 
-### Explicit Goals:
+### Explicit Goals
+
 - Stated clearly in the policy text
 - Found in legislative history
 - Articulated in public statements
@@ -67,7 +72,8 @@ backgroundColor: #fefefe
 
 ---
 
-### Implicit Goals:
+### Implicit Goals
+
 - Embedded in policy design choices
 - Revealed through implementation priorities
 - Sometimes political or symbolic
@@ -81,7 +87,8 @@ backgroundColor: #fefefe
 
 **Definition:** The theory about what causes a problem and how the policy will address it
 
-### Key Functions:
+### Key Functions
+
 - Forms the foundation of policy logic - the *theory of change*
 - Essential for measuring the policy's success
 - Shapes selection of appropriate policy tools
@@ -96,7 +103,8 @@ backgroundColor: #fefefe
 
 **Problems are socially constructed and defined - they don't simply exist "out there"**
 
-### Key Points:
+### Key Points
+
 - Different stakeholders frame problems differently
 - Each problem definition implies a different solution
 - Whoever successfully defines the problem gains advantage in designing the solution
@@ -120,7 +128,7 @@ backgroundColor: #fefefe
 
 ## Policy Goals from Stone's *Policy Paradox*
 
-### Four Core Policy Goals:
+### Four Core Policy Goals
 
 1. **Security** - Protecting people from harm
 2. **Liberty** - Protecting people's rights
@@ -136,6 +144,7 @@ backgroundColor: #fefefe
 ## Next Up: Part 2 - Goal Conflicts and Trade-offs
 
 In the next presentation, we'll explore:
+
 - How policy goals conflict with each other
 - Strategies for balancing competing objectives
 - Real-world examples of goal trade-offs

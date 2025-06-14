@@ -6,7 +6,9 @@ backgroundColor: #fefefe
 ---
 
 # Implementation
+
 ## POSC 315 • Introduction to Public Policy - Part 2
+
 *Networks, Programs, and Best Practices*
 
 ---
@@ -26,6 +28,7 @@ backgroundColor: #fefefe
 ### Period: Early 2000s
 
 **Key Features:**
+
 - **Synthesizes** top-down & bottom-up approaches
 - Focus on **policy networks** and communication flow
 - Combines **Backward Mapping** with **Forward Mapping**
@@ -49,6 +52,7 @@ backgroundColor: #fefefe
 ### Period: 2010s–Present
 
 **Characteristics:**
+
 - **Dynamic, interactive** program implementation
 - **Tailored, practical approaches** for specific sectors
 - Focus on **real-time data** and **adaptive management**
@@ -58,7 +62,8 @@ backgroundColor: #fefefe
 
 ## 4th Generation: Program Implementation Principles
 
-### Modern Approach:
+### Modern Approach
+
 - **Iterative feedback loops** with stakeholders
 - **Rapid cycle evaluation** to adjust tactics
 - Emphasis on **evidence-based best practices**
@@ -68,7 +73,8 @@ backgroundColor: #fefefe
 
 ## Best Practices for Implementation
 
-### Proven Strategies:
+### Proven Strategies
+
 - **Build coalitions** across agencies
 - **Invest in frontline staff** training
 - **Set measurable milestones**
@@ -80,7 +86,8 @@ backgroundColor: #fefefe
 
 ## Common Pitfalls
 
-### What to Avoid:
+### What to Avoid
+
 - **Unrealistic timelines** & budgets
 - **Poor communication** between levels
 - **Failure to adapt** locally
@@ -92,7 +99,8 @@ backgroundColor: #fefefe
 
 ## Implementation in Practice
 
-### Key Questions for Any Policy:
+### Key Questions for Any Policy
+
 - Who are the key implementers?
 - What resources do they need?
 - How will we measure success?
@@ -103,6 +111,7 @@ backgroundColor: #fefefe
 ## Real-World Application
 
 **Think about a policy area you're interested in:**
+
 - What implementation challenges might it face?
 - Which generation's insights would be most helpful?
 - What best practices would you recommend?
@@ -111,7 +120,8 @@ backgroundColor: #fefefe
 
 ## Evolution of Implementation Theory
 
-### The Journey:
+### The Journey
+
 - **1st Generation:** "Why do programs fail?"
 - **2nd Generation:** "What theoretical model works?"
 - **3rd Generation:** "How do networks collaborate?"
@@ -121,7 +131,8 @@ backgroundColor: #fefefe
 
 ## Key Takeaways
 
-### Main Points:
+### Main Points
+
 - **Implementation bridges** policy design to real-world impact
 - The field has evolved through **four generations** of scholarship
 - Success hinges on **communication, resources, and adaptability**
@@ -131,6 +142,7 @@ backgroundColor: #fefefe
 ## Final Reflection
 
 **Implementation is not just about following rules—it's about:**
+
 - Translating intentions into outcomes
 - Adapting to local contexts
 - Building sustainable relationships

@@ -1,8 +1,6 @@
 ---
 marp: true
-theme: default
-style: |
-  @import url('marp_light.css');
+theme: marp_light
 paginate: true
 backgroundColor: #fefefe
 ---
@@ -40,19 +38,12 @@ backgroundColor: #fefefe
 ---
 
 ## Dimensions of Policy Tools
-
-### Type of Activity:
-- Money (grants, payments)
-- Services, protections, restrictions
-
-### Delivery System:
-- Direct (govt) vs. Indirect (nonprofits, contractors)
-
-### Centralization:
-- Federal, state, or shared
-
-### Complexity:
-- Simple vs. layered or customized
+| **Dimension**        | **Options/Examples**                        |
+|----------------------|---------------------------------------------|
+| **Type of Activity** | Money (grants, payments); Services, protections, restrictions |
+| **Delivery System**  | Direct (government); Indirect (nonprofits, contractors) |
+| **Centralization**   | Federal; State; Shared                      |
+| **Complexity**       | Simple; Layered or customized                |
 
 **Effective tools match the problem's nature, target population, and administrative context**
 
@@ -73,19 +64,23 @@ backgroundColor: #fefefe
 
 ---
 
-## Love, Fear, and Money - Applications
+---
+## Love, Fear, and Money: Applications
 
-### Policy Examples:
-- **Love:** Public campaigns that appeal to moral duty (recycling, blood donation)
-- **Fear:** Traffic fines, criminal penalties, business regulations
-- **Money:** Tax incentives, subsidies, grants, economic benefits
+### Policy Examples
+- **Love:** Public campaigns appealing to moral duty (e.g., recycling, blood donation)
+- **Fear:** Enforcement through traffic fines, criminal penalties, business regulations
+- **Money:** Use of tax incentives, subsidies, grants, or direct economic benefits
 
-### Trade-offs:
-- Fear-based tools are often immediately effective but create resistance
-- Love-based tools create sustainable behavior but take time to develop
-- Money-based tools work well but can be expensive and create dependency
+---
 
-**Different policy domains may require different compliance mechanisms**
+## Love, Fear, and Money: Trade-offs
+
+- **Fear-based tools** can prompt immediate compliance but may foster resistance or resentment
+- **Love-based tools** encourage sustainable behavior change but require time and cultural alignment
+- **Money-based tools** are often effective but can be costly and risk creating dependency
+
+**Selecting the right compliance mechanism depends on the policy domain and context**
 
 ---
 
@@ -110,11 +105,19 @@ backgroundColor: #fefefe
 - The extent to which government will use its resources to achieve a policy goal
 - Choosing effective tools requires a good causal theory
 
+---
+
+## Policy Tool Considerations
+
 ### Questions to Ask:
 - What behavior needs to change?
 - Who needs to take action?
 - What might motivate compliance?
 - What tools are politically feasible?
+
+---
+
+## Policy Tool Considerations
 
 ### Tool Selection Criteria:
 - Effectiveness
@@ -138,15 +141,17 @@ backgroundColor: #fefefe
 
 ---
 
-## Economic Tools
+## Economic Tools Characteristics:
 
-### Characteristics:
 - Favor individual freedom and choice
 - Tend to use non-coercive means
 - Makes many assumptions about what is "possible" and what is "rational"
 - Assumes that people are rational actors
 
-### Examples:
+---
+
+## Economic Tools Examples:
+
 - **Subsidies:** Agriculture, energy, housing
 - **Tax incentives:** R&D credits, mortgage deductions
 - **Vouchers:** Education, housing, healthcare
@@ -162,6 +167,10 @@ backgroundColor: #fefefe
 - Often more politically palatable than regulations
 - Can harness market efficiency for public goals
 - Allow flexible responses by target populations
+
+---
+
+## Economic Tools: Trade-offs
 
 ### Disadvantages:
 - May not work when markets are imperfect
@@ -180,6 +189,8 @@ backgroundColor: #fefefe
 > 
 > *- Howlett, Ramesh, and Perl*
 
+---
+
 ### Political Tool Examples:
 - **Regulations:** Command-and-control rules
 - **Direct provision:** Government services
@@ -197,6 +208,10 @@ backgroundColor: #fefefe
 - Resources constrain available options
 - Behavioral assumptions matter
 - Multiple tools typically needed
+
+---
+
+## Tools and Choices
 
 ### Tool Selection Factors:
 - Administrative capacity
@@ -237,17 +252,12 @@ backgroundColor: #fefefe
 
 ### Climate Policy Example:
 
-**Objective elements:**
-- Carbon pricing mechanisms
-- Emissions targets and timelines
-- Reporting requirements
-- Enforcement structures
-
-**Subjective elements:**
-- Intergenerational justice concerns
-- Distribution of transition costs
-- Rights of affected communities
-- Balance between global and local interests
+| **Objective Elements**                | **Subjective Elements**                      |
+|----------------------------------------|----------------------------------------------|
+| Carbon pricing mechanisms              | Intergenerational justice concerns           |
+| Emissions targets and timelines        | Distribution of transition costs             |
+| Reporting requirements                 | Rights of affected communities               |
+| Enforcement structures                 | Balance between global and local interests   |
 
 **Effective policy design requires attention to both dimensions**
 
@@ -268,36 +278,15 @@ backgroundColor: #fefefe
 
 ## Policy Design in Practice
 
-### Challenges:
-- Incomplete information
-- Value conflicts
-- Resource constraints
-- Political pressures
-- Implementation complexities
-
-### Strategies:
-- Pilot programs
-- Phased implementation
-- Adaptive management
-- Inclusive design processes
-- Evidence-based approaches
+| **Challenges**              | **Strategies**                    |
+|-----------------------------|-----------------------------------|
+| Incomplete information      | Pilot programs                    |
+| Value conflicts             | Inclusive design processes         |
+| Resource constraints        | Phased implementation             |
+| Political pressures         | Evidence-based approaches          |
+| Implementation complexities | Adaptive management                |
 
 **Policy design is iterative, not linear - it requires ongoing learning and adaptation**
-
----
-
-## Apply the Framework
-
-**Use these design questions to strengthen your policy process paper:**
-
-- What are the policy's stated and unstated goals?
-- What is the causal logic? Why will this work?
-- What tool(s) are used, and why?
-- Who is the target population?
-- How is the policy implemented?
-- What trade-offs are present—between equity, efficiency, and feasibility?
-
-**Show that you've thought through these design choices—not just what the policy does, but how and why**
 
 ---
 

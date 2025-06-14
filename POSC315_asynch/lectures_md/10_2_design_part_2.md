@@ -1,8 +1,6 @@
 ---
 marp: true
-theme: default
-style: |
-  @import url('./marp_light.css');
+theme: marp_light
 paginate: true
 backgroundColor: #fefefe
 ---
@@ -20,6 +18,8 @@ backgroundColor: #fefefe
 - Policy focuses on removing barriers to entry
 - Minimal intervention in markets
 - **Examples:** Anti-discrimination laws, public education
+
+---
 
 ### Equality of Outcome:
 - More prevalent in social democracies
@@ -40,6 +40,10 @@ backgroundColor: #fefefe
 - The idea is to achieve an objective with the least amount of resources
 - Often in conflict with other goals like equity or comprehensiveness
 
+---
+
+## Efficiency: Key Considerations
+
 ### Key Questions:
 - How do we define and measure inputs?
 - How do we define and measure outputs?
@@ -52,19 +56,22 @@ backgroundColor: #fefefe
 
 ## Efficiency: Measurement Challenges
 
-### Problems of Efficiency:
+### Why Measuring Efficiency Is Difficult
 
-**Measurement Challenges:**
-- What are the inputs and outputs?
-- How do we measure them accurately?
-- What is the appropriate time frame?
-- What is the opportunity cost?
+- **Defining Inputs and Outputs:** What counts as an input (money, time, staff) and what counts as an output (test scores, patient health, miles of road)?
+- **Accuracy:** Data may be incomplete, inconsistent, or hard to compare.
+- **Time Frame:** Short-term gains may differ from long-term results.
+- **Opportunity Cost:** What alternatives are being given up to pursue this policy?
 
-**Policy Examples:**
-- **Education:** Cost per student vs. quality metrics
-- **Healthcare:** Treatment speed vs. health outcomes
-- **Welfare:** Administrative costs vs. benefits delivered
-- **Infrastructure:** Quick fixes vs. sustainable solutions
+---
+
+## Efficiency: Policy Examples
+
+- **Education:** Cost per student vs. learning outcomes or graduation rates.
+- **Healthcare:** Speed of treatment vs. improvements in patient health.
+- **Welfare:** Administrative costs vs. the value and reach of benefits delivered.
+- **Infrastructure:** Quick, low-cost repairs vs. durable, long-term solutions.
+
 
 ---
 
@@ -94,43 +101,56 @@ backgroundColor: #fefefe
 
 ## Equity: A Contested Goal
 
-**Definition:** Equity is fairness in the distribution of resources, opportunities, and outcomes
+**Definition:**  
+Equity is fairness in the distribution of resources, opportunities, and outcomes. It is a central but highly debated goal in policy design.
 
-### Characteristics:
-- Often in tension with efficiency and sometimes with liberty
-- Different conceptions of what counts as "fair"
-- Contested views on whether process or outcomes matter more
-- Disagreement about which inequities require intervention
+### Why Equity Is Contested:
+- Competing ideas of what is "fair"
+- Tension with other goals like efficiency and liberty
+- Disagreement over whether to focus on equal processes or equal outcomes
+- Debate about which inequities require government intervention
 
-### Forms of Equity:
-- Horizontal equity (treating similar cases similarly)
-- Vertical equity (treating different cases differently)
-- Intergenerational equity
-- Procedural vs. substantive equity
+---
 
-### Policy Approaches:
-- Universal programs
-- Targeted interventions
-- Redistributive policies
-- Procedural safeguards
+## Forms and Dimensions of Equity
+
+### Key Types:
+- **Horizontal Equity:** Treating similar cases similarly (e.g., equal tax rates for people with equal income)
+- **Vertical Equity:** Treating different cases differently to account for relevant differences (e.g., progressive taxation)
+- **Intergenerational Equity:** Fairness between current and future generations (e.g., climate policy)
+- **Procedural vs. Substantive Equity:** Fairness in the process vs. fairness in the results
+
+---
+
+## Policy Approaches to Advancing Equity
+
+### Common Strategies:
+- **Universal Programs:** Benefits or services provided to all (e.g., public education)
+- **Targeted Interventions:** Focused support for disadvantaged groups (e.g., affirmative action)
+- **Redistributive Policies:** Shifting resources to reduce disparities (e.g., progressive taxes, social welfare)
+- **Procedural Safeguards:** Ensuring fair treatment and due process (e.g., anti-discrimination laws)
+
+**Policymakers must choose among these approaches based on context, values, and political feasibility.**
 
 ---
 
 ## Security vs. Liberty: Conflicting Goals
 
-### Thomas Hobbes' Tradeoff:
-- Give up some liberties to the state, which holds the most power, so there is security
-- This is an authoritarian view of the state
-- Emphasizes security as prerequisite for all other rights
-- Views human nature as requiring strong control
+### Thomas Hobbes' Tradeoff
+- Individuals surrender significant liberties to a powerful sovereign in exchange for security and order
+- The state wields broad authority to prevent chaos and violence
+- Security is seen as the foundation for all other rights and freedoms
+- Human nature is viewed as self-interested and prone to conflict, requiring strong control
 
-### John Locke's Approach:
-- Form a social contract wherein one surrenders some liberties to create a government of limited power
-- Democratic view of the state
-- Sees liberty as fundamental natural right
-- Government exists primarily to protect rights
+---
 
-**These competing philosophical traditions continue to shape contemporary policy debates**
+### John Locke's Approach
+- Individuals enter a social contract, giving up only limited liberties to form a government with restricted powers
+- The state’s primary role is to protect fundamental natural rights—life, liberty, and property
+- Liberty is considered an inherent right, not granted by the state
+- Government legitimacy depends on the consent of the governed and the protection of individual freedoms
+
+**These competing philosophical traditions continue to shape contemporary policy debates about the proper balance between security and liberty.**
 
 ---
 
@@ -149,17 +169,22 @@ backgroundColor: #fefefe
 
 ## Ambiguity and Goal Conflict
 
-**Policy design reveals that goals are often ambiguous and in conflict with one another**
+**Policy goals are often ambiguous and may conflict with each other.**
 
-### Key Points:
-- Different stakeholders prioritize different goals
-- Policy design reveals conflicts over means of achieving goals
-- Different policy goals can be in conflict with one another
-  - For example: Immigration policy versus foreign relations policy with Mexico
+### Why Ambiguity and Conflict Arise:
+- Stakeholders value different goals and interpret them in various ways
+- Disagreements can occur over both the ends (goals) and the means (methods)
+- Example: Immigration policy may conflict with foreign relations goals
 
-### Managing Conflicts:
-- Conflicts are not hopeless! They are *complex*. Good policy finds a balance.
-- Policy ambiguity can sometimes be *strategic* - allowing coalitions to form around different interpretations
+---
+
+## Managing Ambiguity and Conflict
+
+- Conflicts are not failures—they reflect real-world complexity
+- Effective policy design seeks workable balances, not perfect solutions
+- Ambiguity can be useful, enabling broad coalitions by allowing multiple interpretations
+- Transparent discussion of trade-offs helps build legitimacy and support
+
 
 ---
 
@@ -171,6 +196,8 @@ backgroundColor: #fefefe
 - Conservation vs. resource development
 - Local impacts vs. global benefits
 
+---
+
 ### Healthcare Policy:
 - Universal access vs. cost containment
 - Quality of care vs. efficiency
@@ -181,41 +208,45 @@ backgroundColor: #fefefe
 
 ---
 
-## Balancing Competing Goals
+## Common Trade-offs in Policy Design
 
-### Common Trade-offs:
 - **Efficiency vs. Equity:** Cost-effectiveness vs. fair distribution
 - **Security vs. Liberty:** Protection vs. freedom
 - **Speed vs. Deliberation:** Quick action vs. careful planning
 - **Standardization vs. Flexibility:** Consistency vs. adaptability
 
-### Balancing Strategies:
-- Prioritization - which goal takes precedence?
-- Compromise - finding middle ground
-- Sequencing - different goals at different stages
-- Compensation - offsetting negative impacts
-- Mixed strategies - different approaches for different segments
+---
 
-**Policy design is not about eliminating all tensions, but making thoughtful choices about trade-offs**
+## Strategies for Balancing Competing Goals
+
+- **Prioritization:** Decide which goal takes precedence
+- **Compromise:** Find a workable middle ground
+- **Sequencing:** Pursue different goals at different stages
+- **Compensation:** Offset negative impacts for affected groups
+- **Mixed Strategies:** Apply different approaches for different segments
+
+**Policy design is about making informed choices, not eliminating all tensions**
 
 ---
 
-## Case Study: Healthcare Policy
+## Case Study: Healthcare Policy — Competing Goals
 
-### Competing Goals:
-- **Universal Access:** Everyone gets healthcare
-- **Quality:** High standards of care
-- **Cost Control:** Affordable for society
-- **Provider Autonomy:** Medical judgment
-- **Patient Choice:** Selection of providers/treatments
+- **Universal Access:** Ensure everyone receives healthcare
+- **Quality:** Maintain high standards of care
+- **Cost Control:** Keep healthcare affordable for society
+- **Provider Autonomy:** Respect medical professionals' judgment
+- **Patient Choice:** Allow selection of providers and treatments
 
-### Balancing Approaches:
-- **Tiered Systems:** Basic universal coverage with optional supplements
-- **Quality Metrics:** Performance-based payments
-- **Managed Care:** Coordinated services with oversight
-- **Public-Private Mix:** Different sectors handle different aspects
+---
 
-**Policy designers must explicitly address these tensions rather than ignoring them**
+## Case Study: Healthcare Policy — Balancing Approaches
+
+- **Tiered Systems:** Basic universal coverage with optional supplemental plans
+- **Quality Metrics:** Use performance-based payments to incentivize high standards
+- **Managed Care:** Coordinate services with oversight to control costs
+- **Public-Private Mix:** Assign different roles to public and private sectors
+
+**Effective policy design requires openly addressing these tensions, not ignoring them**
 
 ---
 
@@ -241,6 +272,10 @@ backgroundColor: #fefefe
 - What resources are available?
 - What is the timeframe?
 
+---
+
+## Scalability of Policy Goals
+
 ### Target Setting Example:
 - **Ambitious:** Carbon neutrality by 2030
 - **Moderate:** 50% emissions reduction by 2035
@@ -251,21 +286,25 @@ backgroundColor: #fefefe
 
 ---
 
-## Policy Design Framework
+## Policy Design Framework: Core Elements
 
-### Core Elements:
-- **Goals:** What the policy is trying to achieve
-- **Causal Theory:** Why the proposed solution will work
-- **Tools:** The instruments used to achieve goals
-- **Implementation:** How the policy is carried out
+### Core Elements
+- **Goals:** What is the policy trying to achieve?
+- **Causal Theory:** Why will the proposed solution address the problem?
+- **Tools:** What instruments or mechanisms will be used to reach the goals?
+- **Implementation:** How will the policy be put into practice and enforced?
 
-### Cross-Cutting Themes:
-- **Equity:** Who benefits or bears costs?
-- **Efficiency:** Are we using resources well?
-- **Political Feasibility:** Can it gain support?
-- **Administrative Capacity:** Can it be implemented?
+---
 
-**Design is the intersection of logic, values, and institutional capacity**
+## Policy Design Framework: Cross-Cutting Themes
+
+### Cross-Cutting Themes
+- **Equity:** Who benefits from or bears the costs of the policy?
+- **Efficiency:** Are resources being used in the best possible way?
+- **Political Feasibility:** Can the policy gain sufficient political and public support?
+- **Administrative Capacity:** Does the government or organization have the ability to implement the policy effectively?
+
+**Effective policy design sits at the intersection of logic, values, and institutional capacity.**
 
 ---
 

@@ -1,8 +1,6 @@
 ---
 marp: true
-theme: default
-style: |
-  @import url('./marp_light.css');
+theme: marp_light
 paginate: true
 backgroundColor: #fefefe
 ---
@@ -67,6 +65,8 @@ backgroundColor: #fefefe
 - Articulated in public statements
 - Measurable objectives and targets
 
+---
+
 ### Implicit Goals:
 - Embedded in policy design choices
 - Revealed through implementation priorities
@@ -108,15 +108,11 @@ backgroundColor: #fefefe
 
 ### Example: Homelessness
 
-**Defined as:**
-- Housing affordability crisis
-- Mental health/addiction issue
-- Economic displacement
-
-**Resulting Policy Approaches:**
-- Affordable housing development
-- Treatment and services
-- Job programs and economic support
+| **Problem Definition**                | **Resulting Policy Approaches**           |
+|---------------------------------------|-------------------------------------------|
+| Housing affordability crisis          | Affordable housing development            |
+| Mental health/addiction issue         | Treatment and services                    |
+| Economic displacement                 | Job programs and economic support         |
 
 **The way we define the problem shapes the solutions we consider**
 

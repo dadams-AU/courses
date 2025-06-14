@@ -1,142 +1,293 @@
 <!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section{font-family:'Inter', sans-serif;background:linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);color:#1e293b;padding:60px;font-size:20px;line-height:1.6}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 20px;}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){color:#0f172a;font-weight:700;font-size:calc(var(--marpit-root-font-size, 1rem) * 3.5);text-align:center;margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 1);text-shadow:0 4px 12px rgba(15, 23, 42, 0.1)}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#0284c7;font-weight:600;font-size:calc(var(--marpit-root-font-size, 1rem) * 2.5);margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 2);border-bottom:3px solid #0284c7;padding-bottom:calc(var(--marpit-root-font-size, 1rem) * 0.5);text-shadow:0 2px 8px rgba(2, 132, 199, 0.15)}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){color:#059669;font-weight:600;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.8);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0 calc(var(--marpit-root-font-size, 1rem) * 1) 0;text-shadow:0 2px 6px rgba(5, 150, 105, 0.15)}div#\:\$p > svg > foreignObject > section p, div#\:\$p > svg > foreignObject > section li{font-size:calc(var(--marpit-root-font-size, 1rem) * 1.1);line-height:1.7;margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 0.8)}div#\:\$p > svg > foreignObject > section strong{color:#d97706;font-weight:600}div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin:calc(var(--marpit-root-font-size, 1rem) * 1) 0;padding-left:calc(var(--marpit-root-font-size, 1rem) * 2)}div#\:\$p > svg > foreignObject > section li{margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 0.8);position:relative}div#\:\$p > svg > foreignObject > section li::marker{color:#2563eb}div#\:\$p > svg > foreignObject > section table{width:100%;border-collapse:collapse;margin:calc(var(--marpit-root-font-size, 1rem) * 2) 0;background:rgba(255, 255, 255, 0.9);border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(15, 23, 42, 0.1);border:1px solid rgba(2, 132, 199, 0.2)}div#\:\$p > svg > foreignObject > section th, div#\:\$p > svg > foreignObject > section td{padding:calc(var(--marpit-root-font-size, 1rem) * 1) calc(var(--marpit-root-font-size, 1rem) * 1.5);text-align:left;border-bottom:1px solid rgba(2, 132, 199, 0.15)}div#\:\$p > svg > foreignObject > section th{background:linear-gradient(135deg, rgba(2, 132, 199, 0.1), rgba(5, 150, 105, 0.1));color:#0f172a;font-weight:600;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.1);text-shadow:0 1px 2px rgba(255, 255, 255, 0.8)}div#\:\$p > svg > foreignObject > section td{font-size:calc(var(--marpit-root-font-size, 1rem) * 1);color:#334155;font-weight:500;background:rgba(255, 255, 255, 0.7)}div#\:\$p > svg > foreignObject > section tr:nth-child(even) td{background:rgba(248, 250, 252, 0.8)}div#\:\$p > svg > foreignObject > section tr:hover td{background:rgba(2, 132, 199, 0.05);transition:background 0.2s ease}div#\:\$p > svg > foreignObject > section .subtitle{text-align:center;color:#64748b;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.3);font-weight:300;margin-top:-calc(var(--marpit-root-font-size, 1rem) * 1);margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 2)}div#\:\$p > svg > foreignObject > section section.subtitle{--marpit-root-font-size: calc(var(--marpit-root-font-size, 1rem) * 1.3);}div#\:\$p > svg > foreignObject > section .lecture-info{background:rgba(2, 132, 199, 0.05);border:2px solid rgba(2, 132, 199, 0.2);border-radius:16px;padding:calc(var(--marpit-root-font-size, 1rem) * 2);margin:calc(var(--marpit-root-font-size, 1rem) * 2) 0;text-align:center;box-shadow:0 8px 32px rgba(2, 132, 199, 0.1)}div#\:\$p > svg > foreignObject > section .highlight-box{background:linear-gradient(135deg, rgba(5, 150, 105, 0.05), rgba(2, 132, 199, 0.05));border-left:4px solid #059669;padding:calc(var(--marpit-root-font-size, 1rem) * 1.5);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0;border-radius:0 12px 12px 0;box-shadow:0 4px 16px rgba(5, 150, 105, 0.1)}div#\:\$p > svg > foreignObject > section .example-box{background:rgba(124, 58, 237, 0.05);border:2px solid rgba(124, 58, 237, 0.2);border-radius:12px;padding:calc(var(--marpit-root-font-size, 1rem) * 1.5);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0;box-shadow:0 4px 16px rgba(124, 58, 237, 0.1)}div#\:\$p > svg > foreignObject > section .warning-box{background:rgba(220, 38, 38, 0.05);border:2px solid rgba(220, 38, 38, 0.2);border-radius:12px;padding:calc(var(--marpit-root-font-size, 1rem) * 1.5);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0;box-shadow:0 4px 16px rgba(220, 38, 38, 0.1)}div#\:\$p > svg > foreignObject > section .success-box{background:rgba(22, 163, 74, 0.05);border:2px solid rgba(22, 163, 74, 0.2);border-radius:12px;padding:calc(var(--marpit-root-font-size, 1rem) * 1.5);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0;box-shadow:0 4px 16px rgba(22, 163, 74, 0.1)}div#\:\$p > svg > foreignObject > section .info-box{background:rgba(2, 132, 199, 0.05);border:2px solid rgba(2, 132, 199, 0.2);border-radius:12px;padding:calc(var(--marpit-root-font-size, 1rem) * 1.5);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0;box-shadow:0 4px 16px rgba(2, 132, 199, 0.1)}div#\:\$p > svg > foreignObject > section .centered{text-align:center}div#\:\$p > svg > foreignObject > section .large-text{font-size:calc(var(--marpit-root-font-size, 1rem) * 1.4);font-weight:500}div#\:\$p > svg > foreignObject > section section.large-text{--marpit-root-font-size: calc(var(--marpit-root-font-size, 1rem) * 1.4);}div#\:\$p > svg > foreignObject > section .small-text{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9);color:#64748b}div#\:\$p > svg > foreignObject > section section.small-text{--marpit-root-font-size: calc(var(--marpit-root-font-size, 1rem) * 0.9);}div#\:\$p > svg > foreignObject > section footer{color:#94a3b8;font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9)}div#\:\$p > svg > foreignObject > section code{background:rgba(248, 250, 252, 0.8);color:#334155;padding:calc(var(--marpit-root-font-size, 1rem) * 0.2) calc(var(--marpit-root-font-size, 1rem) * 0.4);border-radius:4px;font-family:'Fira Code', monospace;border:1px solid rgba(2, 132, 199, 0.1)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:rgba(248, 250, 252, 0.8);color:#334155;padding:calc(var(--marpit-root-font-size, 1rem) * 1);border-radius:8px;overflow-x:auto;margin:calc(var(--marpit-root-font-size, 1rem) * 1) 0;border:1px solid rgba(2, 132, 199, 0.1)}div#\:\$p > svg > foreignObject > section blockquote{border-left:4px solid #2563eb;padding-left:calc(var(--marpit-root-font-size, 1rem) * 1.5);margin:calc(var(--marpit-root-font-size, 1rem) * 1.5) 0;font-style:italic;color:#475569;background:rgba(2, 132, 199, 0.02);padding:calc(var(--marpit-root-font-size, 1rem) * 1) calc(var(--marpit-root-font-size, 1rem) * 1.5);border-radius:0 8px 8px 0}div#\:\$p > svg > foreignObject > section img{max-width:100%;height:auto;border-radius:8px;box-shadow:0 4px 16px rgba(15, 23, 42, 0.1)}div#\:\$p > svg > foreignObject > section a{color:#2563eb;text-decoration:none;border-bottom:1px solid transparent;transition:border-bottom 0.2s ease}div#\:\$p > svg > foreignObject > section a:hover{border-bottom:1px solid #2563eb;color:#1d4ed8}div#\:\$p > svg > foreignObject > section .glow{text-shadow:0 0 10px rgba(2, 132, 199, 0.3)}div#\:\$p > svg > foreignObject > section .fade-in{animation:fadeIn 0.8s ease-in}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media (max-width: 768px){div#\:\$p > svg > foreignObject > section{padding:40px;font-size:18px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 18px;}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:calc(var(--marpit-root-font-size, 1rem) * 2.5)}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:calc(var(--marpit-root-font-size, 1rem) * 2)}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:calc(var(--marpit-root-font-size, 1rem) * 1.5)}}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
-</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="1" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="1" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
 <h1 id="policy-design-and-tools">Policy Design and Tools</h1>
-<h2 id="posc-315--week-11---part-1-foundations-and-goals">POSC 315 | Week 11 - Part 1: Foundations and Goals</h2>
+<h2 id="posc-315--week-11---part-2-goal-conflicts-and-trade-offs">POSC 315 | Week 11 - Part 2: Goal Conflicts and Trade-offs</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="2" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="policy-design">Policy Design</h2>
-<p><strong>Definition:</strong> The process by which policies are designed—through technical analysis and political negotiation—to achieve a public goal.</p>
-<h3 id="key-characteristics">Key Characteristics:</h3>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="2" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="equality-a-contested-goal">Equality: A Contested Goal</h2>
+<h3 id="equality-of-opportunity">Equality of Opportunity:</h3>
 <ul>
-<li>Occurs across the policy process, not just at the beginning</li>
-<li>Involves selecting policy tools to pursue goals</li>
-<li>Balances <em>technical feasibility</em> with <em>political acceptability</em></li>
-</ul>
-<p><strong>Key Insight:</strong> Every design choice involves trade-offs—between values, goals, and outcomes</p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="3" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="policy-design-and-implementation">Policy Design and Implementation</h2>
-<h3 id="how-design-shapes-implementation">How Design Shapes Implementation</h3>
-<ul>
-<li>Determines available resources and constraints</li>
-<li>Sets timelines, milestones, and accountability</li>
-<li>Assigns roles to agencies and actors</li>
-<li>Defines the scope for administrative discretion</li>
+<li>Dominant in American political discourse</li>
+<li>Everyone starts with same rules and chances</li>
+<li>Policy focuses on removing barriers to entry</li>
+<li>Minimal intervention in markets</li>
+<li><strong>Examples:</strong> Anti-discrimination laws, public education</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h3 id="how-implementation-shapes-design">How Implementation Shapes Design</h3>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="3" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h3 id="equality-of-outcome">Equality of Outcome:</h3>
 <ul>
-<li>Reveals practical challenges and unintended effects</li>
-<li>Generates feedback that can prompt design changes</li>
-<li>Highlights gaps between policy intent and outcomes</li>
-<li>Agencies may reinterpret or adapt vague policy language</li>
+<li>More prevalent in social democracies</li>
+<li>Focuses on end distribution of resources</li>
+<li>Policy aims to narrow gaps between groups</li>
+<li>More significant market interventions</li>
+<li><strong>Examples:</strong> Progressive taxation, universal benefits</li>
 </ul>
-<p><strong>Design and implementation influence each other in an ongoing, iterative process—not a simple linear sequence.</strong></p>
+<p><strong>Trade-offs involve balancing individual liberty with collective welfare, and efficiency with equity</strong></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="five-elements-of-policy-design">Five Elements of Policy Design</h2>
-<ol>
-<li><strong>Goals</strong> - What is the policy trying to achieve?</li>
-<li><strong>Causal Theory</strong> - What is the theory of change?</li>
-<li><strong>Tools</strong> - What tools will be used to achieve the goals?</li>
-<li><strong>Target Population</strong> - Who is the policy trying to affect?</li>
-<li><strong>Implementation</strong> - How will the policy be implemented?</li>
-</ol>
-<p><strong>These five elements must work together coherently for a policy to succeed</strong></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="goals">Goals</h2>
-<p><strong>Definition:</strong> The desired outcomes of the policy - what the policy is trying to achieve</p>
-<h3 id="explicit-goals">Explicit Goals:</h3>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="efficiency-a-contested-goal">Efficiency: A Contested Goal</h2>
+<h3 id="core-concept">Core Concept:</h3>
 <ul>
-<li>Stated clearly in the policy text</li>
-<li>Found in legislative history</li>
-<li>Articulated in public statements</li>
-<li>Measurable objectives and targets</li>
+<li>Often defined as achieving the most output for the least input</li>
+<li>Usually a means to a goal, not an end in itself</li>
+<li>The idea is to achieve an objective with the least amount of resources</li>
+<li>Often in conflict with other goals like equity or comprehensiveness</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="7" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h3 id="implicit-goals">Implicit Goals:</h3>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="efficiency-key-considerations">Efficiency: Key Considerations</h2>
+<h3 id="key-questions">Key Questions:</h3>
 <ul>
-<li>Embedded in policy design choices</li>
-<li>Revealed through implementation priorities</li>
-<li>Sometimes political or symbolic</li>
-<li>May reflect unstated priorities</li>
+<li>How do we define and measure inputs?</li>
+<li>How do we define and measure outputs?</li>
+<li>Efficiency for whom? (Government, citizens, specific groups?)</li>
+<li>What timeframe are we considering? (Short vs. long-term)</li>
 </ul>
-<p><strong>Multiple, sometimes <em>conflicting goals</em> often exist within the same policy</strong></p>
+<p><strong>Efficiency is not neutral or objective - it depends on how we value different inputs and outputs</strong></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="causal-theory">Causal Theory</h2>
-<p><strong>Definition:</strong> The theory about what causes a problem and how the policy will address it</p>
-<h3 id="key-functions">Key Functions:</h3>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="efficiency-measurement-challenges">Efficiency: Measurement Challenges</h2>
+<h3 id="why-measuring-efficiency-is-difficult">Why Measuring Efficiency Is Difficult</h3>
 <ul>
-<li>Forms the foundation of policy logic - the <em>theory of change</em></li>
-<li>Essential for measuring the policy's success</li>
-<li>Shapes selection of appropriate policy tools</li>
-<li>Informs implementation strategies</li>
-<li>Poor theory can lead to policy failure even with perfect implementation</li>
-</ul>
-<p><strong>If your causal theory is wrong, even the most well-implemented policy will fail to achieve its goals</strong></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="causal-theory-problem-definition-%E2%86%92-policy-design">Causal Theory: Problem Definition → Policy Design</h2>
-<p><strong>Problems are socially constructed and defined - they don't simply exist &quot;out there&quot;</strong></p>
-<h3 id="key-points">Key Points:</h3>
-<ul>
-<li>Different stakeholders frame problems differently</li>
-<li>Each problem definition implies a different solution</li>
-<li>Whoever successfully defines the problem gains advantage in designing the solution</li>
-<li>Problems must be defined as something we can do something about</li>
+<li><strong>Defining Inputs and Outputs:</strong> What counts as an input (money, time, staff) and what counts as an output (test scores, patient health, miles of road)?</li>
+<li><strong>Accuracy:</strong> Data may be incomplete, inconsistent, or hard to compare.</li>
+<li><strong>Time Frame:</strong> Short-term gains may differ from long-term results.</li>
+<li><strong>Opportunity Cost:</strong> What alternatives are being given up to pursue this policy?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="10" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="problem-definition-example">Problem Definition Example</h2>
-<h3 id="example-homelessness">Example: Homelessness</h3>
-<table>
-<thead>
-<tr>
-<th><strong>Problem Definition</strong></th>
-<th><strong>Resulting Policy Approaches</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Housing affordability crisis</td>
-<td>Affordable housing development</td>
-</tr>
-<tr>
-<td>Mental health/addiction issue</td>
-<td>Treatment and services</td>
-</tr>
-<tr>
-<td>Economic displacement</td>
-<td>Job programs and economic support</td>
-</tr>
-</tbody>
-</table>
-<p><strong>The way we define the problem shapes the solutions we consider</strong></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="7" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="efficiency-policy-examples">Efficiency: Policy Examples</h2>
+<ul>
+<li><strong>Education:</strong> Cost per student vs. learning outcomes or graduation rates.</li>
+<li><strong>Healthcare:</strong> Speed of treatment vs. improvements in patient health.</li>
+<li><strong>Welfare:</strong> Administrative costs vs. the value and reach of benefits delivered.</li>
+<li><strong>Infrastructure:</strong> Quick, low-cost repairs vs. durable, long-term solutions.</li>
+</ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="policy-goals-from-stones-policy-paradox">Policy Goals from Stone's <em>Policy Paradox</em></h2>
-<h3 id="four-core-policy-goals">Four Core Policy Goals:</h3>
-<ol>
-<li><strong>Security</strong> - Protecting people from harm</li>
-<li><strong>Liberty</strong> - Protecting people's rights</li>
-<li><strong>Efficiency</strong> - Getting the most out of resources</li>
-<li><strong>Equity</strong> - Fairness in the distribution of resources</li>
-</ol>
-<p><strong>Stone argues these goals are inherently in tension with one another - policy design involves making trade-offs between them</strong></p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="efficiency-herbert-simons-perspective">Efficiency: Herbert Simon's Perspective</h2>
+<blockquote>
+<p>&quot;A good public library is not one that owns all the books that have ever been published, but one that has used its limited funds to build up as good a collection as possible under the circumstances&quot;</p>
+<p><em>- Herbert Simon</em></p>
+</blockquote>
+<p><strong>Efficiency is about making the best possible use of limited resources, not maximizing every possible outcome</strong></p>
+<p><em>Source: Herbert Simon, Administrative Behavior (1947)</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="efficiency-political-dimensions">Efficiency: Political Dimensions</h2>
+<blockquote>
+<p>&quot;People who oppose certain programs will often do so because they disagree with the substance of the policy. But it is much easier—and often more successful—to claim or expose how a policy is wasteful, rather than arguing about the policy's merits because nobody favors waste.&quot;</p>
+<p><em>- Deborah Stone</em></p>
+</blockquote>
+<p><strong>Efficiency arguments can be strategic and political, not just technical</strong></p>
 <p><em>Source: Stone, D. (2012). Policy Paradox: The Art of Political Decision Making</em></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="12">
-<h2 id="next-up-part-2---goal-conflicts-and-trade-offs">Next Up: Part 2 - Goal Conflicts and Trade-offs</h2>
-<p>In the next presentation, we'll explore:</p>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="10" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="equity-a-contested-goal">Equity: A Contested Goal</h2>
+<p><strong>Definition:</strong><br />
+Equity is fairness in the distribution of resources, opportunities, and outcomes. It is a central but highly debated goal in policy design.</p>
+<h3 id="why-equity-is-contested">Why Equity Is Contested:</h3>
 <ul>
-<li>How policy goals conflict with each other</li>
-<li>Strategies for balancing competing objectives</li>
-<li>Real-world examples of goal trade-offs</li>
-<li>The complexity of managing multiple policy objectives</li>
+<li>Competing ideas of what is &quot;fair&quot;</li>
+<li>Tension with other goals like efficiency and liberty</li>
+<li>Disagreement over whether to focus on equal processes or equal outcomes</li>
+<li>Debate about which inequities require government intervention</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="forms-and-dimensions-of-equity">Forms and Dimensions of Equity</h2>
+<h3 id="key-types">Key Types:</h3>
+<ul>
+<li><strong>Horizontal Equity:</strong> Treating similar cases similarly (e.g., equal tax rates for people with equal income)</li>
+<li><strong>Vertical Equity:</strong> Treating different cases differently to account for relevant differences (e.g., progressive taxation)</li>
+<li><strong>Intergenerational Equity:</strong> Fairness between current and future generations (e.g., climate policy)</li>
+<li><strong>Procedural vs. Substantive Equity:</strong> Fairness in the process vs. fairness in the results</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="policy-approaches-to-advancing-equity">Policy Approaches to Advancing Equity</h2>
+<h3 id="common-strategies">Common Strategies:</h3>
+<ul>
+<li><strong>Universal Programs:</strong> Benefits or services provided to all (e.g., public education)</li>
+<li><strong>Targeted Interventions:</strong> Focused support for disadvantaged groups (e.g., affirmative action)</li>
+<li><strong>Redistributive Policies:</strong> Shifting resources to reduce disparities (e.g., progressive taxes, social welfare)</li>
+<li><strong>Procedural Safeguards:</strong> Ensuring fair treatment and due process (e.g., anti-discrimination laws)</li>
+</ul>
+<p><strong>Policymakers must choose among these approaches based on context, values, and political feasibility.</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="security-vs-liberty-conflicting-goals">Security vs. Liberty: Conflicting Goals</h2>
+<h3 id="thomas-hobbes-tradeoff">Thomas Hobbes' Tradeoff</h3>
+<ul>
+<li>Individuals surrender significant liberties to a powerful sovereign in exchange for security and order</li>
+<li>The state wields broad authority to prevent chaos and violence</li>
+<li>Security is seen as the foundation for all other rights and freedoms</li>
+<li>Human nature is viewed as self-interested and prone to conflict, requiring strong control</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h3 id="john-lockes-approach">John Locke's Approach</h3>
+<ul>
+<li>Individuals enter a social contract, giving up only limited liberties to form a government with restricted powers</li>
+<li>The state’s primary role is to protect fundamental natural rights—life, liberty, and property</li>
+<li>Liberty is considered an inherent right, not granted by the state</li>
+<li>Government legitimacy depends on the consent of the governed and the protection of individual freedoms</li>
+</ul>
+<p><strong>These competing philosophical traditions continue to shape contemporary policy debates about the proper balance between security and liberty.</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="15" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="security-vs-liberty-modern-applications">Security vs. Liberty: Modern Applications</h2>
+<p><strong>This fundamental tension plays out in numerous policy areas:</strong></p>
+<ul>
+<li><strong>National Security:</strong> Surveillance vs. privacy rights</li>
+<li><strong>Public Health:</strong> Mandatory measures vs. individual choice</li>
+<li><strong>Gun Control:</strong> Public safety vs. individual rights to bear arms</li>
+<li><strong>Internet Regulation:</strong> Protection from harm vs. free speech</li>
+</ul>
+<p><strong>The design question is not <em>whether</em> to limit liberty for security, but <em>how much</em> and <em>in what ways</em> to balance these competing goods</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="16" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="ambiguity-and-goal-conflict">Ambiguity and Goal Conflict</h2>
+<p><strong>Policy goals are often ambiguous and may conflict with each other.</strong></p>
+<h3 id="why-ambiguity-and-conflict-arise">Why Ambiguity and Conflict Arise:</h3>
+<ul>
+<li>Stakeholders value different goals and interpret them in various ways</li>
+<li>Disagreements can occur over both the ends (goals) and the means (methods)</li>
+<li>Example: Immigration policy may conflict with foreign relations goals</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="17" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="managing-ambiguity-and-conflict">Managing Ambiguity and Conflict</h2>
+<ul>
+<li>Conflicts are not failures—they reflect real-world complexity</li>
+<li>Effective policy design seeks workable balances, not perfect solutions</li>
+<li>Ambiguity can be useful, enabling broad coalitions by allowing multiple interpretations</li>
+<li>Transparent discussion of trade-offs helps build legitimacy and support</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="goal-conflicts---real-world-examples">Goal Conflicts - Real World Examples</h2>
+<h3 id="environmental-policy">Environmental Policy:</h3>
+<ul>
+<li>Environmental protection vs. economic growth</li>
+<li>Carbon reduction vs. energy affordability</li>
+<li>Conservation vs. resource development</li>
+<li>Local impacts vs. global benefits</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="19" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h3 id="healthcare-policy">Healthcare Policy:</h3>
+<ul>
+<li>Universal access vs. cost containment</li>
+<li>Quality of care vs. efficiency</li>
+<li>Patient choice vs. standardized treatments</li>
+<li>Prevention vs. treatment funding</li>
+</ul>
+<p><strong>The most effective policies don't eliminate conflicts - they manage them transparently</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="20" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="common-trade-offs-in-policy-design">Common Trade-offs in Policy Design</h2>
+<ul>
+<li><strong>Efficiency vs. Equity:</strong> Cost-effectiveness vs. fair distribution</li>
+<li><strong>Security vs. Liberty:</strong> Protection vs. freedom</li>
+<li><strong>Speed vs. Deliberation:</strong> Quick action vs. careful planning</li>
+<li><strong>Standardization vs. Flexibility:</strong> Consistency vs. adaptability</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="21" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="strategies-for-balancing-competing-goals">Strategies for Balancing Competing Goals</h2>
+<ul>
+<li><strong>Prioritization:</strong> Decide which goal takes precedence</li>
+<li><strong>Compromise:</strong> Find a workable middle ground</li>
+<li><strong>Sequencing:</strong> Pursue different goals at different stages</li>
+<li><strong>Compensation:</strong> Offset negative impacts for affected groups</li>
+<li><strong>Mixed Strategies:</strong> Apply different approaches for different segments</li>
+</ul>
+<p><strong>Policy design is about making informed choices, not eliminating all tensions</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="22" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="case-study-healthcare-policy--competing-goals">Case Study: Healthcare Policy — Competing Goals</h2>
+<ul>
+<li><strong>Universal Access:</strong> Ensure everyone receives healthcare</li>
+<li><strong>Quality:</strong> Maintain high standards of care</li>
+<li><strong>Cost Control:</strong> Keep healthcare affordable for society</li>
+<li><strong>Provider Autonomy:</strong> Respect medical professionals' judgment</li>
+<li><strong>Patient Choice:</strong> Allow selection of providers and treatments</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="23" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="case-study-healthcare-policy--balancing-approaches">Case Study: Healthcare Policy — Balancing Approaches</h2>
+<ul>
+<li><strong>Tiered Systems:</strong> Basic universal coverage with optional supplemental plans</li>
+<li><strong>Quality Metrics:</strong> Use performance-based payments to incentivize high standards</li>
+<li><strong>Managed Care:</strong> Coordinate services with oversight to control costs</li>
+<li><strong>Public-Private Mix:</strong> Assign different roles to public and private sectors</li>
+</ul>
+<p><strong>Effective policy design requires openly addressing these tensions, not ignoring them</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="24" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="complexity-and-differing-goals">Complexity and Differing Goals</h2>
+<p><strong>Question:</strong> Is the purpose of the goal to eliminate a problem, hold steady a growing problem, or reduce the problem to a lower level?</p>
+<h3 id="war-on-drugs-example">War on Drugs Example:</h3>
+<ul>
+<li><strong>Elimination:</strong> Zero tolerance, maximum enforcement, severe penalties</li>
+<li><strong>Holding Steady:</strong> Targeted enforcement, education campaigns</li>
+<li><strong>Reduction:</strong> Harm reduction strategies, treatment over punishment</li>
+</ul>
+<p><strong>Each approach implies different tools, resources, timeframes, and metrics for success</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="25" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="scalability-of-policy-goals">Scalability of Policy Goals</h2>
+<h3 id="goal-intensity-questions">Goal Intensity Questions:</h3>
+<ul>
+<li>How much change is needed?</li>
+<li>What is politically feasible?</li>
+<li>What is administratively possible?</li>
+<li>What resources are available?</li>
+<li>What is the timeframe?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="26" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="scalability-of-policy-goals-1">Scalability of Policy Goals</h2>
+<h3 id="target-setting-example">Target Setting Example:</h3>
+<ul>
+<li><strong>Ambitious:</strong> Carbon neutrality by 2030</li>
+<li><strong>Moderate:</strong> 50% emissions reduction by 2035</li>
+<li><strong>Minimal:</strong> Stabilize emissions by 2040</li>
+<li>Each target demands different policy tools</li>
+</ul>
+<p><strong>Policy designers must balance ambition with feasibility when setting targets</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="policy-design-framework-core-elements">Policy Design Framework: Core Elements</h2>
+<h3 id="core-elements">Core Elements</h3>
+<ul>
+<li><strong>Goals:</strong> What is the policy trying to achieve?</li>
+<li><strong>Causal Theory:</strong> Why will the proposed solution address the problem?</li>
+<li><strong>Tools:</strong> What instruments or mechanisms will be used to reach the goals?</li>
+<li><strong>Implementation:</strong> How will the policy be put into practice and enforced?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="28" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="policy-design-framework-cross-cutting-themes">Policy Design Framework: Cross-Cutting Themes</h2>
+<h3 id="cross-cutting-themes">Cross-Cutting Themes</h3>
+<ul>
+<li><strong>Equity:</strong> Who benefits from or bears the costs of the policy?</li>
+<li><strong>Efficiency:</strong> Are resources being used in the best possible way?</li>
+<li><strong>Political Feasibility:</strong> Can the policy gain sufficient political and public support?</li>
+<li><strong>Administrative Capacity:</strong> Does the government or organization have the ability to implement the policy effectively?</li>
+</ul>
+<p><strong>Effective policy design sits at the intersection of logic, values, and institutional capacity.</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-background-color="#fefefe" data-theme="marp_light" lang="en-US" data-marpit-pagination="29" style="--paginate:true;--background-color:#fefefe;--theme:marp_light;background-color:#fefefe;background-image:none;" data-marpit-pagination-total="29">
+<h2 id="next-up-part-3---policy-tools-and-implementation">Next Up: Part 3 - Policy Tools and Implementation</h2>
+<p>In the final presentation, we'll explore:</p>
+<ul>
+<li>Different types of policy tools</li>
+<li>How to select appropriate tools</li>
+<li>The role of compliance mechanisms</li>
+<li>Integrating design elements in practice</li>
 </ul>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();

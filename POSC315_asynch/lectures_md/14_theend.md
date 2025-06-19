@@ -67,7 +67,8 @@ Need anything? Ping me on Discord or email ➜ [dpadams@fullerton.edu](mailto:dp
 
 ## Looking Ahead
 
-* Apply these tools in POSC 321, 409, your internships, or city‑hall gigs.
+* Apply these tools in POSC 321, 425, your internships, or city‑hall gigs.
+* Consider **POSC 425** for a deeper dive into policy analysis.
 * Consider **MPA** or **MS GIS** pathways if you loved the analytic side.
 * Keep reading Birkland — it ages well. 😉
 

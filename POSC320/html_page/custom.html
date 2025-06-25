@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>$title$</title>
+  <link rel="stylesheet" href="lecture-style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>$title$</h1>
+    $if(subtitle)$
+      <h2>$subtitle$</h2>
+    $endif$
+    $if(author)$
+      <p class="author">$for(author)$$author$$sep$<br />$endfor$</p>
+    $endif$
+  </header>
+
+  $body$
+</body>
+
+</html>

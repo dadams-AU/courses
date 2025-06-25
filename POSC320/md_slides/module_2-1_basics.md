@@ -1,118 +1,254 @@
 # Public Administration and the Public Sector
 
-Basic Concepts
+## Module 2-1: Basic Concepts
 
-Module 2-1: Basics
+### CRJU/POSC 320: Introduction to Public Administration
 
----
-
-## Public Administration Competencies
-### NASPAA Competencies
-
-1. To lead and manage in public governance
-2. To participate in and contribute to the policy process
-3. To analyze, synthesize, think critically, solve problems and make decisions
-4. To articulate and apply a public service perspective
-5. To communicate and interact productively with a diverse and changing workforce and citizenry
+#### Dr. David P. Adams
 
 ---
 
-## Linguistics of the Field
+## What Makes a Good Public Administrator?
 
-- Government: the formal institutions and processes through which decisions are made for a body politic
-- Public Administration: the field of study and practice that concerns itself with the management of public programs
-- Public Policy: the decisions made by government that are intended to affect the lives of citizens
-- Governance: the process of governing, which includes the formal institutions of government as well as informal arrangements that influence decision-making
+### Core Competencies (NASPAA Standards)
 
----
-
-## Enduring Debates in Public Administration
-
-- Politics vs. Administration
-- Facts vs. Values
-- Public vs. Private
+**Leadership & Management:** Navigate complex political environments
+**Policy Participation:** Help shape and implement public decisions  
+**Critical Thinking:** Analyze problems and develop solutions
+**Public Service Perspective:** Serve the broader public interest
+**Communication:** Work with diverse stakeholders and communities
 
 ---
 
-## Interdisciplinary Nature of Public Administration
+## Speaking the Language of Public Administration
 
-- Political Science
-- Economics
-- Sociology
-- Psychology
-- Law
-- Business
-- Engineering
+### Key Terms You Need to Know
 
----
+**Government:** Formal institutions and processes for making collective decisions
 
-## Interdisciplinary Nature of Public Administration
+- *Example: City council, police department, federal courts*
 
-Public administration is a multidisciplinary field that draws on the insights of many disciplines to understand the complex world of public management and tackle large, complex, and expensive problems.
+**Public Administration:** Managing and implementing public programs
 
----
+- *Example: Running a police department, managing court operations*
 
-## Foundations of Public Administration
+**Public Policy:** Government decisions intended to affect citizens' lives
 
-- Is private sector management the same as public sector management?
-- What is the role of government in society?
-- How do we trust government to act in our best interests?
-
+- *Example: Community policing policies, sentencing guidelines*
 
 ---
 
-## Solving the Public's Demands on Government
+## Speaking the Language (continued)
 
-- Politics: Choice among competing values
-- Performance: How well does government get the work done?
-- Accountability: How do we hold government accountable for its actions?
+**Governance:** The broader process of governing beyond formal government
 
----
+- *Includes: NGOs, private contractors, community partnerships*
+- *Example: Private prisons, community policing partnerships, court-appointed attorneys*
 
-## The Meaning of Accountability
-
-- Accountability is the obligation of public servants to be answerable for their actions and to act responsibly and without blame.
-
-- Principles of accountability:
-  - Transparency
-  - Responsiveness
-  - Responsibility
-  - Integrity
-  - Trust
+**The Big Picture:** Modern governance involves many actors beyond traditional government
 
 ---
 
-## Approaches to Accountability
+## Three Enduring Debates in Public Administration
 
-- Political Accountability
-- Legal Accountability
-- Administrative Accountability
-- Social Accountability
+### The Big Questions That Never Go Away
+
+1. **Politics vs. Administration**
+2. **Facts vs. Values**
+3. **Public vs. Private**
+
+*These debates shape how we think about the role and practice of public administration*
+
+---
+
+## Debate 1: Politics vs. Administration
+
+**The Question:** Should administrators be neutral implementers or active participants in policy?
+
+**Traditional View:** "There is a science of administration which stands apart from politics"
+
+**Reality Check:**
+
+- Police chiefs advocate for department budgets
+- Court administrators influence judicial policy
+- Federal agents make discretionary enforcement decisions
+
+**Your Take:** Can public administrators really be "neutral"?
+
+---
+
+## Debate 2: Facts vs. Values
+
+**The Question:** Should administration be based on objective facts or subjective values?
+
+**The Challenge:**
+
+- **Facts:** Crime statistics, budget numbers, performance metrics
+- **Values:** What kind of community do we want? How should we treat offenders?
+
+**Example:** Using data to decide where to patrol vs. community values about policing priorities
+
+---
+
+## Debate 3: Public vs. Private
+
+**The Question:** Are public and private management fundamentally different?
+
+**Consider:**
+
+- Should government be run "like a business"?
+- Can private companies deliver public services effectively?
+- What about private prisons, private security, contracted court services?
+
+**Key Insight:** The answer affects how we train, evaluate, and organize public servants
+
+---
+
+## Public Administration is Interdisciplinary
+
+### Drawing from Many Fields
+
+**Political Science:** How power and authority work
+**Economics:** Resource allocation and efficiency
+**Sociology:** Group behavior and organizational culture
+**Psychology:** Individual motivation and decision-making
+
+---
+
+## Why Interdisciplinary Matters
+
+**Public administration tackles complex problems that require multiple perspectives:**
+
+- **Criminal justice reform:** Needs law, psychology, sociology, economics
+- **Emergency management:** Requires engineering, communications, political science
+- **Budget management:** Uses economics, accounting, political science
+
+**Bottom Line:** No single discipline has all the answers to public problems
+
+---
+
+## Fundamental Questions
+
+### What We're Really Asking
+
+**Is private sector management the same as public sector management?**
+*Hint: Remember Module 1's discussion of differences*
+
+**What is the role of government in society?**
+*This shapes everything we do in public administration*
+
+**How do we trust government to act in our best interests?**
+*The accountability challenge*
+
+---
+
+## The Public's Demands on Government
+
+### Three Core Expectations
+
+**Politics:** Make choices among competing values
+
+- *Example: Balancing public safety with individual rights*
+
+**Performance:** Get the work done effectively and efficiently
+
+- *Example: Reducing crime rates, processing cases quickly*
+
+**Accountability:** Be answerable for actions and results
+
+- *Example: Police oversight, judicial review, budget transparency*
+
+---
+
+## Understanding Accountability
+
+**Accountability = Being answerable for your actions**
+
+### Five Key Principles
+
+**Transparency:** Open processes and accessible information
+**Responsiveness:** Reacting to public needs and concerns
+**Responsibility:** Taking ownership of actions and outcomes
+**Integrity:** Acting ethically and honestly
+**Trust:** Building and maintaining public confidence
+
+---
+
+## Types of Accountability
+
+**Political Accountability:** Answerable to elected officials
+
+- *Example: Police chief reports to mayor*
+
+**Legal Accountability:** Answerable to courts and law
+
+- *Example: Following constitutional requirements*
+
+**Administrative Accountability:** Answerable within the organization
+
+- *Example: Internal affairs investigations*
+
+**Social Accountability:** Answerable to the public
+
+- *Example: Community oversight boards*
 
 ---
 
 ## Elements of Accountability
 
-- Fiscal Accountability
-- Process Accountability
-- Program Accountability
-- Performance Accountability
+**Fiscal:** Responsible use of public money
+
+- *Example: Police overtime budgets, court operating costs*
+
+**Process:** Following proper procedures
+
+- *Example: Due process in investigations, transparent hiring*
+
+**Program:** Achieving intended outcomes
+
+- *Example: Crime reduction, case processing times*
+
+**Performance:** Meeting standards and goals
+
+- *Example: Response times, conviction rates*
 
 ---
 
-## Theories of Public Administration for Next Time
+## Accountability in Action
 
-- Old Public Administration
-- New Public Administration
-- New Public Management
-- New Public Service
-- New Public Governance
+**Police Example:**
+
+- **Fiscal:** Body camera costs vs. budget
+- **Process:** Following arrest procedures
+- **Program:** Community policing effectiveness
+- **Performance:** Crime statistics and clearance rates
+
+**Question:** How do these different types of accountability sometimes conflict?
 
 ---
 
-## End of Module 2-1
+## Coming Up: Evolution of Public Administration
 
+### Five Major Approaches We'll Explore
 
+**Old Public Administration** (1880s-1960s): Efficiency and hierarchy
+**New Public Administration** (1960s-1980s): Equity and social responsiveness  
+**New Public Management** (1980s-2000s): Market-based reforms
+**New Public Service** (2000s): Citizen engagement and democracy
+**New Public Governance** (2000s-present): Networks and collaboration
 
+*Each responds to different challenges and criticisms*
 
+---
 
+## Module 2-1 Summary
+
+**Key Takeaways:**
+
+- Public administration requires multiple competencies and perspectives
+- Three enduring debates shape the field's development
+- Interdisciplinary approach essential for complex problems
+- Accountability has multiple dimensions and stakeholders
+- The field continues to evolve in response to changing challenges
+
+**Next:** Historical development and theoretical approaches

@@ -1,210 +1,456 @@
 # Organizational Theory
 
+## Understanding How Public Organizations Work
 
-CRJU/POSC 320 | Module 4-1 | Organizational Theory
+### Module 4-1: Organizational Theory
 
----
-
-## Organizational Studies
-
-Organizational theory is the study of the structures of organizations and how they function.    
-
-Organizational behavior is the study of the behavior of individuals and groups within organizations.
-
---- 
-
-## Architectural Elements of Public Service Organizations
-
-| Mission | Size | Structure |
-| :--- | :--- | :--- |
-| Workforce Characteristics | Partisan Politics | Coordinating Mechanisms |
-| Financial Resources | Public Trust | Organizational Culture |
-| Time Horizon | Public Scrutiny | Decision Making Processes |
-| Information Technology | Policies and Procedures | Incentive Systems |
+#### David P. Adams, Ph.D.
 
 ---
 
-## Historical Development 
+## Why Does Organizational Theory Matter?
 
-- Classical School (early 1900s): focus on structure and process
-  - Weber, Taylor, Fayol
-  
-- Human Relations School (1930s-1950s): focus on behavior
-  - Mayo, Maslow, McGregor
-  
-- Modern Organizational Theory (1960s-present): focus on structure, process, and behavior
-  - Systems Theory, Contingency Theory, New Public Management
+**You'll work in organizations your entire career:**
 
----
+- Police departments, courts, corrections facilities
+- Federal agencies, city governments, nonprofits
+- Understanding how they work = understanding how to be effective
 
-## Classical School: Six PA Principles
-
-1. Bases of Organization: structural strategies relate to purpose, process, clientele, and place.
-2. Mutually exclusive alternatives: policymakers must decide which values to emphasize and which problems to accept.
-3. Focus on purpose at the top: problem solving through organizing at the executive level by purpose and bringing together the activities that contribute to that purpose.
-4. Span of control: the number of subordinates a manager can effectively supervise.
-5. Unity of command: each employee should have only one supervisor.
-6. Separate line and staff: line managers are responsible for achieving organizational goals; staff managers provide advice and support.
+**Today's Question:** Why do some organizations work well while others struggle?
 
 ---
 
-## Weber's Bureaucratic Theory
+## Two Key Concepts
 
-- Max Weber (1864-1920) was a German sociologist and political economist.
-- His work on bureaucracy was published posthumously in 1922.
-- Bureaucracy is a formal organization with a hierarchy of authority and a clear division of labor.
+**Organizational Theory:** How organizations are structured and function
 
----
+- *Focus: The "big picture" design and systems*
 
-## Weber's Bureaucratic Theory
+**Organizational Behavior:** How individuals and groups behave within organizations  
 
-- Bureaucracy is a formal organization with a hierarchy of authority and a clear division of labor.
-  - Hierarchy is a system of ranking individuals in an organization.
-  - Division of labor is the assignment of different tasks to different people.
-  - Formal rules are written guidelines for behavior.
-  - Impersonality is the separation of personal and official lives.
-  - Qualification-based hiring is the selection of employees based on merit.
-  - Career orientation is the expectation of long-term employment.
-  - Separation of work and ownership is the distinction between public and private property.
+- *Focus: People, motivation, and interactions*
 
+**Both matter:** Great structure with poor behavior fails. Great people with poor structure also fails.
 
 ---
 
-## Taylor's Scientific Management
+## The Building Blocks of Public Organizations
 
-- Frederick Taylor (1856-1915) was an American mechanical engineer.
-- His work on scientific management was published in 1911.
-- Scientific management is the application of scientific principles to management of work and workers.
-- Taylor's approach emphasized efficiency and "one best way" of doing tasks.
-- His work had a significant impact on administrative practices.
-- Taylor's approach was criticized for being too mechanistic and dehumanizing.
-- His work was also criticized for being too simplistic and ignoring the social context of work.
-- Taylor's approach is still used in some organizations today.
+### What Makes Organizations Tick?
+
+**Structure Elements:**
+
+- Mission and goals
+- Size and hierarchy  
+- Formal rules and procedures
+
+**People Elements:**
+
+- Workforce characteristics
+- Organizational culture
+- Leadership styles
+
+**Environmental Elements:**
+
+- Political pressures
+- Public scrutiny
+- Available resources
 
 ---
 
-## Human Relations Movement
+## Three Schools of Organizational Thought
 
-- The Human Relations Movement emerged in the 1930s and 1940s.
-- It was a response to the mechanistic approach of the classical school.
-- The movement emphasized the importance of human needs and relationships in the workplace.
-- The movement was influenced by the Hawthorne Studies conducted by Elton Mayo and his colleagues.
-- The Hawthorne Studies found that productivity increased when workers were given special attention.
+### The Evolution of Ideas
+
+**Classical School (1900s-1930s):** "There's one best way"
+
+- Focus: Structure, efficiency, rules
+
+**Human Relations School (1930s-1960s):** "People matter"  
+
+- Focus: Motivation, relationships, satisfaction
+
+**Modern Theories (1960s-present):** "It depends"
+
+- Focus: Contingency, systems, networks
+
+*Each school responded to problems with the previous approach*
+
+---
+
+## Classical School: The Foundation
+
+### Six Core Principles
+
+**1. Organize by Purpose, Process, Place, or People**
+
+- *Example: Police organized by geography (precincts) vs. function (traffic, detective)*
+
+**2. Can't Optimize Everything**  
+
+- *Example: Faster case processing vs. thorough investigation*
+
+**3. Focus on Purpose at the Top**
+
+- *Example: Police chief coordinates patrol, detective, and administrative units*
+
+---
+
+## Classical School Principles (continued)
+
+**4. Span of Control: How Many Can You Supervise?**
+
+- *Example: Sergeant supervising 8-12 patrol officers*
+
+**5. Unity of Command: One Boss**
+
+- *Example: Officer reports to one sergeant, not multiple supervisors*
+
+**6. Line vs. Staff Functions**
+
+- *Line: Core mission (patrol officers, detectives)*
+- *Staff: Support functions (HR, IT, training)*
+
+---
+
+## Max Weber's Bureaucracy
+
+### The "Ideal" Organization (1920s)
+
+**Weber's Key Features:**
+
+- **Hierarchy:** Clear chain of command
+- **Division of Labor:** Specialized roles and tasks
+- **Formal Rules:** Written procedures for everything  
+- **Impersonality:** Decisions based on rules, not relationships
+- **Merit-Based Hiring:** Qualifications, not connections
+- **Career Orientation:** Long-term employment and advancement
+
+---
+
+## Weber's Bureaucracy in Criminal Justice
+
+**Police Department Example:**
+
+- **Hierarchy:** Chief → Captain → Lieutenant → Sergeant → Officer
+- **Specialization:** Patrol, detective, traffic, SWAT units
+- **Rules:** Standard operating procedures, policy manuals
+- **Merit Hiring:** Civil service exams, background checks
+- **Career Path:** Promotional opportunities, pension systems
+
+**Question:** What are the benefits and drawbacks of this approach?
+
+---
+
+## Frederick Taylor's Scientific Management
+
+### "One Best Way" to Do Everything
+
+**Taylor's Principles:**
+
+- Study work scientifically to find the most efficient method
+- Select and train workers scientifically  
+- Cooperate with workers to ensure methods are followed
+- Divide work: managers plan, workers execute
+
+**Example:** Assembly line approach to processing arrests, court cases, or parole decisions
+
+---
+
+## Scientific Management in Practice
+
+**Court Example:**
+
+- Time each step of case processing
+- Standardize paperwork and procedures
+- Train clerks in most efficient methods
+- Measure and reward productivity
+
+**Benefits:** Faster processing, reduced errors, cost savings
+**Problems:** Treats people like machines, ignores worker knowledge, can reduce quality
+
+**Modern Application:** Some aspects still used in performance management
+
+---
+
+## The Human Relations Revolution
+
+### People Aren't Machines (1930s-1950s)
+
+**The Hawthorne Studies Discovery:**
+Worker productivity increased when they received attention, regardless of working conditions
+
+**Key Insights:**
+
+- Social relationships affect performance
+- Worker attitudes and morale matter
+- Informal groups have power
+- Participation in decisions improves outcomes
+
+---
+
+## Human Relations in Criminal Justice
+
+**Police Example:**
+
+- **Team building:** Squad cohesion affects performance
+- **Morale matters:** Stressed, unhappy officers perform poorly
+- **Informal networks:** Officers learn from each other, not just training
+- **Participation:** Officers involved in policy development are more likely to follow it
+
+**Modern Application:** Community policing emphasizes officer discretion and relationship-building
 
 ---
 
 ## Modern Organizational Theories
 
-- Systems Theory (1960s): organizations are complex systems with interdependent parts.
-- Contingency Theory (1960s): there is no one best way to organize; the best approach depends on the situation.
-- New Public Management (1980s): public organizations should be managed like private businesses.
+### "It Depends" Approach
 
+**Systems Theory:** Organizations are interconnected parts
+
+- *Example: Changes in arrest policies affect courts, jails, probation*
+
+**Contingency Theory:** Best approach depends on the situation
+
+- *Example: Military structure for SWAT, team structure for community policing*
+
+**Network Theory:** Organizations work through partnerships
+
+- *Example: Criminal justice involves police, courts, corrections, social services*
 
 ---
 
+## Organizational Structure Types
 
-## Organizational Structure
+### Different Ways to Organize
 
-- Organizational structure is the formal system of task and authority relationships.
-- Organizational design is the process of creating or changing an organization's structure.
+**Hierarchical:** Traditional pyramid
+
+- *Example: Traditional police department*
+
+**Matrix:** People report to multiple supervisors
+
+- *Example: Detective assigned to both robbery unit and gang task force*
+
+**Flat:** Few management levels
+
+- *Example: Small-town police with chief and officers*
+
+**Network:** Loose connections between independent units
+
+- *Example: Multi-agency drug task force*
 
 ---
 
-## Types Organizational Structure
+## Which Structure When?
 
-- Hierarchical structure is the most common type of organizational structure.
-- Matrix structure is a combination of functional and project-based structures.
-- Flat structure has few levels of hierarchy.
-- Boundaryless structure has few internal or external barriers.
-- Virtual structure is a network of independent organizations.
-- Team-based structure is a network of teams that coordinate their work.
-- Learning structure is a network of teams that learn from each other.
+**Hierarchical works for:**
+
+- Routine, predictable work
+- Clear authority needed
+- Large organizations
+
+**Flat works for:**
+
+- Creative, flexible work  
+- Quick decision-making
+- Small organizations
+
+**Matrix works for:**
+
+- Complex projects
+- Multiple expertise needed
+- Temporary assignments
+
+**Your challenge:** Most public organizations need elements of all three
 
 ---
 
 ## Organizational Culture
 
-- Organizational culture is the shared values and beliefs that shape employee behavior and performance.
-- Organizational climate is the shared perceptions of employees about their work environment.
-- Organizational socialization is the process of learning about an organization's culture.
-- Organizational assimilation is the process of adapting to an organization's culture.
+### "How We Do Things Around Here"
+
+**Culture includes:**
+
+- **Values:** What's important (service, integrity, efficiency)
+- **Norms:** Unwritten rules of behavior
+- **Symbols:** Uniforms, badges, ceremonies
+- **Stories:** Legends about heroes and villains
+- **Rituals:** Regular practices and traditions
+
+**Culture often matters more than formal rules**
 
 ---
 
-## Leadership in Organizations
+## Culture in Criminal Justice
 
-- Leadership is the process of influencing others to achieve organizational goals.
-- Leaders are individuals who influence others to achieve organizational goals.
-- Managers are individuals who plan, organize, and control organizational resources.
+**Police Culture Examples:**
 
----
+- "Thin blue line" solidarity
+- "Officer safety first" priority
+- "We protect and serve" mission
+- Shift briefings, roll call traditions
+- Stories about legendary officers
 
-## Leadership Styles
+**Court Culture Examples:**
 
-- Leadership styles are the different ways that leaders influence others.
-- Trait theories of leadership focus on the personal characteristics of leaders.
-- Behavioral theories of leadership focus on the actions of leaders.
-- Contingency theories of leadership focus on the situation in which leadership occurs.
-- Transformational leadership is a style of leadership that inspires followers to achieve organizational goals.
-- Transactional leadership is a style of leadership that motivates followers through rewards and punishments.
-- Servant leadership is a style of leadership that focuses on the needs of followers.
-- Authentic leadership is a style of leadership that emphasizes honesty and integrity.
-- Distributed leadership is a style of leadership that is shared among members of a group.
+- "Justice is blind" ideal
+- Formal courtroom procedures
+- Professional dress and language
+- Traditions and ceremonies
 
+**Question:** How does culture help or hinder organizational goals?
 
 ---
 
-## Decision Making in Public Organizations
+## Leadership in Public Organizations
 
-- Decision making is the process of choosing among alternatives.
-- Rational decision making is the process of choosing the best alternative.
-- Bounded rationality is the process of choosing the first alternative that meets minimum criteria.
-- Incrementalism is the process of making decisions by making small changes to existing policies.
-- Garbage can model is the process of making decisions in a chaotic environment.
+### Different Styles for Different Situations
 
----
+**Autocratic Leadership:** Clear direction, top-down control
 
-## Policy Making in Public Organizations
+- *Good for: Crisis situations, dangerous operations*
+- *Example: SWAT team leader during active incident*
 
-- Policy formulation is the process of deciding what to do.
-- Policy implementation is the process of putting policy into action.
-- Policy evaluation is the process of determining whether policy is achieving its goals.
+**Democratic Leadership:** Participative decision-making
 
----
+- *Good for: Complex problems, building buy-in*
+- *Example: Community policing planning meetings*
 
-## Challenges of Public Administration
+**Laissez-faire Leadership:** Hands-off, delegate authority
 
-- Common challenges in public administration include:
-  - Complexity: public organizations are complex systems.
-  - Uncertainty: operate in an uncertain environment.
-  - Conflict: must balance competing interests.
-  - Change: must adapt to changing conditions.
-
-- Other challenges include:
-  - Bureaucracy: excessive rules and procedures.
-  - Accountability: must be accountable to the public.
-  - Ethical dilemmas: must make difficult ethical decisions.
+- *Good for: Highly skilled professionals*
+- *Example: Supervising experienced detectives*
 
 ---
 
-## Organizational Theory Summary
+## Modern Leadership Concepts
 
-- Organizational Theory: Studies organizational structures and functions.
-  - Classical School: Emphasizes structure and process.
-  - Human Relations Movement: Focuses on behavior.
-  - Modern Approach: Integrates structure, process, and behavior.
+**Transformational Leadership:** Inspiring people toward shared vision
 
-- Organizational Structure & Culture:
-  - Structure: Formal task and authority relationships.
-  - Culture: Shared values and beliefs influencing employee behavior.
+- *Example: Police chief leading department culture change*
 
-- Key Processes:
-  - Leadership: Influencing others to achieve goals.
-  - Decision Making: Choosing among alternatives.
-  - Policy Making: Developing, implementing, and evaluating policies.
+**Servant Leadership:** Focus on developing and serving followers
 
-- Challenges in Public Administration:
-  - Internal: Complexity, uncertainty, conflict, bureaucracy, accountability.
-  - External: Ethical dilemmas, environmental changes.
+- *Example: Court administrator supporting judges and staff*
+
+**Authentic Leadership:** Leading with integrity and self-awareness
+
+- *Example: Sheriff being honest about budget constraints*
+
+**Question:** Which style would work best for leading organizational change?
 
 ---
+
+## Decision Making in Organizations
+
+### How Choices Get Made
+
+**Rational Model:** Identify problem → Generate options → Evaluate → Choose best
+
+- *Works when: Clear goals, complete information, unlimited time*
+
+**Bounded Rationality:** Choose first "good enough" option
+
+- *Works when: Limited time, incomplete information, competing pressures*
+
+**Incremental Model:** Make small changes to existing policies
+
+- *Works when: High uncertainty, political constraints*
+
+---
+
+## Decision Making Examples
+
+**Police Chief Budget Decision:**
+
+- **Rational:** Analyze all options, cost-benefit analysis
+- **Bounded Rational:** Choose first option that meets basic needs
+- **Incremental:** Adjust last year's budget slightly
+
+**Reality:** Most public sector decisions involve bounded rationality or incrementalism
+
+**Why?** Political pressures, limited information, time constraints, multiple stakeholders
+
+---
+
+## Contemporary Challenges
+
+### What Modern Public Organizations Face
+
+**Complexity:** Multiple missions, stakeholders, accountability systems
+**Technology:** Rapid change, digital transformation, cybersecurity
+**Networks:** Working across boundaries, partnerships, collaboration  
+**Transparency:** Social media, open records, 24/7 scrutiny
+**Diversity:** Multicultural workforce and communities
+**Resources:** Doing more with less, competing priorities
+
+---
+
+## Organizational Change
+
+### Why Change is Hard and How to Do It
+
+**Why Organizations Resist Change:**
+
+- Culture and tradition
+- Individual resistance
+- Resource constraints  
+- Political opposition
+- Technical barriers
+
+**Successful Change Strategies:**
+
+- Clear vision and communication
+- Leadership commitment
+- Stakeholder involvement
+- Adequate resources
+- Patience and persistence
+
+---
+
+## Real Example: Body-Worn Cameras
+
+### Organizational Change in Action
+
+**Classical Approach:** Top-down mandate, standard procedures
+**Human Relations Approach:** Officer input, training, support  
+**Modern Approach:** Pilot testing, continuous improvement, community input
+
+**Challenges:**
+
+- Technology costs and maintenance
+- Privacy and policy concerns
+- Officer resistance and training needs
+- Data storage and management
+- Community expectations
+
+---
+
+## Future Trends in Public Organizations
+
+### What's Coming
+
+**Data-Driven Organizations:** Using analytics for decisions
+**Agile Organizations:** Rapid adaptation and experimentation
+**Network Organizations:** Collaboration across sectors
+**Learning Organizations:** Continuous improvement culture
+**Inclusive Organizations:** Equity and representation focus
+
+**Your Role:** Leaders who can navigate these trends while maintaining public trust
+
+---
+
+## Module 4-1 Summary
+
+**Key Takeaways:**
+
+- Organizations can be understood through structure, people, and environment
+- Different theories provide different insights into how organizations work
+- Classical emphasis on efficiency, human relations on people, modern on contingency
+- Culture often matters more than formal structure
+- Leadership style should match the situation
+- Decision-making in public sector involves constraints and politics
+- Change is difficult but necessary for organizational survival
+
+**Next:** Examining specific organizational problems and management challenges

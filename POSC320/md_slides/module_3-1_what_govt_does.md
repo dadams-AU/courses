@@ -1,10 +1,9 @@
-# What Government Does
-
-## Exploring the Role and Functions of Government
-
-### Module 3-1: Government Functions
-
-#### David P. Adams, Ph.D.
+---
+title: "What Government Does"
+subtitle: "Exploring the Role and Functions of Government"
+course: "POSC320"
+author: "David P. Adams, Ph.D."
+---
 
 ---
 
@@ -22,11 +21,11 @@
 
 ### Five Common Misconceptions
 
-**Myth 1:** Government keeps getting bigger and bigger
-**Myth 2:** Government wastes huge amounts of money  
-**Myth 3:** Government employees are lazy and inefficient
-**Myth 4:** Private sector always does things better
-**Myth 5:** We can easily cut government without consequences
+- **Myth 1:** Government keeps getting bigger and bigger
+- **Myth 2:** Government wastes huge amounts of money  
+- **Myth 3:** Government employees are lazy and inefficient
+- **Myth 4:** Private sector always does things better
+- **Myth 5:** We can easily cut government without consequences
 
 **Reality:** The picture is much more complex
 
@@ -36,16 +35,18 @@
 
 ### How Many Governments Do We Have?
 
-**1 Federal Government**
-**50 State Governments**
-**90,000+ Local Governments:**
-
-- 3,000+ counties
-- 19,000+ municipalities  
-- 16,000+ townships
-- 13,000+ school districts
-- 38,000+ special districts (water, fire, transit, etc.)
-
+- **1 Federal Government**
+- **50 State Governments**
+- **Local Governments:**
+  - 3,000+ counties
+  - 19,000+ municipalities  
+  - 16,000+ townships
+  - 13,000+ school districts
+  - 38,000+ special districts (water, fire, transit, etc.)
+- **Tribal Governments:** 574 federally recognized tribes
+- **Territorial Governments:** 5 U.S. territories (Puerto Rico, Guam, etc.)
+- **Total:** Over 90,000 distinct government entities
+  
 **Criminal Justice Implication:** This creates coordination challenges for law enforcement across jurisdictions
 
 ---

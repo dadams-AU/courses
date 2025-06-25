@@ -336,9 +336,9 @@
 
 ---
 
-## Current Reform Movements
+## Current Reform
 
-### What's Happening Now
+## What's Happening Now
 
 **Police Reform:**
 
@@ -413,12 +413,12 @@
 
 ### Lessons from Success Stories
 
-**Strong Leadership:** Champions who persist through obstacles
-**Clear Vision:** Specific goals everyone can understand
-**Stakeholder Buy-in:** Including those affected in design
-**Adequate Resources:** Funding and time for proper implementation
-**Measurement and Adjustment:** Learning and adapting during implementation
-**Cultural Change:** Addressing values and norms, not just procedures
+- **Strong Leadership:** Champions who persist through obstacles
+- **Clear Vision:** Specific goals everyone can understand
+- **Stakeholder Buy-in:** Including those affected in design
+- **Adequate Resources:** Funding and time for proper implementation
+- **Measurement and Adjustment:** Learning and adapting during implementation
+- **Cultural Change:** Addressing values and norms, not just procedures
 
 **Example:** Community policing success required changing police culture, not just tactics
 

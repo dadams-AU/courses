@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>$title$</title>
   <link rel="stylesheet" href="lecture-style.css">
 </head>
+<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
+  🌓
+</button>
+<script>
+  const toggle = document.getElementById("toggle-dark");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+
 <body>
   <header class="page-header">
     <h1>$title$</h1>
     $if(subtitle)$
       <h2>$subtitle$</h2>
+    $endif$
+    $if(course)$
+      <p class="course">$course$</p>
     $endif$
     $if(author)$
       <p class="author">$for(author)$$author$$sep$<br />$endfor$</p>
@@ -18,5 +32,4 @@
 
   $body$
 </body>
-
 </html>

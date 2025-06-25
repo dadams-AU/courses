@@ -1,11 +1,8 @@
-# What is Public Administration?
-
-## Module 1, Basic Concepts
-
-### CRJU/POSC 320: Introduction to Public Administration
-
-### Dr. David P. Adams
-
+---
+title: "What is Public Administration?"
+subtitle: "Module 1, Basic Concepts"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## What is Public Administration?
@@ -21,7 +18,7 @@
 
 ---
 
-### What is Public Administration?
+## What is Public Administration?
 
 - **Public administration** is the study of how public organizations function and how they are managed
 - Public organizations are characterized as **bureaucracies**—formal rational systems with administrative authority to execute public programs
@@ -32,7 +29,7 @@
 
 ---
 
-### Public vs. Private Administration
+## Public vs. Private Administration
 
 **Public administration:**
 
@@ -81,9 +78,9 @@
 
 ---
 
-### Policy Execution vs. Policy Making
+## Policy Execution vs. Policy Making
 
-#### Policy Execution (Implementation)
+### Policy Execution (Implementation)
 
 **Translating policy into action through:**
 
@@ -135,7 +132,7 @@
 
 ---
 
-### Administrative Responsibility
+## Administrative Responsibility
 
 **Public administrators are responsible for effective and efficient policy implementation**
 
@@ -161,7 +158,7 @@
 
 ---
 
-### Accountability
+## Accountability
 
 **Accountability = obligation to explain and justify actions to higher authority**
 
@@ -196,7 +193,7 @@
 
 ---
 
-### Theory and Practice
+## Theory and Practice
 
 **Public administration is both theoretical and practical**
 

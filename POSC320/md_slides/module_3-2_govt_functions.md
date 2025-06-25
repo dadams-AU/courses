@@ -1,17 +1,14 @@
-# How Government Functions
-
-## Understanding the Mechanisms of Governance
-
-### Module 3-2: Government Functions
-
-#### David P. Adams, Ph.D.
-
+---
+title: "How Government Functions"
+subtitle: "Understanding the Mechanisms of Governance"
+author: "David P. Adams, Ph.D."
+course: "POSC 320: American Government"
 ---
 
 ## From "What" to "How"
 
-**Module 3-1:** We learned *what* government does (services, regulation, redistribution)
-**Module 3-2:** Now we explore *how* government actually gets things done
+- **Module 3-1:** We learned *what* government does (services, regulation, redistribution)
+- **Module 3-2:** Now we explore *how* government actually gets things done
 
 **Key Question:** How do 90,000+ governments coordinate to provide services, enforce laws, and maintain order?
 
@@ -21,9 +18,9 @@
 
 ### Constitutional Framework
 
-**Federal Government:** Powers explicitly granted (national defense, interstate commerce, currency)
-**State Governments:** Powers not denied or given to federal (police powers, education, elections)
-**Local Governments:** Powers delegated by states (zoning, local police, fire services)
+- **Federal Government:** Powers explicitly granted (national defense, interstate commerce, currency)
+- **State Governments:** Powers not denied or given to federal (police powers, education, elections)
+- **Local Governments:** Powers delegated by states (zoning, local police, fire services)
 
 **Reality:** These boundaries blur constantly in practice
 
@@ -80,10 +77,10 @@
 **Traditional View:** Politicians make policy, administrators implement it
 **Reality:** Administrators influence policy through:
 
-- **Expertise:** Technical knowledge politicians don't have
-- **Implementation decisions:** How policies get carried out
-- **Feedback:** Information about what works and what doesn't
-- **Rule-making:** Filling in details of broad legislation
+1. **Expertise:** Technical knowledge politicians don't have
+2. **Implementation decisions:** How policies get carried out
+3. **Feedback:** Information about what works and what doesn't
+4. **Rule-making:** Filling in details of broad legislation
 
 **Example:** Congress passes a crime bill, but agencies write the specific regulations
 
@@ -119,11 +116,11 @@
 
 ### Why Good Policies Sometimes Fail
 
-**Resource Constraints:** Not enough money, staff, or time
-**Coordination Problems:** Multiple agencies, unclear responsibilities
-**Resistance to Change:** Existing culture, procedures, interests
-**Technical Challenges:** Complex problems, limited knowledge
-**Political Opposition:** Continued disagreement about goals
+😕 **Resource Constraints:** Not enough money, staff, or time  
+🤝 **Coordination Problems:** Multiple agencies, unclear responsibilities  
+🙅 **Resistance to Change:** Existing culture, procedures, interests  
+🛠️ **Technical Challenges:** Complex problems, limited knowledge  
+⚖️ **Political Opposition:** Continued disagreement about goals
 
 **Case Study:** Body-worn camera policies - simple idea, complex implementation
 
@@ -133,10 +130,10 @@
 
 ### How Government Budgeting Works
 
-**Budget Preparation:** Agencies request, executives propose
-**Budget Adoption:** Legislatures review, modify, approve
-**Budget Execution:** Agencies spend according to plan
-**Budget Monitoring:** Ongoing oversight and adjustment
+1. **Budget Preparation:** Agencies request, executives propose  
+2. **Budget Adoption:** Legislatures review, modify, approve  
+3. **Budget Execution:** Agencies spend according to plan  
+4. **Budget Monitoring:** Ongoing oversight and adjustment  
 
 **Criminal Justice Reality:** Competition for limited public safety dollars between police, courts, corrections, prevention
 
@@ -146,11 +143,11 @@
 
 ### Why Government Budgeting is Different
 
-**Multiple Goals:** Efficiency + equity + political feasibility
-**Public Scrutiny:** Every decision is potentially controversial
-**Long-term Commitments:** Pensions, infrastructure, debt service
-**Economic Constraints:** Revenue depends on economic conditions
-**Political Constraints:** Electoral pressures, interest group demands
+⚖️ **Multiple Goals:** Efficiency + equity + political feasibility  
+👀 **Public Scrutiny:** Every decision is potentially controversial  
+📆 **Long-term Commitments:** Pensions, infrastructure, debt service  
+📉 **Economic Constraints:** Revenue depends on economic conditions  
+🗳️ **Political Constraints:** Electoral pressures, interest group demands  
 
 **Example:** Deciding between hiring more police officers vs. funding drug treatment programs
 
@@ -160,11 +157,11 @@
 
 ### How Regulations Happen
 
-**Legislative Authorization:** Congress/legislature grants rule-making power
-**Proposed Rules:** Agencies draft specific regulations
-**Public Comment:** Stakeholders provide input
-**Final Rules:** Agencies issue binding regulations
-**Enforcement:** Agencies monitor compliance and impose penalties
+📝 **Legislative Authorization:** Congress/legislature grants rule-making power  
+🛠️ **Proposed Rules:** Agencies draft specific regulations  
+💬 **Public Comment:** Stakeholders provide input  
+✅ **Final Rules:** Agencies issue binding regulations  
+👮 **Enforcement:** Agencies monitor compliance and impose penalties  
 
 **Criminal Justice Example:** Police use-of-force policies - from law to department regulation to officer training
 
@@ -196,12 +193,12 @@
 
 ### How Government Buys Goods and Services
 
-**Planning:** Identify needs, develop specifications
-**Solicitation:** Advertise opportunities, receive proposals
-**Evaluation:** Compare proposals using stated criteria
-**Award:** Select contractor and negotiate contract
-**Management:** Monitor performance and payment
-**Evaluation:** Assess results for future decisions
+📝 **Planning:** Identify needs, develop specifications  
+📢 **Solicitation:** Advertise opportunities, receive proposals  
+🔍 **Evaluation:** Compare proposals using stated criteria  
+🏆 **Award:** Select contractor and negotiate contract  
+📋 **Management:** Monitor performance and payments  
+🔄 **Review:** Assess results to inform future contracting decisions  
 
 **Key Principles:** Competition, transparency, accountability
 
@@ -297,12 +294,12 @@
 
 ### Why Government Sometimes Struggles
 
-**Complexity:** Multiple levels, agencies, stakeholders
-**Resources:** Never enough money, time, or staff
-**Politics:** Electoral pressures, partisan disagreement
-**Accountability:** Balancing oversight with efficiency
-**Change:** Adapting to new problems and technologies
-**Expectations:** Public demands for perfect performance
+🧩 **Complexity:** Multiple levels, agencies, stakeholders  
+💸 **Resources:** Never enough money, time, or staff  
+⚖️ **Politics:** Electoral pressures, partisan disagreement  
+🔍 **Accountability:** Balancing oversight with efficiency  
+🔄 **Change:** Adapting to new problems and technologies  
+🌟 **Expectations:** Public demands for perfect performance
 
 **Reality Check:** Private organizations face many of these same challenges
 
@@ -312,7 +309,7 @@
 
 ### How to Improve Performance
 
-**Clear Goals and Metrics:** Know what success looks like
+Clear Goals and Metrics:** Know what success looks like
 **Adequate Resources:** Match funding to expectations
 **Effective Leadership:** Skilled managers at all levels
 **Good Information Systems:** Data for decision-making

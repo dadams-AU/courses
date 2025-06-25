@@ -1,11 +1,8 @@
-# Eras of Public Administration
-
-## Tracing the Evolution from Tradition to Modernity
-
-### Module 2-2: Historical Development
-
-#### David P. Adams, Ph.D
-
+---
+title: "Eras of Public Administration"
+subtitle: "Tracing the Evolution from Tradition to Modernity"
+course: "Module 2-2: Historical Development"
+author: "David P. Adams, Ph.D"
 ---
 
 ## Why Study the Evolution of Public Administration?
@@ -26,11 +23,11 @@
 
 ### The Timeline
 
-**Old Public Administration** (1880s-1960s): Efficiency and hierarchy
-**New Public Administration** (1960s-1980s): Equity and social justice
-**New Public Management** (1980s-2000s): Market-based efficiency
-**New Public Service** (2000s-present): Citizen-centered democracy
-**New Public Governance** (2000s-present): Networks and collaboration
+1. **Old Public Administration** (1880s-1960s): Efficiency and hierarchy  
+2. **New Public Administration** (1960s-1980s): Equity and social justice  
+3. **New Public Management** (1980s-2000s): Market-based efficiency  
+4. **New Public Service** (2000s-present): Citizen-centered democracy  
+5. **New Public Governance** (2000s-present): Networks and collaboration
 
 *Note: These overlap and coexist rather than completely replacing each other*
 

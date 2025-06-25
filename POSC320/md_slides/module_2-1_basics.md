@@ -1,26 +1,19 @@
-# Public Administration and the Public Sector
-
-## Module 2-1: Basic Concepts
-
-### CRJU/POSC 320: Introduction to Public Administration
-
-#### Dr. David P. Adams
-
+---
+title: "Public Administration and the Public Sector"
+subtitle: "Module 2-1: Basic Concepts"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## What Makes a Good Public Administrator?
 
-### Core Competencies (NASPAA Standards)
+### Core Competencies [NASPAA Standards](https://www.naspaa.org/accreditation/standards-and-guidance/standard-standard-guidance/standard-5-matching-operations)
 
-**Leadership & Management:** Navigate complex political environments
-**Policy Participation:** Help shape and implement public decisions  
-**Critical Thinking:** Analyze problems and develop solutions
-**Public Service Perspective:** Serve the broader public interest
-**Communication:** Work with diverse stakeholders and communities
-
----
-
-## Speaking the Language of Public Administration
+1. **Leadership & Management:** Navigate complex political environments  
+2. **Policy Participation:** Help shape and implement public decisions  
+3. **Critical Thinking:** Analyze problems and develop solutions  
+4. **Public Service Perspective:** Serve the broader public interest  
+5. **Communication:** Work with diverse stakeholders and communities
 
 ### Key Terms You Need to Know
 
@@ -38,7 +31,7 @@
 
 ---
 
-## Speaking the Language (continued)
+### Public Administration in Context
 
 **Governance:** The broader process of governing beyond formal government
 
@@ -63,9 +56,9 @@
 
 ## Debate 1: Politics vs. Administration
 
-**The Question:** Should administrators be neutral implementers or active participants in policy?
+**The Question:** *Should administrators be neutral implementers or active participants in policy?*
 
-**Traditional View:** "There is a science of administration which stands apart from politics"
+**Traditional View:** "There is a science of administration which stands apart from politics."
 
 **Reality Check:**
 
@@ -79,7 +72,7 @@
 
 ## Debate 2: Facts vs. Values
 
-**The Question:** Should administration be based on objective facts or subjective values?
+**The Question:** *Should administration be based on objective facts or subjective values?*
 
 **The Challenge:**
 
@@ -92,7 +85,7 @@
 
 ## Debate 3: Public vs. Private
 
-**The Question:** Are public and private management fundamentally different?
+**The Question:** *Are public and private management fundamentally different?*
 
 **Consider:**
 
@@ -108,10 +101,42 @@
 
 ### Drawing from Many Fields
 
-**Political Science:** How power and authority work
-**Economics:** Resource allocation and efficiency
-**Sociology:** Group behavior and organizational culture
-**Psychology:** Individual motivation and decision-making
+- **Political Science:** How power and authority work
+- **Economics:** Resource allocation and efficiency
+- **Sociology:** Group behavior and organizational culture
+- **Psychology:** Individual motivation and decision-making
+- **Law:** Legal frameworks and constitutional limits
+- **Management:** Organizational theory and practice
+- **Public Policy:** Policy analysis and evaluation
+- **History:** Context and evolution of public institutions
+- **Ethics:** Moral principles guiding public service
+- **Communication:** Engaging with the public and stakeholders
+- **Information Technology:** Data management and digital governance
+- **Environmental Science:** Sustainability and resource management
+- **Urban Planning:** City development and infrastructure
+- **Public Health:** Health policy and community well-being
+- **Education:** Educational policy and administration
+- **International Relations:** Global governance and diplomacy
+- **Criminal Justice:** Law enforcement, courts, corrections
+- **Social Work:** Community services and support systems
+- **Anthropology:** Cultural perspectives on governance
+- **Geography:** Spatial analysis of public issues
+- **Statistics:** Data analysis and interpretation
+- **Philosophy:** Ethical frameworks and public morality
+- **Communication Studies:** Public relations and media engagement
+- **Behavioral Science:** Understanding human behavior in public contexts
+
+---
+
+### Want to sail a ship? Make a bomb? Build a bridge? You need expertise from many fields
+
+- **Example:** Building a bridge requires civil engineering, environmental science, urban planning, and public policy expertise
+- **Example:** Creating a public health campaign requires knowledge of psychology, communication, sociology, and public policy
+- **Example:** Managing a police department requires understanding law, sociology, psychology, and public administration principles
+- **Example:** Running a city requires expertise in urban planning, public finance, environmental science, and community engagement
+- **Example:** Implementing a new education policy requires insights from education theory, sociology, economics, and public administration
+- **Example:** Addressing climate change requires collaboration across environmental science, public policy, economics, and community engagement
+- **Example:** Responding to a public health crisis like COVID-19 requires expertise in epidemiology, public policy, communication, and crisis management
 
 ---
 
@@ -131,14 +156,14 @@
 
 ### What We're Really Asking
 
-**Is private sector management the same as public sector management?**
-*Hint: Remember Module 1's discussion of differences*
+- **Is managing in the public sector the same as managing in the private sector?**
+    - *Think back to Module 1: Consider differences in goals, accountability, and constraints.*
 
-**What is the role of government in society?**
-*This shapes everything we do in public administration*
+- **What should government’s role be in society?**
+    - *This fundamental question guides every decision in public administration.*
 
-**How do we trust government to act in our best interests?**
-*The accountability challenge*
+- **How can we ensure government acts in the public’s best interest?**
+    - *This is the heart of the accountability challenge.*
 
 ---
 
@@ -146,17 +171,14 @@
 
 ### Three Core Expectations
 
-**Politics:** Make choices among competing values
+1. **Politics:** Make choices among competing values  
+    - *Example: Balancing public safety with individual rights*
 
-- *Example: Balancing public safety with individual rights*
+2. **Performance:** Get the work done effectively and efficiently  
+    - *Example: Reducing crime rates, processing cases quickly*
 
-**Performance:** Get the work done effectively and efficiently
-
-- *Example: Reducing crime rates, processing cases quickly*
-
-**Accountability:** Be answerable for actions and results
-
-- *Example: Police oversight, judicial review, budget transparency*
+3. **Accountability:** Be answerable for actions and results  
+    - *Example: Police oversight, judicial review, budget transparency*
 
 ---
 
@@ -166,11 +188,11 @@
 
 ### Five Key Principles
 
-**Transparency:** Open processes and accessible information
-**Responsiveness:** Reacting to public needs and concerns
-**Responsibility:** Taking ownership of actions and outcomes
-**Integrity:** Acting ethically and honestly
-**Trust:** Building and maintaining public confidence
+1. **Transparency:** Open processes and accessible information  
+2. **Responsiveness:** Reacting to public needs and concerns  
+3. **Responsibility:** Taking ownership of actions and outcomes  
+4. **Integrity:** Acting ethically and honestly  
+5. **Trust:** Building and maintaining public confidence  
 
 ---
 
@@ -231,11 +253,11 @@
 
 ### Five Major Approaches We'll Explore
 
-**Old Public Administration** (1880s-1960s): Efficiency and hierarchy
-**New Public Administration** (1960s-1980s): Equity and social responsiveness  
-**New Public Management** (1980s-2000s): Market-based reforms
-**New Public Service** (2000s): Citizen engagement and democracy
-**New Public Governance** (2000s-present): Networks and collaboration
+1. **Old Public Administration** (1880s-1960s): Efficiency and hierarchy  
+2. **New Public Administration** (1960s-1980s): Equity and social responsiveness  
+3. **New Public Management** (1980s-2000s): Market-based reforms  
+4. **New Public Service** (2000s): Citizen engagement and democracy  
+5. **New Public Governance** (2000s-present): Networks and collaboration
 
 *Each responds to different challenges and criticisms*
 

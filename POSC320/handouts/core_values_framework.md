@@ -2,7 +2,6 @@
 title: "Public Administration Core Values Framework"
 subtitle: "CRJU/POSC 320: Introduction to Public Administration"
 author: "Dr. David P. Adams"
-date: "Last Updated: June 2025"
 ---
 
 

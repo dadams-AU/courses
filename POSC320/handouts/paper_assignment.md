@@ -2,7 +2,6 @@
 title: "Scaffolded Policy Brief Assignment"
 subtitle: "CRJU/POSC 320: Public Administration Theory and Practice"
 author: "David P. Adams, Ph.D."
-date: "Last Updated: June 2025"
 ---
 
 ### Overview

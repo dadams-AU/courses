@@ -2,7 +2,6 @@
 title: "Decision-Making Models Comparison Guide"
 subtitle: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D."
-date: "Last Updated: June 2025"
 ---
 
 ## Four Models of Public Decision-Making

@@ -2,7 +2,6 @@
 title: "Research Log Guidelines"
 subtitle: "CRJU/POSC 320 – Introduction to Public Administration"
 author: "Dr. David P. Adams"
-date: "Last Updated: June 2025"
 ---
 
 ## 📚 What Is a Research Log?

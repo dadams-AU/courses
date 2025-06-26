@@ -2,7 +2,6 @@
 title: "AI Use & Academic Integrity Policy"
 subtitle: "CRJU/POSC 320 – Introduction to Public Administration"
 author: "Dr. David P. Adams"
-date: "Updated June 2025"
 ---
 
 ## 🤖 Why We’re Talking About AI

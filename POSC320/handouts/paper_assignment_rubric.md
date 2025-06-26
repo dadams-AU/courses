@@ -2,7 +2,6 @@
 title: "Policy Brief Grading Rubric"
 subtitle: "CRJU/POSC 320 – Introduction to Public Administration"
 author: "Dr. David P. Adams"
-date: "Summer 2025"
 ---
 
 ## 📊 Overview

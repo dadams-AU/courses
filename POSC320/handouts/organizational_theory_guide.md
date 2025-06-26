@@ -2,7 +2,6 @@
 title: "Organizational Theory Quick Reference Guide"
 subtitle: "CRJU/POSC 320: Introduction to Public Administration"
 auhor: "David P. Adams, Ph.D."
-date: "Last Updated: June 2025"
 ---
 
 ## Three Schools of Organizational Theory

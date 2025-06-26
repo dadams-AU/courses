@@ -2,7 +2,6 @@
 title: "Resource Guide: Finding Scholarly Sources"
 subtitle: "POSC 320 – Introduction to Public Policy"
 author: "David P. Adams, Ph.D."
-date: "Updated June 2025"
 ---
 ## 📚 Resource Guide: Finding Scholarly Sources for POSC 320
 

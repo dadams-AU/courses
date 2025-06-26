@@ -2,7 +2,6 @@
 title: "Accountability Mechanisms Guide"
 subtitle: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D."
-date: "Last Updated: June 2025"
 ---
 
 ## What is Accountability?

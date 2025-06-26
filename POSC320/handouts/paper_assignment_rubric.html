@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policy Brief Grading Rubric</title>
+  <meta name="author" content="Dr. David P. Adams" />
+  <meta name="date" content="Summer 2025" />
+  <link rel="stylesheet" href="handout_style.css" />
+</head>
+<body>
+  <nav id="topbar">
+    <a href="https://courses.dadams.io/#posc320_async" class="home-link">← Back to POSC 320</a>
+    <button id="toggle-dark">🌙</button>
+    <button onclick="window.print()">🖨️</button>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Policy Brief Grading Rubric</h1>
+      <h2 class="subtitle">CRJU/POSC 320 – Introduction to Public
+Administration</h2>
+      <p class="byline">By Dr. David P. Adams</p>
+      <p class="dateline">Summer 2025</p>
+    </header>
+
+    <h2 id="overview">📊 Overview</h2>
+    <p>Your <strong>Policy Brief Project</strong> is worth <strong>45%
+    of your total course grade</strong>. This rubric explains how your
+    work will be evaluated each week and at the end of the project.
+    Please refer to this guide as you draft, revise, and finalize your
+    brief.</p>
+    <hr />
+    <h2 id="grading-breakdown-total-55-points">✅ Grading Breakdown
+    (Total: 55 points)</h2>
+    <table>
+    <colgroup>
+    <col style="width: 17%" />
+    <col style="width: 75%" />
+    <col style="width: 7%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th><strong>Category</strong></th>
+    <th><strong>Criteria</strong></th>
+    <th><strong>Points</strong></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td><strong>Content &amp; Analysis</strong></td>
+    <td>Clearly defines the problem; supports claims with evidence;
+    provides thoughtful stakeholder, organizational, and management
+    analysis</td>
+    <td>20</td>
+    </tr>
+    <tr class="even">
+    <td><strong>Kettl Integration</strong></td>
+    <td>Accurately applies weekly textbook concepts; includes page
+    citations; deepens use of theory across project stages</td>
+    <td>15</td>
+    </tr>
+    <tr class="odd">
+    <td><strong>Structure &amp; Organization</strong></td>
+    <td>Logical section flow; clear headers and transitions; consistent
+    formatting</td>
+    <td>5</td>
+    </tr>
+    <tr class="even">
+    <td><strong>Writing Quality</strong></td>
+    <td>Professional tone; clear and concise writing; minimal grammar or
+    usage issues; follows memo formatting guidelines</td>
+    <td>5</td>
+    </tr>
+    <tr class="odd">
+    <td><strong>Revision &amp; Process</strong></td>
+    <td>Shows weekly progress with tracked changes and comments;
+    revision history demonstrates active engagement</td>
+    <td>5</td>
+    </tr>
+    <tr class="even">
+    <td><strong>Final Polish</strong></td>
+    <td>Includes executive summary; cohesive and well-cited in APA;
+    meets length and style expectations</td>
+    <td>5</td>
+    </tr>
+    <tr class="odd">
+    <td><strong>TOTAL</strong></td>
+    <td></td>
+    <td><strong>/55</strong></td>
+    </tr>
+    </tbody>
+    </table>
+    <hr />
+    <h2 id="evaluation-notes">🧾 Evaluation Notes</h2>
+    <h3 id="strengths">🟢 Strengths</h3>
+    <p>Where did you demonstrate insight, depth, or strong integration
+    of theory?</p>
+    <h3 id="suggestions">🟡 Suggestions</h3>
+    <p>What would improve your analysis, clarity, or use of
+    evidence?</p>
+    <h3 id="concerns">🔴 Concerns</h3>
+    <p>Any issues with citations, source quality, writing integrity, or
+    development process?</p>
+    <hr />
+    <h2 id="academic-integrity-reminders">🚫 Academic Integrity
+    Reminders</h2>
+    <p>The following will result in <strong>automatic zero</strong> for
+    that week’s assignment:</p>
+    <ul>
+    <li>Large blocks of text appearing suddenly without revision
+    history<br />
+    </li>
+    <li>Generic, off-topic, or AI-generated analysis without
+    citation<br />
+    </li>
+    <li>Inaccurate or missing references to Kettl<br />
+    </li>
+    <li>Research logs that don’t match document development<br />
+    </li>
+    <li>Copy-paste content without attribution</li>
+    </ul>
+    <hr />
+    <h2 id="tips-for-success">💡 Tips for Success</h2>
+    <ul>
+    <li>Follow the weekly prompts closely and cite Kettl every time</li>
+    <li>Write incrementally: don’t paste in large sections all at
+    once</li>
+    <li>Use tracked changes in Google Docs to show your process</li>
+    <li>Be specific. Avoid generic or vague analysis—use real cases,
+    data, and clear logic</li>
+    <li>Use your Research Log to explain what you’re learning and how
+    your thinking is evolving</li>
+    </ul>
+  </main>
+
+  <script>
+    const toggleButton = document.getElementById("toggle-dark");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+</body>
+</html>

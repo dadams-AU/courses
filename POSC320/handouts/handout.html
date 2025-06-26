@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$title$</title>
+  <meta name="author" content="$author$" />
+  <meta name="date" content="$date$" />
+  <link rel="stylesheet" href="handout_style.css" />
+</head>
+<body>
+  <nav id="topbar">
+    <a href="https://courses.dadams.io/#posc320_async" class="home-link">← Back to POSC 320</a>
+    <button id="toggle-dark">🌙</button>
+    <button onclick="window.print()">🖨️</button>
+  </nav>
+
+  <main>
+    <header>
+      <h1>$title$</h1>
+      $if(subtitle)$<h2 class="subtitle">$subtitle$</h2>$endif$
+      $if(author)$<p class="byline">By $author$</p>$endif$
+      $if(date)$<p class="dateline">$date$</p>$endif$
+    </header>
+
+    $body$
+  </main>
+
+  <script>
+    const toggleButton = document.getElementById("toggle-dark");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CRJU/POSC 320 Introduction to Public Administration - Handouts and supplementary materials for the summer asynchronous course.">
+  <title>CRJU/POSC 320 - Handouts & Resources</title>
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,600">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
+  
+  <style>
+:root {
+  --primary-blue: #2563eb;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+}
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+}
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+.navbar {
+  background-color: var(--bg-primary) !important;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar-nav .nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-blue) !important;
+}
+.theme-toggle {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  width: 50px;
+  height: 26px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.theme-toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+}
+[data-theme="dark"] .theme-toggle-slider {
+  transform: translateX(24px);
+}
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-blue), #1d4ed8);
+  color: white;
+  padding: 4rem 0;
+}
+.course-section {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+.course-section h2 {
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.lecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.lecture-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+.lecture-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.lecture-item h5 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.lecture-item p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+.btn-primary {
+  background: var(--primary-blue);
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+.btn-outline-primary {
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  background: transparent;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+}
+.btn-outline-primary:hover {
+  background: var(--primary-blue);
+  color: white;
+}
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.quick-link-card {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+.quick-link-card:hover {
+  background: #1d4ed8;
+  transform: translateY(-4px);
+  color: white;
+  text-decoration: none;
+}
+.quick-link-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.quick-link-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+.course-card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.course-card .card-header {
+  background: var(--primary-blue);
+  color: white;
+  border-bottom: none;
+  padding: 1.25rem;
+}
+.course-card .card-body {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+}
+.resource-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.discord-btn {
+  background: #5865F2;
+  border: none;
+  color: white;
+}
+.discord-btn:hover {
+  background: #4752C4;
+  color: white;
+}
+.primary-blue { color: var(--primary-blue); }
+.primary-green { color: #059669; }
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .course-section {
+    padding: 1rem;
+  }
+  
+  .lecture-grid,
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-link-card {
+    padding: 1rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="https://dadams.io/index.html">
+        <img src="..//dadams.png" alt="David P. Adams" height="40">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://dadams.io/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dadams.io/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dadams.io/research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="https://courses.dadams.io/">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://dadams.io/contact.html">Contact</a>
+          </li>
+        </ul>
+        
+        
+        <div class="theme-toggle" onclick="toggleTheme()">
+          <div class="theme-toggle-slider">
+            <i class="fas fa-sun" id="theme-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8 animate-fade-in">
+          <i class="fas fa-balance-scale fa-3x mb-4"></i>
+          <h1 class="display-5 fw-bold mb-4">CRJU/POSC 320: Introduction to Public Administration</h1>
+          <p class="lead mb-4">Handouts, resources, and supplementary materials for your journey through the science and art of making government work.</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="../index.html#crju320-async" class="btn btn-lg btn-light">
+              <i class="fas fa-arrow-left me-2"></i> Back to Course Materials
+            </a>
+            <a href="https://discord.gg/pKjbtWydxm" class="btn btn-lg discord-btn">
+              <i class="fa-brands fa-discord me-2"></i> Join Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Syllabus Card -->
+        <div class="col-md-6 animate-fade-in" style="animation-delay: 0.1s;">
+          <div class="card course-card h-100">
+        <div class="card-header d-flex align-items-center">
+          <i class="fas fa-book-open me-2"></i>
+          <h2 class="m-0 fs-3">Course Syllabus</h2>
+        </div>
+        <div class="card-body d-flex flex-column">
+          <p class="flex-grow-1" style="color: var(--text-primary);">Complete course syllabus with schedule, policies, assignment details, and AI usage guidelines for summer 2025.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="https://raw.githubusercontent.com/dadams-AU/syllabi/main/CRJU_POSC%20320%20Intro%20PA/2025%20Summer/CRJU-POSC_320.pdf" class="btn btn-primary">
+          <i class="fas fa-download me-2"></i> Download Syllabus
+            </a>
+          </div>
+        </div>
+          </div>
+        </div>
+        
+        <!-- Schedule Card -->
+        <div class="col-md-6 animate-fade-in" style="animation-delay: 0.2s;">
+          <div class="card course-card h-100">
+            <div class="card-header d-flex align-items-center">
+              <i class="fas fa-calendar-alt me-2"></i>
+              <h2 class="m-0 fs-3">Weekly Schedule & Assignments</h2>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <table class="table table-sm align-middle mb-0">
+          <thead>
+            <tr>
+              <th scope="col">Week</th>
+              <th scope="col">Dates</th>
+              <th scope="col">Modules</th>
+              <th scope="col">Policy Brief Component</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Jun 30–Jul 6</td>
+              <td>1-2</td>
+              <td>
+                Problem Statement & Research Foundation<br>
+                <small class="text-muted">Due Sat 7/5</small>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jul 7–13</td>
+              <td>3-4</td>
+              <td>
+                Stakeholder Analysis & Context<br>
+                <small class="text-muted">Due Sat 7/12</small>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Jul 14–20</td>
+              <td>5-6</td>
+              <td>
+                Organizational Theory Application<br>
+                <small class="text-muted">Due Sat 7/19</small>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Jul 21–27</td>
+              <td>7-8</td>
+              <td>
+                Management Challenges & Solutions<br>
+                <small class="text-muted">Due Sat 7/26</small>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Jul 28–Aug 1</td>
+              <td>9-10</td>
+              <td>
+                Final Recommendations & Polish<br>
+                <small class="text-muted">Due Fri 8/1</small>
+              </td>
+            </tr>
+          </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+            </div>
+            
+            <!-- Main Content Cards -->
+      <div class="row mt-5">
+        <!-- Handouts Section -->
+        <div class="col-lg-4 mb-4">
+          <div class="card resource-card h-100 animate-slide-in">
+            <div class="card-header bg-primary text-white">
+              <h2 class="fs-4 m-0">
+                <i class="fas fa-file-alt me-2"></i> Course Handouts
+              </h2>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center border-0">
+                    <i class="fas fa-file-alt text-primary me-3"></i>
+                  <a href="handouts/core_values_framework.html" class="text-decoration-none stretched-link">PA Core Values Framework</a>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-file-alt text-primary me-3"></i>
+                  <a href="handouts/organizational_theory_guide.html" class="text-decoration-none stretched-link">Organizational Theory Quick Reference</a>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-file-alt text-primary me-3"></i>
+                  <a href="handouts/decision_making_models.html" class="text-decoration-none stretched-link">Decision-Making Models Comparison</a>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-file-alt text-primary me-3"></i>
+                  <a href="handouts/accountability_mechanisms.html" class="text-decoration-none stretched-link">Accountability Mechanisms Guide</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Assignments Section -->
+        <div class="col-lg-4 mb-4">
+          <div class="card resource-card h-100 animate-slide-in" style="animation-delay: 0.1s;">
+            <div class="card-header bg-success text-white">
+              <h2 class="fs-4 m-0">
+                <i class="fas fa-tasks me-2"></i> Assignment Details
+              </h2>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-file-alt text-success me-3"></i>
+                  <a href="handouts/paper_assignment.html" class="text-decoration-none stretched-link">Policy Brief Project Instructions</a>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-clipboard-check text-success me-3"></i>
+                  <a href="handouts/paper_assignment_rubric.html" class="text-decoration-none stretched-link">Grading Rubric</a>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-lightbulb text-warning me-3"></i>
+                  <a href="handouts/reserach_log_guidelines.html" class="text-decoration-none stretched-link">Research Log Guidelines</a>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0">
+                  <i class="fas fa-robot text-info me-3"></i>
+                  <a href="handouts/ai_policy_guide.pdf" class="text-decoration-none stretched-link">AI Tool Usage Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Writing & Research Resources Section -->
+        <div class="col-lg-4 mb-4">
+          <div class="card resource-card h-100 animate-slide-in" style="animation-delay: 0.2s;">
+            <div class="card-header bg-info text-white">
+              <h2 class="fs-4 m-0">
+          <i class="fas fa-book me-2"></i> Writing & Research Resources
+              </h2>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex align-items-center border-0">
+            <i class="fas fa-university text-info me-3"></i>
+            <a href="https://english.fullerton.edu/writing_center/" class="text-decoration-none stretched-link" target="_blank" rel="noopener">CSUF Writing Center</a>
+            </li>
+            <li class="list-group-item d-flex align-items-center border-0">
+            <i class="fas fa-book-reader text-info me-3"></i>
+            <a href="handouts/resources_guide.html" class="text-decoration-none stretched-link">Research & Writing Resources Guide</a>
+            </li>
+          <li class="list-group-item d-flex align-items-center border-0">
+            <i class="fas fa-book-open text-info me-3"></i>
+            <a href="https://www.library.fullerton.edu/" class="text-decoration-none stretched-link" target="_blank" rel="noopener">CSUF Pollak Library</a>
+          </li>
+          <li class="list-group-item d-flex align-items-center border-0">
+            <i class="fas fa-quote-right text-info me-3"></i>
+            <a href="https://libraryguides.fullerton.edu/citations/APA" class="text-decoration-none stretched-link" target="_blank" rel="noopener">APA Citation Guide</a>
+          </li>
+          <li class="list-group-item d-flex align-items-center border-0">
+            <i class="fas fa-search text-info me-3"></i>
+            <a href="https://libraryguides.fullerton.edu/govdocs" class="text-decoration-none stretched-link" target="_blank" rel="noopener">Government Documents Research</a>
+          </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Criminal Justice Focus Section -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="card-header bg-dark text-white">
+              <h2 class="fs-4 m-0">
+                <i class="fas fa-balance-scale me-2"></i> Criminal Justice & Public Administration Resources
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3 class="fs-5 primary-blue">Professional Organizations</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.aspanet.org/" class="text-decoration-none" target="_blank" rel="noopener">American Society for Public Administration (ASPA)</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://icma.org/" class="text-decoration-none" target="_blank" rel="noopener">International City/County Management Association (ICMA)</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.acjs.org/" class="text-decoration-none" target="_blank" rel="noopener">Academy of Criminal Justice Sciences (ACJS)</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.naspaa.org/" class="text-decoration-none" target="_blank" rel="noopener">Network of Schools of Public Policy and Administration (NASPAA)</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="fs-5 primary-blue">Government Resources</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.gao.gov/" class="text-decoration-none" target="_blank" rel="noopener">Government Accountability Office (GAO)</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.justice.gov/" class="text-decoration-none" target="_blank" rel="noopener">U.S. Department of Justice</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://bjs.ojp.gov/" class="text-decoration-none" target="_blank" rel="noopener">Bureau of Justice Statistics</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.policefoundation.org/" class="text-decoration-none" target="_blank" rel="noopener">Police Foundation</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Resources Section -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card animate-fade-in" style="animation-delay: 0.4s;">
+            <div class="card-header bg-secondary text-white">
+              <h2 class="fs-4 m-0">
+                <i class="fas fa-link me-2"></i> Course Materials & Communication
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3 class="fs-5 primary-blue">Course Materials</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://discord.gg/pKjbtWydxm" class="text-decoration-none">Course Discord Server</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="https://www.zotero.org/dpadams/collections/2B4LA498" class="text-decoration-none">Course Zotero Library</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-external-link-alt me-2 primary-green"></i>
+                      <a href="/index.html" class="text-decoration-none">Return to Module Slides</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="fs-5 primary-blue">Getting Help</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-clock me-2 primary-green"></i>
+                      <strong>Office Hours:</strong> Tuesdays 9:30-10:30 AM & 7:00-8:00 PM (Discord)
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-calendar me-2 primary-green"></i>
+                      <strong>Appointments:</strong> <a href="https://dadams.io/appointments" class="text-decoration-none">dadams.io/appointments</a>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-envelope me-2 primary-green"></i>
+                      <strong>Email:</strong> dpadams@fullerton.edu
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-phone me-2 primary-green"></i>
+                      <strong>Phone/Text:</strong> (657) 278-4770
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="../termsofuse.html" class="btn btn-link">Terms of Use</a>
+        <p style="color: #5E81AC;">Copyright &copy; 2025 David Prescott Adams</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      const icon = document.getElementById('theme-icon');
+      icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.getElementById('theme-icon').className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+  </script>
+</body>
+</html>

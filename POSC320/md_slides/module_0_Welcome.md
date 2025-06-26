@@ -5,15 +5,6 @@ course: "CRJU/POSC 320: Public Administration"
 author: "David P. Adams, Ph.D."
 ---
 
-# Welcome to Public Administration
-
-## The Science and Art of Making Government Work
-
-### Module 0: Course Introduction and Overview
-
-
----
-
 ## Welcome to CRJU/POSC 320
 
 **Your instructor:** Dr. David P. Adams, Ph.D.  

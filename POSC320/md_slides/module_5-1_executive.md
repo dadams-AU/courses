@@ -1,11 +1,8 @@
-# The Executive Branch
-
-## Where Policy Meets Practice
-
-### Module 5-1: Executive Leadership and Organization
-
-#### David P. Adams, Ph.D.
-
+---
+title: "The Executive Branch"
+subtitle: "Module 5-1: Where Policy Meets Practice"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## Opening Question

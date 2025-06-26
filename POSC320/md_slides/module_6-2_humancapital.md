@@ -1,11 +1,8 @@
-# Human Capital in Government: Challenges and Strategies
-
-## Managing People in a Changing World
-
-### Module 6-2: Modern Workforce Management
-
-#### David P. Adams, Ph.D.
-
+---
+title: "Human Capital in Government"
+subtitle: "Module 6-2: Modern Workforce Management"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## Opening Reality Check

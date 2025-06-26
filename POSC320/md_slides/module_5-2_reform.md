@@ -1,11 +1,8 @@
-# Administrative Reform in America
-
-## Why Government Never Stops Trying to Fix Itself
-
-### Module 5-2: Reform Movements and Modernization
-
-#### David P. Adams, Ph.D.
-
+---
+title: "Reform in Public Administration"
+subtitle: "Module 5-2: Why Government Never Stops Trying to Fix Itself"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## Opening Reality Check

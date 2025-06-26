@@ -1,10 +1,8 @@
 ---
 title: "What Government Does"
-subtitle: "Exploring the Role and Functions of Government"
-course: "POSC320"
+subtitle: "Module 3-1: Exploring the Role and Functions of Government"
+course: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D."
----
-
 ---
 
 ## Opening Question

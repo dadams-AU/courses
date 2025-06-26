@@ -1,11 +1,8 @@
-# Civil Service: Evolution and Challenges
-
-## The People Who Make Government Work
-
-### Module 6-1: Civil Service Systems and Human Capital
-
-#### David P. Adams, Ph.D.
-
+---
+title: "Civil Service: Evolution and Challenges"
+subtitle: "Module 6-1: Civil Service Systems and Human Capital"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## Opening Questions

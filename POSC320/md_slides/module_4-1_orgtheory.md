@@ -1,11 +1,8 @@
-# Organizational Theory
-
-## Understanding How Public Organizations Work
-
-### Module 4-1: Organizational Theory
-
-#### David P. Adams, Ph.D.
-
+---
+title: "Organizational Theory"
+subtitle: "Module 4-1: Understanding How Public Organizations Work"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## Why Does Organizational Theory Matter?

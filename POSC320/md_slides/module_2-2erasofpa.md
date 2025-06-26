@@ -1,7 +1,7 @@
 ---
 title: "Eras of Public Administration"
-subtitle: "Tracing the Evolution from Tradition to Modernity"
-course: "Module 2-2: Historical Development"
+subtitle: "Module 2-2: Tracing the Evolution from Tradition to Modernity"
+course: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D"
 ---
 

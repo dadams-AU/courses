@@ -1,6 +1,6 @@
 ---
 title: "What is Public Administration?"
-subtitle: "Module 1, Basic Concepts"
+subtitle: "Module 1, Overview and Key Concepts"
 course: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D."
 ---

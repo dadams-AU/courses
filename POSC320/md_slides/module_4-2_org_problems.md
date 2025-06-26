@@ -1,11 +1,8 @@
-# Organizational Problems
-
-## When Good Organizations Go Bad
-
-### Module 4-2: Common Organizational Challenges
-
-#### David P. Adams, Ph.D.
-
+---
+title: "Organizational Problems"
+subtitle: "Module 4-2: When Good Organizations Go Bad"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## The Reality Check

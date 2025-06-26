@@ -1,8 +1,8 @@
 ---
 title: "How Government Functions"
-subtitle: "Understanding the Mechanisms of Governance"
+subtitle: "Module 3-2: Understanding the Mechanisms of Governance"
+course: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D."
-course: "POSC 320: American Government"
 ---
 
 ## From "What" to "How"

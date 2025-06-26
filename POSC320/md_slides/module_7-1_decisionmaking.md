@@ -1,6 +1,7 @@
 ---
-title: "Module 7-1 Decision-Making in Public Administration"
-subtitle: "How Public Servants Make Choices That Matter"
+title: "Decision-Making in Public Administration"
+subtitle: "Module 7-1: How Public Servants Make Choices That Matter"
+course: "CRJU/POSC 320: Introduction to Public Administration"
 author: "David P. Adams, Ph.D."
 ---
 

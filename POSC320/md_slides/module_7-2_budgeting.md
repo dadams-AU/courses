@@ -1,11 +1,8 @@
-# Public Budgeting
-
-## Where Values Meet Reality
-
-### Module 7-2: Budgets, Politics, and Public Priorities
-
-#### David P. Adams, Ph.D.
-
+---
+title: "Public Budgeting"
+subtitle: "Module 7-2: Budgets, Politics, and Public Priorities"
+course: "CRJU/POSC 320: Introduction to Public Administration"
+author: "David P. Adams, Ph.D."
 ---
 
 ## Opening Budget Crisis

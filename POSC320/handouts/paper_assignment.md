@@ -26,40 +26,55 @@ Each weekly Research Log is worth 2% of your total course grade (5 weeks × 2% =
 
 ## Topic Options (Choose One)
 
-### Option 1: COVID-19 Response Coordination
+### Option 1: "Who Gets Help?" — Disaster Relief and Administrative Discretion
 
-Analyze the administrative challenges in vaccine distribution coordination between federal, state, and local agencies during 2021-2022. Focus on intergovernmental coordination, resource allocation, and communication breakdowns.
+**Prompt:**  
+Analyze how public agencies decide *who gets help first* after disasters like wildfires, floods, or extreme heat events. Focus on one case (e.g. Maui fires, Hurricane Ian, California wildfires) and examine how values like efficiency, equity, and accountability were balanced (or not).
 
-### Option 2: Remote Work Implementation  
+**Key Themes:**  
+- Administrative discretion
+- Equity in service delivery
+- Interagency coordination
+- Public trust and transparency
 
-Examine how federal agencies implemented telework policies during 2020-2023 and ongoing administrative challenges. Focus on management, performance measurement, and organizational culture changes.
-
-### Option 3: Infrastructure Investment Administration
-
-Analyze the administrative challenges in implementing the Infrastructure Investment and Jobs Act at state and local levels. Focus on funding distribution, project management, and intergovernmental coordination.
-
----
-
-## Submission Requirements
-
-### Google Docs Setup
-
-1. **Create a Google Doc** titled: "PA Brief - [Your Last Name] - [Topic Choice]"
-2. **[Share with instructor](mailto:dpadams@fullerton.edu?subject=PA%20Brief%20Submission&body=Please%20find%20my%20policy%20brief%20attached%20or%20shared%20via%20Google%20Docs.)** (`dpadams@fullerton.edu`) with **edit access** by **Saturday, Week 1, 11:59 PM**
-3. **All work must show incremental development** through tracked changes
-4. **Keep tracked changes ON** throughout the entire project
-
-### Research Requirements
-
-- **Current sources only:** Nothing older than 2020
-- **Government sources encouraged:** Congressional reports, GAO studies, agency reports
-- **Academic sources:** Peer-reviewed articles, policy analyses
-- **News sources:** Major outlets only (NYT, WSJ, WaPo, Politico, etc.)
-- **Minimum 10 sources total** across all weeks
+**Kettl Links:**  
+Ch. 1 (Core Values), Ch. 2 (Government Functions), Ch. 7–8 (Implementation & Budgeting), Ch. 10 (Oversight)
 
 ---
 
-## Weekly Assignments
+### Option 2: "Smart Tech, Safe City?" — Surveillance and Public Safety in Local Government
+
+**Prompt:**  
+Explore how a local government or law enforcement agency is using surveillance tech (e.g. drones, license plate readers, facial recognition). Analyze the administrative challenges of implementing this tech: who oversees it, how it’s budgeted, and how it affects public trust.
+
+**Key Themes:**  
+- Accountability and innovation
+- Local governance and discretion
+- Regulation and civil liberties
+- Performance and budgeting
+
+**Kettl Links:**  
+Ch. 3 (Gov’t Functions), Ch. 4–5 (Organizational Theory & Executive Structure), Ch. 9–10 (Regulation & Accountability)
+
+---
+
+### Option 3: "Is This Working?" — Evaluating a Public Program in Your Community
+
+**Prompt:**  
+Choose a local public program—something your city or county is doing (e.g. homelessness response, water conservation, youth services). Evaluate how effective it is and what administrative challenges it faces. Use Kettl’s frameworks to diagnose problems and recommend improvements.
+
+**Key Themes:**  
+- Program performance and evaluation
+- Administrative capacity
+- Budgeting and implementation
+- Community impact
+
+**Kettl Links:**  
+Ch. 2 (What Government Does), Ch. 6 (Human Capital), Ch. 8 (Performance Management), Ch. 10 (Accountability)
+
+---
+
+## Project Structure
 
 ## Week 1: Problem Statement & Research Foundation
 

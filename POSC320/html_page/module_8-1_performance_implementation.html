@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Performance Management and Implementation</title>
   <link rel="stylesheet" href="lecture-style.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
 </head>
-<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
-  🌓
-</button>
-<script>
-  const toggle = document.getElementById("toggle-dark");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle-slider">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+  </div>
   <header class="page-header">
     <h1>Performance Management and Implementation</h1>
           <h2>Module 8-1: Making Things Actually Work</h2>
@@ -119,7 +116,7 @@ Administration</p>
   <li>Continuous adaptation and learning required</li>
   </ul>
   <hr />
-  <!--  <h2 id="criminal-justice-implementation-challenges">Criminal Justice
+  <h2 id="criminal-justice-implementation-challenges">Criminal Justice
   Implementation Challenges</h2>
   <h3 id="real-world-examples">Real-World Examples</h3>
   <p><strong>Community Policing Implementation:</strong></p>
@@ -149,8 +146,6 @@ Administration</p>
   </ul></li>
   </ul>
   <hr />
-  -->
-
   <h2 id="the-blended-government-reality">The Blended Government
   Reality</h2>
   <h3 id="nobody-governs-alone">Nobody Governs Alone</h3>
@@ -282,7 +277,6 @@ Administration</p>
   <p><strong>Challenge:</strong> Balancing multiple goals and avoiding
   unintended consequences</p>
   <hr />
-  <!--
   <h2 id="performance-measurement-pitfalls">Performance Measurement
   Pitfalls</h2>
   <h3 id="when-measurement-goes-wrong">When Measurement Goes Wrong</h3>
@@ -312,7 +306,6 @@ Administration</p>
   experience</li>
   </ul>
   <hr />
-  -->
   <h2 id="federalism-and-implementation">Federalism and
   Implementation</h2>
   <h3 id="coordinating-across-government-levels">Coordinating Across
@@ -371,7 +364,6 @@ Administration</p>
   <li>Regular evaluation and improvement</li>
   </ul>
   <hr />
-  <!--
   <h2 id="contracting-and-public-private-partnerships">Contracting and
   Public-Private Partnerships</h2>
   <h3 id="when-government-works-with-others">When Government Works with
@@ -427,8 +419,6 @@ Administration</p>
   <p><strong>Example:</strong> Private prison contracts with performance
   incentives for recidivism reduction and safety outcomes</p>
   <hr />
-  -->
-  <!--
   <h2 id="technology-and-implementation">Technology and
   Implementation</h2>
   <h3 id="digital-transformation-of-government-services">Digital
@@ -460,7 +450,6 @@ Administration</p>
   <li>Continuous improvement and adaptation</li>
   </ul>
   <hr />
-  -->
   <h2 id="implementation-in-crisis-situations">Implementation in Crisis
   Situations</h2>
   <h3 id="when-normal-processes-dont-work">When Normal Processes Don’t
@@ -493,7 +482,7 @@ Administration</p>
   <li>After-action reviews and learning</li>
   </ul>
   <hr />
-  <!--  <h2 id="performance-dashboards-and-data-visualization">Performance
+  <h2 id="performance-dashboards-and-data-visualization">Performance
   Dashboards and Data Visualization</h2>
   <h3 id="making-information-actionable">Making Information
   Actionable</h3>
@@ -523,8 +512,6 @@ Administration</p>
   <li>Public access and satisfaction</li>
   </ul>
   <hr />
-  -->
-
   <h2 id="continuous-improvement-culture">Continuous Improvement
   Culture</h2>
   <h3 id="building-learning-organizations">Building Learning
@@ -610,7 +597,6 @@ Administration</p>
   <li>Learning networks and knowledge sharing</li>
   </ul>
   <hr />
-  <!--
   <h2 id="your-role-as-implementation-leaders">Your Role as
   Implementation Leaders</h2>
   <h3 id="skills-for-success">Skills for Success</h3>
@@ -648,7 +634,6 @@ Administration</p>
   challenges</li>
   </ul>
   <hr />
-  -->
   <h2 id="case-study-national-police-reform-implementation">Case Study:
   National Police Reform Implementation</h2>
   <h3 id="multiple-levels-multiple-challenges">Multiple Levels, Multiple
@@ -682,7 +667,6 @@ Administration</p>
   adjustment</li>
   </ul>
   <hr />
-  <!--
   <h2 id="discussion-questions">Discussion Questions</h2>
   <p><strong>Thinking About Implementation:</strong></p>
   <ul>
@@ -698,7 +682,6 @@ Administration</p>
   future?</li>
   </ul>
   <hr />
-  -->
   <h2 id="module-8-1-summary">Module 8-1 Summary</h2>
   <p><strong>Key Takeaways:</strong></p>
   <ul>
@@ -721,5 +704,7 @@ Administration</p>
   </ul>
   <p><strong>Next:</strong> Examining regulation and oversight in public
   administration</p>
+
+  <script src="../../js/theme-toggle.js"></script>
 </body>
 </html>

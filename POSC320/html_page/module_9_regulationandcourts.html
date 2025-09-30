@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Regulation and the Judiciary</title>
   <link rel="stylesheet" href="lecture-style.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
 </head>
-<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
-  🌓
-</button>
-<script>
-  const toggle = document.getElementById("toggle-dark");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle-slider">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+  </div>
   <header class="page-header">
     <h1>Regulation and the Judiciary</h1>
           <h2>Module 9: Administrative Law and Judicial Oversight</h2>
@@ -74,7 +71,6 @@ Administration</p>
   operation requirements</li>
   </ul>
   <hr />
-  <!--
   <h2 id="the-regulatory-landscape-in-criminal-justice">The Regulatory
   Landscape in Criminal Justice</h2>
   <h3 id="who-regulates-what">Who Regulates What</h3>
@@ -110,7 +106,6 @@ Administration</p>
   processing goals</li>
   </ul>
   <hr />
-  -->
   <h2 id="the-constitutional-foundation">The Constitutional
   Foundation</h2>
   <h3 id="where-regulatory-power-comes-from">Where Regulatory Power
@@ -189,7 +184,6 @@ Administration</p>
   processes.</em></li>
   </ul>
   <hr />
-  <!--
   <h2 id="real-example-body-worn-camera-regulations">Real Example:
   Body-Worn Camera Regulations</h2>
   <h3 id="regulation-in-action">Regulation in Action</h3>
@@ -216,7 +210,6 @@ Administration</p>
   <li>Officer training and compliance procedures</li>
   </ul>
   <hr />
--->
   <h2 id="types-of-regulation">Types of Regulation</h2>
   <h3 id="economic-vs.-social-regulation">Economic vs. Social
   Regulation</h3>
@@ -241,7 +234,6 @@ Administration</p>
   <p><strong>Modern Trend:</strong> More social regulation affecting
   criminal justice agencies</p>
   <hr />
-  <!--
   <h2 id="criminal-justice-social-regulations">Criminal Justice Social
   Regulations</h2>
   <h3 id="protecting-rights-and-safety">Protecting Rights and
@@ -280,7 +272,6 @@ Administration</p>
   investigation procedures</li>
   </ul>
   <hr />
-  -->
   <h2 id="transparency-and-public-participation">Transparency and Public
   Participation</h2>
   <h3 id="who-gets-to-influence-regulations">Who Gets to Influence
@@ -308,7 +299,6 @@ Administration</p>
   involvement</li>
   </ul>
   <hr />
-  <!--
   <h2 id="interest-group-influence-in-criminal-justice">Interest Group
   Influence in Criminal Justice</h2>
   <h3 id="who-has-a-voice">Who Has a Voice?</h3>
@@ -336,7 +326,6 @@ Administration</p>
   <p><strong>Challenge:</strong> Balancing competing interests and
   unequal resources</p>
   <hr />
-  -->
   <h2 id="expert-analysis-in-regulation">Expert Analysis in
   Regulation</h2>
   <h3 id="using-science-and-data">Using Science and Data</h3>
@@ -424,7 +413,6 @@ Administration</p>
   governing digital evidence</li>
   </ul>
   <hr />
-  <!--
   <h2
   id="landmark-court-cases-affecting-criminal-justice-regulation">Landmark
   Court Cases Affecting Criminal Justice Regulation</h2>
@@ -452,7 +440,6 @@ Administration</p>
   <p><strong>Pattern:</strong> Court decisions create regulatory
   requirements for agencies</p>
   <hr />
-  -->
   <h2 id="political-influences-on-regulation">Political Influences on
   Regulation</h2>
   <h3 id="how-politics-shapes-rules">How Politics Shapes Rules</h3>
@@ -596,7 +583,6 @@ Administration</p>
   integrity</li>
   </ul>
   <hr />
-  <!--
   <h2 id="future-trends-in-regulation">Future Trends in Regulation</h2>
   <h3 id="whats-coming-next">What’s Coming Next</h3>
   <p><strong>Data-Driven Regulation:</strong></p>
@@ -633,7 +619,6 @@ Administration</p>
   on experience</li>
   </ul>
   <hr />
-  -->
   <h2 id="your-role-in-the-regulatory-system">Your Role in the
   Regulatory System</h2>
   <h3 id="what-you-need-to-know">What You Need to Know</h3>
@@ -669,7 +654,6 @@ Administration</p>
   <li><strong>Improve continuously:</strong> Learn from experience and
   adapt</li>
   </ul>
-  <!--
   <hr />
   <h2 id="case-study-police-consent-decree-implementation">Case Study:
   Police Consent Decree Implementation</h2>
@@ -710,7 +694,6 @@ Administration</p>
   <li><strong>Continuous monitoring:</strong> Regular assessment and
   adjustment</li>
   </ul>
-  -->
   <hr />
   <h2 id="the-balance-efficiency-vs.-accountability">The Balance:
   Efficiency vs. Accountability</h2>
@@ -750,7 +733,6 @@ Administration</p>
   based on experience</li>
   </ul>
   <hr />
-  <!--
   <h2 id="discussion-questions">Discussion Questions</h2>
   <p><strong>Thinking About Regulation:</strong></p>
   <ul>
@@ -765,7 +747,6 @@ Administration</p>
   change?</li>
   </ul>
   <hr />
-  -->
   <h2 id="module-9-summary">Module 9 Summary</h2>
   <p><strong>Key Takeaways:</strong></p>
   <ul>
@@ -790,5 +771,7 @@ Administration</p>
   </ul>
   <p><strong>Next:</strong> Examining accountability and oversight
   mechanisms in public administration</p>
+
+  <script src="../../js/theme-toggle.js"></script>
 </body>
 </html>

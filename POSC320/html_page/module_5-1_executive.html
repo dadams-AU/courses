@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Executive Branch</title>
   <link rel="stylesheet" href="lecture-style.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
 </head>
-<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
-  🌓
-</button>
-<script>
-  const toggle = document.getElementById("toggle-dark");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle-slider">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+  </div>
   <header class="page-header">
     <h1>The Executive Branch</h1>
           <h2>Module 5-1: Where Policy Meets Practice</h2>
@@ -526,6 +523,20 @@ Administration</p>
   <li>Accountability and responsibility</li>
   </ul>
   <hr />
+  <h2 id="discussion-questions">Discussion Questions</h2>
+  <p><strong>Thinking About Executive Leadership:</strong></p>
+  <ul>
+  <li>How would you balance professional judgment with political
+  direction?</li>
+  <li>What strategies would you use to coordinate multiple
+  agencies?</li>
+  <li>How can executives maintain accountability while being
+  effective?</li>
+  <li>What role should technology play in executive
+  decision-making?</li>
+  <li>How do you lead when you don’t have complete control?</li>
+  </ul>
+  <hr />
   <h2 id="module-5-1-summary">Module 5-1 Summary</h2>
   <p><strong>Key Takeaways:</strong></p>
   <ul>
@@ -543,5 +554,7 @@ Administration</p>
   </ul>
   <p><strong>Next:</strong> Examining human capital management and
   personnel systems in public organizations</p>
+
+  <script src="../../js/theme-toggle.js"></script>
 </body>
 </html>

@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome to Public Administration</title>
   <link rel="stylesheet" href="lecture-style.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
 </head>
-<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
-  🌓
-</button>
-<script>
-  const toggle = document.getElementById("toggle-dark");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle-slider">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+  </div>
   <header class="page-header">
     <h1>Welcome to Public Administration</h1>
           <h2>The Science and Art of Making Government Work</h2>
@@ -171,10 +168,13 @@
   <h3 id="real-world-application">Real-World Application</h3>
   <p><strong>Choose one current challenge:</strong></p>
   <ul>
-  <li><strong>“Who Gets Help?” — Disaster Relief and Administrative Discretion:</strong> How do public agencies decide who gets help first after disasters like wildfires, floods, or heatwaves?</li>
-  <li><strong>“Smart Tech, Safe City?” — Surveillance and Public Safety in Local Government:</strong> How are local governments using surveillance technology, and what are the administrative challenges?</li>
-  <li><strong>“Is This Working?” — Evaluating a Public Program in Your Community:</strong> How effective is a local public program, and what implementation issues does it face?</li>
-
+  <li><strong>COVID-19 Response Coordination:</strong> How did
+  government agencies coordinate (or fail to coordinate) during the
+  pandemic?</li>
+  <li><strong>Remote Work Implementation:</strong> How are federal
+  agencies adapting to new work arrangements?</li>
+  <li><strong>Infrastructure Investment Administration:</strong> How is
+  the Infrastructure Investment and Jobs Act being implemented?</li>
   </ul>
   <p><strong>Build expertise week by week:</strong></p>
   <ul>
@@ -275,28 +275,13 @@
   <li>Practical experience in government and nonprofit sectors</li>
   <li>Committed to your success in this intensive summer course</li>
   </ul>
-  <table>
-    <tr>
-      <th>Contact Method</th>
-      <th>Details</th>
-    </tr>
-    <tr>
-      <td><strong>Office Hours</strong></td>
-      <td>Tuesdays 9:30-10:30 AM and 7:00-8:00 PM on Discord</td>
-    </tr>
-    <tr>
-      <td><strong>Appointments</strong></td>
-      <td>Available throughout the week at <a href="https://dadams.io/appointments">dadams.io/appointments</a></td>
-    </tr>
-    <tr>
-      <td><strong>Phone/Text</strong></td>
-      <td>(657) 278-4770 for urgent issues</td>
-    </tr>
-    <tr>
-      <td><strong>Course Communication</strong></td>
-      <td>Discord #320-public-admin channel for questions and discussion</td>
-    </tr>
-  </table>
+  <p><strong>Office Hours:</strong> Tuesdays 9:30-10:30 AM and 7:00-8:00
+  PM on Discord <strong>Appointments:</strong> Available throughout the
+  week at dadams.io/appointments <strong>Response Time:</strong> Within
+  24 hours for emails and Canvas messages <strong>Phone/Text:</strong>
+  (657) 278-4770 for urgent issues</p>
+  <p><strong>Course Communication:</strong> Discord #320-public-admin
+  channel for questions and discussion</p>
   <hr />
   <h2 id="technology-and-tools">Technology and Tools</h2>
   <h3 id="what-youll-need-to-succeed">What You’ll Need to Succeed</h3>
@@ -484,5 +469,7 @@
   <p><strong>Let’s get started!</strong></p>
   <p><em>Your future in public service begins now. Make it
   count.</em></p>
+
+  <script src="../../js/theme-toggle.js"></script>
 </body>
 </html>

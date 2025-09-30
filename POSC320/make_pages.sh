@@ -1,8 +1,8 @@
 #!/bin/bash
-input_dir="/home/dadams/Repos/courses/POSC320/md_slides"
-output_dir="/home/dadams/Repos/courses/POSC320/html_page"
-template="$output_dir/custom.html"
-css="$output_dir/lecture-style.css"
+input_dir="POSC320/md_slides"
+output_dir="POSC320/html_page"
+template="POSC320/html_page/custom.html"
+css="POSC320/html_page/lecture-style.css"
 
 mkdir -p "$output_dir"  # Ensure the output directory exists
 

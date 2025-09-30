@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Public Budgeting</title>
   <link rel="stylesheet" href="lecture-style.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
 </head>
-<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
-  🌓
-</button>
-<script>
-  const toggle = document.getElementById("toggle-dark");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle-slider">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+  </div>
   <header class="page-header">
     <h1>Public Budgeting</h1>
           <h2>Module 7-2: Budgets, Politics, and Public Priorities</h2>
@@ -111,7 +108,6 @@ Administration</p>
   <li><em>Example: Data-driven analysis or political
   negotiation?</em></li>
   </ul>
-  <!--
   <hr />
   <h2 id="criminal-justice-budget-realities">Criminal Justice Budget
   Realities</h2>
@@ -137,7 +133,6 @@ Administration</p>
   <li>Contracted services</li>
   <li>Travel and transportation</li>
   </ul>
-  -->
   <hr />
   <h2 id="budgets-and-the-economy">Budgets and the Economy</h2>
   <h3 id="how-government-budgets-affect-everyone">How Government Budgets
@@ -205,7 +200,6 @@ Administration</p>
   priorities</li>
   </ul>
   <hr />
-  <!--
   <h2 id="criminal-justice-budget-politics">Criminal Justice Budget
   Politics</h2>
   <h3 id="real-world-examples-of-political-pressures">Real-World
@@ -243,7 +237,6 @@ Administration</p>
   <li><strong>Private vs. public:</strong> Contracting decisions
   affecting operations</li>
   </ul>
--->
   <hr />
   <h2 id="the-budget-process-how-it-really-works">The Budget Process:
   How It Really Works</h2>
@@ -274,22 +267,24 @@ Administration</p>
   <li>Lessons learned for next budget cycle</li>
   </ul>
   <hr />
-  <h2 id="public-sector-budget-calendar">Public Sector Budget Calendar</h2>
+  <h2 id="criminal-justice-budget-calendar">Criminal Justice Budget
+  Calendar</h2>
   <h3 id="when-things-happen">When Things Happen</h3>
-  <ul>
-    <li><strong>January–March:</strong> Needs assessment, performance review, strategic planning</li>
-    <li><strong>April–June:</strong> Department budget requests, resource planning</li>
-    <li><strong>July–September:</strong> Executive budget preparation, community input</li>
-    <li><strong>October–December:</strong> Legislative review, public hearings, final approval</li>
-  </ul>
+  <p><strong>January-March:</strong> Crime analysis, performance review,
+  needs assessment <strong>April-June:</strong> Department budget
+  requests, equipment planning <strong>July-September:</strong>
+  Executive budget preparation, community input
+  <strong>October-December:</strong> Legislative review, public
+  hearings, final approval</p>
   <p><strong>Ongoing Throughout Year:</strong></p>
   <ul>
-    <li>Grant applications and awards</li>
-    <li>Emergency budget adjustments</li>
-    <li>Quarterly performance reviews</li>
-    <li>Monitoring and management of expenditures</li>
+  <li>Grant applications and awards</li>
+  <li>Emergency budget adjustments</li>
+  <li>Quarterly performance reviews</li>
+  <li>Overtime monitoring and management</li>
   </ul>
-  <p><strong>Challenge:</strong> Community needs and emergencies may require flexible budget responses throughout the year.</p>
+  <p><strong>Challenge:</strong> Crime doesn’t follow budget calendars -
+  emergencies require flexible response</p>
   <hr />
   <h2 id="types-of-budgets">Types of Budgets</h2>
   <h3 id="different-tools-for-different-purposes">Different Tools for
@@ -391,34 +386,32 @@ Administration</p>
   <p><strong>Advantages:</strong> Shows what taxpayers get for their
   money</p>
   <hr />
-  <!--
-    <h2 id="grant-funding-in-criminal-justice">Grant Funding in Criminal
-    Justice</h2>
-    <h3 id="external-funding-sources-and-challenges">External Funding
-    Sources and Challenges</h3>
-    <p><strong>Federal Grants:</strong></p>
-    <ul>
-    <li><strong>COPS Grants:</strong> Community policing, officer
-    hiring</li>
-    <li><strong>Byrne JAG:</strong> Equipment, training,
-    multi-jurisdictional programs</li>
-    <li><strong>VAWA Grants:</strong> Domestic violence, sexual assault
-    programs</li>
-    <li><strong>SCAAP:</strong> Compensation for incarcerating
-    undocumented immigrants</li>
-    </ul>
-    <p><strong>Grant Challenges:</strong></p>
-    <ul>
-    <li><strong>Matching requirements:</strong> Local funds required</li>
-    <li><strong>Reporting obligations:</strong> Detailed documentation and
-    evaluation</li>
-    <li><strong>Sustainability:</strong> What happens when grant
-    ends?</li>
-    <li><strong>Mission drift:</strong> Chasing funding rather than
-    priorities</li>
-    </ul>
-    <hr />
-  -->
+  <h2 id="grant-funding-in-criminal-justice">Grant Funding in Criminal
+  Justice</h2>
+  <h3 id="external-funding-sources-and-challenges">External Funding
+  Sources and Challenges</h3>
+  <p><strong>Federal Grants:</strong></p>
+  <ul>
+  <li><strong>COPS Grants:</strong> Community policing, officer
+  hiring</li>
+  <li><strong>Byrne JAG:</strong> Equipment, training,
+  multi-jurisdictional programs</li>
+  <li><strong>VAWA Grants:</strong> Domestic violence, sexual assault
+  programs</li>
+  <li><strong>SCAAP:</strong> Compensation for incarcerating
+  undocumented immigrants</li>
+  </ul>
+  <p><strong>Grant Challenges:</strong></p>
+  <ul>
+  <li><strong>Matching requirements:</strong> Local funds required</li>
+  <li><strong>Reporting obligations:</strong> Detailed documentation and
+  evaluation</li>
+  <li><strong>Sustainability:</strong> What happens when grant
+  ends?</li>
+  <li><strong>Mission drift:</strong> Chasing funding rather than
+  priorities</li>
+  </ul>
+  <hr />
   <h2 id="budget-constraints-and-trade-offs">Budget Constraints and
   Trade-offs</h2>
   <h3 id="the-reality-of-scarcity">The Reality of Scarcity</h3>
@@ -444,7 +437,6 @@ Administration</p>
   <li>Emergency repairs or planned replacement?</li>
   </ul>
   <hr />
-  <!--
   <h2 id="performance-based-budgeting-in-practice">Performance-Based
   Budgeting in Practice</h2>
   <h3 id="linking-money-to-results">Linking Money to Results</h3>
@@ -473,8 +465,6 @@ Administration</p>
   <li>Gaming the system to meet metrics</li>
   </ul>
   <hr />
-  -->
-  <!--
   <h2 id="technology-and-budget-innovation">Technology and Budget
   Innovation</h2>
   <h3 id="modern-tools-for-better-budgeting">Modern Tools for Better
@@ -501,32 +491,39 @@ Administration</p>
   <li>Social media engagement</li>
   </ul>
   <hr />
-  -->
-  <h2 id="budget-challenges-for-public-agencies">Budget Challenges for Public Agencies</h2>
-  <h3 id="key-issues-facing-government-budgets">Key Issues Facing Government Budgets</h3>
+  <h2 id="budget-challenges-in-criminal-justice">Budget Challenges in
+  Criminal Justice</h2>
+  <h3 id="current-issues-and-pressures">Current Issues and
+  Pressures</h3>
   <p><strong>Rising Costs:</strong></p>
   <ul>
-    <li><strong>Personnel:</strong> Salary increases, pension obligations, healthcare costs</li>
-    <li><strong>Technology:</strong> Upgrading and maintaining IT systems and equipment</li>
-    <li><strong>Regulatory compliance:</strong> Meeting new laws, mandates, and standards</li>
-    <li><strong>Training:</strong> Ongoing staff development and certification requirements</li>
+  <li><strong>Personnel:</strong> Salary increases, pension obligations,
+  healthcare costs</li>
+  <li><strong>Technology:</strong> Expensive equipment requiring regular
+  updates</li>
+  <li><strong>Legal compliance:</strong> Court mandates and consent
+  decrees</li>
+  <li><strong>Training:</strong> Enhanced standards and liability
+  concerns</li>
   </ul>
   <p><strong>Revenue Pressures:</strong></p>
   <ul>
-    <li><strong>Economic downturns:</strong> Reduced tax and fee revenues</li>
-    <li><strong>Competing priorities:</strong> Demands from multiple sectors (education, health, safety, infrastructure)</li>
-    <li><strong>Legal limits:</strong> Tax caps, balanced budget requirements, and spending restrictions</li>
-    <li><strong>Political pressure:</strong> Anti-tax sentiment and calls for reduced government spending</li>
+  <li><strong>Economic downturns:</strong> Reduced tax revenues</li>
+  <li><strong>Competition:</strong> Other priorities demanding
+  resources</li>
+  <li><strong>Legal limits:</strong> Tax caps and spending
+  restrictions</li>
+  <li><strong>Political pressure:</strong> Anti-tax sentiment</li>
   </ul>
-  <p><strong>Demographic and Social Changes:</strong></p>
+  <p><strong>Demographic Changes:</strong></p>
   <ul>
-    <li><strong>Aging population:</strong> Increased demand for health and social services, changing tax base</li>
-    <li><strong>Urbanization:</strong> Higher service demands in cities, infrastructure strain</li>
-    <li><strong>Economic inequality:</strong> Greater need for public assistance with limited resources</li>
-    <li><strong>Population growth or decline:</strong> Shifting service needs and funding challenges</li>
+  <li><strong>Aging population:</strong> Different service needs and tax
+  capacity</li>
+  <li><strong>Urbanization:</strong> Concentrated service demands</li>
+  <li><strong>Economic inequality:</strong> Greater need with reduced
+  ability to pay</li>
   </ul>
   <hr />
-  <!--
   <h2 id="federal-state-and-local-budget-relationships">Federal, State,
   and Local Budget Relationships</h2>
   <h3 id="how-different-levels-interact">How Different Levels
@@ -555,7 +552,6 @@ Administration</p>
   <p><strong>Challenge:</strong> Coordinating across levels with
   different priorities and timelines</p>
   <hr />
-  -->
   <h2 id="budget-ethics-and-accountability">Budget Ethics and
   Accountability</h2>
   <h3 id="responsibilities-of-budget-professionals">Responsibilities of
@@ -582,7 +578,6 @@ Administration</p>
   regulations</li>
   </ul>
   <hr />
-  <!--
   <h2 id="crisis-budgeting">Crisis Budgeting</h2>
   <h3 id="when-normal-processes-dont-work">When Normal Processes Don’t
   Work</h3>
@@ -638,7 +633,6 @@ Administration</p>
   <li>Democratic decision-making innovations</li>
   </ul>
   <hr />
-  -->
   <h2 id="your-role-as-budget-professionals">Your Role as Budget
   Professionals</h2>
   <h3 id="skills-youll-need">Skills You’ll Need</h3>
@@ -664,7 +658,6 @@ Administration</p>
   <li>Change management and adaptation</li>
   </ul>
   <hr />
-  <!--
   <h2 id="case-study-police-budget-reform">Case Study: Police Budget
   Reform</h2>
   <h3 id="balancing-competing-demands">Balancing Competing Demands</h3>
@@ -708,7 +701,6 @@ Administration</p>
   <li>What budget reforms would improve government effectiveness?</li>
   </ul>
   <hr />
-  -->
   <h2 id="module-7-2-summary">Module 7-2 Summary</h2>
   <p><strong>Key Takeaways:</strong></p>
   <ul>
@@ -726,5 +718,7 @@ Administration</p>
   </ul>
   <p><strong>Next:</strong> Examining regulation, implementation, and
   performance measurement in public administration</p>
+
+  <script src="../../js/theme-toggle.js"></script>
 </body>
 </html>

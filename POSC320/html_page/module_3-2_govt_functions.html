@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How Government Functions</title>
   <link rel="stylesheet" href="lecture-style.css">
+  <link rel="stylesheet" href="../../style/theme.css">
+  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
 </head>
-<button id="toggle-dark" style="position:fixed;top:1rem;right:1rem;z-index:999;">
-  🌓
-</button>
-<script>
-  const toggle = document.getElementById("toggle-dark");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="theme-toggle-slider">
+      <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+  </div>
   <header class="page-header">
     <h1>How Government Functions</h1>
           <h2>Module 3-2: Understanding the Mechanisms of
@@ -98,20 +95,23 @@ Administration</p>
   <hr />
   <h2 id="the-role-of-public-administration">The Role of Public
   Administration</h2>
-  <h3 id="where-politics-ends-and-administration-begins">Where Politics Ends and Administration Begins?</h3>
-  <p>
-    <strong>Traditional View:</strong> Politicians make policy, administrators implement it.<br>
-    <strong>Reality:</strong> Administrators influence policy through:
-  </p>
-  <ol>
-    <li><strong>Expertise:</strong> Technical knowledge politicians may lack</li>
-    <li><strong>Implementation Decisions:</strong> Choices about how policies are carried out</li>
-    <li><strong>Feedback:</strong> Providing information about what works and what doesn’t</li>
-    <li><strong>Rule-making:</strong> Filling in details of broad legislation</li>
+  <h3 id="where-politics-ends-and-administration-begins">Where Politics
+  Ends and Administration Begins?</h3>
+  <p><strong>Traditional View:</strong> Politicians make policy,
+  administrators implement it <strong>Reality:</strong> Administrators
+  influence policy through:</p>
+  <ol type="1">
+  <li><strong>Expertise:</strong> Technical knowledge politicians don’t
+  have</li>
+  <li><strong>Implementation decisions:</strong> How policies get
+  carried out</li>
+  <li><strong>Feedback:</strong> Information about what works and what
+  doesn’t</li>
+  <li><strong>Rule-making:</strong> Filling in details of broad
+  legislation</li>
   </ol>
-  <p>
-    <strong>Example:</strong> Congress passes a crime bill, but agencies write the specific regulations.
-  </p>
+  <p><strong>Example:</strong> Congress passes a crime bill, but
+  agencies write the specific regulations</p>
   <hr />
   <h2 id="policy-making-the-real-process">Policy Making: The Real
   Process</h2>
@@ -355,17 +355,18 @@ Administration</p>
   <p><strong>Reality Check:</strong> Private organizations face many of
   these same challenges</p>
   <hr />
-  <h2 id="strategies-for-better-government-functioning">Strategies for Better Government Functioning</h2>
+  <h2 id="strategies-for-better-government-functioning">Strategies for
+  Better Government Functioning</h2>
   <h3 id="how-to-improve-performance">How to Improve Performance</h3>
-  <ul>
-    <li><strong>Clear Goals and Metrics:</strong> Know what success looks like</li>
-    <li><strong>Adequate Resources:</strong> Match funding to expectations</li>
-    <li><strong>Effective Leadership:</strong> Skilled managers at all levels</li>
-    <li><strong>Good Information Systems:</strong> Data for decision-making</li>
-    <li><strong>Stakeholder Engagement:</strong> Include those affected by decisions</li>
-    <li><strong>Continuous Learning:</strong> Adapt based on experience</li>
-  </ul>
-  <p><strong>Your Role:</strong> Future public administrators who can implement these strategies</p>
+  <p>Clear Goals and Metrics:** Know what success looks like
+  <strong>Adequate Resources:</strong> Match funding to expectations
+  <strong>Effective Leadership:</strong> Skilled managers at all levels
+  <strong>Good Information Systems:</strong> Data for decision-making
+  <strong>Stakeholder Engagement:</strong> Include those affected by
+  decisions <strong>Continuous Learning:</strong> Adapt based on
+  experience</p>
+  <p><strong>Your Role:</strong> Future public administrators who can
+  implement these strategies</p>
   <hr />
   <h2 id="technology-and-government-functions">Technology and Government
   Functions</h2>
@@ -390,18 +391,41 @@ Administration</p>
   <li>Predictive analytics for resource allocation</li>
   </ul>
   <hr />
-  <h2 id="the-future-of-government-functioning">The Future of Government Functioning</h2>
-  <h3 id="emerging-trends-and-challenges">Emerging Trends and Challenges</h3>
-  <ul>
-    <li><strong>Network Governance:</strong> Government as coordinator rather than direct provider</li>
-    <li><strong>Data-Driven Decision Making:</strong> Using analytics to improve performance</li>
-    <li><strong>Citizen Engagement:</strong> Technology-enabled participation</li>
-    <li><strong>Agile Government:</strong> Rapid adaptation to changing needs</li>
-    <li><strong>Equity and Inclusion:</strong> Ensuring services reach all communities</li>
-  </ul>
-  <p><strong>Question:</strong> How might these trends affect criminal justice agencies?</p>
+  <h2 id="the-future-of-government-functioning">The Future of Government
+  Functioning</h2>
+  <h3 id="emerging-trends-and-challenges">Emerging Trends and
+  Challenges</h3>
+  <p><strong>Network Governance:</strong> Government as coordinator
+  rather than direct provider <strong>Data-Driven Decision
+  Making:</strong> Using analytics to improve performance
+  <strong>Citizen Engagement:</strong> Technology-enabled participation
+  <strong>Agile Government:</strong> Rapid adaptation to changing needs
+  <strong>Equity and Inclusion:</strong> Ensuring services reach all
+  communities</p>
+  <p><strong>Question:</strong> How might these trends affect criminal
+  justice agencies?</p>
   <hr />
-
+  <h2 id="case-study-covid-19-response">Case Study: COVID-19
+  Response</h2>
+  <h3 id="government-functioning-under-pressure">Government Functioning
+  Under Pressure</h3>
+  <p><strong>Coordination Challenges:</strong></p>
+  <ul>
+  <li>Federal, state, local health authorities</li>
+  <li>Multiple agencies within each level</li>
+  <li>Public health vs. economic priorities</li>
+  <li>Changing science and guidance</li>
+  </ul>
+  <p><strong>Criminal Justice Impacts:</strong></p>
+  <ul>
+  <li>Jail population management</li>
+  <li>Court operations and backlogs</li>
+  <li>Police enforcement of health orders</li>
+  <li>Technology adoption acceleration</li>
+  </ul>
+  <p><strong>Lessons:</strong> Complex problems require coordinated
+  responses</p>
+  <hr />
   <h2 id="module-3-2-summary">Module 3-2 Summary</h2>
   <p><strong>Key Takeaways:</strong></p>
   <ul>
@@ -417,5 +441,7 @@ Administration</p>
   </ul>
   <p><strong>Next:</strong> Examining organizational theory and how
   public agencies are structured and managed</p>
+
+  <script src="../../js/theme-toggle.js"></script>
 </body>
 </html>

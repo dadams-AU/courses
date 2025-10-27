@@ -9,225 +9,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,600">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
   <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
-  
-  <style>
-:root {
-  --primary-blue: #2563eb;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --border-color: #e2e8f0;
-}
-
-[data-theme="dark"] {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --border-color: #334155;
-}
-
-body {
-  font-family: 'Ubuntu', sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  transition: all 0.3s ease;
-}
-
-.navbar {
-  background-color: var(--bg-primary) !important;
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.navbar-nav .nav-link {
-  color: var(--text-secondary) !important;
-  font-weight: 500;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--primary-blue) !important;
-}
-
-.theme-toggle {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  width: 50px;
-  height: 26px;
-  position: relative;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-.theme-toggle-slider {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 22px;
-  height: 22px;
-  background: var(--primary-blue);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 12px;
-}
-
-[data-theme="dark"] .theme-toggle-slider {
-  transform: translateX(24px);
-}
-
-.hero-section {
-  background: linear-gradient(135deg, var(--primary-blue), #1d4ed8);
-  color: white;
-  padding: 4rem 0;
-}
-
-.course-section {
-  background: var(--bg-secondary);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border-color);
-}
-
-.course-section h2 {
-  color: var(--primary-blue);
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.lecture-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.lecture-item {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem;
-  transition: all 0.3s ease;
-}
-
-.lecture-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.lecture-item h5 {
-  color: var(--text-primary);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.lecture-item p {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  margin-bottom: 0.75rem;
-}
-
-.btn-primary {
-  background: var(--primary-blue);
-  border: none;
-  border-radius: 6px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-}
-
-.btn-outline-primary {
-  color: var(--primary-blue);
-  border: 1px solid var(--primary-blue);
-  background: transparent;
-  font-size: 0.875rem;
-  padding: 0.4rem 0.8rem;
-}
-
-.btn-outline-primary:hover {
-  background: var(--primary-blue);
-  color: white;
-}
-
-.quick-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.quick-link-card {
-  background: var(--primary-blue);
-  color: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-.quick-link-card:hover {
-  background: #1d4ed8;
-  transform: translateY(-4px);
-  color: white;
-  text-decoration: none;
-}
-
-.quick-link-card h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.quick-link-card p {
-  font-size: 0.9rem;
-  margin: 0;
-  opacity: 0.9;
-}
-
-.footer {
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
-  padding: 2rem 0;
-  margin-top: 4rem;
-  text-align: center;
-  color: var(--text-secondary);
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 2rem 0;
-  }
-  
-  .course-section {
-    padding: 1rem;
-  }
-  
-  .lecture-grid,
-  .quick-links {
-    grid-template-columns: 1fr;
-  }
-  
-  .quick-link-card {
-    padding: 1rem;
-  }
-}
-  </style>
 </head>
 
 <body>
@@ -238,7 +21,7 @@ body {
         <img src="dadams.png" alt="David P. Adams" height="40">
       </a>
       
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -285,18 +68,15 @@ body {
   <section class="py-5">
     <div class="container">
       <div class="quick-links">
-
         <a href="#posc315-async" class="quick-link-card">
-          <h4>POSC 315</h4>
+          <h4><i class="fas fa-balance-scale me-2"></i>POSC 315</h4>
           <p>Introduction to Public Policy</p>
+          <small>40+ lecture modules covering the complete policy process</small>
         </a>
         <a href="#posc320-async" class="quick-link-card">
-          <h4>CRJU/POSC 320</h4>
+          <h4><i class="fas fa-building me-2"></i>CRJU/POSC 320</h4>
           <p>Introduction to Public Administration</p>
-        </a>
-        <a href="#posc521" class="quick-link-card">
-          <h4>POSC 521</h4>
-          <p>MPA Capstone: Public Administration Theory</p>
+          <small>18 modules on PA theory, practice, and application</small>
         </a>
       </div>
     </div>
@@ -412,193 +192,292 @@ body {
     <div class="container">
       <div class="course-section">
         <h2><i class="fas fa-laptop me-2"></i>POSC 315: Introduction to Public Policy</h2>
-        <div class="lecture-grid">
+        <p class="mb-4">40+ lectures organized by topic. Click each section to expand.</p>
+        
+        <!-- Unit 1: Foundations -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 1: Foundations & Overview</strong>
+            <span class="lecture-count">4 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 0: Introduction</h5>
+            <h5>Introduction</h5>
             <p>Course introduction</p>
             <a href="POSC315_asynch/lectures/lecture_0_introduction/lecture_0.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 1-1: Overview A</h5>
+            <h5>Overview Part A</h5>
             <p>Policy overview part A</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_1-1.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 1-2: Overview B</h5>
+            <h5>Overview Part B</h5>
             <p>Policy overview part B</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_1-2.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 1-3: Overview C</h5>
+            <h5>Overview Part C</h5>
             <p>Policy overview part C</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_1-3.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 2: Policy Process & Change -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 2: Policy Process & Change</strong>
+            <span class="lecture-count">3 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 2-1: Process Models</h5>
+            <h5>Process Models</h5>
             <p>Policy process models</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_2-1_processmodels.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 2-2: Environments</h5>
+            <h5>Environments</h5>
             <p>Policy environments</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_2-2_enviro.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 2-3: Change</h5>
+            <h5>Change</h5>
             <p>Policy change dynamics</p>
             <a href="/POSC315_asynch/lectures_beamer/lecture_2-3_change.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 3: Structure & Federalism -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 3: Structure & Federalism</strong>
+            <span class="lecture-count">2 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 3-1: History & Structure</h5>
+            <h5>History & Structure</h5>
             <p>Historical and structural foundations</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_3-1_history_strucure.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 3-2: Federalism</h5>
+            <h5>Federalism</h5>
             <p>Federalism in policy making</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_3-2_federalism.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 4: Policy Actors -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 4: Policy Actors (Official & Unofficial)</strong>
+            <span class="lecture-count">5 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 4-1: Official Actors Theory</h5>
+            <h5>Official Actors Theory</h5>
             <p>Theories of official actors</p>
             <a href="POSC315_asynch/lectures_md/html/4_1_officialtheory_legis.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 4-2: Official Actors</h5>
+            <h5>Official Actors</h5>
             <p>Official actors in practice</p>
             <a href="POSC315_asynch/lectures_md/html/4_2_official_exec_jud.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 5-1: Unofficial Actors I</h5>
+            <h5>Unofficial Actors I</h5>
             <p>Unofficial actors part I</p>
             <a href="POSC315_asynch/lectures_md/html/5_1_unofficialactors.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 5-2: Unofficial Actors II</h5>
+            <h5>Unofficial Actors II</h5>
             <p>Unofficial actors part II</p>
             <a href="POSC315_asynch/lectures_md/html/5_2_actor_interaction.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 5-3: Unofficial Actors III</h5>
-            <p>Letter from the Birmingham Jail</p>
+            <h5>Letter from Birmingham Jail</h5>
+            <p>Individual actors and civil rights</p>
             <a href="POSC315_asynch/lectures_md/5-3_BhamJail.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 5: Agenda Setting & Policy Types -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 5: Agenda Setting & Policy Types</strong>
+            <span class="lecture-count">6 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 6-1: Agenda Setting - Problems</h5>
+            <h5>Agenda Setting: Problems</h5>
             <p>Agenda setting and problem identification</p>
             <a href="POSC315_asynch/lectures_md/html/6_1_agendasetting_problem.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 6-2: Agenda Setting - Levels</h5>
+            <h5>Agenda Setting: Levels</h5>
             <p>Agenda setting at different levels</p>
             <a href="POSC315_asynch/lectures_md/html/6_2_agenda_levels.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 6-3: Agenda Setting - Wrap Up</h5>
-            <p>Finalizing agenda setting concepts</p>
+            <h5>Agenda Setting: Power</h5>
+            <p>Power and agenda control</p>
             <a href="POSC315_asynch/lectures_md/html/6_3_agenda_power.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 7-1: Policy Types</h5>
-            <p>Distributive and Redistributive</p>
+            <h5>Policy Types: Distributive & Redistributive</h5>
+            <p>Distributive and redistributive policy</p>
             <a href="POSC315_asynch/lectures_md/html/7_1_types_why.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 7-2: Policy Types - Regulatory and Constituent</h5>
+            <h5>Policy Types: Regulatory & Constituent</h5>
             <p>Regulatory and constituent policy types</p>
             <a href="POSC315_asynch/lectures_md/html/7_2_types_reg_const.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 7-3: Policy Types - Alternatives and Wrap Up</h5>
-            <p>Alternative policy types and summary</p>
+            <h5>Policy Types: Alternatives</h5>
+            <p>Alternative policy typologies</p>
             <a href="POSC315_asynch/lectures_md/html/7_3_types_alt.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 6: Decision Making -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 6: Decision Making</strong>
+            <span class="lecture-count">3 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 8-1: Decision Making <br> Part 1</h5>
+            <h5>Rational Decision Making</h5>
             <p>Rational decision-making models</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_8-1_decisionmaking_1.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 8-2: Decision Making <br> Part 2</h5>
-            <p>Bounded Rationality and Incrementalism</p>
+            <h5>Bounded Rationality & Incrementalism</h5>
+            <p>Bounded rationality and incrementalism</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_8-2_decisionmaking_2.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 8-3: Decision Making <br> Part 3</h5>
+            <h5>Dysfunctional Decision Making</h5>
             <p>Dysfunctional decision-making models</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_8-3_decisionmaking_3.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 7: Policy Analysis -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 7: Policy Analysis</strong>
+            <span class="lecture-count">2 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Lecture 9-1: Policy Analysis <br> Part 1</h5>
+            <h5>Policy Analysis Fundamentals</h5>
             <p>Introduction to policy analysis</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_9-1_policyanalysis_1.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 9-2: Policy Analysis <br> Part 2</h5>
-            <p>Policy analysis methodologies</p>
+            <h5>Policy Analysis Methodologies</h5>
+            <p>Policy analysis methods and applications</p>
             <a href="POSC315_asynch/lectures_beamer/lecture_9-2_policyanalysis_2.pdf" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 8: Design & Implementation -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 8: Design & Implementation</strong>
+            <span class="lecture-count">5 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
             <div class="lecture-item">
-            <h5>Lecture 10-1: Policy Design <br> Part 1</h5>
-            <p>Foundations and Goals</p>
+            <h5>Design Foundations & Goals</h5>
+            <p>Policy design foundations</p>
             <a href="POSC315_asynch/lectures_md/html/10_1_design_part_1.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 10-2: Policy Design <br> Part 2</h5>
-            <p>Goal Conflicts and Tradeoffs</p>
+            <h5>Goal Conflicts & Tradeoffs</h5>
+            <p>Managing competing policy goals</p>
             <a href="POSC315_asynch/lectures_md/html/10_2_design_part_2.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 10-3: Policy Design <br> Part 3</h5>
-            <p>Designing for Implementation</p>
+            <h5>Designing for Implementation</h5>
+            <p>Implementation-focused design</p>
             <a href="POSC315_asynch/lectures_md/html/10_3_design_part_3.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 11-1: Implementation <br> Part 1</h5>
-            <p>Transforming Policy into Practice</p>
+            <h5>Transforming Policy into Practice</h5>
+            <p>From policy to practice</p>
             <a href="POSC315_asynch/lectures_md/html/11_1_implementation_part_1.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 11-2: Implementation <br> Part 2</h5>
-            <p>Challenges and Strategies</p>
+            <h5>Implementation Challenges</h5>
+            <p>Overcoming implementation barriers</p>
             <a href="POSC315_asynch/lectures_md/html/11_2_implementation_part_2.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
+          </div>
+        </div>
+
+        <!-- Unit 9: Failure, Evaluation & Science -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 9: Failure, Evaluation & Science</strong>
+            <span class="lecture-count">7 lectures</span>
+          </button>
+          <div class="lecture-grid unit-content">
             <div class="lecture-item">
-            <h5>Lecture 12-1: Failure and Learning <br> Part 1</h5>
+            <h5>Failure and Learning Part 1</h5>
             <p>Understanding Policy Failures</p>
             <a href="POSC315_asynch/lectures_md/html/12_1_failure-learning_part_1.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 12-2: Failure and Learning <br> Part 2</h5>
+            <h5>Failure and Learning Part 2</h5>
             <p>Lessons from Policy Failures</p>
             <a href="POSC315_asynch/lectures_md/html/12_2_failure-learning_part_2.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 13-1: Evaluation and Science <br> Part 1</h5>
+            <h5>Evaluation and Science Part 1</h5>
             <p>Policy Evaluation Fundamentals</p>
             <a href="POSC315_asynch/lectures_md/html/13-1_Evaluation.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 13-2: Evaluation and Science <br> Part 2</h5>
+            <h5>Evaluation and Science Part 2</h5>
             <p>Connecting Policy Evaluation to Science</p>
             <a href="POSC315_asynch/lectures_md/html/13-2_PhilOfScience.html" class="btn btn-sm btn-primary">View Lecture</a>
             </div>
             <div class="lecture-item">
-            <h5>Lecture 13-3: Evaluation and Science <br> Part 3</h5>
+            <h5>Evaluation and Science Part 3</h5>
             <p>Methodologies in Policy Evaluation</p>
             <a href="POSC315_asynch/lectures_md/html/13-3_methodology.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 13-4: Evaluation and Science <br> Part 4</h5>
+            <h5>Evaluation and Science Part 4</h5>
             <p>Science and Change</p>            
             <a href="POSC315_asynch/lectures_md/html/13-4_change.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
           <div class="lecture-item">
-            <h5>Lecture 14-1: Wrap Up</h5>  
+            <h5>Wrap Up</h5>  
             <p>Course wrap-up and reflections</p>
             <a href="POSC315_asynch/lectures_md/html/14_theend.html" class="btn btn-sm btn-primary">View Lecture</a>
           </div>
+          </div>
         </div>
+
           <a href="/POSC315_asynch/posc315_async_handouts.html" class="btn btn-outline-primary mt-3">
             <i class="fas fa-file-alt me-1"></i>View All Handouts
         </a>
@@ -609,98 +488,186 @@ body {
     <div class="container">
       <div class="course-section">
         <h2><i class="fas fa-laptop me-2"></i>CRJU/POSC 320: Introduction to Public Administration</h2>
-        <div class="lecture-grid">
+        <p class="mb-4">18 modules organized by topic. Click each section to expand.</p>
+        
+        <!-- Unit 1: Foundations -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 1: Foundations of Public Administration</strong>
+            <span class="lecture-count">3 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 0: Introduction</h5>
+            <h5>Introduction</h5>
             <p>Course introduction and syllabus</p>
             <a href="POSC320/html_page/module_0_Welcome.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 1: What Is PA?</h5>
-            <p>Presentations and course materials for Module 1: What Is PA?.</p>
+            <h5>What Is PA?</h5>
+            <p>Defining public administration</p>
             <a href="POSC320/html_page/module_1_WhatIsPA.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 2-1: Basics</h5>
-            <p>Presentations and course materials for Module 2-1: Basics.</p>
+            <h5>Basics</h5>
+            <p>PA fundamentals</p>
             <a href="POSC320/html_page/module_2-1_basics.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 2: History & Functions -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 2: History & Government Functions</strong>
+            <span class="lecture-count">3 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 2-2: Eras of PA</h5>
-            <p>Presentations and course materials for Module 2-2: Eras of PA.</p>
+            <h5>Eras of PA</h5>
+            <p>Historical eras of public administration</p>
             <a href="POSC320/html_page/module_2-2erasofpa.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 3-1: What Govt Does</h5>
-            <p>Presentations and course materials for Module 3-1: What Govt Does.</p>
+            <h5>What Govt Does</h5>
+            <p>Government functions and roles</p>
             <a href="POSC320/html_page/module_3-1_what_govt_does.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 3-2: Govt Functions</h5>
-            <p>Presentations and course materials for Module 3-2: Govt Functions.</p>
+            <h5>Govt Functions</h5>
+            <p>Core government functions</p>
             <a href="POSC320/html_page/module_3-2_govt_functions.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 3: Organization Theory -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 3: Organization Theory & Problems</strong>
+            <span class="lecture-count">2 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 4-1: Org Theory</h5>
-            <p>Presentations and course materials for Module 4-1: Org Theory.</p>
+            <h5>Org Theory</h5>
+            <p>Organization theory</p>
             <a href="POSC320/html_page/module_4-1_orgtheory.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 4-2: Org Problems</h5>
-            <p>Presentations and course materials for Module 4-2: Org Problems.</p>
+            <h5>Org Problems</h5>
+            <p>Organizational problems</p>
             <a href="POSC320/html_page/module_4-2_org_problems.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 4: Executive & Reform -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 4: Executive Leadership & Reform</strong>
+            <span class="lecture-count">2 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 5-1: Executive</h5>
-            <p>Presentations and course materials for Module 5-1: Executive.</p>
+            <h5>Executive</h5>
+            <p>Executive leadership</p>
             <a href="POSC320/html_page/module_5-1_executive.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 5-2: Reform</h5>
-            <p>Presentations and course materials for Module 5-2: Reform.</p>
+            <h5>Reform</h5>
+            <p>Administrative reform</p>
             <a href="POSC320/html_page/module_5-2_reform.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 5: Human Resources -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 5: Civil Service & Human Capital</strong>
+            <span class="lecture-count">2 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 6-1: Civil Service</h5>
-            <p>Presentations and course materials for Module 6-1: Civil Service.</p>
+            <h5>Civil Service</h5>
+            <p>Civil service systems</p>
             <a href="POSC320/html_page/module_6-1_civilservice.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 6-2: Human Capital</h5>
-            <p>Presentations and course materials for Module 6-2: Human Capital.</p>
+            <h5>Human Capital</h5>
+            <p>Human capital management</p>
             <a href="POSC320/html_page/module_6-2_humancapital.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 6: Decision Making & Budgeting -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 6: Decision Making & Budgeting</strong>
+            <span class="lecture-count">2 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 7-1: Decision Making</h5>
-            <p>Presentations and course materials for Module 7-1: Decision Making.</p>
+            <h5>Decision Making</h5>
+            <p>Administrative decision making</p>
             <a href="POSC320/html_page/module_7-1_decisionmaking.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 7-2: Budgeting</h5>
-            <p>Presentations and course materials for Module 7-2: Budgeting.</p>
+            <h5>Budgeting</h5>
+            <p>Public budgeting</p>
             <a href="POSC320/html_page/module_7-2_budgeting.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
+          </div>
+        </div>
+
+        <!-- Unit 7: Performance & Accountability -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 7: Performance, Regulation & Accountability</strong>
+            <span class="lecture-count">3 modules</span>
+          </button>
+          <div class="lecture-grid unit-content">
           <div class="lecture-item">
-            <h5>Module 8-1: Performance Implementation</h5>
-            <p>Presentations and course materials for Module 8-1: Performance Implementation.</p>
+            <h5>Performance Implementation</h5>
+            <p>Performance management</p>
             <a href="POSC320/html_page/module_8-1_performance_implementation.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 9: Regulation and Courts</h5>
-            <p>Presentations and course materials for Module 9: Regulation and Courts.</p>
+            <h5>Regulation and Courts</h5>
+            <p>Regulation and judicial review</p>
             <a href="POSC320/html_page/module_9_regulationandcourts.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
           <div class="lecture-item">
-            <h5>Module 10: Accountability</h5>
-            <p>Presentations and course materials for Module 10: Accountability.</p>
+            <h5>Accountability</h5>
+            <p>Administrative accountability</p>
             <a href="POSC320/html_page/module_10_accountability.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
-          <div class="lecture-item">
-            <h5>Module 11: Wrap-up</h5>
-            <p>Presentations and course materials for Module 11: Wrap-up.</p>
-            <a href="POSC320/html_page/module_11_wrap-up.html" class="btn btn-sm btn-primary">View Slides</a>
           </div>
         </div>
+
+        <!-- Unit 8: Conclusion -->
+        <div class="unit-section">
+          <button class="unit-header" onclick="toggleUnit(this)">
+            <i class="fas fa-chevron-right me-2"></i>
+            <strong>Unit 8: Course Wrap-up</strong>
+            <span class="lecture-count">1 module</span>
+          </button>
+          <div class="lecture-grid unit-content">
+          <div class="lecture-item">
+            <h5>Wrap-up</h5>
+            <p>Course conclusion</p>
+            <a href="POSC320/html_page/module_11_wrap-up.html" class="btn btn-sm btn-primary">View Slides</a>
+          </div>
+          </div>
+        </div>
+
         <a href="POSC320/posc320_async_handouts.html" class="btn btn-outline-primary mt-3">
           <i class="fas fa-file-alt me-1"></i>View All Handouts
         </a>
@@ -734,13 +701,13 @@ body {
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
         <p class="mb-2 mb-md-0">&copy; 2025 David Prescott Adams</p>
         <div>
-          <a href="https://dadams.io/contact.html" class="me-3 text-decoration-none" style="color: var(--text-secondary);">
+          <a href="https://dadams.io/contact.html" class="me-3 text-decoration-none footer-link">
             <i class="fas fa-envelope me-1"></i>Contact
           </a>
-          <a href="termsofuse.html" class="text-decoration-none" style="color: var(--text-secondary);">
+          <a href="termsofuse.html" class="text-decoration-none footer-link">
             <i class="fas fa-gavel me-1"></i>Terms of Use
           </a>
-          <a href="license.html" class="text-decoration-none ms-3" style="color: var(--text-secondary);">
+          <a href="license.html" class="text-decoration-none ms-3 footer-link">
             <i class="fas fa-balance-scale me-1"></i>License
           </a>
         </div>
@@ -761,6 +728,19 @@ body {
       
       const icon = document.getElementById('theme-icon');
       icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+
+    function toggleUnit(button) {
+      const content = button.nextElementSibling;
+      const isExpanded = content.classList.contains('expanded');
+      
+      if (isExpanded) {
+        content.classList.remove('expanded');
+        button.classList.remove('expanded');
+      } else {
+        content.classList.add('expanded');
+        button.classList.add('expanded');
+      }
     }
 
     // Load saved theme

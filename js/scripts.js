@@ -1,4 +1,37 @@
-   // Theme toggling - Using dadams.io approach
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if images exist in DOM
+    const allImages = document.querySelectorAll('img');
+    
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    // Debug CSS classes that might be hiding images
+    const hiddenImages = document.querySelectorAll('img.image-placeholder');
+    
+    // Force show all images (temporary debug)
+    lazyImages.forEach((img, index) => {
+        // Force immediate loading without lazy loading
+        const src = img.getAttribute('data-src');
+        if (src) {
+            img.src = src;
+            img.style.opacity = '1';
+            img.style.display = 'inline-block';
+            img.style.visibility = 'visible';
+            img.classList.remove('image-placeholder');
+            img.classList.add('loaded');
+        }
+    });
+    
+    // Check for CSS that might be hiding images
+    const styleSheets = document.styleSheets;
+    
+    // Simple force visibility test
+    setTimeout(() => {
+        lazyImages.forEach(img => {
+        });
+    }, 1000);
+    
+    // Theme handling (keeping the existing code)
     const themeToggleButtons = document.querySelectorAll('[data-bs-theme-value]');
     const themeButton = document.getElementById('bd-theme');
     
@@ -7,195 +40,99 @@
     
     // Apply the theme
     const applyTheme = (theme) => {
-      document.body.className = ''; // Clear all theme classes
-      
-      if (theme === 'auto') {
-        // Check system preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
-        document.body.classList.add('auto-theme');
-        document.documentElement.setAttribute('data-bs-theme', prefersDark ? 'dark' : 'light');
-      } else {
-        document.body.classList.add(`${theme}-theme`);
-        document.documentElement.setAttribute('data-bs-theme', theme);
-      }
-      
-      // Save theme preference
-      localStorage.setItem('themePreference', theme);
-    };
-    
-// Update theme button icon and active states
-const updateThemeIcon = (theme) => {
-    const targetEl = document.querySelector(`[data-bs-theme-value="${theme}"]`);
-    if (!targetEl) return;
-    
-    const svgContent = targetEl.querySelector('svg.theme-icon').outerHTML;
-    
-    // Update button icon
-    const themeIcon = themeButton?.querySelector('svg');
-    if (themeIcon) {
-      themeIcon.outerHTML = svgContent;
-    } else if (themeButton) {
-      themeButton.insertAdjacentHTML('afterbegin', svgContent);
-    }
-    
-    // Update active states
-    themeToggleButtons.forEach(btn => {
-      btn.setAttribute('aria-pressed', 'false');
-      btn.classList.remove('active');
-      // Hide checkmark
-      const checkmark = btn.querySelector('svg.bi.ms-auto');
-      if (checkmark) {
-        checkmark.classList.add('d-none');
-      }
-    });
+        document.body.classList.remove('light-theme', 'dark-theme', 'auto-theme');
 
-    // Chevron icon toggle for main course sections
-    const mainCollapsibleSectionIds = ['#posc315-content', '#posc315-async-content', '#posc521-content', '#posc320-async-content'];
-
-    mainCollapsibleSectionIds.forEach(sectionIdSelector => {
-      const collapsibleElement = document.querySelector(sectionIdSelector);
-      if (collapsibleElement) {
-        // Find the specific icon button associated with this collapsible section
-        const iconToggleButton = document.querySelector(`.main-section-toggle-btn[data-bs-target="${sectionIdSelector}"]`);
-        if (iconToggleButton) {
-          const icon = iconToggleButton.querySelector('i.fas'); // Get the <i> element
-          if (icon) {
-            collapsibleElement.addEventListener('shown.bs.collapse', function () {
-              icon.classList.remove('fa-chevron-right');
-              icon.classList.add('fa-chevron-down');
-            });
-            collapsibleElement.addEventListener('hidden.bs.collapse', function () {
-              icon.classList.remove('fa-chevron-down');
-              icon.classList.add('fa-chevron-right');
-            });
-
-            // Set initial icon state based on whether the section is initially shown or hidden
-            if (collapsibleElement.classList.contains('show')) {
-              icon.classList.remove('fa-chevron-right');
-              icon.classList.add('fa-chevron-down');
-            } else {
-              icon.classList.remove('fa-chevron-down');
-              icon.classList.add('fa-chevron-right');
-            }
-          }
+        if (theme === 'auto') {
+            // Check system preference
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
+            document.body.classList.add('auto-theme');
+        } else {
+            document.body.classList.add(`${theme}-theme`);
         }
-      }
-    });
-    
-    targetEl.setAttribute('aria-pressed', 'true');
-    targetEl.classList.add('active');
-    
-    // Show checkmark on active item
-    const checkmark = targetEl.querySelector('svg.bi.ms-auto');
-    if (checkmark) {
-      checkmark.classList.remove('d-none');
-    }
-  };
+
+        // Save theme preference
+        localStorage.setItem('themePreference', theme);
+    };
+
+    const updateThemeState = (theme) => {
+        const targetEl = document.querySelector(`[data-bs-theme-value="${theme}"]`);
+        if (!targetEl) return;
+
+        // Update active states
+        themeToggleButtons.forEach(btn => {
+            btn.setAttribute('aria-pressed', 'false');
+            btn.classList.remove('active');
+        });
+
+        targetEl.setAttribute('aria-pressed', 'true');
+        targetEl.classList.add('active');
+
+        if (themeButton) {
+            const themeIconUse = themeButton.querySelector('use');
+            const themeText = document.getElementById('bd-theme-text');
+            const iconMap = {
+                light: '#sun-fill',
+                dark: '#moon-stars-fill',
+                auto: '#circle-half'
+            };
+
+            if (themeIconUse) {
+                themeIconUse.setAttribute('href', iconMap[theme] || '#circle-half');
+            }
+
+            const label = `Toggle theme (${theme})`;
+            themeButton.setAttribute('aria-label', label);
+            if (themeText) {
+                themeText.textContent = label;
+            }
+        }
+    };
     
     // Apply the initial theme with a smooth transition
     document.body.style.transition = 'none';
     const storedTheme = getStoredTheme();
     applyTheme(storedTheme);
-    updateThemeIcon(storedTheme);
+    updateThemeState(storedTheme);
     
     // Re-enable transitions after initial theme is applied
     setTimeout(() => {
-      document.body.style.transition = '';
+        document.body.style.transition = '';
     }, 50);
     
     // Handle theme toggle clicks
     themeToggleButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const theme = btn.getAttribute('data-bs-theme-value');
-        applyTheme(theme);
-        updateThemeIcon(theme);
-      });
+        btn.addEventListener('click', () => {
+            const theme = btn.getAttribute('data-bs-theme-value');
+            applyTheme(theme);
+            updateThemeState(theme);
+        });
     });
     
     // Listen for system preference changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      if (getStoredTheme() === 'auto') {
-        applyTheme('auto');
-      }
-    });
-    
-    // Lazy image loading
-    document.addEventListener('DOMContentLoaded', function() {
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      
-      lazyImages.forEach((img) => {
-        const src = img.getAttribute('data-src');
-        if (src) {
-          img.src = src;
-          img.classList.remove('image-placeholder');
-          img.classList.add('loaded');
+        if (getStoredTheme() === 'auto') {
+            applyTheme('auto');
         }
-      });
     });
-    
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          
-          // Scroll to the target with offset for fixed header
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-          
-        }
-      });
-    });
-    
-    // Animation on scroll
-    function animateOnScroll() {
-      const animatedElements = document.querySelectorAll('.animate-slide-in');
-      
-      animatedElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        
-        if (rect.top <= windowHeight * 0.85 && rect.bottom >= 0) {
-          el.style.opacity = '1';
-          el.style.transform = 'translateX(0)';
-        }
-      });
-    }
-    
-    // Set initial state for animated elements
-    document.querySelectorAll('.animate-slide-in').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateX(-20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateOnScroll);
     
     // Back to top button
     const backToTopBtn = document.getElementById('backToTop');
     
     if (backToTopBtn) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTopBtn.style.display = 'block';
-        } else {
-          backToTopBtn.style.display = 'none';
-        }
-      });
-      
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
         });
-      });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
+});

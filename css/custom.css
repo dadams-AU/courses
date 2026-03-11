@@ -1813,3 +1813,134 @@ body.dark-theme article header div.text-muted {
 .dark-theme .lecture-item p {
   color: var(--dark-text-secondary);
 }
+/* =========================================================
+   Lecture Card Enhancements — YouTube + Layout
+   ========================================================= */
+
+/* lecture-item: flex column so actions stick to bottom */
+.lecture-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.lecture-item p {
+  flex: 1;
+}
+
+/* Action button row inside each lecture card */
+.lecture-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* YouTube button — YouTube brand red */
+.btn-youtube {
+  background-color: #FF0000;
+  color: #ffffff;
+  border: 1px solid #CC0000;
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus {
+  background-color: #CC0000;
+  color: #ffffff;
+  border-color: #AA0000;
+  box-shadow: 0 4px 10px rgba(204, 0, 0, 0.35);
+}
+
+.btn-youtube:active {
+  background-color: #AA0000;
+  color: #ffffff;
+}
+
+.dark-theme .btn-youtube {
+  background-color: #FF0000;
+  color: #ffffff;
+  border-color: #CC0000;
+}
+
+.dark-theme .btn-youtube:hover,
+.dark-theme .btn-youtube:focus {
+  background-color: #CC0000;
+  border-color: #AA0000;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.4);
+}
+
+/* Expand / Collapse All button row */
+.unit-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.unit-controls .btn {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+}
+
+/* Unit header left-accent bar on hover for visual affordance */
+.unit-header {
+  border-left: 3px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.unit-header:hover {
+  border-left-color: var(--primary-blue);
+}
+
+.unit-header.expanded {
+  border-left-color: var(--primary-green);
+}
+
+.dark-theme .unit-header.expanded {
+  border-left-color: #34d399;
+}
+
+/* Dark-theme hover accent for unit-header */
+.dark-theme .unit-header:hover {
+  border-left-color: #60a5fa;
+}
+
+/* Hover transform for YouTube button — consistent with .btn-primary */
+.btn-youtube:hover,
+.btn-youtube:focus {
+  transform: translateY(-2px);
+}
+
+.btn-youtube:active {
+  transform: translateY(0);
+}
+
+/* unit-controls dark theme */
+.dark-theme .unit-controls {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: var(--dark-border);
+}
+
+/* expand-all-bar — styled container for expand/collapse controls */
+.expand-all-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--light-bg-alt);
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-md);
+}
+
+.dark-theme .expand-all-bar {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: var(--dark-border);
+}
+
+.expand-all-bar .btn {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}

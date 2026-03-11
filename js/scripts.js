@@ -1,3 +1,22 @@
+// Expand / Collapse all units within a course section
+function expandAllUnits(sectionId, expand) {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+  section.querySelectorAll('.unit-header').forEach(function(btn) {
+    const content = btn.nextElementSibling;
+    if (!content) return;
+    if (expand) {
+      content.classList.add('expanded');
+      btn.classList.add('expanded');
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      content.classList.remove('expanded');
+      btn.classList.remove('expanded');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Check if images exist in DOM

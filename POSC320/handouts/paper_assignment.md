@@ -1,23 +1,23 @@
 ---
-title: "Scaffolded Policy Brief Assignment"
+title: "Scaffolded Management Brief Assignment"
 subtitle: "CRJU/POSC 320: Public Administration Theory and Practice"
 author: "David P. Adams, Ph.D."
 ---
 
 ### Overview
 
-You will analyze one of three current public administration challenges through a 5-week scaffolded project using a single shared Google Doc. Each week builds on course concepts and requires specific integration with your Kettl textbook. By the end of Week 5, you will have created a professional policy brief demonstrating your understanding of public administration theory and practice.
+You will analyze one of three current public administration challenges through a 5-week scaffolded project using a single shared Google Doc. Each week builds on course concepts and requires specific integration with your Kettl textbook. By the end of Week 5, you will have created a professional management brief demonstrating your understanding of public administration theory and practice.
 
 **Total Project Value: 45% of course grade**
 **Research Logs: 10% of course grade (graded separately)**
 
-**Policy Brief Project Grade Breakdown:**
+**Management Brief Project Grade Breakdown:**
 
-- Week 1: 10% of Policy Brief grade (Problem Statement & Research Foundation)
-- Week 2: 15% of Policy Brief grade (Stakeholder Analysis & Context)
-- Week 3: 20% of Policy Brief grade (Organizational Theory Application)
-- Week 4: 25% of Policy Brief grade (Management Challenges & Solutions)
-- Week 5: 30% of Policy Brief grade (Final Recommendations & Polish)
+- Week 1: 10% of Management Brief grade (Problem Statement & Research Foundation)
+- Week 2: 15% of Management Brief grade (Stakeholder Analysis & Context)
+- Week 3: 20% of Management Brief grade (Organizational Theory Application)
+- Week 4: 25% of Management Brief grade (Management Challenges & Solutions)
+- Week 5: 30% of Management Brief grade (Final Recommendations & Polish)
 
 **Research Log Grading:**
 Each weekly Research Log is worth 2% of your total course grade (5 weeks × 2% = 10% total). Research Logs are evaluated on evidence of genuine engagement with sources, reflection on learning process, and connection to course concepts.
@@ -28,7 +28,7 @@ Each weekly Research Log is worth 2% of your total course grade (5 weeks × 2% =
 
 ### Google Docs Setup
 
-1. **Create a Google Doc** titled: "PA Brief - [Your Last Name] - [Topic Choice]"
+1. **Create a Google Doc** titled: "Management Brief - [Your Last Name] - [Topic Choice]"
 2. **Before your first submission**, share the document with **dpadams@fullerton.edu** and set access to **Editor** (Share → add dpadams@fullerton.edu → Editor)
 3. **Each week**, paste the shareable link into the Canvas assignment by the Friday deadline
 4. **Use Suggesting mode** for your revisions in Weeks 4 and 5 so your edits are visible; accept your suggestions before the final submission to produce a clean final version at the top of the document

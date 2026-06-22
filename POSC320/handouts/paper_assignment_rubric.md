@@ -1,12 +1,12 @@
 ---
-title: "Policy Brief Grading Rubric"
+title: "Management Brief Grading Rubric"
 subtitle: "CRJU/POSC 320 – Introduction to Public Administration"
 author: "Dr. David P. Adams"
 ---
 
 ## 📊 Overview
 
-Your **Policy Brief Project** is worth **45% of your total course grade**. This rubric explains how your work will be evaluated each week and at the end of the project. Please refer to this guide as you draft, revise, and finalize your brief.
+Your **Management Brief Project** is worth **45% of your total course grade**. This rubric explains how your work will be evaluated each week and at the end of the project. Please refer to this guide as you draft, revise, and finalize your brief.
 
 ---
 

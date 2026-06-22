@@ -6,9 +6,9 @@ author: "Dr. David P. Adams"
 
 ## 📚 What Is a Research Log?
 
-The **Research Log** is a weekly writing task (2–3 sentences) that tracks your thought process as you build your Policy Brief. It’s not a summary of what you wrote—it's a reflection on what you learned, struggled with, or discovered.
+The **Research Log** is a weekly writing task (2–3 sentences) that tracks your thought process as you build your Management Brief. It’s not a summary of what you wrote—it's a reflection on what you learned, struggled with, or discovered.
 
-You will complete **one log entry per week**, embedded directly at the end of your policy brief Google Doc.
+You will complete **one log entry per week**, embedded directly at the end of your management brief Google Doc.
 
 ---
 
@@ -65,7 +65,7 @@ Here are some example sentence starters:
 
 ## 📅 When Is It Due?
 
-Each week, your Research Log is due at the same time as your policy brief draft:
+Each week, your Research Log is due at the same time as your management brief draft:
 
 - **Friday, 11:59 PM**, each week (Weeks 1–5)
 

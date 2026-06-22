@@ -18,7 +18,7 @@ Your **Policy Brief Project** is worth **45% of your total course grade**. This 
 | **Kettl Integration**     | Accurately applies weekly textbook concepts; includes page citations; deepens use of theory across project stages     | 15         |
 | **Structure & Organization** | Logical section flow; clear headers and transitions; consistent formatting                                         | 5          |
 | **Writing Quality**       | Professional tone; clear and concise writing; minimal grammar or usage issues; follows memo formatting guidelines     | 5          |
-| **Revision & Process**    | Shows weekly progress with tracked changes and comments; revision history demonstrates active engagement              | 5          |
+| **Revision & Process**    | Shows weekly progress in the shared Google Doc using Suggesting mode and comments; revision history demonstrates active engagement | 5          |
 | **Final Polish**          | Includes executive summary; cohesive and well-cited in APA; meets length and style expectations                      | 5          |
 | **TOTAL**                 |                                                                                                                      | **/55**    |
 
@@ -53,6 +53,6 @@ The following will result in **automatic zero** for that week’s assignment:
 
 - Follow the weekly prompts closely and cite Kettl every time
 - Write incrementally: don't paste in large sections all at once
-- Use tracked changes in Google Docs to show your process
+- Use Suggesting mode in Google Docs to show your process
 - Be specific. Avoid generic or vague analysis—use real cases, data, and clear logic
 - Use your Research Log to explain what you’re learning and how your thinking is evolving

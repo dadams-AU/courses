@@ -67,8 +67,7 @@ Here are some example sentence starters:
 
 Each week, your Research Log is due at the same time as your policy brief draft:
 
-- **Saturday, 11:59 PM**, Weeks 1–4  
-- **Friday, 11:59 PM**, Week 5 (final reflection)
+- **Friday, 11:59 PM**, each week (Weeks 1–5)
 
 ---
 

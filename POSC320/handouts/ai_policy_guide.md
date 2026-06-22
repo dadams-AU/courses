@@ -59,7 +59,7 @@ AI can’t think for you. **Your grade depends on your analysis, synthesis, and 
 Every week I check:
 
 - Whether your writing shows growth over time
-- If your tracked changes reflect your process
+- If your document history reflects your process
 - If your citations and claims are grounded in real sources
 
 If something seems off—like a sudden style shift or generic, vague text—it will be reviewed. I may ask you to explain your thinking or redo sections if originality is unclear.
@@ -92,7 +92,7 @@ Use APA-style citations in your reference list or as footnotes.
 
 > *Pasted entire section from ChatGPT without revision or citation.*
 
-> *Used AI to rewrite Week 3 without tracked changes showing development.*
+> *Used AI to rewrite Week 3 without revision history showing development.*
 
 > *AI-generated sources or citations that don’t exist.*
 

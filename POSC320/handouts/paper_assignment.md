@@ -6,7 +6,7 @@ author: "David P. Adams, Ph.D."
 
 ### Overview
 
-You will analyze one of three current public administration challenges through a 5-week scaffolded project using Google Docs with tracked changes. Each week builds on course concepts and requires specific integration with your Kettl textbook. By the end of Week 5, you will have created a professional policy brief demonstrating your understanding of public administration theory and practice.
+You will analyze one of three current public administration challenges through a 5-week scaffolded project using a single shared Google Doc. Each week builds on course concepts and requires specific integration with your Kettl textbook. By the end of Week 5, you will have created a professional policy brief demonstrating your understanding of public administration theory and practice.
 
 **Total Project Value: 45% of course grade**
 **Research Logs: 10% of course grade (graded separately)**
@@ -21,6 +21,18 @@ You will analyze one of three current public administration challenges through a
 
 **Research Log Grading:**
 Each weekly Research Log is worth 2% of your total course grade (5 weeks × 2% = 10% total). Research Logs are evaluated on evidence of genuine engagement with sources, reflection on learning process, and connection to course concepts.
+
+---
+
+## Submission Requirements
+
+### Google Docs Setup
+
+1. **Create a Google Doc** titled: "PA Brief - [Your Last Name] - [Topic Choice]"
+2. **Before your first submission**, share the document with **dpadams@fullerton.edu** and set access to **Editor** (Share → add dpadams@fullerton.edu → Editor)
+3. **Each week**, paste the shareable link into the Canvas assignment by the Friday deadline
+4. **Use Suggesting mode** for your revisions in Weeks 4 and 5 so your edits are visible; accept your suggestions before the final submission to produce a clean final version at the top of the document
+5. Microsoft Word, PDF, or other file uploads will not be accepted. If you lose editor access or move the file, your submission will be considered late until access is restored.
 
 ---
 
@@ -78,7 +90,7 @@ Ch. 2 (What Government Does), Ch. 6 (Human Capital), Ch. 8 (Performance Manageme
 
 ## Week 1: Problem Statement & Research Foundation
 
-**Due: Saturday, Week 1, 11:59 PM**  
+**Due: Friday, Week 1, 11:59 PM**  
 **Length: 400-600 words**  
 **Aligns with:** Modules 1-2 (Introduction & Foundations)
 
@@ -104,7 +116,7 @@ Write 2-3 sentences documenting: "This week I found [specific sources/data] and 
 
 ## Week 2: Stakeholder Analysis & Context  
 
-**Due: Saturday, Week 2, 11:59 PM**  
+**Due: Friday, Week 2, 11:59 PM**  
 **Length: 500-700 words (added to existing doc)**  
 **Aligns with:** Modules 3-4 (Government Functions & Organizational Theory)
 
@@ -132,7 +144,7 @@ Document new sources and insights about stakeholder dynamics.
 
 ## Week 3: Organizational Theory Application
 
-**Due: Saturday, Week 3, 11:59 PM**  
+**Due: Friday, Week 3, 11:59 PM**  
 **Length: 500-700 words (added to existing doc)**  
 **Aligns with:** Modules 5-6 (Executive Branch & Human Capital)
 
@@ -160,7 +172,7 @@ Document what you learned about organizational and management factors.
 
 ## Week 4: Management Challenges & Solutions
 
-**Due: Saturday, Week 4, 11:59 PM**  
+**Due: Friday, Week 4, 11:59 PM**  
 **Length: 600-800 words (added to existing doc)**  
 **Aligns with:** Modules 7-8 (Decision Making, Budgeting & Performance)
 
@@ -229,7 +241,7 @@ Reflect on what you learned about public administration through this project.
 - **Content Quality** (40%): Depth of analysis, use of evidence
 - **Kettl Integration** (30%): Accurate application of textbook concepts
 - **Research Quality** (20%): Appropriate sources, current information
-- **Writing & Process** (10%): Clarity, tracked changes, research logs
+- **Writing & Process** (10%): Clarity, document history, research logs
 
 ### AI-Use Detection
 

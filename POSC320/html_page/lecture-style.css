@@ -4,38 +4,79 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  /* Light mode tokens (stronger contrast than the old version) */
+  --bg:           #ffffff;
+  --bg-alt:       #f5f7fa;   /* section banding, blockquote */
+  --bg-stripe:    #fafbfd;   /* alternate section */
+  --text:         #1a1f2c;   /* body text — near-black, was #222 */
+  --text-muted:   #4a5568;   /* secondary text, was #666 */
+  --text-soft:    #2d3748;   /* header subtitle, was #333 */
+  --heading:      #0b3d91;   /* h1/h2 — was #0d47a1, deepened */
+  --heading-2:    #0b3d91;
+  --heading-3:    #1565c0;
+  --heading-4:    #1e3a5f;
+  --accent:       #1565c0;   /* was #1976d2 */
+  --accent-soft:  #d0e3f7;   /* was #90caf9 (used in h3 left border) */
+  --rule:         #cbd5e0;   /* was #ddd */
+  --rule-soft:    #e2e8f0;
+  --code-bg:      #1e2530;   /* slightly less harsh than #272822 */
+  --code-text:    #e8eaed;
+  --code-inline:  #edf2f7;   /* was #f4f4f4, more legible */
+  --link:         #1565c0;
+  --link-hover:   #0b3d91;
+  --target-hl:    #fff7c2;   /* anchor highlight */
+  --strong:       #2c3e6b;   /* <strong>: deep slate-blue, distinct from --heading navy */
+  --emphasis:     #b8431f;   /* <em> uses a warm rust so italics pop */
+}
+
 body {
   margin: 0;
   padding: 2rem;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   font-size: 1.125rem;
   line-height: 1.7;
-  background-color: #fefefe;
-  color: #222;
+  background-color: var(--bg);
+  color: var(--text);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
 }
 
 /* ==== Headings ==== */
 h1, h2, h3, h4 {
   margin-top: 2.5rem;
   line-height: 1.2;
+  color: var(--heading);
 }
 
 h1 {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #0d47a1;
-  border-bottom: 3px solid #1976d2;
+  color: var(--heading);
+  border-bottom: 3px solid var(--accent);
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 1.75rem;
-  color: #0d47a1;
-  border-left: 4px solid #1976d2;
+  color: var(--heading-2);
+  border-left: 4px solid var(--accent);
   padding-left: 0.6rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -43,17 +84,18 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  color: #1565c0;
+  color: var(--heading-3);
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   padding-left: 0.4rem;
-  border-left: 3px solid #90caf9;
+  border-left: 3px solid var(--accent-soft);
 }
 
 h4 {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--heading-4);
   margin-bottom: 0.5rem;
 }
 
@@ -61,6 +103,7 @@ h4 {
 ul, ol {
   margin: 1rem 0;
   padding-left: 2rem;
+  color: var(--text);
 }
 
 li {
@@ -69,15 +112,37 @@ li {
 
 /* ==== Emphasis & Quotes ==== */
 strong {
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--strong);
+}
+
+em {
+  color: var(--emphasis);
+  font-style: italic;
+}
+
+/* <strong><em> nested (e.g. inside a <p><strong> header line)
+   should still read as bold body text, not the rust italic. */
+strong em {
+  color: var(--strong);
+  font-style: italic;
+}
+
+/* <em><strong> nested: keep the bold weight, but the rust italic
+   tone still wins so the user can spot a "note" inside a
+   bold lead-in. */
+em strong {
+  color: var(--emphasis);
 }
 
 blockquote {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
-  background: #f1f5f9;
-  border-left: 4px solid #0077cc;
+  background: var(--bg-alt);
+  border-left: 4px solid var(--accent);
   font-style: italic;
+  color: var(--text-soft);
+  border-radius: 0 4px 4px 0;
 }
 
 /* ==== Tables ==== */
@@ -86,38 +151,54 @@ table {
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 1rem;
+  border: 1px solid var(--rule);
 }
 
 th, td {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--rule);
+  color: var(--text);
 }
 
 th {
-  background: #f4f4f4;
-  font-weight: bold;
+  background: var(--bg-alt);
+  font-weight: 700;
+  color: var(--heading);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--bg-stripe);
 }
 
 /* ==== Code Blocks ==== */
 pre {
-  background: #272822;
-  color: #f8f8f2;
+  background: var(--code-bg);
+  color: var(--code-text);
   padding: 1rem;
   overflow-x: auto;
   border-radius: 5px;
+  border: 1px solid #2d3748;
 }
 
 code {
-  background: #f4f4f4;
+  background: var(--code-inline);
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
   font-family: monospace;
+  color: #c05621;  /* warm contrast for inline code on light bg */
+  font-size: 0.95em;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--code-text);
 }
 
 /* ==== Navigation Anchor Highlighting ==== */
 :target {
   scroll-margin-top: 4rem;
-  background: #fff9c4;
+  background: var(--target-hl);
   transition: background 0.5s ease;
 }
 
@@ -125,11 +206,11 @@ code {
 section {
   padding: 2rem 0;
   margin-bottom: 3rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--rule);
 }
 
 section:nth-child(odd) {
-  background: #fcfcfc;
+  background: var(--bg-stripe);
 }
 
 /* ==== Header Block ==== */
@@ -138,7 +219,7 @@ section:nth-child(odd) {
   margin-top: 2rem;
   margin-bottom: 3rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid var(--rule);
 }
 
 .page-header h1 {
@@ -149,28 +230,30 @@ section:nth-child(odd) {
 .page-header h2 {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #333;
+  color: var(--text-soft);
   margin-top: 0;
   margin-bottom: 0.5rem;
+  border-left: none;
+  padding-left: 0;
 }
 
 .page-header .course {
   font-size: 1rem;
-  color: #444;
+  color: var(--text-soft);
   font-weight: 500;
   margin-bottom: 0.3rem;
 }
 
 .page-header .author {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-muted);
   font-style: italic;
 }
 
 /* ==== Horizontal Rule === */
 hr {
   border: none;
-  border-top: 1px dashed #ccc;
+  border-top: 1px dashed var(--rule);
   margin: 3rem 0;
   opacity: 0.6;
 }
@@ -179,83 +262,240 @@ hr {
 footer, .summary {
   margin-top: 3rem;
   font-size: 0.95rem;
-  color: #666;
-  border-top: 1px solid #ccc;
+  color: var(--text-muted);
+  border-top: 1px solid var(--rule);
   padding-top: 1.5rem;
   text-align: center;
 }
 
 /* ==== Dark Mode (Auto & Toggle Support) ==== */
+/* The user-controlled toggle sets data-theme on <html>.
+   Default to light, switch to dark only when explicitly
+   requested, OR when the OS prefers dark AND the user
+   hasn't chosen light yet. */
+:root[data-theme="dark"] {
+  --bg:           #0f1419;
+  --bg-alt:       #1a2028;
+  --bg-stripe:    #131820;
+  --text:         #e2e8f0;
+  --text-muted:   #a0aec0;
+  --text-soft:    #cbd5e0;
+  --heading:      #90caf9;
+  --heading-2:    #90caf9;
+  --heading-3:    #a8d0f5;
+  --heading-4:    #cbd5e0;
+  --accent:       #64b5f6;
+  --accent-soft:  #2d4a66;
+  --rule:         #2d3748;
+  --rule-soft:    #1a2028;
+  --code-bg:      #0a0e13;
+  --code-text:    #e8eaed;
+  --code-inline:  #1a2028;
+  --link:         #90caf9;
+  --link-hover:   #bbdefb;
+  --target-hl:    #3d3520;
+  --strong:       #b8c5e0;
+  --emphasis:     #f0a878;
+}
+
 @media (prefers-color-scheme: dark) {
-  body,
-  section {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-
-  a {
-    color: #90caf9;
-  }
-
-  h1, h2, h3, h4 {
-    color: #bbdefb;
-  }
-
-  blockquote {
-    background-color: #1e1e1e;
-    border-left-color: #64b5f6;
-  }
-
-  code,
-  pre {
-    background-color: #1e1e1e;
-    color: #eee;
-  }
-
-  .page-header {
-    border-bottom-color: #333;
-  }
-
-  .page-header .course,
-  .page-header .author {
-    color: #ccc;
-  }
-
-  hr {
-    border-top: 1px dashed #444;
+  /* Only auto-dark if the user hasn't explicitly set a theme
+     via the toggle (or saved one in localStorage). */
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --bg:           #0f1419;
+    --bg-alt:       #1a2028;
+    --bg-stripe:    #131820;
+    --text:         #e2e8f0;
+    --text-muted:   #a0aec0;
+    --text-soft:    #cbd5e0;
+    --heading:      #90caf9;
+    --heading-2:    #90caf9;
+    --heading-3:    #a8d0f5;
+    --heading-4:    #cbd5e0;
+    --accent:       #64b5f6;
+    --accent-soft:  #2d4a66;
+    --rule:         #2d3748;
+    --rule-soft:    #1a2028;
+    --code-bg:      #0a0e13;
+    --code-text:    #e8eaed;
+    --code-inline:  #1a2028;
+    --link:         #90caf9;
+    --link-hover:   #bbdefb;
+    --target-hl:    #3d3520;
+    --strong:       #b8c5e0;
+    --emphasis:     #f0a878;
   }
 }
 
-/* Manual toggle class */
+/* Element-level dark-mode styling: applies whenever dark
+   tokens are active (either via toggle OR via OS pref).
+   :is() keeps the rule block DRY across both paths. */
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] section,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) body,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) section {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+}
+
+:root[data-theme="dark"] a,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) a {
+    color: var(--link);
+  }
+}
+
+:root[data-theme="dark"] a:hover,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) a:hover {
+    color: var(--link-hover);
+  }
+}
+
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) h1,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) h2,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) h3,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) h4 {
+    color: var(--heading);
+  }
+}
+
+:root[data-theme="dark"] blockquote,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) blockquote {
+    background-color: var(--bg-alt);
+    border-left-color: var(--accent);
+  }
+}
+
+:root[data-theme="dark"] code,
+:root[data-theme="dark"] pre,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) code,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) pre {
+    background-color: var(--code-inline);
+    color: #f8d7a8;  /* warm inline code on dark */
+  }
+}
+
+:root[data-theme="dark"] pre,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) pre {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+  }
+}
+
+:root[data-theme="dark"] pre code,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) pre code {
+    color: var(--code-text);
+  }
+}
+
+:root[data-theme="dark"] th,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) th {
+    background: var(--bg-alt);
+    color: var(--heading);
+  }
+}
+
+:root[data-theme="dark"] .page-header,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .page-header {
+    border-bottom-color: var(--rule);
+  }
+}
+
+:root[data-theme="dark"] .page-header .course,
+:root[data-theme="dark"] .page-header .author,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .page-header .course,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .page-header .author {
+    color: var(--text-muted);
+  }
+}
+
+:root[data-theme="dark"] hr,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) hr {
+    border-top: 1px dashed var(--rule);
+  }
+}
+
+/* Manual toggle class — mirrors the auto dark media query */
 body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+  --bg:           #0f1419;
+  --bg-alt:       #1a2028;
+  --bg-stripe:    #131820;
+  --text:         #e2e8f0;
+  --text-muted:   #a0aec0;
+  --text-soft:    #cbd5e0;
+  --heading:      #90caf9;
+  --heading-2:    #90caf9;
+  --heading-3:    #a8d0f5;
+  --heading-4:    #cbd5e0;
+  --accent:       #64b5f6;
+  --accent-soft:  #2d4a66;
+  --rule:         #2d3748;
+  --code-bg:      #0a0e13;
+  --code-text:    #e8eaed;
+  --code-inline:  #1a2028;
+  --link:         #90caf9;
+  --link-hover:   #bbdefb;
+  --target-hl:    #3d3520;
+  --strong:       #b8c5e0;
+  --emphasis:     #f0a878;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 body.dark-mode h1,
 body.dark-mode h2 {
-  color: #bbdefb;
+  color: var(--heading);
 }
 
 body.dark-mode h3 {
-  color: #e0e0e0;
+  color: var(--text);
   font-weight: 600;
-  border-left: 3px solid #444;
+  border-left: 3px solid var(--accent-soft);
   background-color: transparent;
   padding-left: 0.4rem;
 }
 
-
 body.dark-mode blockquote {
-  background-color: #1e1e1e;
-  border-left-color: #64b5f6;
+  background-color: var(--bg-alt);
+  border-left-color: var(--accent);
 }
 
 body.dark-mode code,
 body.dark-mode pre {
-  background-color: #1e1e1e;
-  color: #eee;
+  background-color: var(--code-inline);
+  color: #f8d7a8;
 }
+
+body.dark-mode pre {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+}
+
+body.dark-mode pre code {
+  color: var(--code-text);
+}
+
+body.dark-mode th {
+  background: var(--bg-alt);
+  color: var(--heading);
+}
+
 
 @media print {
   body {

@@ -15,7 +15,7 @@ You will analyze one of three current public administration challenges through a
 
 - Week 1: 10% of Management Brief grade (Problem Statement & Research Foundation)
 - Week 2: 15% of Management Brief grade (Stakeholder Analysis & Context)
-- Week 3: 20% of Management Brief grade (Reform & Human Capital Analysis)
+- Week 3: 20% of Management Brief grade (Organizational Problems & Civil Service Analysis)
 - Week 4: 25% of Management Brief grade (Management Challenges & Solutions)
 - Week 5: 30% of Management Brief grade (Final Recommendations & Polish)
 
@@ -50,7 +50,7 @@ Analyze how public agencies decide *who gets help first* after disasters like wi
 - Public trust and transparency
 
 **Kettl Links:**  
-Ch. 1 (Core Values), Ch. 2 (What Government Does), Ch. 11–12 (Budgeting & Implementation), Ch. 14 (Oversight)
+Ch. 2 (Accountability), Ch. 3 (What Government Does), Ch. 12–13 (Budgeting & Implementation), Ch. 15 (Oversight)
 
 ---
 
@@ -66,7 +66,7 @@ Explore how a local government or law enforcement agency is using surveillance t
 - Performance and budgeting
 
 **Kettl Links:**  
-Ch. 2 (What Government Does), Ch. 4–5 (Organizational Theory & Executive Structure), Ch. 13–14 (Regulation & Accountability)
+Ch. 3 (What Government Does), Ch. 5–6 (Organizational Theory & Executive Structure), Ch. 14–15 (Regulation & Accountability)
 
 ---
 
@@ -82,7 +82,7 @@ Choose a local public program—something your city or county is doing (e.g. hom
 - Community impact
 
 **Kettl Links:**  
-Ch. 2 (What Government Does), Ch. 9 (Human Capital), Ch. 12 (Implementation & Performance), Ch. 14 (Accountability)
+Ch. 3 (What Government Does), Ch. 10 (Human Capital), Ch. 13 (Implementation & Performance), Ch. 15 (Accountability)
 
 ---
 
@@ -99,14 +99,14 @@ Ch. 2 (What Government Does), Ch. 9 (Human Capital), Ch. 12 (Implementation & Pe
 #### Problem Definition (200-300 words)
 
 - **Clear problem statement** related to your chosen topic
-- **Connect to Kettl Chapter 1:** Use the three core values framework (accountability, efficiency, equity) to explain why this is a significant PA problem (cite specific pages)
+- **Connect to Kettl Chapter 2:** Use the three core values framework (accountability, efficiency, equity) to explain why this is a significant PA problem (cite specific pages)
 - **Scope definition:** What specific aspect of the broader issue will you focus on?
 
 #### Significance & Evidence (200-300 words)
 
 - **Administrative relevance:** Why does this matter for public administration practice?
 - **Current evidence:** 2-3 statistics, examples, or recent developments (2023-2025 sources)
-- **Connect to Kettl Chapter 2:** Reference "what government does" framework (cite specific sections)
+- **Connect to Kettl Chapter 3:** Reference "what government does" framework (cite specific sections)
 
 #### Weekly Research Log
 
@@ -118,7 +118,7 @@ Write 2-3 sentences documenting: "This week I found [specific sources/data] and 
 
 **Due: Friday, Week 2, 11:59 PM**  
 **Length: 500-700 words (added to existing doc)**  
-**Aligns with:** Modules 4-6 (Organizational Theory & Structure)
+**Aligns with:** Modules 4-6 (Public Administration & Organizational Structure)
 
 ### Required Elements
 
@@ -127,14 +127,14 @@ Write 2-3 sentences documenting: "This week I found [specific sources/data] and 
 - **Primary stakeholders:** Government agencies, officials, affected populations
 - **Secondary stakeholders:** Interest groups, contractors, other governments
 - **Conflicting interests:** How do stakeholder goals create administrative challenges?
-- **Connect to Kettl Chapter 5:** Use executive branch structure concepts to categorize stakeholder roles (cite specific examples)
+- **Connect to Kettl Chapter 6:** Use executive branch structure concepts to categorize stakeholder roles (cite specific examples)
 
 #### Contextual Factors (250-350 words)
 
 - **Political environment:** How do political pressures affect administrative action?
 - **Legal/regulatory constraints:** What rules shape administrative responses?
 - **Resource limitations:** Budget, staff, or technology constraints
-- **Connect to Kettl Chapters 4 and 6:** Apply organizational theory concepts to explain coordination challenges (minimum 2 concepts with page citations)
+- **Connect to Kettl Chapter 5:** Apply organizational theory concepts to explain coordination challenges (minimum 2 concepts with page citations)
 
 #### Weekly Research Log
 
@@ -142,11 +142,11 @@ Document new sources and insights about stakeholder dynamics.
 
 ---
 
-## Week 3: Reform & Human Capital Analysis
+## Week 3: Organizational Problems & Civil Service Analysis
 
 **Due: Friday, Week 3, 11:59 PM**  
 **Length: 500-700 words (added to existing doc)**  
-**Aligns with:** Modules 7-9 (Reform, Civil Service & Human Capital)
+**Aligns with:** Modules 7-9 (Organization Problems, Reform & Civil Service)
 
 ### Required Elements
 
@@ -155,14 +155,14 @@ Document new sources and insights about stakeholder dynamics.
 - **Organizational design issues:** How does structure contribute to the problem?
 - **Coordination challenges:** Between agencies, levels of government, or departments
 - **Authority and accountability:** Who is responsible and how is performance measured?
-- **Connect to Kettl Chapter 7:** Use administrative reform concepts to analyze structural problems (cite specific examples)
+- **Connect to Kettl Chapter 7:** Use organizational problems concepts to analyze structural and coordination problems (cite specific examples)
 
-#### Human Capital Challenges (250-350 words)
+#### Civil Service & Personnel Challenges (250-350 words)
 
 - **Personnel issues:** Staffing, skills, training, or motivation problems
 - **Management capacity:** Leadership and oversight challenges
 - **Organizational culture:** How do values and norms affect performance?
-- **Connect to Kettl Chapter 9:** Apply human capital management concepts (minimum 3 applications with page numbers)
+- **Connect to Kettl Chapter 9:** Apply civil service concepts to personnel issues (minimum 3 applications with page numbers)
 
 #### Weekly Research Log
 
@@ -174,7 +174,7 @@ Document what you learned about organizational and management factors.
 
 **Due: Friday, Week 4, 11:59 PM**  
 **Length: 600-800 words (added to existing doc)**  
-**Aligns with:** Modules 10-12 (Decision Making, Budgeting & Performance)
+**Aligns with:** Modules 10-12 (Human Capital, Decision Making & Budgeting)
 
 ### Required Elements
 
@@ -183,14 +183,14 @@ Document what you learned about organizational and management factors.
 - **Decision-making problems:** Information gaps, conflicting priorities, time pressures
 - **Implementation barriers:** What prevents effective policy execution?
 - **Performance measurement:** How do agencies know if they're succeeding?
-- **Connect to Kettl Chapter 10:** Use decision-making framework to analyze challenges (cite specific processes)
+- **Connect to Kettl Chapter 11:** Use decision-making framework to analyze challenges (cite specific processes)
 
 #### Preliminary Solutions (300-400 words)
 
 - **Process improvements:** Better coordination, communication, or planning
 - **Resource solutions:** Funding, staffing, or technology needs
 - **Structural reforms:** Organizational changes or new authorities
-- **Connect to Kettl Chapters 11-12:** Address budgeting and performance concepts (cite specific tools or approaches)
+- **Connect to Kettl Chapters 10 and 12:** Address human capital and budgeting concepts (cite specific tools or approaches)
 
 #### Weekly Research Log
 
@@ -202,7 +202,7 @@ Note what you discovered about potential solutions and their feasibility.
 
 **Due: Friday, Week 5, 11:59 PM**  
 **Length: 400-600 words recommendations + executive summary revision**  
-**Aligns with:** Modules 13-14 (Regulation, Courts & Accountability)
+**Aligns with:** Modules 13-15 (Implementation, Regulation & Accountability)
 
 ### Required Elements
 
@@ -212,7 +212,7 @@ Note what you discovered about potential solutions and their feasibility.
 - **Implementation strategy:** How would these be carried out in practice?
 - **Feasibility assessment:** Political, financial, and administrative constraints
 - **Expected outcomes:** How would success be measured?
-- **Connect to Kettl Chapters 13-14:** Address accountability and oversight mechanisms (cite specific concepts)
+- **Connect to Kettl Chapters 14-15:** Address accountability and oversight mechanisms (cite specific concepts)
 
 #### Executive Summary (300-400 words)
 

@@ -59,16 +59,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Apply the theme
     const applyTheme = (theme) => {
+        const root = document.documentElement;
         document.body.classList.remove('light-theme', 'dark-theme', 'auto-theme');
+        root.classList.remove('light-theme', 'dark-theme');
 
+        let effective;
         if (theme === 'auto') {
             // Check system preference
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
-            document.body.classList.add('auto-theme');
+            effective = prefersDark ? 'dark-theme' : 'light-theme';
+            document.body.classList.add(effective, 'auto-theme');
         } else {
-            document.body.classList.add(`${theme}-theme`);
+            effective = `${theme}-theme`;
+            document.body.classList.add(effective);
         }
+
+        // Keep <html> in sync with <body> so the anti-FOUC class and the
+        // glass navbar (which key off .dark-theme) stay correct after toggling.
+        root.classList.add(effective);
 
         // Save theme preference
         localStorage.setItem('themePreference', theme);

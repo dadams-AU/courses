@@ -1100,7 +1100,7 @@ body.dark-theme .courses-meta {
 
 .dark-theme .navbar {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  background-color: rgba(20, 20, 20, 0.95) !important;
+  /* Background is set by the theme-aware .navbar-glass rules below. */
 }
 
 /* Footer Styles */
@@ -1943,4 +1943,116 @@ body.dark-theme article header div.text-muted {
 .expand-all-bar .btn {
   font-size: var(--font-size-sm);
   padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+/* -----------------------------------------------
+   Anti-FOUC base paint (set from inline <head> script)
+   The theme class lands on <html> before first paint so the page
+   background never flashes the wrong color while scripts.js loads.
+   ----------------------------------------------- */
+html.dark-theme { background-color: #121212; }
+html.dark-theme body {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* -----------------------------------------------
+   Modernized navbar: translucent "glass", theme-aware
+   ----------------------------------------------- */
+.navbar-glass {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.dark-theme .navbar-glass {
+  background-color: rgba(17, 17, 17, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Wordmark brand (replaces the old logo image) */
+.navbar-wordmark {
+  font-family: 'Google Sans Flex', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--primary-blue);
+  transition: color 0.3s ease;
+}
+.navbar-wordmark-dot { color: var(--primary-green); }
+.navbar-brand:hover .navbar-wordmark { color: var(--primary-blue-dark); }
+.dark-theme .navbar-wordmark { color: #93c5fd; }
+.dark-theme .navbar-wordmark-dot { color: #34d399; }
+.dark-theme .navbar-brand:hover .navbar-wordmark { color: #bfdbfe; }
+
+/* Nav links: dark text on the light glass, light text on the dark glass */
+.navbar-glass .nav-link {
+  color: rgba(33, 37, 41, 0.72);
+  font-weight: 500;
+}
+.navbar-glass .nav-link:hover,
+.navbar-glass .nav-link:focus,
+.navbar-glass .nav-link.active {
+  color: var(--primary-blue);
+}
+.dark-theme .navbar-glass .nav-link { color: rgba(255, 255, 255, 0.75); }
+.dark-theme .navbar-glass .nav-link:hover,
+.dark-theme .navbar-glass .nav-link:focus,
+.dark-theme .navbar-glass .nav-link.active {
+  color: #93c5fd;
+}
+
+/* Mobile toggler: theme-aware border + hamburger icon */
+.navbar-glass .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.12);
+  padding: 0.35rem 0.55rem;
+}
+.navbar-glass .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+.navbar-glass .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.dark-theme .navbar-glass .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.dark-theme .navbar-glass .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Theme toggle pill button: theme-aware surface */
+.navbar-glass .theme-toggle-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(33, 37, 41, 0.8);
+}
+.navbar-glass .theme-toggle-btn:hover,
+.navbar-glass .theme-toggle-btn:focus-visible {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--primary-blue);
+}
+.dark-theme .navbar-glass .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark-theme .navbar-glass .theme-toggle-btn:hover,
+.dark-theme .navbar-glass .theme-toggle-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+/* On mobile the collapsed menu sits on the glass panel; give it breathing room */
+@media (max-width: 991.98px) {
+  .navbar-glass .navbar-collapse {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .dark-theme .navbar-glass .navbar-collapse {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
 }

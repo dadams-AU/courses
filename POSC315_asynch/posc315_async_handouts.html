@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- theme-init: set light/dark class before first paint to avoid FOUC -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('themePreference') || 'auto';
+        var dark = t === 'dark' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.add(dark ? 'dark-theme' : 'light-theme');
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="POSC 315 Summer 2026 asynchronous handouts, syllabus, schedule, and assignment resources.">
@@ -287,19 +297,63 @@ body {
   .hero-section {
     padding: 2rem 0;
   }
-  
+
   .course-section {
     padding: 1rem;
   }
-  
+
   .lecture-grid,
   .quick-links {
     grid-template-columns: 1fr;
   }
-  
+
   .quick-link-card {
     padding: 1rem;
   }
+}
+
+/* Anti-FOUC base paint (set from inline <head> script before first paint) */
+html.dark-theme { background-color: #0f172a; }
+html.dark-theme body { background-color: #0f172a; color: #f8fafc; }
+
+/* Modernized navbar: translucent "glass", theme-aware (overrides opaque .navbar) */
+.navbar-glass {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.dark-theme .navbar-glass {
+  background-color: rgba(15, 23, 42, 0.72) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Wordmark brand (replaces the old logo image) */
+.navbar-wordmark {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #2563eb;
+}
+.navbar-wordmark-dot { color: #059669; }
+.dark-theme .navbar-wordmark { color: #93c5fd; }
+.dark-theme .navbar-wordmark-dot { color: #34d399; }
+
+/* Mobile toggler: theme-aware hamburger */
+.navbar-glass .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.12);
+  padding: 0.35rem 0.55rem;
+}
+.navbar-glass .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.dark-theme .navbar-glass .navbar-toggler { border-color: rgba(255, 255, 255, 0.15); }
+.dark-theme .navbar-glass .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
   </style>
 </head>
@@ -322,10 +376,10 @@ body {
   </svg>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-glass fixed-top" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand" href="https://dadams.io/index.html">
-        <img src="dadams.png" alt="David P. Adams" height="40">
+      <a class="navbar-brand" href="https://dadams.io/index.html" aria-label="Home">
+        <span class="navbar-wordmark">dadams<span class="navbar-wordmark-dot">.</span></span>
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -658,15 +712,23 @@ body {
       const getStoredTheme = () => localStorage.getItem('themePreference') || 'auto';
 
       const applyTheme = (theme) => {
+        const root = document.documentElement;
         document.body.classList.remove('light-theme', 'dark-theme', 'auto-theme');
+        root.classList.remove('light-theme', 'dark-theme');
 
+        let effective;
         if (theme === 'auto') {
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.body.classList.add(prefersDark ? 'dark-theme' : 'light-theme');
-          document.body.classList.add('auto-theme');
+          effective = prefersDark ? 'dark-theme' : 'light-theme';
+          document.body.classList.add(effective, 'auto-theme');
         } else {
-          document.body.classList.add(`${theme}-theme`);
+          effective = `${theme}-theme`;
+          document.body.classList.add(effective);
         }
+
+        // Keep <html> in sync with <body> so the anti-FOUC class and the
+        // glass navbar (which key off .dark-theme) stay correct after toggling.
+        root.classList.add(effective);
 
         localStorage.setItem('themePreference', theme);
       };

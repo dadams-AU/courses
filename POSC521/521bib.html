@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <!-- theme-init: set light/dark class before first paint to avoid FOUC -->
+      <script>
+        (function () {
+          try {
+            var t = localStorage.getItem('themePreference') || 'auto';
+            var dark = t === 'dark' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            document.documentElement.classList.add(dark ? 'dark-theme' : 'light-theme');
+          } catch (e) {}
+        })();
+      </script>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +25,74 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="/style/style.css">
+        <!-- Modernized glass navbar + wordmark + anti-FOUC (this page uses style.css, not custom.css) -->
+        <style>
+          html.dark-theme { background-color: #222222; }
+          html.dark-theme body { background-color: #222222; color: #E0E0E0; }
+
+          .navbar-glass {
+            background-color: rgba(255, 255, 255, 0.72);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+          }
+          .dark-theme .navbar-glass {
+            background-color: rgba(34, 34, 34, 0.72);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+          }
+          .navbar-glass .nav-link { color: rgba(33, 37, 41, 0.72); font-weight: 500; }
+          .navbar-glass .nav-link:hover,
+          .navbar-glass .nav-link:focus,
+          .navbar-glass .nav-link.active { color: #2563eb; }
+          .dark-theme .navbar-glass .nav-link { color: rgba(255, 255, 255, 0.75); }
+          .dark-theme .navbar-glass .nav-link:hover,
+          .dark-theme .navbar-glass .nav-link:focus,
+          .dark-theme .navbar-glass .nav-link.active { color: #93c5fd; }
+
+          .navbar-wordmark {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            color: #2563eb;
+          }
+          .navbar-wordmark-dot { color: #059669; }
+          .dark-theme .navbar-wordmark { color: #93c5fd; }
+          .dark-theme .navbar-wordmark-dot { color: #34d399; }
+
+          .navbar-glass .navbar-toggler { border-color: rgba(0, 0, 0, 0.12); padding: 0.35rem 0.55rem; }
+          .navbar-glass .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33,37,41,0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+          }
+          .dark-theme .navbar-glass .navbar-toggler { border-color: rgba(255, 255, 255, 0.15); }
+          .dark-theme .navbar-glass .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+          }
+
+          .navbar-glass .theme-toggle-btn {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 999px;
+            color: rgba(33, 37, 41, 0.8);
+            padding: 0.35rem 0.6rem;
+          }
+          .navbar-glass .theme-toggle-btn:hover,
+          .navbar-glass .theme-toggle-btn:focus-visible {
+            background: rgba(0, 0, 0, 0.08); color: #2563eb; outline: none;
+          }
+          .dark-theme .navbar-glass .theme-toggle-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .dark-theme .navbar-glass .theme-toggle-btn:hover,
+          .dark-theme .navbar-glass .theme-toggle-btn:focus-visible {
+            background: rgba(255, 255, 255, 0.16); color: #fff;
+          }
+        </style>
     </head>
 
 <body id="page-top">
@@ -39,9 +117,9 @@
 
   <!-- nav bar -->
   <section>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="navigation bar">
+    <nav class="navbar navbar-expand-sm navbar-glass" aria-label="navigation bar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="https://dadams.io/index.html"><img src="/dadams.png" alt="dadams logo" width="120"></a>
+        <a class="navbar-brand" href="https://dadams.io/index.html" aria-label="Home"><span class="navbar-wordmark">dadams<span class="navbar-wordmark-dot">.</span></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="Navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -65,7 +143,7 @@
             </li>
           </ul>
         <div class="dropdown bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+    <button class="btn theme-toggle-btn dropdown-toggle d-flex align-items-center"
             id="bd-theme"
             type="button"
             aria-expanded="false"

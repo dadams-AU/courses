@@ -17,7 +17,7 @@ You will analyze one of three current public administration challenges through a
 - Week 2: 15% of Management Brief grade (Stakeholder Analysis & Context)
 - Week 3: 20% of Management Brief grade (Organizational Problems & Civil Service Analysis)
 - Week 4: 25% of Management Brief grade (Management Challenges & Solutions)
-- Week 5: 30% of Management Brief grade (Final Recommendations & Polish)
+- Week 5: 30% of Management Brief grade (Final Recommendations & Executive Summary)
 
 **Research Log Grading:**
 Each weekly Research Log is worth 2% of your total course grade (5 weeks × 2% = 10% total). Research Logs are evaluated on evidence of genuine engagement with sources, reflection on learning process, and connection to course concepts.
@@ -105,7 +105,7 @@ Ch. 3 (What Government Does), Ch. 10 (Human Capital), Ch. 13 (Implementation & P
 #### Significance & Evidence (200-300 words)
 
 - **Administrative relevance:** Why does this matter for public administration practice?
-- **Current evidence:** 2-3 statistics, examples, or recent developments (2023-2025 sources)
+- **Current evidence:** 2-3 statistics, examples, or recent developments (2022 or later)
 - **Connect to Kettl Chapter 3:** Reference "what government does" framework (cite specific sections)
 
 #### Weekly Research Log
@@ -198,7 +198,7 @@ Note what you discovered about potential solutions and their feasibility.
 
 ---
 
-## Week 5: Final Recommendations & Polish
+## Week 5: Final Recommendations & Executive Summary
 
 **Due: Friday, Week 5, 11:59 PM**  
 **Length: 400-600 words recommendations + executive summary revision**  

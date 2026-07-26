@@ -223,9 +223,10 @@ Note what you discovered about potential solutions and their feasibility.
 
 #### Final Document Requirements
 
+- **Document title:** Your Google Doc must be titled **Management Brief - [Your Last Name] - [Topic Choice]**, and your name must appear in the document itself
 - **Total length:** 2,800-4,200 words
-- **Professional formatting:** Clear headers, consistent style
-- **APA citations:** In-text citations and reference list
+- **Professional formatting:** Clear headers, consistent style, every stage clearly labeled
+- **APA citations:** In-text citations with page numbers for Kettl, plus a complete reference list containing every source you cite
 - **Revision polish:** Fix any errors, improve flow and clarity
 
 #### Final Research Log

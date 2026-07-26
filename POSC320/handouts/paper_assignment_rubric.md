@@ -77,7 +77,7 @@ The stage rubrics below match the rubrics attached to each Canvas assignment. Re
 | **Kettl Ch. 13–15 integration** | Applies implementation, regulation, and accountability concepts with page citations | 6 |
 | **Executive summary** | Revises a clear, compelling, stand-alone summary with a call to action | 6 |
 | **Project cohesion and APA citations** | Presents all five stages as one coherent document with complete APA citations | 5 |
-| **Final Google Doc submission** | Uses Suggesting mode, accepts suggestions for a clean final version, and submits the link | 5 |
+| **Final Google Doc submission** | Uses Suggesting mode, accepts suggestions for a clean final version, and submits the link. The document must be titled **Management Brief - [Last Name] - [Topic Choice]**, carry your name, and end with a complete APA reference list | 5 |
 
 ---
 

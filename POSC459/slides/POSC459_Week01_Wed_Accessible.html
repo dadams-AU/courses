@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Who Are the Poor?</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Who Are the Poor?</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+1, Wednesday 26 August 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#opening-your-board" id="toc-opening-your-board">Opening:
+your board</a></li>
+<li><a href="#where-this-is-going" id="toc-where-this-is-going">Where
+this is going</a></li>
+<li><a href="#the-is-it-welfare-exercise"
+id="toc-the-is-it-welfare-exercise">The “Is it welfare?”
+exercise</a></li>
+<li><a href="#where" id="toc-where">Where</a></li>
+<li><a href="#how-long" id="toc-how-long">How long</a></li>
+<li><a href="#who" id="toc-who">Who</a></li>
+<li><a href="#this-room-and-the-public"
+id="toc-this-room-and-the-public">This room and the public</a></li>
+<li><a href="#closing" id="toc-closing">Closing</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 1 Wednesday slides — same
+content in linear order, with no slide-scaling container. Reading: Rank,
+Eppard, and Bullock,</em> Poorly Understood, <em>Section I.</em></p>
+<h2 id="opening-your-board">Opening: your board</h2>
+<h3 id="monday-in-your-words">Monday, in your words</h3>
+<p><em>“What do you think of when you hear/use the term POOR?”</em></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td>Economic construction</td>
+<td>Exploitation</td>
+</tr>
+<tr>
+<td>Circumstances where can’t get needs</td>
+<td>Immigration</td>
+</tr>
+<tr>
+<td>Lack of opportunity</td>
+<td>Over policing</td>
+</tr>
+<tr>
+<td>Paycheck to paycheck — one emergency away from unable to make
+it</td>
+<td>Pollution</td>
+</tr>
+<tr>
+<td>Disadvantaged indiv.</td>
+<td>Class — poor different in diff parts of world</td>
+</tr>
+<tr>
+<td>Deprivation of resources — disparities, e.g. food deserts</td>
+<td>Zip code</td>
+</tr>
+<tr>
+<td>Being poor is expensive</td>
+<td>Debt</td>
+</tr>
+<tr>
+<td></td>
+<td>Intergenerational / multi-family homes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sixteen-answers.-not-one-of-them-is-a-person.">Sixteen answers.
+Not one of them is a person.</h3>
+<p>No race. No behavior. No character.</p>
+<p>You gave me <strong>causes and conditions</strong> — an economy, a
+zip code, a policing pattern, a debt.</p>
+<p>The closest thing to a person on that board is “disadvantaged
+indiv.,” and even that names something done <em>to</em> someone.</p>
+<h3 id="so-the-question-changed">So the question changed</h3>
+<p>The public that Rank and his coauthors study <strong>does not answer
+this way.</strong></p>
+<blockquote>
+<p>Only <strong>21 percent</strong> of Americans can correctly say there
+are more White SNAP recipients than Black ones.</p>
+</blockquote>
+<p>Two questions for today:</p>
+<ol type="1">
+<li>Why doesn’t this room look like that public?</li>
+<li>Does it matter — for you, for the policy?</li>
+</ol>
+<h2 id="where-this-is-going">Where this is going</h2>
+<h3 id="ten-minutes-on-the-shape-of-the-course-then-we-vote">Ten minutes
+on the shape of the course, then we vote</h3>
+<h3 id="four-parts.-each-one-answers-one-question.">Four parts. Each one
+answers one question.</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Part</th>
+<th>Weeks</th>
+<th>The question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I. The Big Picture</strong></td>
+<td>1–4</td>
+<td>What <em>is</em> the American welfare state, and why this one?</td>
+</tr>
+<tr>
+<td><strong>II. Programs</strong></td>
+<td>5–8</td>
+<td>What are the actual programs, and who do they reach?</td>
+</tr>
+<tr>
+<td><strong>III. Reform</strong></td>
+<td>9–11</td>
+<td>What happens when we try to change it?</td>
+</tr>
+<tr>
+<td><strong>IV. Political Forces</strong></td>
+<td>12–15</td>
+<td>Who decides, and on what grounds?</td>
+</tr>
+</tbody>
+</table>
+<p>If you remember nothing else from a syllabus talk, remember those
+four questions in that order.</p>
+<h3 id="today-is-part-i-week-1">Today is Part I, Week 1</h3>
+<p>Part I takes the thing apart before we look at any single
+program.</p>
+<ul>
+<li><strong>Week 1</strong> — what counts as welfare <em>(that’s the
+vote in a minute)</em></li>
+<li><strong>Week 2</strong> — why so many Americans are poor</li>
+<li><strong>Week 3</strong> — why <em>this</em> country’s version and
+not Denmark’s</li>
+<li><strong>Week 4</strong> — how it got built</li>
+</ul>
+<p><strong>Three async weeks across the term: 4, 9, and 14.</strong> No
+room, same reading, same work. Put them in your calendar now — 9/14–16,
+10/19–21, and the week before 12/2.</p>
+<h3 id="the-rhythm-five-fridays">The rhythm: five Fridays</h3>
+<p><strong>Discussion papers. Five of them. Two percent
+each.</strong></p>
+<p><strong>9/18 · 10/2 · 10/23 · 11/6 · 11/20</strong></p>
+<p>Every one is tied to something we read or watched that week. The
+first pairs with <em>Growing Up Poor in America</em> — Part 1 this week,
+Part 2 in Week 4.</p>
+<p>Put all five in your phone before you leave this room.</p>
+<h3 id="the-one-thing-you-build-all-semester">The one thing you build
+all semester</h3>
+<p>You pick a program in September and you are still working on it in
+December.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Undergraduates</th>
+<th>Graduate students</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>September</strong></td>
+<td>Program selection · <strong>9/21</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>October</strong></td>
+<td>Source and claims memo · <strong>10/9</strong><br>Policy Brief ·
+<strong>10/28</strong></td>
+<td>Research proposal · <strong>10/5</strong></td>
+</tr>
+<tr>
+<td><strong>December</strong></td>
+<td>Term Paper · <strong>12/2</strong></td>
+<td>Intro, outline, annotated bib · <strong>12/2</strong><br>Final paper
+· <strong>12/14</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Pick the program you actually want to know about. Three months is a
+long time to spend on one you don’t.</p>
+<h3 id="before-september-18-nothing-is-due.">Before September 18,
+nothing is due.</h3>
+<p>That is deliberate.</p>
+<p>The first three weeks are for getting the tools — the reading, the
+account, the film, and how I ask questions. Not for producing.</p>
+<p>For the next two weeks the whole assignment is: <strong>read, and
+show up.</strong></p>
+<h3 id="questions.">Questions.</h3>
+<p>About the parts, the papers, the exams, the async weeks —
+anything.</p>
+<h2 id="the-is-it-welfare-exercise">The “Is it welfare?” exercise</h2>
+<p>Twelve items. One at a time.</p>
+<p><strong>Welfare, or not welfare?</strong> Hands up. No wrong answers,
+and I am keeping the tally.</p>
+<h3 id="snap">SNAP</h3>
+<p>Food benefits on an EBT card. Means-tested. Federal rules, state
+administration.</p>
+<h3 id="mortgage-interest-deduction">Mortgage-interest deduction</h3>
+<p>Homeowners who itemize deduct mortgage interest from taxable
+income.</p>
+<h3 id="medicare">Medicare</h3>
+<p>Health insurance for people 65+ and some disabled. Payroll-tax
+financed.</p>
+<h3 id="employer-health-insurance-exclusion">Employer health-insurance
+exclusion</h3>
+<p>Premiums an employer pays are not taxed as the worker’s income.</p>
+<h3 id="tanf">TANF</h3>
+<p>Cash assistance to poor families with children. Block grant. Work
+requirements and time limits.</p>
+<h3 id="k-and-pension-exclusion">401(k) and pension exclusion</h3>
+<p>Retirement contributions and earnings untaxed until withdrawal.</p>
+<h3 id="social-security">Social Security</h3>
+<p>Retirement and survivors’ benefits. Payroll-tax financed.</p>
+<h3 id="eitc">EITC</h3>
+<p>Refundable credit for low-wage workers with earnings. Delivered
+through the tax return.</p>
+<h3 id="pell-grants">Pell grants</h3>
+<p>Need-based federal grants for undergraduates.</p>
+<h3 id="child-tax-credit">Child tax credit</h3>
+<p>Per-child credit, partly refundable. Expanded and contracted in
+2021–22.</p>
+<h3 id="unemployment-insurance">Unemployment insurance</h3>
+<p>Wage replacement for the laid-off. Payroll-tax financed, state-run
+under federal rules.</p>
+<h3 id="farm-subsidies">Farm subsidies</h3>
+<p>Crop insurance subsidies and commodity payments, mostly to larger
+operations.</p>
+<h3 id="the-reveal">The reveal</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th>You said</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNAP</td>
+<td></td>
+<td>Direct spending, <strong>visible</strong> — lower tier</td>
+</tr>
+<tr>
+<td>Mortgage-interest deduction</td>
+<td></td>
+<td>Tax expenditure, <strong>hidden</strong> — rises with income</td>
+</tr>
+<tr>
+<td>Medicare</td>
+<td></td>
+<td>Direct spending, <strong>visible</strong> — social insurance</td>
+</tr>
+<tr>
+<td>Employer health exclusion</td>
+<td></td>
+<td>Tax expenditure, <strong>hidden</strong> — largest single one</td>
+</tr>
+<tr>
+<td>TANF</td>
+<td></td>
+<td>Direct spending, <strong>visible</strong> — “welfare”</td>
+</tr>
+<tr>
+<td>401(k) / pension exclusion</td>
+<td></td>
+<td>Tax expenditure, <strong>hidden</strong></td>
+</tr>
+<tr>
+<td>Social Security</td>
+<td></td>
+<td>Direct spending, <strong>visible</strong> — social insurance</td>
+</tr>
+<tr>
+<td>EITC</td>
+<td></td>
+<td>Tax expenditure, <strong>hidden</strong> — largest cash program for
+the working poor</td>
+</tr>
+<tr>
+<td>Pell grants</td>
+<td></td>
+<td>Direct spending, visible — rarely called welfare</td>
+</tr>
+<tr>
+<td>Child tax credit</td>
+<td></td>
+<td>Tax expenditure, <strong>hidden</strong></td>
+</tr>
+<tr>
+<td>Unemployment insurance</td>
+<td></td>
+<td>Direct spending, visible — social insurance</td>
+</tr>
+<tr>
+<td>Farm subsidies</td>
+<td></td>
+<td>Direct spending — not social welfare on most definitions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-ones-you-voted-not">The ones you voted “not”</h3>
+<p>They are the <strong>hidden welfare state</strong>, and it is larger
+than the visible one.</p>
+<p>Same money. Same government. Different delivery mechanism — a check
+versus a line on a tax return.</p>
+<p><strong>Who counts as a recipient</strong> depends entirely on where
+you draw that line. That is Howard’s question, and it is this course’s
+first one.</p>
+<blockquote>
+<p>Keep this tally. We use it again in Week 2 and in Week 15.</p>
+</blockquote>
+<h3 id="now-here-is-the-number-that-should-bother-you">Now here is the
+number that should bother you</h3>
+<p><strong>65%</strong></p>
+<p>of Americans will live in a household that receives a
+<strong>means-tested</strong> program at some point between ages 20 and
+65.</p>
+<p>Only <strong>15.9 percent</strong> will do so for five or more
+<em>consecutive</em> years.</p>
+<p><em>Rank et al., Table 2.2</em></p>
+<h2 id="where">Where</h2>
+<h3 id="you-said-zip-code-food-deserts-over-policing-pollution">You
+said: zip code, food deserts, over policing, pollution</h3>
+<p>That is a picture of a place — and it is a specific place. Let’s test
+it.</p>
+<h3
+id="only-10-to-15-percent-of-poor-people-live-in-a-high-poverty-neighborhood">Only
+10 to 15 percent of poor people live in a high-poverty neighborhood</h3>
+<p>A <strong>high-poverty tract</strong> = 40 percent or more of
+residents below the line.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Year</th>
+<th>Poor people in high-poverty tracts</th>
+<th>All tracts that are high-poverty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1990</td>
+<td>15.5%</td>
+<td>5.7%</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>10.3%</td>
+<td>3.9%</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>13.6%</td>
+<td>5.6%</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>11.9%</td>
+<td>5.0%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Rank et al., Table 3.1 (Jargowsky)</em></p>
+<h3 id="two-findings-that-surprise-almost-everyone">Two findings that
+surprise almost everyone</h3>
+<h3
+id="more-poor-people-now-live-in-suburbs-than-in-central-cities">More
+poor people now live in <strong>suburbs</strong> than in central
+cities</h3>
+<p>Poverty <em>rates</em> stay higher in cities. The <em>count</em> is
+higher in suburbs. Rate and count are different questions — remember
+that, it comes back in twenty minutes.</p>
+<h3 id="the-deepest-most-persistent-poverty-is-rural">The deepest, most
+persistent poverty is <strong>rural</strong></h3>
+<p>Of 353 counties above 20 percent poverty since the 1980 Census,
+<strong>301 are nonmetropolitan.</strong></p>
+<h3 id="five-rural-poverty-regions-five-different-histories">Five rural
+poverty regions, five different histories</h3>
+<ul>
+<li><strong>Appalachia</strong> — coal’s dominance and
+disappearance</li>
+<li><strong>Deep South and Mississippi Delta</strong> — slavery,
+sharecropping, and their descendants</li>
+<li><strong>Texas–Mexico border</strong> — the colonias, lacking basic
+public services</li>
+<li><strong>Southwest and Northern Plains</strong> — reservations;
+broken treaties</li>
+<li><strong>California’s central corridor</strong> — migrant farm labor
+and historically low wages</li>
+</ul>
+<p><strong>No single national program fits all five.</strong> That is a
+design problem, and it is ours.</p>
+<h2 id="how-long">How long</h2>
+<h3 id="you-said-intergenerational">You said: intergenerational</h3>
+<p>Hold that thought. You are partly right, and the book will
+half-concede it.</p>
+<h3 id="most-poverty-spells-are-short">Most poverty spells are
+short</h3>
+<table>
+<thead>
+<tr>
+<th>Years in poverty</th>
+<th>New spells that have ended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>52.5%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>69.7%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>77.9%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>86.1%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>92.3%</td>
+</tr>
+</tbody>
+</table>
+<p>Fewer than <strong>15 percent</strong> of spells run past five
+years.</p>
+<p><em>Stevens (1999), Journal of Human Resources 34(3), p. 568</em></p>
+<h3 id="so-why-does-poverty-look-permanent">So why does poverty look
+permanent?</h3>
+<blockquote>
+<p>Consider the situation in a typical hospital. Most of the persons
+admitted in any year will require only a very short spell of
+hospitalization. But a few of the newly admitted patients are
+chronically ill and will have extended stays… if we ask what fraction of
+the hospital’s beds at any one time are occupied by the chronically ill,
+the answer is much larger.</p>
+</blockquote>
+<p><strong>— Bane and Ellwood</strong>, quoted at p. 26</p>
+<p>Most <em>admissions</em> are short. Most <em>beds at any moment</em>
+hold long stayers.</p>
+<p>Both true. Different questions.</p>
+<h3 id="where-you-were-right">Where you were right</h3>
+<p>More than <strong>half</strong> of those who escape poverty return
+within five years.</p>
+<p>After five years poor, the annual chance of exiting falls
+<strong>below 20 percent</strong>.</p>
+<p>Of those poor five or more years before exiting, <strong>more than
+two-thirds</strong> are back within five.</p>
+<blockquote>
+<p>“Intergenerational” is not the mechanism the book finds — but
+stickiness is real, and you named it.</p>
+</blockquote>
+<h3 id="and-the-program-you-were-all-thinking-about">And the program you
+were all thinking about</h3>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Monthly participation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medicaid</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>SNAP</td>
+<td>13%</td>
+</tr>
+<tr>
+<td><strong>TANF</strong></td>
+<td><strong>1%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Half of TANF spells end within <strong>four months</strong>. 78
+percent within a year.</p>
+<p>The program that carries the entire political meaning of the word
+“welfare” is the <strong>smallest one on the board.</strong></p>
+<h2 id="who">Who</h2>
+<h3
+id="nobody-in-this-room-named-a-race-on-monday.-hold-on-to-that.">Nobody
+in this room named a race on Monday. Hold on to that.</h3>
+<h3 id="rate-and-composition-are-different-questions">Rate and
+composition are different questions</h3>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Poverty <strong>rate</strong></th>
+<th>Share of <strong>the poor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td>10.5%</td>
+<td>100.0%</td>
+</tr>
+<tr>
+<td>Whites</td>
+<td>9.1%</td>
+<td>66.2%</td>
+</tr>
+<tr>
+<td>Whites, not Hispanic</td>
+<td>7.3%</td>
+<td>41.6%</td>
+</tr>
+<tr>
+<td>Blacks</td>
+<td>18.8%</td>
+<td>23.8%</td>
+</tr>
+<tr>
+<td>Hispanics</td>
+<td>15.7%</td>
+<td>28.1%</td>
+</tr>
+<tr>
+<td>Native Americans</td>
+<td>23.7%</td>
+<td>1.7%</td>
+</tr>
+<tr>
+<td>Asian and Pacific Islander</td>
+<td>7.3%</td>
+<td>4.3%</td>
+</tr>
+</tbody>
+</table>
+<p><em>U.S. Census Bureau, 2019 · Rank et al., Table 5.1</em></p>
+<h3 id="both-columns-are-true">Both columns are true</h3>
+<p><strong>Left column:</strong> Black and Native American poverty rates
+run two to three times the White rate.</p>
+<p><strong>Right column:</strong> about two-thirds of poor people are
+White, because there are far more White people.</p>
+<p>Neither is the “real” answer. <strong>Which column you stand on is an
+argument, not a fact.</strong></p>
+<p>When a politician says “most people on food stamps are White” — or
+“Black Americans are twice as likely to be poor” — both are reading this
+table. Ask what each one wants you to do.</p>
+<h3 id="the-same-pattern-in-the-programs-with-one-exception">The same
+pattern in the programs — with one exception</h3>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Largest group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNAP (2017)</td>
+<td>White, 35.8%</td>
+</tr>
+<tr>
+<td>Medicaid (nonelderly)</td>
+<td>White, 41% — 23.5 million</td>
+</tr>
+<tr>
+<td><strong>TANF (2018)</strong></td>
+<td><strong>Hispanic, 37.8%</strong> — White third, at 27.2%</td>
+</tr>
+</tbody>
+</table>
+<p>Before PRWORA in 1996, Whites were typically the largest share of the
+cash caseload.</p>
+<p><strong>The program’s design changed who receives it.</strong> That
+is policy feedback, and we come back to it in Weeks 6 and 9.</p>
+<h2 id="this-room-and-the-public">This room and the public</h2>
+<h3 id="what-the-coverage-shows">What the coverage shows</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Portrayed as poor</th>
+<th>Actually poor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>News, 2015–16</td>
+<td>59% Black</td>
+<td>27%</td>
+</tr>
+<tr>
+<td>News, 2015–16</td>
+<td>17% White</td>
+<td>66%</td>
+</tr>
+<tr>
+<td>Newsmagazines, 1988–92 (Gilens)</td>
+<td>62% Black</td>
+<td>29%</td>
+</tr>
+<tr>
+<td>TV welfare-reform coverage (Kelly)</td>
+<td>58% Black</td>
+<td>39%</td>
+</tr>
+</tbody>
+</table>
+<p>The skew held in <strong>both</strong> right- and left-leaning
+outlets.</p>
+<h3 id="and-the-public-tracks-the-coverage">And the public tracks the
+coverage</h3>
+<ul>
+<li><strong>1994:</strong> 31% of poll respondents believed almost all
+African Americans were poor or near-poor</li>
+<li><strong>2014:</strong> 20% still did</li>
+<li>Only <strong>1 to 2%</strong> said the same of Whites, at both time
+points</li>
+<li>Only <strong>21%</strong> correctly identify that there are more
+White SNAP recipients than Black</li>
+</ul>
+<blockquote>
+<p>White respondents were <strong>less likely to remember</strong>
+having seen a White welfare recipient in a videotaped story than a Black
+one. <em>(Gilliam)</em></p>
+</blockquote>
+<h3 id="so-back-to-monday">So — back to Monday</h3>
+<p>Your board had no race on it. No laziness. No character.</p>
+<p>That is a good board. It is also not where most Americans start, and
+the distance is worth knowing about rather than being pleased about.</p>
+<p>Something taught you to answer structurally. Most of the people this
+policy is written for did not get that, and they vote.</p>
+<blockquote>
+<p>The gap between how you read poverty and how the public reads it is
+going to explain a lot of what looks irrational later in this
+course.</p>
+</blockquote>
+<h3 id="what-rank-does-not-cover">What Rank does not cover</h3>
+<p>Three things you put on the board are <strong>nowhere in Section
+I</strong>:</p>
+<ul>
+<li><strong>Immigration</strong> — Weeks 6 and 7, when we get to
+eligibility rules</li>
+<li><strong>Over policing</strong> — not this book’s story</li>
+<li><strong>Pollution</strong> — not this book’s story either</li>
+</ul>
+<p>Naming what a text leaves out is part of reading it. Keep your
+board.</p>
+<h2 id="closing">Closing</h2>
+<h3 id="three-distinctions-to-carry-out-of-today">Three distinctions to
+carry out of today</h3>
+<p>Each one sounds like a contradiction and is really two answers to two
+different questions.</p>
+<p><strong>Rate is not composition.</strong> Black Americans are more
+than twice as likely to be poor as White Americans — <em>and</em> about
+two-thirds of poor people are White. Both true.</p>
+<p><strong>Flow is not stock.</strong> Most spells of poverty are short
+— <em>and</em> most people who are poor right now have been poor a long
+time. Both true. (The hospital beds.)</p>
+<p><strong>Prevalence is not penalty.</strong> We do not have more job
+loss, divorce, or single parenthood than other rich countries. We punish
+them harder.</p>
+<blockquote>
+<p>Get these three and you can read every table in this course on your
+own.</p>
+</blockquote>
+<h3 id="before-monday">Before Monday</h3>
+<p><strong>Read:</strong> Howard ch. 2 · Desmond ch. 1–2</p>
+<p><strong>In class Monday 8/31:</strong> baseline writing diagnostic —
+in the room, no preparation, not a trap</p>
+<p><strong>This week:</strong> <em>Growing Up Poor in America</em>, Part
+1 — half of Discussion Paper 1, due Friday 9/18</p>
+</body>
+</html>

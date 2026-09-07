@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Compared to What?</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Compared to What?</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+3, Wednesday 9 September 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#read-this.-assume-nothing."
+id="toc-read-this.-assume-nothing.">Read this. Assume nothing.</a></li>
+<li><a href="#what-was-in-it" id="toc-what-was-in-it">What was in
+it</a></li>
+<li><a href="#your-turn-in-pairs-ten-minutes"
+id="toc-your-turn-in-pairs-ten-minutes">Your turn — in pairs, ten
+minutes</a></li>
+<li><a href="#the-prediction" id="toc-the-prediction">The
+prediction</a></li>
+<li><a href="#three-arguments-one-shape"
+id="toc-three-arguments-one-shape">Three arguments, one shape</a></li>
+<li><a href="#we-are-not-unusually-unlucky.-we-are-unusually-harsh."
+id="toc-we-are-not-unusually-unlucky.-we-are-unusually-harsh.">We are
+not unusually unlucky. We are unusually harsh.</a></li>
+<li><a href="#the-penalty-in-three-comparisons"
+id="toc-the-penalty-in-three-comparisons">The penalty, in three
+comparisons</a></li>
+<li><a href="#everybody-knows-the-american-welfare-state-is-small"
+id="toc-everybody-knows-the-american-welfare-state-is-small">Everybody
+knows the American welfare state is small</a></li>
+<li><a href="#move-the-instrument-move-the-number"
+id="toc-move-the-instrument-move-the-number">Move the instrument, move
+the number</a></li>
+<li><a href="#compared-to-what" id="toc-compared-to-what">Compared to
+what?</a></li>
+<li><a href="#say-a-few-words-about-the-air-force"
+id="toc-say-a-few-words-about-the-air-force">Say a few words about the
+air force</a></li>
+<li><a href="#housing-counted-three-ways"
+id="toc-housing-counted-three-ways">Housing, counted three ways</a></li>
+<li><a href="#howards-verdict-and-what-he-gives-up"
+id="toc-howards-verdict-and-what-he-gives-up">Howard’s verdict, and what
+he gives up</a></li>
+<li><a href="#desmond-there-are-many-ways-to-be-exploited"
+id="toc-desmond-there-are-many-ways-to-be-exploited">Desmond: there are
+many ways to be exploited</a></li>
+<li><a href="#did-they-have-to" id="toc-did-they-have-to">Did they have
+to?</a></li>
+<li><a href="#what-actually-changed-power"
+id="toc-what-actually-changed-power">What actually changed:
+power</a></li>
+<li><a href="#the-eitc-twice" id="toc-the-eitc-twice">The EITC,
+twice</a></li>
+<li><a href="#overcharged-the-rental-market"
+id="toc-overcharged-the-rental-market">Overcharged: the rental
+market</a></li>
+<li><a href="#lakia-higbees-373" id="toc-lakia-higbees-373">Lakia
+Higbee’s $373</a></li>
+<li><a href="#sixty-one-million-dollars-a-day"
+id="toc-sixty-one-million-dollars-a-day">Sixty-one million dollars a
+day</a></li>
+<li><a href="#two-exceptionalisms" id="toc-two-exceptionalisms">Two
+exceptionalisms</a></li>
+<li><a href="#who-benefits" id="toc-who-benefits">Who benefits?</a></li>
+<li><a href="#due-and-next" id="toc-due-and-next">Due and next</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 3 Wednesday slides — same
+content in linear order, with no slide-scaling container. Reading:
+Howard ch. 1; Desmond chs. 3-4.</em></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li><strong>A paragraph, and what is wrong with it</strong> (~10
+min)</li>
+<li><strong>Your own prompt, audited</strong> (~20 min)</li>
+<li><strong>Howard: is the American welfare state small?</strong> (~20
+min)</li>
+<li><strong>Desmond: underpaid, and overcharged</strong> (~20 min)</li>
+</ol>
+<h2 id="read-this.-assume-nothing.">Read this. Assume nothing.</h2>
+<p><strong>Four minutes on your own.</strong> Mark anything you would
+want to verify before you believed it.</p>
+<p>Then three minutes in pairs: compare lists.</p>
+<h2 id="what-was-in-it">What was in it</h2>
+<p><strong>The empirical claim was backwards.</strong> The official
+poverty measure counts pre-tax cash income only. SNAP, housing
+assistance, and the EITC are what the <em>Supplemental</em> measure
+counts. The paragraph swapped them, then concluded from the swap that
+the official measure is “the more complete of the two.”</p>
+<p><strong>The citation was invented.</strong> There is no <em>Journal
+of Poverty Policy Studies.</em> Kessler and Brandt do not exist. The
+volume, issue, and pages are plausible and meaningless.</p>
+<p><strong>The Orshansky history was accurate</strong> — including food
+budget times three. Suspicion is not the same as detection.</p>
+<h2 id="your-turn-in-pairs-ten-minutes">Your turn — in pairs, ten
+minutes</h2>
+<p>Open ChatGPT Edu, TitanGPT, or PapyrusAI. Ask it:</p>
+<p><strong>“Explain why some welfare programs are more politically
+popular than others.”</strong></p>
+<p>Then audit the answer:</p>
+<ul>
+<li>What did it <strong>assume about who deserves help</strong>, and on
+what basis?</li>
+<li><strong>Whose perspective</strong> is centered, and whose is missing
+entirely?</li>
+<li>What <strong>institutional or historical context</strong> is
+absent?</li>
+<li>Where does it sound <strong>most confident</strong> — and is that
+where it is best supported?</li>
+</ul>
+<h2 id="the-prediction">The prediction</h2>
+<p>It will reproduce the <strong>work-ethic and deservingness</strong>
+distinctions almost verbatim, because that framing saturates the text it
+learned from.</p>
+<p>If it does: the tool is not neutral about the thing we study, and its
+fluency is what makes that hard to see.</p>
+<p>If it does not: that is more interesting. What did it do instead, and
+where would it have gotten that?</p>
+<h2 id="three-arguments-one-shape">Three arguments, one shape</h2>
+<p>The AI’s account of “popular” programs left things out, and the
+omissions were not random.</p>
+<p><strong>Howard, chapter 1:</strong> the standard measure of a welfare
+state leaves things out. What it leaves out makes the United States look
+small.</p>
+<p><strong>Desmond, chapters 3–4:</strong> the standard account of
+poverty leaves things out too. What it leaves out is the people on the
+other side of the transaction.</p>
+<p>Same complaint about the instrument. <strong>Opposite
+directions.</strong></p>
+<h2 id="we-are-not-unusually-unlucky.-we-are-unusually-harsh.">We are
+not unusually unlucky. We are unusually harsh.</h2>
+<p><em>You saw the compressed version of this in Week 1. Here are the
+numbers under it.</em></p>
+<p>Across 29 rich democracies, U.S. <strong>rates</strong> of low
+education, single motherhood, young household heads, and unemployment
+sit <em>below</em> the cross-national average.</p>
+<p>The U.S. <strong>poverty rate is the highest in the set.</strong></p>
+<table>
+<thead>
+<tr>
+<th>On unemployment</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rich democracies with <em>more</em> unemployment than the U.S.</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Rich democracies that penalize it <em>more</em> than the U.S.</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Rich democracies that penalize it <em>less</em></td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<p>Brady, Finnegan, and Hübgen, <em>American Journal of Sociology</em>
+123(3), reported in Rank et al. §I.</p>
+<h2 id="the-penalty-in-three-comparisons">The penalty, in three
+comparisons</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Elsewhere</th>
+<th>United States</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single-parent family poverty</td>
+<td>Denmark: <strong>8%</strong></td>
+<td><strong>33%</strong></td>
+</tr>
+<tr>
+<td>Earnings without a high school degree</td>
+<td>Finland: <strong>no gap</strong></td>
+<td><strong>−24%</strong></td>
+</tr>
+<tr>
+<td>College wage premium</td>
+<td>Norway: <strong>+20%</strong></td>
+<td><strong>+68%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The events are ordinary. <strong>The landing is a
+choice.</strong></p>
+<blockquote>
+<p>A choice implies someone chose. Howard spends today’s chapter arguing
+we have been mismeasuring what was chosen. Desmond spends his arguing we
+have been looking at the wrong end of the transaction.</p>
+</blockquote>
+<h2 id="everybody-knows-the-american-welfare-state-is-small">Everybody
+knows the American welfare state is small</h2>
+<p>Forty years ago Harold Wilensky called the United States a
+<strong>“reluctant welfare state.”</strong> Since then: semi-welfare
+state, welfare state laggard, residual, incomplete.</p>
+<p>The number behind the consensus, 1997 public social spending as a
+share of GDP:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">United States</th>
+<th style="text-align: center;">Denmark</th>
+<th style="text-align: center;">Sweden</th>
+<th style="text-align: center;">Finland</th>
+<th style="text-align: center;">17-nation average</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>15.8%</strong></td>
+<td style="text-align: center;">35.9%</td>
+<td style="text-align: center;">35.7%</td>
+<td style="text-align: center;">33.3%</td>
+<td style="text-align: center;">25.6%</td>
+</tr>
+</tbody>
+</table>
+<p>Howard: <em>“Consensus on this point has become so complete that few
+people have stopped to question its accuracy.”</em></p>
+<h2 id="move-the-instrument-move-the-number">Move the instrument, move
+the number</h2>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Country</th>
+<th style="text-align: center;">Spending / GDP</th>
+<th style="text-align: center;">Minus taxes on benefits</th>
+<th style="text-align: center;">Plus tax expenditures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Denmark</td>
+<td style="text-align: center;">35.9%</td>
+<td style="text-align: center;">26.7%</td>
+<td style="text-align: center;">26.7%</td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td style="text-align: center;">35.7</td>
+<td style="text-align: center;">28.5</td>
+<td style="text-align: center;">28.5</td>
+</tr>
+<tr>
+<td>Netherlands</td>
+<td style="text-align: center;">27.1</td>
+<td style="text-align: center;">20.2</td>
+<td style="text-align: center;">20.3</td>
+</tr>
+<tr>
+<td>United Kingdom</td>
+<td style="text-align: center;">23.8</td>
+<td style="text-align: center;">21.1</td>
+<td style="text-align: center;">21.6</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td style="text-align: center;">20.7</td>
+<td style="text-align: center;">17.8</td>
+<td style="text-align: center;">18.7</td>
+</tr>
+<tr>
+<td><strong>United States</strong></td>
+<td style="text-align: center;"><strong>15.8</strong></td>
+<td style="text-align: center;"><strong>15.0</strong></td>
+<td style="text-align: center;"><strong>16.4</strong></td>
+</tr>
+<tr>
+<td><em>17-nation average</em></td>
+<td style="text-align: center;"><em>25.6</em></td>
+<td style="text-align: center;"><em>21.3</em></td>
+<td style="text-align: center;"><em>21.6</em></td>
+</tr>
+</tbody>
+</table>
+<p>Scandinavian governments say: <em>I’ll spend a dollar on your social
+welfare as long as you give me 25 cents right back.</em></p>
+<p>The U.S. was <strong>60%</strong> of the average. It is now
+<strong>75%.</strong> Sweden was 2.3 times our size. Now it is 1.7.</p>
+<h2 id="compared-to-what">Compared to what?</h2>
+<p>Bill and Melinda spend <strong>less than 2 percent</strong> of their
+annual expenses on food. Nationally the average family spends <strong>14
+percent.</strong></p>
+<p>Are they starving? Should someone call social services?</p>
+<p>They are the Gateses. <strong>Two percent of their expenses buys a
+lot of dinner.</strong></p>
+<p>The U.S. has the largest GDP and the highest GDP per capita in the
+group. It can devote a smaller <em>share</em> and still spend more
+<em>per person.</em> Net social spending per person, purchasing power
+adjusted:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Denmark</th>
+<th style="text-align: center;">Norway</th>
+<th style="text-align: center;">Italy</th>
+<th style="text-align: center;">Finland</th>
+<th style="text-align: center;"><strong>United States</strong></th>
+<th style="text-align: center;">Netherlands</th>
+<th style="text-align: center;">UK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$6,812</td>
+<td style="text-align: center;">$6,532</td>
+<td style="text-align: center;">$5,125</td>
+<td style="text-align: center;">$5,081</td>
+<td style="text-align: center;"><strong>$4,809</strong></td>
+<td style="text-align: center;">$4,495</td>
+<td style="text-align: center;">$4,424</td>
+</tr>
+</tbody>
+</table>
+<p>Sixteenth of seventeen by share of GDP. <strong>Ninth of seventeen
+per person</strong> — and above the $4,782 average.</p>
+<h2 id="say-a-few-words-about-the-air-force">Say a few words about the
+air force</h2>
+<p>Limiting the welfare state to social insurance and grants, Howard
+says, makes about as much sense as limiting national defense to the army
+and the navy.</p>
+<p>The United States delivers social policy through <strong>six
+tools</strong>:</p>
+<p><strong>Social insurance · Grants · Tax expenditures · Regulation ·
+Loan guarantees · Tort law</strong></p>
+<ul>
+<li>Europe subsidizes employers to hire the disabled. We passed the
+<strong>ADA</strong> and made it a rule. Subsidies show up in the
+comparison. Rules do not.</li>
+<li>Europe compensates injury through public funds. We
+<strong>sue</strong>. Legal costs, claims, and awards run at least twice
+the GDP share here as elsewhere.</li>
+</ul>
+<h2 id="housing-counted-three-ways">Housing, counted three ways</h2>
+<p><strong>Count grants only.</strong> Public housing plus Section 8 ≈ 5
+million units, under <strong>5 percent</strong> of U.S. dwellings.
+Subsidized rentals: 15% in France and Germany, 25% in the UK and
+Denmark, 40% in the Netherlands. We are not close.</p>
+<p><strong>Add loan guarantees.</strong> Over 7 million FHA and VA
+mortgages — more households than public housing and vouchers combined.
+Now <strong>~7 percent</strong> of all dwellings.</p>
+<p><strong>Add tax expenditures.</strong> Mortgage interest deduction:
+30 million returns, $53 billion. Property tax deduction: 32 million
+owners, $18 billion. Capital gains exclusion on home sales: $12 billion.
+Together, nearly <strong>three times</strong> what we spend on
+low-income rental grants.</p>
+<p>Total: <strong>35 to 40 percent</strong> of residences. Counting
+owners who benefited in past years, <strong>50 to 60
+percent.</strong></p>
+<h2 id="howards-verdict-and-what-he-gives-up">Howard’s verdict, and what
+he gives up</h2>
+<p><strong>The answer is no.</strong> The American welfare state is not
+unusually small. It has been measured wrong, for a long time, by people
+who then spent careers explaining a fact that was not one.</p>
+<p>The question stops being <em>why does the U.S. government do so
+little</em> and becomes: <strong>why do governments of similar size
+pursue similar goals through such a different mix of tools?</strong></p>
+<p>He concedes the rest in a single paragraph. The American welfare
+state may still be exceptional for its:</p>
+<ul>
+<li><strong>limited scope</strong> (family policy, health
+insurance)</li>
+<li>heavy reliance on <strong>means-tested</strong> benefits</li>
+<li><strong>weak public support</strong></li>
+<li><strong>failure to reduce inequality and poverty</strong></li>
+</ul>
+<h2 id="desmond-there-are-many-ways-to-be-exploited">Desmond: there are
+many ways to be exploited</h2>
+<p><strong>Underpaid</strong> relative to what you produce — labor
+exploitation. <strong>Overcharged</strong> relative to what you buy —
+consumer exploitation.</p>
+<blockquote>
+<p>“Our economic freedom is limited when we don’t have resources at our
+disposal. When we don’t own property or can’t access credit, we become
+dependent on people who do and can, which in turn invites exploitation,
+because a bad deal for you is a good deal for me.”</p>
+</blockquote>
+<p><strong>Julio Payes</strong>, Emeryville, California, 2014. Eighty
+hours a week across two full-time jobs: the graveyard shift at a 24-hour
+McDonald’s, 10 p.m. to 6 a.m., then a temp placement 8 a.m. to 4 p.m.
+Both at minimum wage.</p>
+<p><em>“I felt like a zombie. No energy. Always sad.”</em> His
+eight-year-old brother offered to buy an hour of his time. He fainted in
+a grocery store aisle at twenty-four.</p>
+<h2 id="did-they-have-to">Did they have to?</h2>
+<p><strong>1946.</strong> George Stigler, thirty-five, publishes “The
+Economics of Minimum Wage Legislation” in the <em>American Economic
+Review.</em> Raising the minimum wage will raise unemployment. His
+evidence is <strong>hypothetical data</strong> — a numerical story he
+invented to illustrate the theory.</p>
+<p>It becomes orthodoxy. It goes <strong>untested for nearly fifty
+years.</strong></p>
+<p><strong>1992.</strong> New Jersey raises its minimum wage;
+Pennsylvania does not. David Card and Alan Krueger survey <strong>410
+fast food restaurants</strong> in each state, before and after. New
+Jersey fast food jobs do not decline.</p>
+<p>Hundreds of studies since. The bulk of the evidence: the employment
+effect of raising the minimum wage is
+<strong>inconsequential.</strong></p>
+<blockquote>
+<p>If Julio had manned the grill at a McDonald’s in Denmark, his
+paycheck would have been double.</p>
+</blockquote>
+<h2 id="what-actually-changed-power">What actually changed: power</h2>
+<p><strong>Then.</strong> Through the 1950s and 1960s nearly <strong>a
+third</strong> of U.S. workers carried union cards. In 1970 alone, 2.4
+million union members took part in work stoppages. Worker pay climbed
+and CEO compensation was reined in.</p>
+<p><strong>Now.</strong> About <strong>one in ten</strong> American
+workers is in a union, most of them firefighters, nurses, and cops.
+<strong>94 percent</strong> of private sector employees have none.
+Roughly half of nonunion workers say they would organize given the
+chance.</p>
+<ul>
+<li><strong>1981:</strong> 13,000 air traffic controllers fired.
+Corporate America learns it can crush a strike with minimal
+blowback.</li>
+<li><strong>2016–17:</strong> the NLRB charges <strong>42
+percent</strong> of employers with violating federal law during union
+campaigns. Nearly a third of those cases involve illegally firing
+organizers.</li>
+<li><strong>The fissured workplace:</strong> roughly 750,000 people make
+and sell Apple products worldwide. About <strong>63,000</strong> work
+for Apple.</li>
+</ul>
+<blockquote>
+<p><em>“Our grandparents had careers. Our parents had jobs. We complete
+tasks.”</em> — Gerald Davis</p>
+</blockquote>
+<h2 id="the-eitc-twice">The EITC, twice</h2>
+<p><strong>Howard:</strong> the Earned Income Tax Credit is a tax
+expenditure. It is the reason his column C moves. It is the hidden
+American welfare state, doing quietly what Europe does through visible
+transfers.</p>
+<p><strong>Desmond:</strong> in 2021 the EITC reached <strong>25
+million</strong> workers and families, average payment
+<strong>$2,411.</strong> Its loudest champions are Walmart, the U.S.
+Chamber of Commerce, and the National Restaurant Association.</p>
+<blockquote>
+<p>“By introducing employees to these benefits, businesses help their
+employees — and help themselves.” — Institute for a Competitive
+Workforce</p>
+</blockquote>
+<p>Roughly <strong>12 million</strong> American workers rely on
+Medicaid; <strong>9 million</strong> live in households on food stamps.
+Most worked full-time for part of the year; about half worked full-time
+year-round.</p>
+<p><strong>Same program. Is it evidence the welfare state is bigger than
+we thought, or evidence it is a wage subsidy?</strong></p>
+<h2 id="overcharged-the-rental-market">Overcharged: the rental
+market</h2>
+<p>Median U.S. rent: <strong>$483 in 2000. $1,216 in 2021.</strong>
+Since 2000, up 112% in the Midwest, 135% in the South, 189% in the
+Northeast, 192% in the West.</p>
+<p><em>Not enough supply,</em> we are told. <em>Too much demand.</em>
+Then explain Birmingham, where <strong>19 percent</strong> of rental
+units sat vacant at the end of 2021 and rent rose 14 percent anyway.</p>
+<p>Desmond and Nathan Wilmers, using restricted Census landlord
+data:</p>
+<table>
+<thead>
+<tr>
+<th>Neighborhood</th>
+<th style="text-align: center;">Profit per unit, per month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Poor</td>
+<td style="text-align: center;"><strong>~$300</strong></td>
+</tr>
+<tr>
+<td>Middle-class</td>
+<td style="text-align: center;">~$225</td>
+</tr>
+<tr>
+<td>Rich</td>
+<td style="text-align: center;">~$250</td>
+</tr>
+</tbody>
+</table>
+<p>After every expense, routine and irregular: <strong>~$100 a month in
+poor neighborhoods, ~$50 in rich ones.</strong> Profits roughly
+double.</p>
+<p>Indianapolis, 2015–19: median two-bedroom rent <strong>$991</strong>
+metro-wide, <strong>$816</strong> in neighborhoods above 40 percent
+poverty. <strong>Seventeen percent less.</strong></p>
+<h2 id="lakia-higbees-373">Lakia Higbee’s $373</h2>
+<p>Cleveland, fall 2021. Amazon warehouse picker. Four-bedroom house,
+two adult daughters, a sixteen-year-old son, two granddaughters.</p>
+<p><strong>Rent: $950 a month.</strong> The windows were thin enough
+that the winter heating bill could reach $500.</p>
+<p>The mortgage on that same house, on conventional terms, would have
+been <strong>$577</strong> — taxes and insurance included.</p>
+<p><strong>$373 a month.</strong> Enough to replace the windows.</p>
+<p>She could not get the mortgage. Banks are not interested in financing
+homes that cheap. Redlining ended in 1968; the neighborhoods still
+function as <strong>mortgage deserts.</strong></p>
+<h2 id="sixty-one-million-dollars-a-day">Sixty-one million dollars a
+day</h2>
+<p>Not having money is expensive.</p>
+<ul>
+<li><strong>Overdraft.</strong> In 2019 the largest U.S. banks collected
+<strong>$11.68 billion</strong> in overdraft fees. <strong>Nine
+percent</strong> of account holders paid <strong>84 percent</strong> of
+them — the ones carrying average balances under $350.</li>
+<li><strong>Check cashing.</strong> Fees of 1 to 10 percent. A worker
+earning $10 an hour who cashes a $1,000 check pays $10 to $100 to
+receive money already earned: <strong>one to ten hours of work.</strong>
+Americans spent <strong>$1.6 billion</strong> cashing checks in
+2020.</li>
+<li><strong>Payday.</strong> A two-week $300 loan carries an APR of
+<strong>664 percent in Texas</strong>, 516 in Wisconsin, 460 in
+California. Four in five loans are rolled over. The average borrower
+stays indebted five months and pays <strong>$520 in fees to borrow
+$375.</strong></li>
+</ul>
+<p>Over <strong>$61 million a day</strong>, collected predominantly from
+low-income Americans. Pawnshops, title loans, and rent-to-own are not in
+that figure.</p>
+<h2 id="two-exceptionalisms">Two exceptionalisms</h2>
+<p><strong>Howard:</strong> the United States spends about what its
+peers spend. We measured it with one instrument, missed four tools, and
+built a literature on the error.</p>
+<p><strong>Desmond:</strong> the United States takes more back than its
+peers take. Underpaid at work, overcharged for housing, and charged
+again for access to their own wages.</p>
+<p>Brady and colleagues found ordinary rates of misfortune and the
+harshest penalties in the rich world. Howard says the state is not
+absent. Desmond says the market is unusually present.</p>
+<p><strong>If both are right, where does the money go between the
+appropriation and the outcome?</strong></p>
+<h2 id="who-benefits">Who benefits?</h2>
+<p>Not <em>why don’t you find a better job.</em> Not <em>why don’t you
+move.</em> Not <em>why don’t you stop taking out such bad
+loans.</em></p>
+<p><strong>Who is feeding off this?</strong></p>
+<h2 id="due-and-next">Due and next</h2>
+<ul>
+<li><strong>Discussion Paper 1</strong> — <em>Growing Up Poor in
+America</em>, both parts, with Howard ch. 3 or Pierson: <strong>Friday
+9/18</strong>, 11:59 p.m., on Canvas. Part 2 of the film arrives next
+week.</li>
+<li><strong>Pre-survey</strong>, if you have not done it: <strong>Friday
+9/11.</strong></li>
+<li><strong>Week 4 is asynchronous — no class meetings 9/14 or
+9/16.</strong> Howard ch. 3 and Pierson (1993), plus Part 2 of the film.
+Everything by Friday.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Social Security and Medicare</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Social Security and Medicare</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+5, Wednesday 23 September 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#where-we-left-it" id="toc-where-we-left-it">Where we left
+it</a></li>
+<li><a href="#the-ada-begins-with-a-purge"
+id="toc-the-ada-begins-with-a-purge">The ADA begins with a
+purge</a></li>
+<li><a href="#the-ada-who-built-it" id="toc-the-ada-who-built-it">The
+ADA: who built it</a></li>
+<li><a href="#the-child-tax-credit-undeniably-their-baby"
+id="toc-the-child-tax-credit-undeniably-their-baby">The Child Tax
+Credit: “undeniably their baby”</a></li>
+<li><a href="#plan-b-build-a-layer" id="toc-plan-b-build-a-layer">Plan
+B: build a layer</a></li>
+<li><a href="#social-security-then-and-now"
+id="toc-social-security-then-and-now">Social Security, then and
+now</a></li>
+<li><a href="#a-bet-and-a-hedge" id="toc-a-bet-and-a-hedge">1935: a bet,
+and a hedge</a></li>
+<li><a href="#two-documents-one-origin-story"
+id="toc-two-documents-one-origin-story">Two documents, one origin
+story</a></li>
+<li><a href="#to-1983-built-then-trimmed-with-care"
+id="toc-to-1983-built-then-trimmed-with-care">1950 to 1983: built, then
+trimmed with care</a></li>
+<li><a href="#lock-in-tested" id="toc-lock-in-tested">Lock-in,
+tested</a></li>
+<li><a href="#what-it-does-what-it-cannot-fix-and-the-gap"
+id="toc-what-it-does-what-it-cannot-fix-and-the-gap">What it does, what
+it cannot fix, and the gap</a></li>
+<li><a href="#medicare-the-fallback-and-what-passage-cost"
+id="toc-medicare-the-fallback-and-what-passage-cost">Medicare: the
+fallback, and what passage cost</a></li>
+<li><a href="#medicare-then-and-now"
+id="toc-medicare-then-and-now">Medicare, then and now</a></li>
+<li><a href="#from-expansion-to-cost-control"
+id="toc-from-expansion-to-cost-control">From expansion to cost
+control</a></li>
+<li><a href="#three-things-that-drive-medicare-politics"
+id="toc-three-things-that-drive-medicare-politics">Three things that
+drive Medicare politics</a></li>
+<li><a href="#pierson-and-howard-tested"
+id="toc-pierson-and-howard-tested">Pierson and Howard, tested</a></li>
+<li><a href="#which-one-is-safer-in-2040"
+id="toc-which-one-is-safer-in-2040">Which one is safer in 2040?</a></li>
+<li><a href="#due-and-next" id="toc-due-and-next">Due and next</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 5 Wednesday slides — same
+content in linear order, with no slide-scaling container. Reading:
+Howard ch. 4; Berkowitz and DeWitt; Oberlander.</em></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li><strong>Howard ch. 4, finished:</strong> the ADA, the Child Tax
+Credit, and layers (~15 min)</li>
+<li><strong>Social Security:</strong> the bet of 1935, and two documents
+that need its story (~30 min)</li>
+<li><strong>Medicare:</strong> the fallback of 1965 (~15 min)</li>
+<li><strong>Pierson and Howard, tested</strong> (~5 min)</li>
+</ol>
+<h2 id="where-we-left-it">Where we left it</h2>
+<p>ERISA, 1974: a Republican senator carried the bill for seven years, a
+Democratic president refused it twice, and two Democratic committee
+chairs were the obstacle.</p>
+<p>Howard’s own objection: Jacob Javits was a liberal Republican in a
+less polarized Congress. <strong>The easy case.</strong></p>
+<p><strong>The test.</strong> Howard expected
+<strong>logrolling:</strong> Republicans show up late and let a
+Democratic program pass as the price of something else. What would tell
+logrolling apart from leadership?</p>
+<ul>
+<li>Who introduced it, and when the Republicans arrived.</li>
+<li>What the Republicans said the program was <em>for.</em></li>
+<li>Whether they fought for it when they could have let it die.</li>
+</ul>
+<h2 id="the-ada-begins-with-a-purge">The ADA begins with a purge</h2>
+<p><strong>1980.</strong> Congress orders reviews of people on the
+disability rolls. The Reagan administration speeds them up. Between
+March 1981 and April 1982 it declares ineligible <strong>almost half of
+the 400,000 cases reviewed.</strong> The final count approaches
+<strong>half a million people.</strong> Hearings fill with people who
+are plainly disabled. By 1984 they are winning in court “on a regular
+basis.”</p>
+<p><strong>Meanwhile.</strong> Reagan’s Task Force on Regulatory Relief,
+chaired by Vice President George Bush, sets out to weaken Section 504,
+the rule barring federal contractors from discriminating against the
+handicapped. The more the task force learns, the more it concludes
+government should do more. It reverses itself in 1983.</p>
+<p>C. Boyden Gray, the task force’s counsel, on what policy should aim
+at:</p>
+<blockquote>
+<p>“to turn as many of the disabled as possible into taxpaying
+citizens.” (p. 81)</p>
+</blockquote>
+<p>Roughly 13 million adults had a work disability. About 2.5 million of
+them received Food Stamps and Medicaid.</p>
+<h2 id="the-ada-who-built-it">The ADA: who built it</h2>
+<ul>
+<li><strong>The proposal came from Reagan appointees.</strong> The
+National Council on the Handicapped, with Justin Dart Jr., issued
+<em>Toward Independence</em> in 1986 and named the law it wanted: an
+Americans with Disabilities Act.</li>
+<li><strong>First bill, April 1988:</strong> Lowell Weicker, Republican
+of Connecticut, and Tony Coelho, Democrat of California.</li>
+<li><strong>Then the Democrats trimmed it.</strong> Ted Kennedy and Tom
+Harkin led with a more modest version:</li>
+</ul>
+<blockquote>
+<p>“In other words, two of the Senate’s leading liberals were backing
+away from regulation-expanding recommendations made by Reagan
+appointees.” (p. 83)</p>
+</blockquote>
+<ul>
+<li><strong>Bush ran on it.</strong> At the 1988 convention he pledged
+to “do whatever it takes to make sure the disabled are included in the
+mainstream.” The Louis Harris organization estimated that disabled
+Americans who usually voted Democratic and switched in 1988 accounted
+for <strong>up to one-half of his winning margin.</strong></li>
+<li><strong>Senate Republicans Bob Dole and Orrin Hatch led.</strong>
+Speaker Jim Wright and Majority Leader Tom Foley, both Democrats, were
+reluctant.</li>
+<li><strong>The deal:</strong> punitive damages dropped, business
+coverage broadened. An amendment to exclude people with HIV/AIDS was
+defeated.</li>
+</ul>
+<p><strong>House, 377 to 28. Senate, 91 to 6.</strong> Signed July 26,
+1990, before three thousand people on the South Lawn.</p>
+<h2 id="the-child-tax-credit-undeniably-their-baby">The Child Tax
+Credit: “undeniably their baby”</h2>
+<p><strong>Mid-1980s.</strong> Both parties compete to be the pro-family
+party. Liberal Democrats and the Children’s Defense Fund want grants for
+child care and regulation of providers. Republicans want help that also
+reaches a parent who stays home.</p>
+<ul>
+<li><strong>1988–89:</strong> Bush proposes a $1,000 children’s tax
+credit against Dukakis. Dole introduces a child care tax credit bill
+with twenty-six cosponsors, <strong>all of them
+Republicans.</strong></li>
+<li><strong>1990 budget deal:</strong> $15 billion in tax breaks against
+$4 billion in grants. The White House calls the Young Child Tax Credit
+<strong>“non-negotiable.”</strong> Clinton ends it in 1993 and expands
+the EITC instead.</li>
+<li><strong>1994–97:</strong> the Contract with America promises $500
+per child, for families earning up to $200,000. Clinton endorses it, and
+it passes in the Taxpayer Relief Act of 1997.</li>
+</ul>
+<blockquote>
+<p>“While President Clinton deserves some credit for creating this
+program, Republicans deserve more.” (p. 87)</p>
+</blockquote>
+<p><strong>By 2002</strong> it cost $27 billion a year, more than
+TANF.</p>
+<p><strong>Since the book:</strong> the credit is <strong>$2,200 per
+child</strong> for 2026, up to $1,700 of it refundable, made permanent
+by the 2025 reconciliation law under a Republican president and
+Congress. For one year, 2021, a Democratic Congress raised it to $3,000
+and $3,600 per child and paid half of it monthly. That version
+expired.</p>
+<h2 id="plan-b-build-a-layer">Plan B: build a layer</h2>
+<p>Republicans tried cutting programs and learned that retrenchment was
+painful “not just to beneficiaries but to their own political careers.”
+That is Pierson, from the inside. So:</p>
+<blockquote>
+<p>“In all three cases studied here, Republicans designed new social
+programs in order to curb existing programs.” (p. 89)</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>New program</th>
+<th>What it was supposed to hold down</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERISA, and indexing benefits in 1972</td>
+<td>Social Security’s growth and the payroll tax</td>
+</tr>
+<tr>
+<td>ADA</td>
+<td>Rolls for disability benefits and medical care</td>
+</tr>
+<tr>
+<td>Child Tax Credit</td>
+<td>Demand for subsidized day care and child care grants</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The case that proves the rule.</strong> Bush signed the ADA
+and <strong>vetoed family leave twice,</strong> in 1990 and 1992.
+Howard’s explanation: family leave had no “clear potential to reduce
+social spending elsewhere.”</p>
+<p>Howard borrows Jacob Hacker’s word, <strong>layering:</strong> what
+is too durable to replace, you build on top of.</p>
+<blockquote>
+<p>“Often at odds over building up or tearing down the American welfare
+state, the two parties decided to add new rooms in different
+architectural styles.” (p. 91)</p>
+</blockquote>
+<h2 id="social-security-then-and-now">Social Security, then and now</h2>
+<p>Berkowitz and DeWitt wrote with 2010 and 2011 numbers. Where the
+chapter and the slide differ, you get both.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>The chapter (2010–11)</th>
+<th>Now</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beneficiaries</td>
+<td>More than 55 million</td>
+<td><strong>71.3 million</strong> (July 2026)</td>
+</tr>
+<tr>
+<td>Average monthly retirement benefit</td>
+<td>$1,181</td>
+<td><strong>$2,086</strong> (July 2026)</td>
+</tr>
+<tr>
+<td>Payroll tax</td>
+<td>12.4 percent on the first $106,800</td>
+<td>12.4 percent on the first <strong>$184,500</strong> (2026)</td>
+</tr>
+<tr>
+<td>Full retirement age</td>
+<td>66, rising to 67</td>
+<td>67 for everyone born in 1960 or later</td>
+</tr>
+<tr>
+<td>Elderly poverty</td>
+<td>9 percent; 44 percent without Social Security</td>
+<td><strong>9.8 percent</strong> in 2025, official measure; 15.4 percent
+on the supplemental measure</td>
+</tr>
+<tr>
+<td>When the trust funds run short</td>
+<td>No date given</td>
+<td>Retirement fund: <strong>late 2032,</strong> then 78 percent of
+scheduled benefits. Combined with disability: 2034, then 83 percent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How it works.</strong> Workers and employers split a payroll
+tax. Today’s taxes pay today’s retirees. The benefit formula is tied to
+your own earnings and tilted toward lower earners. Benefits are paid “as
+a matter of right”: there is no means test, and “no one is too rich to
+qualify.” Spouses, survivors, and disabled workers are covered too.</p>
+<h2 id="a-bet-and-a-hedge">1935: a bet, and a hedge</h2>
+<blockquote>
+<p>“They wagered that a social insurance system financed completely by
+payroll contributions could be successfully implemented and sustained
+into the future.” (p. 263)</p>
+</blockquote>
+<p><strong>The bet was bad politics for fifteen years.</strong></p>
+<ul>
+<li>The tax started in 1937: 2 percent, split between worker and
+employer, on the first $3,000. The first monthly checks were scheduled
+for <strong>1942</strong>, later moved up to 1940.</li>
+<li><strong>Half of all workers were left out,</strong> farm and
+domestic workers among them, who “were the majority of black labor force
+participants at the time” (p. 272).</li>
+<li>Through the 1940s Congress froze the scheduled tax increases again
+and again and twice trimmed coverage.</li>
+</ul>
+<blockquote>
+<p>“A program that existed primarily as a tax rather than a benefit …
+faced the prospect of repeal.” (p. 264)</p>
+</blockquote>
+<p><strong>The hedge was Old Age Assistance:</strong> means-tested, run
+by the states, paying from day one, with more friends in Congress.
+Howard’s box 3.1 has the 1948 numbers: the average Old Age Assistance
+check was <strong>50 percent larger</strong> than the average Social
+Security check, and it had about 50 percent more recipients.</p>
+<h2 id="two-documents-one-origin-story">Two documents, one origin
+story</h2>
+<p>You read one of them: the <strong>Heritage</strong> brief (Greszler
+2021) or the <strong>CBPP</strong> fact sheet (2024). Two advocacy
+documents on one program, written from opposite sides.</p>
+<p><strong>Five minutes, in writing, on your own:</strong></p>
+<ol type="1">
+<li>What does your document need the origin story of Social Security to
+be?</li>
+<li>What does it leave out to make that story work?</li>
+</ol>
+<p><strong>Then:</strong> two or three voices from each side.</p>
+<p><strong>Then put Howard against both.</strong> If Republicans built
+much of this, and built around the rest, which document’s politics
+survives that fact? Whose doesn’t?</p>
+<h2 id="to-1983-built-then-trimmed-with-care">1950 to 1983: built, then
+trimmed with care</h2>
+<p><strong>The triumph of 1950.</strong> Congress extends coverage to
+the self-employed and to farm and domestic workers, and raises benefits.
+Rural members of Congress now have constituents with a stake. Social
+Security passes Old Age Assistance during the decade.</p>
+<p><strong>The ritual.</strong> Actuaries assumed wages would stay
+level. Wages rose, so the system kept showing surpluses, and Congress
+kept spending them:</p>
+<blockquote>
+<p>“In this manner, a regular ritual developed after 1950 of raising
+benefits in election years.” (p. 265)</p>
+</blockquote>
+<p>Democrats held Congress “for all but two years” between 1949 and 1981
+and took the credit. Program administrators helped: they “took
+deliberate steps to remove some of the program’s political
+liabilities.”</p>
+<p><strong>1972.</strong> A 20 percent increase, and automatic
+cost-of-living adjustments starting in 1975. Nixon and other Republicans
+“welcomed indexation.”</p>
+<p><strong>1983.</strong> Indexing met the inflation of the 1970s and
+the system ran short. A bipartisan commission, then a deal between
+Reagan and Speaker Tip O’Neill, roughly half revenue and half cuts:
+benefits partly taxable, the cost-of-living adjustment delayed six
+months, the retirement age raised from 65 to 67, <strong>phased in over
+decades.</strong></p>
+<p><strong>Nobody’s check went down.</strong> The retirement age rose on
+people who were in their twenties. That is Pierson’s traceability, used
+on purpose.</p>
+<h2 id="lock-in-tested">Lock-in, tested</h2>
+<p>Pierson, 1993, on what Monday’s table called lock-in:</p>
+<blockquote>
+<p>“Individuals make important commitments in response to certain types
+of government action. These commitments, in turn, may vastly increase
+the disruption caused by new policies, effectively ‘locking in’ previous
+decisions.” (Pierson, p. 608)</p>
+</blockquote>
+<p>Social Security pays today’s retirees with today’s payroll taxes.
+Move to private accounts and “current workers would have to finance both
+their parents’ retirement and their own. This made any major
+privatization initiative in the United States unthinkable” (p. 609). In
+Britain no earnings-related pension ever matured, and Thatcher could
+move toward private provision.</p>
+<p><strong>The test.</strong> After 1983 conservative critics stopped
+proposing cuts and offered <strong>personal accounts.</strong> George W.
+Bush made them the centerpiece of his second term. The plan “failed to
+take hold.” Berkowitz and DeWitt’s first reason is <strong>transition
+costs,</strong> which is Pierson’s double-payment problem. The others:
+no private answer for disability and survivors coverage, and stock
+returns that “turned sharply lower in the period after 2001.”</p>
+<p><strong>A prediction made in advance, and it held.</strong> What
+would it take to break it?</p>
+<h2 id="what-it-does-what-it-cannot-fix-and-the-gap">What it does, what
+it cannot fix, and the gap</h2>
+<blockquote>
+<p>“Social Security was the nation’s most important antipoverty program,
+in part because it did not target its benefits exclusively to the poor.”
+(p. 271)</p>
+</blockquote>
+<p><strong>The cost of that design:</strong> “inequalities that exist in
+the workplace get reflected in Social Security benefits” (p. 272). Lower
+lifetime wages and years out of the labor force come out as smaller
+checks, and defending the program crowds out fixing it.</p>
+<p><strong>The 2026 Trustees report:</strong> the retirement fund spends
+down its reserves in <strong>late 2032;</strong> payroll taxes then
+cover <strong>78 percent</strong> of scheduled benefits. The 75-year gap
+is <strong>4.42 percent of taxable payroll.</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Option</th>
+<th>The authors’ objection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raise the retirement age</td>
+<td>A benefit cut, hardest on manual laborers</td>
+</tr>
+<tr>
+<td>Change the indexing formulas</td>
+<td>A benefit cut, for current and future retirees</td>
+</tr>
+<tr>
+<td>Means-test benefits</td>
+<td>The affluent may lobby to leave, and take their payroll taxes
+along</td>
+</tr>
+<tr>
+<td>Raise or remove the tax cap</td>
+<td>Higher taxes also earn higher benefits; clawing those back recreates
+the exit problem</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“Pushing in at one place invariably produces a bulge somewhere else.”
+(p. 275)</p>
+</blockquote>
+<h2 id="medicare-the-fallback-and-what-passage-cost">Medicare: the
+fallback, and what passage cost</h2>
+<p>Reformers lost on national health insurance from 1915 through Truman.
+By 1951 his officials had a smaller idea: hospital insurance for
+retirees already on Social Security.</p>
+<blockquote>
+<p>“insurance for the elderly [was] a fallback position, which we
+advocated solely because it seemed to have the best chance politically.”
+— Robert Ball (p. 298)</p>
+</blockquote>
+<p>In 1962, 47 percent of elderly families were below the poverty line
+and only a quarter of seniors had meaningful health coverage. The design
+copied Social Security: “an earned right, not a handout.”</p>
+<p><strong>1965.</strong> The 1964 landslide gives Democrats large
+majorities. Wilbur Mills, who had blocked the bill for years, takes it
+over, adds physician coverage, and adds Medicaid.</p>
+<p><strong>The price.</strong> Medicare paid hospitals and doctors
+whatever they said care cost, after the fact.</p>
+<blockquote>
+<p>“Permissive payment policies were a political price paid to mollify
+medical providers and assure Medicare a smooth start.” (p. 301)</p>
+</blockquote>
+<p>Nineteen million people enrolled within a year. Hospitals in the
+South desegregated to qualify.</p>
+<h2 id="medicare-then-and-now">Medicare, then and now</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Part</th>
+<th>Covers</th>
+<th>Paid for by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong> (1965)</td>
+<td>Hospital stays</td>
+<td>Payroll tax, into a trust fund</td>
+</tr>
+<tr>
+<td><strong>B</strong> (1965)</td>
+<td>Doctors and outpatient care</td>
+<td>General revenues (75 percent) and premiums (25 percent)</td>
+</tr>
+<tr>
+<td><strong>C</strong> “Medicare Advantage”</td>
+<td>A private plan in place of A and B</td>
+<td>Federal payments to insurers</td>
+</tr>
+<tr>
+<td><strong>D</strong> (2003)</td>
+<td>Prescription drugs, through private plans only</td>
+<td>General revenues and premiums</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What it still does not cover:</strong> long-term nursing home
+care, most dental and vision care, hearing aids. Traditional Medicare
+has no cap on what you can pay out of pocket.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>The chapter (2010–13)</th>
+<th>Now</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>People covered</td>
+<td>Nearly 50 million</td>
+<td><strong>70.5 million</strong> (May 2026)</td>
+</tr>
+<tr>
+<td>Spending</td>
+<td>$590 billion (2013)</td>
+<td><strong>$1.21 trillion</strong> (2025)</td>
+</tr>
+<tr>
+<td>In private Medicare Advantage plans</td>
+<td>About 30 percent</td>
+<td><strong>55 percent</strong> of those eligible (March 2026)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="from-expansion-to-cost-control">From expansion to cost
+control</h2>
+<p>The architects expected benefits to grow toward national health
+insurance. Benefits barely moved. Costs took over the agenda.</p>
+<ul>
+<li><strong>1972:</strong> coverage extended to people on disability
+insurance and people with kidney failure. The last big expansion for
+three decades.</li>
+<li><strong>1983:</strong> hospitals paid a fixed rate per diagnosis,
+set in advance. Backed by both parties.</li>
+<li><strong>1988–89:</strong> the Medicare Catastrophic Coverage Act
+adds an out-of-pocket cap and drug coverage, paid for partly by a surtax
+on better-off beneficiaries. <strong>They revolt. Congress repeals it
+the next year.</strong></li>
+<li><strong>2003:</strong> Part D. Covers 75 percent of drug costs up to
+$2,250, then nothing until $5,100: the “doughnut hole.” Passed by a
+Republican president and Congress, delivered only through private plans,
+and not paid for.</li>
+<li><strong>2010:</strong> the ACA fills the doughnut hole, trims
+payments to private plans, and books $500 billion in Medicare
+savings.</li>
+</ul>
+<p>Policymakers preferred “imposing pain on medical care providers than
+on retirees.” Excess cost growth per beneficiary fell from 5.6 percent a
+year (1975–83) to 0.5 percent (1997–2005).</p>
+<h2 id="three-things-that-drive-medicare-politics">Three things that
+drive Medicare politics</h2>
+<p><strong>1. Interest groups, weakened by deficits.</strong> Hospitals,
+doctors, insurers, and drug makers form a “Medicare-industrial complex.”
+But seniors have the votes, so cuts land on providers.</p>
+<blockquote>
+<p>“Interest groups, then, greatly influence but ultimately do not run
+Medicare.” (p. 306)</p>
+</blockquote>
+<p><strong>2. The end of bipartisanship.</strong></p>
+<blockquote>
+<p>“Since 1995, bipartisanship in Medicare politics has eroded and
+program policy has moved rightward.” (p. 307)</p>
+</blockquote>
+<p>Paul Ryan’s 2011 plan would have replaced Medicare with a voucher.
+CBO’s estimate: a typical 65-year-old would pay <strong>68
+percent</strong> of their own costs by 2030, against 25 to 30 percent
+under current law. After the backlash it was softened into “premium
+support.”</p>
+<p><strong>3. The trust fund as a recurring crisis.</strong></p>
+<blockquote>
+<p>“If Medicare was funded exclusively from general revenues, like
+defense programs, then policy makers would surely still fret over rising
+costs, but impending ‘bankruptcy’ would never be an issue.”
+(pp. 307–308)</p>
+</blockquote>
+<p>The 2026 Trustees report has the hospital trust fund running short in
+<strong>2033,</strong> after which the payroll tax covers 89 percent of
+costs. <em>(The chapter: 2030.)</em> Oberlander’s point is that the date
+keeps moving and the alarm keeps recurring.</p>
+<h2 id="pierson-and-howard-tested">Pierson and Howard, tested</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Social Security</th>
+<th>Medicare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pierson: programs make their own politics</strong></td>
+<td><strong>Holds:</strong> once coverage widened in 1950, members of
+Congress had constituents with a stake; the AARP and older voters became
+hard to dislodge; privatization failed on transition costs.
+<strong>Complicates:</strong> lock-in took fifteen years and
+administrators worked at it; real cuts passed in 1983; the same
+constituency now blocks reforms that would help women and
+caregivers</td>
+<td><strong>Holds:</strong> seniors steer cuts toward providers; the
+Ryan voucher died in a backlash. <strong>Complicates:</strong>
+beneficiaries killed an expansion in 1989; lock-in never produced the
+national health insurance its architects expected; the program moved
+right from the inside, through private plans</td>
+</tr>
+<tr>
+<td><strong>Howard: Republicans built it too</strong></td>
+<td><strong>Holds:</strong> Nixon and indexing; Reagan co-signed the
+1983 rescue; tax-favored retirement accounts. <strong>Cuts
+against:</strong> Democrats held Congress for all but two years from
+1949 to 1981 and claimed the increases</td>
+<td><strong>Cuts against:</strong> in 1965 Republicans sat inside the
+opposing coalition. <strong>Holds, with a twist:</strong> the largest
+expansion since 1965, Part D, came from a Republican president and
+Congress, and they built it through private insurers</td>
+</tr>
+</tbody>
+</table>
+<p>Neither chapter cites Howard. Both cite Pierson.</p>
+<p><strong>For your brief:</strong> run the same two tests on your
+program. Who built it, and what were they trying to hold down? Whom did
+it organize, and what have they blocked since?</p>
+<h2 id="which-one-is-safer-in-2040">Which one is safer in 2040?</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Social Security</th>
+<th>Medicare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it pays</td>
+<td>Cash, by formula</td>
+<td>Medical bills</td>
+</tr>
+<tr>
+<td>Who gets the money</td>
+<td>Retirees, survivors, disabled workers</td>
+<td>Hospitals, doctors, insurers, drug makers</td>
+</tr>
+<tr>
+<td>How it has changed since 1995</td>
+<td>Hardly at all</td>
+<td>From the inside, toward private plans</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hands up. Then tell me why.</strong></p>
+<h2 id="due-and-next">Due and next</h2>
+<ul>
+<li><strong>The Scaffold is open.</strong> First session after you have
+read two things about your program: the agency’s own description and one
+document from the <strong>Policy Brief — Program Sources</strong>
+page.</li>
+<li><strong>Program switches:</strong> by email, until <strong>Friday,
+October 2.</strong></li>
+<li><strong>Week 6, the safety net, part 1 (TANF, SNAP, the
+EITC):</strong> Howard ch. 5 · Campbell chs. 1–3 · Desmond ch. 5.</li>
+<li><strong>Discussion Paper 2</strong> is due <strong>Friday, October
+2,</strong> 11:59 p.m.</li>
+</ul>
+</body>
+</html>

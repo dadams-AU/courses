@@ -18,22 +18,26 @@ This repository contains the syllabi, BibTeX files, and other course materials f
 Here you will find the syllabi and other materials related to the undergraduate courses:
 
 - **Course POSC 315**: [Introduction to Public Policy](/POSC315)
-  - Syllabus: [Download here](/POSC315/syllabus/posc_315_2401.pdf)
-  - Lecture Slides: [View Here](POSC315/presentations)
+  - Syllabus (Summer 2026): [Download here](https://github.com/dadams-AU/syllabi/blob/main/POSC%20315%20Intro%20Policy/2026%20Summer/posc315_summer_2026.pdf)
+  - Past syllabi: [All terms](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
+  - Lectures (slides and videos): [View here](https://courses.dadams.io/#posc315-async)
+  - Handouts: [View here](https://courses.dadams.io/POSC315_asynch/posc315_async_handouts.html)
+  - Archived in-person slides: [POSC315/presentations](/POSC315/presentations)
 
 ## Graduate Courses
 
 This section includes information and links to the graduate courses:
 
 - **Course POSC 521**: [MPA Capstone Seminar](/POSC521/)
-  - Syllabus: [Download here](/POSC521/POSC%20521%20Fall%202023.pdf)
+  - Syllabus (Fall 2026): [Download here](https://github.com/dadams-AU/syllabi/blob/main/POSC%20521%20MPA%20Capstone/2026-27%20Fall/posc521_2026_fall.pdf)
+  - Past syllabi: [All terms](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone)
   
 ## MPA Course Reference Materials
 
 - POSC 521 Reference Materials
-  - [POSC 521 Course Bibliography](/POSC521/521bib.html)
-  - [POSC 521 Course Biliography BibTeX file](/PSOC521/521.bib)
-  - [POSC 521 Course Biliography json file](/PSOC521/521.json)
+  - [POSC 521 Course Bibliography](https://courses.dadams.io/POSC521/521bib.html)
+  - [POSC 521 Course Bibliography BibTeX file](/POSC521/521.bib)
+  - [POSC 521 Course Bibliography JSON file](/POSC521/521.json)
 
 ## Additional Resources
 

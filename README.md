@@ -26,14 +26,15 @@ Here you will find the syllabi and other materials related to the undergraduate 
 This section includes information and links to the graduate courses:
 
 - **Course POSC 521**: [MPA Capstone Seminar](/POSC521/)
-  - Syllabus: [Download here](/POSC521/POSC%20521%20Fall%202023.pdf)
+  - Syllabus (Fall 2026): [Download here](https://github.com/dadams-AU/syllabi/blob/main/POSC%20521%20MPA%20Capstone/2026-27%20Fall/posc521_2026_fall.pdf)
+  - Past syllabi: [All terms](https://github.com/dadams-AU/syllabi/tree/main/POSC%20521%20MPA%20Capstone)
   
 ## MPA Course Reference Materials
 
 - POSC 521 Reference Materials
-  - [POSC 521 Course Bibliography](/POSC521/521bib.html)
-  - [POSC 521 Course Biliography BibTeX file](/PSOC521/521.bib)
-  - [POSC 521 Course Biliography json file](/PSOC521/521.json)
+  - [POSC 521 Course Bibliography](https://courses.dadams.io/POSC521/521bib.html)
+  - [POSC 521 Course Bibliography BibTeX file](/POSC521/521.bib)
+  - [POSC 521 Course Bibliography JSON file](/POSC521/521.json)
 
 ## Additional Resources
 

@@ -1,256 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-      <!-- theme-init: set light/dark class before first paint to avoid FOUC -->
-      <script>
-        (function () {
-          try {
-            var t = localStorage.getItem('themePreference') || 'auto';
-            var dark = t === 'dark' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-            document.documentElement.classList.add(dark ? 'dark-theme' : 'light-theme');
-          } catch (e) {}
-        })();
-      </script>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <!-- Security Headers -->
-      <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
-      <meta http-equiv="X-Content-Type-Options" content="nosniff">
-      <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-      <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-      <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-      <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-      
-      <!-- SEO Meta Tags -->
-      <meta name="description" content="David P. Adams - Class Resources. Access slide decks, handouts, and materials for public administration and policy courses.">
-      <meta name="keywords" content="David P. Adams, Public Policy, CSUF, Public Administration, Class Resources, POSC 315, POSC 320, POSC 459">
-      <meta name="author" content="David P. Adams">
-      
-      <!-- Open Graph / Social Media Meta Tags -->
-      <meta property="og:title" content="David P. Adams - Class Resources">
-      <meta property="og:description" content="Access slide decks, handouts, and materials for public administration and policy courses.">
-      <meta property="og:image" content="dadams.png">
-      <meta property="og:url" content="https://courses.dadams.io">
-      <meta property="og:type" content="website">
-      
-      <!-- Twitter Card Meta Tags -->
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="David P. Adams - Class Resources">
-      <meta name="twitter:description" content="Access slide decks, handouts, and materials for public administration and policy courses.">
-      <meta name="twitter:image" content="dadams.png">
-      
-      <title>David P. Adams - Class Resources</title>
-      
-      <!-- Preload Critical Resources -->
-      <link rel="preload" href="css/custom.css" as="style">
-      <link rel="preload" href="bootstrap-icons/font/bootstrap-icons.css" as="style">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      
-      <!-- Favicon-->
-      <link rel="icon" type="image/x-icon" href="favicon.ico">
-      
-      <!-- Stylesheets -->
-      <link href="bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/custom.css">
+---
+layout: site
+description: Slide decks, handouts, and lecture videos for David P. Adams's public administration and policy courses at Cal State Fullerton.
+---
+<header class="page-hero container-xl">
+  <p class="cmd"><span class="ps1" aria-hidden="true">$</span> cd ~/courses &amp;&amp; ls</p>
+  <h1>Class resources</h1>
+  <p class="lead">Access slide decks, handouts, and materials for public administration and policy courses.</p>
+  <div class="lecture-search">
+    <label class="grep-box">
+      <span class="grep-prompt" aria-hidden="true">grep&nbsp;-i</span>
+      <span class="visually-hidden">Search lectures by topic, course, or week</span>
+      <input id="lecture-filter" type="search" placeholder="federalism, week 5, implementation…" autocomplete="off" spellcheck="false">
+      <kbd class="grep-hint" aria-hidden="true">/</kbd>
+    </label>
+    <p class="lecture-search-count" aria-live="polite"><span data-lecture-count></span> of <span data-lecture-total></span> lectures</p>
+  </div>
+  <p class="lecture-empty" data-lecture-empty hidden>grep: no matches. Try a topic, a week number, or a course code.</p>
+</header>
 
-      <!-- Structured Data -->
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "David P. Adams - Class Resources",
-        "url": "https://courses.dadams.io",
-        "author": {
-          "@type": "Person",
-          "name": "David P. Adams"
-        }
-      }
-      </script>
-    </head>
-
-<body id="page-top">
-  <!-- Skip Link for Keyboard Navigation -->
-  <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
-
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="check2" viewBox="0 0 16 16">
-      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-      <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-    </symbol>
-  </svg>
-
-  <!-- Navigation Bar -->
-  <section>
-    <nav class="navbar navbar-expand-lg navbar-glass fixed-top" aria-label="Main navigation">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://dadams.io/index.html" aria-label="Home">
-          <span class="navbar-wordmark">dadams<span class="navbar-wordmark-dot">.</span></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="https://dadams.io/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://dadams.io/about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://dadams.io/research.html">Research</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Teaching</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://dadams.io/contact.html">Contact</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="https://courses.dadams.io" title="Class Resources" target="_blank" rel="noopener">
-                <i class="fa-solid fa-graduation-cap me-1"></i>Class Resources
-              </a>
-            </li>
-          </ul>
-          <div class="dropdown bd-mode-toggle ms-3">
-            <button class="btn theme-toggle-btn dropdown-toggle d-flex align-items-center"
-                    id="bd-theme"
-                    type="button"
-                    aria-expanded="false"
-                    data-bs-toggle="dropdown"
-                    aria-label="Toggle theme (auto)">
-              <svg class="bi theme-icon-active" width="1em" height="1em" aria-hidden="true"><use href="#circle-half"></use></svg>
-              <span class="visually-hidden" id="bd-theme-text">Toggle theme (auto)</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end shadow theme-menu" aria-labelledby="bd-theme-text">
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                  Light
-                  <svg class="bi ms-auto theme-check d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                  Dark
-                  <svg class="bi ms-auto theme-check d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                  Auto
-                  <svg class="bi ms-auto theme-check d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </section>
-
-  <!-- Main Content -->
-  <main class="content-wrapper pt-5" id="main-content" role="main">
-
-    <!-- Hero Section -->
-    <section class="hero-section py-5 mt-4 courses-hero">
-      <div class="container px-4">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <i class="fas fa-chalkboard fa-3x mb-4 primary-blue"></i>
-            <h1 class="display-4 fw-bold lh-1 mb-4 primary-blue">Class Resources</h1>
-            <p class="lead mb-4">
-              Access slide decks, handouts, and materials for public administration and policy courses.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <!-- Quick Links / Course Cards -->
-    <section class="container px-4 py-5 quick-links">
-      <h2 class="pb-2 mb-4 border-bottom secondary-blue">Available Courses</h2>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        
-        <!-- POSC 315 Card -->
-        <div class="col">
-          <div class="card h-100 hover-lift">
-            <div class="card-body">
-              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 mb-3">
-                <i class="fas fa-balance-scale"></i>
-              </div>
-              <h3 class="card-title">POSC 315</h3>
-              <h4 class="card-subtitle mb-2 text-muted h6">Introduction to Public Policy</h4>
-              <p class="card-text">40+ lecture modules covering the complete policy process, from agenda setting to implementation and evaluation.</p>
-              <a href="#posc315-async" class="btn btn-outline-primary stretched-link">View Modules</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- POSC 320 Card -->
-        <div class="col">
-          <div class="card h-100 hover-lift">
-            <div class="card-body">
-              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 mb-3">
-                <i class="fas fa-building"></i>
-              </div>
-              <h3 class="card-title">CRJU/POSC 320</h3>
-              <h4 class="card-subtitle mb-2 text-muted h6">Introduction to Public Administration</h4>
-              <p class="card-text">18 modules on PA theory, practice, and application, exploring how government agencies function.</p>
-              <a href="#posc320-async" class="btn btn-outline-primary stretched-link">View Modules</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- POSC 459 Card -->
-        <div class="col">
-          <div class="card h-100 hover-lift">
-            <div class="card-body">
-              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 mb-3">
-                <i class="fas fa-hand-holding-heart"></i>
-              </div>
-              <h3 class="card-title">POSC 459</h3>
-              <h4 class="card-subtitle mb-2 text-muted h6">Social Welfare Politics and Policy</h4>
-              <p class="card-text">16-week in-person course on the American welfare state. Slides posted weekly as the semester unfolds.</p>
-              <a href="#posc459" class="btn btn-outline-primary stretched-link">View Weeks</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
+<!-- Course cards -->
+<section class="section container-xl" aria-labelledby="courses-heading">
+  <header class="section-head">
+    <p class="cmd"><span class="ps1" aria-hidden="true">$</span> ls ~/courses</p>
+    <h2 id="courses-heading">Available courses</h2>
+  </header>
+  <div class="dir-grid dir-grid-3">
+    <a class="dir-card" href="#posc315-async">
+      <span class="dir-path"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> ~/courses/posc315/</span>
+      <span class="dir-title">POSC 315: Introduction to Public Policy</span>
+      <span class="dir-desc">40+ lecture modules covering the complete policy process, from agenda setting to implementation and evaluation.</span>
+    </a>
+    <a class="dir-card" href="#posc320-async">
+      <span class="dir-path"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> ~/courses/posc320/</span>
+      <span class="dir-title">CRJU/POSC 320: Introduction to Public Administration</span>
+      <span class="dir-desc">18 modules on PA theory, practice, and application, exploring how government agencies function.</span>
+    </a>
+    <a class="dir-card" href="#posc459">
+      <span class="dir-path"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> ~/courses/posc459/</span>
+      <span class="dir-title">POSC 459: Social Welfare Politics and Policy</span>
+      <span class="dir-desc">16-week in-person course on the American welfare state. Slides posted weekly as the semester unfolds.</span>
+    </a>
+  </div>
+</section>
 
     <!-- POSC 315 Async -->
-    <section id="posc315-async" class="py-4" aria-label="POSC 315 lecture modules">
-        <div class="container">
-          <div class="course-section">
+    <section id="posc315-async" class="course-block section container-xl" aria-label="POSC 315 lecture modules">
+        <div class="course-section">
+            <p class="cmd"><span class="ps1" aria-hidden="true">$</span> ls ~/courses/posc315/lectures</p>
             <h2><i class="fas fa-laptop me-2"></i>POSC 315: Introduction to Public Policy</h2>
             <p class="mb-4">Lectures organized by topic. Click each section to expand.</p>
             <div class="unit-controls" role="group" aria-label="Expand or collapse all POSC 315 units">
-              <button class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc315-async', true)" aria-label="Expand all POSC 315 sections">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc315-async', true)" aria-label="Expand all POSC 315 sections">
                 <i class="fas fa-expand-alt me-1"></i>Expand All
               </button>
-              <button class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc315-async', false)" aria-label="Collapse all POSC 315 sections">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc315-async', false)" aria-label="Collapse all POSC 315 sections">
                 <i class="fas fa-compress-alt me-1"></i>Collapse All
               </button>
             </div>
@@ -258,7 +61,7 @@
             
             <!-- Foundations -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-1">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-1">
                 <span>
                     <i class="fas fa-chevron-right me-2"></i>
                     <strong>Introduction to the Policy Process</strong>
@@ -302,7 +105,7 @@
     
             <!-- Policy Making System -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-2">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-2">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Elements of the Policy-Making System</strong>
@@ -339,7 +142,7 @@
     
             <!-- Structure -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-3">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-3">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Historical Context & Structure of US Policy Making</strong>
@@ -368,7 +171,7 @@
     
             <!-- Policy Actors -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-4">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-4">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Official & Unofficial Policy Actors</strong>
@@ -421,7 +224,7 @@
     
             <!-- Agenda Setting -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-5">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-5">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Agenda Setting, Power, and Problem Definition</strong>
@@ -482,7 +285,7 @@
     
             <!-- Decision Making -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-6">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-6">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Policy Decision Making</strong>
@@ -519,7 +322,7 @@
     
             <!-- Policy Analysis -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-7">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-7">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Policy Analysis</strong>
@@ -548,7 +351,7 @@
     
             <!-- Design & Implementation -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-8">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-8">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Policy Design and Implementation</strong>
@@ -601,7 +404,7 @@
     
             <!-- Failure & Evaluation -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-9">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-9">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Policy Failure, Learning, and Evaluation</strong>
@@ -672,19 +475,18 @@
                 <i class="fas fa-file-alt me-1"></i>View All Handouts
             </a>
           </div>
-        </div>
       </section>
 
-      <section id="posc320-async" class="py-4" aria-label="POSC/CRJU 320 lecture modules">
-        <div class="container">
-          <div class="course-section">
+      <section id="posc320-async" class="course-block section container-xl" aria-label="POSC/CRJU 320 lecture modules">
+        <div class="course-section">
+            <p class="cmd"><span class="ps1" aria-hidden="true">$</span> ls ~/courses/posc320/modules</p>
             <h2><i class="fas fa-laptop me-2"></i>CRJU/POSC 320: Introduction to Public Administration</h2>
             <p class="mb-4">18 modules organized by topic. Click each section to expand.</p>
             <div class="unit-controls" role="group" aria-label="Expand or collapse all POSC 320 units">
-              <button class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc320-async', true)" aria-label="Expand all POSC 320 sections">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc320-async', true)" aria-label="Expand all POSC 320 sections">
                 <i class="fas fa-expand-alt me-1"></i>Expand All
               </button>
-              <button class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc320-async', false)" aria-label="Collapse all POSC 320 sections">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc320-async', false)" aria-label="Collapse all POSC 320 sections">
                 <i class="fas fa-compress-alt me-1"></i>Collapse All
               </button>
             </div>
@@ -692,7 +494,7 @@
             
             <!-- Unit 1: Foundations of Public Administration (Ch. 1-3) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-10">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-10">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Unit 1: Foundations of Public Administration</strong>
@@ -737,7 +539,7 @@
 
             <!-- Unit 2: Public Administration & Organizational Structure (Ch. 4-6) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-11">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-11">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Unit 2: Public Administration & Organizational Structure</strong>
@@ -782,7 +584,7 @@
 
             <!-- Unit 3: Organization Problems, Reform & Civil Service (Ch. 7-9) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-12">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-12">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Unit 3: Organization Problems, Reform & Civil Service</strong>
@@ -819,7 +621,7 @@
 
             <!-- Unit 4: Human Capital, Decision Making & Budgeting (Ch. 10-12) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-13">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-13">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Unit 4: Human Capital, Decision Making & Budgeting</strong>
@@ -856,7 +658,7 @@
 
             <!-- Unit 5: Implementation, Regulation & Accountability (Ch. 13-15) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-14">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-14">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Unit 5: Implementation, Regulation & Accountability</strong>
@@ -893,7 +695,7 @@
 
             <!-- Unit 6: Conclusion -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-15">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-15">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Unit 6: Course Wrap-up</strong>
@@ -916,26 +718,25 @@
               <i class="fas fa-file-alt me-1"></i>View All Handouts
             </a>
           </div>
-        </div>
       </section>
 
-      <section id="posc459" class="py-4" aria-label="POSC 459 weekly slides">
-        <div class="container">
-          <div class="course-section">
+      <section id="posc459" class="course-block section container-xl" aria-label="POSC 459 weekly slides">
+        <div class="course-section">
+            <p class="cmd"><span class="ps1" aria-hidden="true">$</span> ls ~/courses/posc459/slides</p>
             <h2><i class="fas fa-hand-holding-heart me-2"></i>POSC 459: Social Welfare Politics and Policy</h2>
             <p class="mb-4">Fall 2026, in person. Weeks organized by course part; slides are posted as the semester unfolds. Each deck includes an accessible text version and a PDF.</p>
             <div class="unit-controls" role="group" aria-label="Expand or collapse all POSC 459 units">
-              <button class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc459', true)" aria-label="Expand all POSC 459 sections">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc459', true)" aria-label="Expand all POSC 459 sections">
                 <i class="fas fa-expand-alt me-1"></i>Expand All
               </button>
-              <button class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc459', false)" aria-label="Collapse all POSC 459 sections">
+              <button type="button" class="btn btn-outline-secondary btn-sm" onclick="expandAllUnits('posc459', false)" aria-label="Collapse all POSC 459 sections">
                 <i class="fas fa-compress-alt me-1"></i>Collapse All
               </button>
             </div>
 
             <!-- Part I: The Big Picture (Weeks 1-4) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-16">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-16">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Part I: The Big Picture</strong>
@@ -989,7 +790,7 @@
 
             <!-- Part II: Programs of the Welfare State (Weeks 5-8) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-17">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-17">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Part II: Programs of the Welfare State</strong>
@@ -1035,7 +836,7 @@
 
             <!-- Part III: Case Studies in Reform (Weeks 9-11) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-18">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-18">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Part III: Case Studies in Reform</strong>
@@ -1063,7 +864,7 @@
 
             <!-- Part IV: Political Forces Shaping the Welfare State (Weeks 12-16) -->
             <div class="unit-section">
-              <button class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-19">
+              <button type="button" class="unit-header" onclick="toggleUnit(this)" aria-expanded="false" aria-controls="unit-content-19">
                 <span>
                 <i class="fas fa-chevron-right me-2"></i>
                 <strong>Part IV: Political Forces Shaping the Welfare State</strong>
@@ -1099,56 +900,4 @@
             </div>
 
           </div>
-        </div>
       </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center mt-3" role="contentinfo">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p style="color: #5E81AC;">Copyright &copy; 2026 David Prescott Adams</p>
-          <div class="d-flex justify-content-center gap-3 mb-3">
-            <a href="https://dadams.io/index.html" class="text-decoration-none footer-link">
-              <i class="fas fa-home me-1"></i>Main Site
-            </a>
-            <a href="termsofuse.html" class="text-decoration-none footer-link">
-              <i class="fas fa-gavel me-1"></i>Terms of Use
-            </a>
-            <a href="https://dadams.io/contact.html" class="text-decoration-none footer-link">
-              <i class="fas fa-envelope me-1"></i>Contact
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-      
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/scripts.js"></script>
-  <script src="https://kit.fontawesome.com/8734ad67bf.js" crossorigin="anonymous"></script>
-  <script>
-    function toggleUnit(button) {
-      const content = button.nextElementSibling;
-      const isExpanded = content.classList.contains('expanded');
-      if (isExpanded) {
-        content.classList.remove('expanded');
-        button.classList.remove('expanded');
-        button.setAttribute('aria-expanded', 'false');
-      } else {
-        content.classList.add('expanded');
-        button.classList.add('expanded');
-        button.setAttribute('aria-expanded', 'true');
-      }
-    }
-  </script>
-</body>
-</html>

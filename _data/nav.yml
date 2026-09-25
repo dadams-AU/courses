@@ -1,0 +1,9 @@
+# Navigation shared with dadams.io. `shortcut` is the second key of the "g <key>" shortcut.
+main:
+  - { label: home,     url: "https://dadams.io/",              shortcut: h }
+  - { label: about,    url: "https://dadams.io/about.html",    shortcut: a }
+  - { label: research, url: "https://dadams.io/research.html", shortcut: r }
+  - { label: teaching, url: "https://dadams.io/courses.html",  shortcut: t }
+  - { label: cv,       url: "https://dadams.io/resume.html",   shortcut: v }
+  - { label: contact,  url: "https://dadams.io/contact.html",  shortcut: c }
+  - { label: blog,     url: "https://dadams.io/blog/",         shortcut: b }

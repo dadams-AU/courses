@@ -18,8 +18,11 @@ This repository contains the syllabi, BibTeX files, and other course materials f
 Here you will find the syllabi and other materials related to the undergraduate courses:
 
 - **Course POSC 315**: [Introduction to Public Policy](/POSC315)
-  - Syllabus: [Download here](/POSC315/syllabus/posc_315_2401.pdf)
-  - Lecture Slides: [View Here](POSC315/presentations)
+  - Syllabus (Summer 2026): [Download here](https://github.com/dadams-AU/syllabi/blob/main/POSC%20315%20Intro%20Policy/2026%20Summer/posc315_summer_2026.pdf)
+  - Past syllabi: [All terms](https://github.com/dadams-AU/syllabi/tree/main/POSC%20315%20Intro%20Policy)
+  - Lectures (slides and videos): [View here](https://courses.dadams.io/#posc315-async)
+  - Handouts: [View here](https://courses.dadams.io/POSC315_asynch/posc315_async_handouts.html)
+  - Archived in-person slides: [POSC315/presentations](/POSC315/presentations)
 
 ## Graduate Courses
 

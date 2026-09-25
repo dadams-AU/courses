@@ -1,0 +1,15 @@
+# courses.dadams.io: class resources for David P. Adams's CSUF courses.
+#
+# Shares its look with dadams.io (repo dadams-AU/mainweb):
+#   css/custom.css  is a verbatim copy of mainweb's css/custom.css; re-copy it to stay in sync
+#   css/courses.css holds everything specific to this site (lecture lists, Bootstrap components)
+#   js/scripts.js   is mainweb's script plus the lecture accordion and lecture search
+#
+# Pages opt into the shared chrome with `layout: site` (_layouts/site.html). The name is
+# deliberately not "default": GitHub Pages applies a layout called "default" to every
+# Markdown file, and the slide/lecture Markdown here should keep rendering as it does.
+title: Class Resources · David P. Adams
+author: David P. Adams
+description: Slide decks, handouts, and materials for public administration and policy courses at Cal State Fullerton.
+url: "https://courses.dadams.io"
+og_image: /images/og-card.png

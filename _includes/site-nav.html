@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg site-nav fixed-top" aria-label="Main navigation">
+  <div class="container-xl">
+    <a class="navbar-brand prompt-brand" href="/" aria-label="Class resources home">
+      <span class="pb-br" aria-hidden="true">[</span><span class="pb-user">dadams</span><span class="pb-at">@</span><span class="pb-host">arch</span><span class="pb-dir"> {{ page.prompt_dir | default: "courses" }}</span><span class="pb-br" aria-hidden="true">]</span><span class="pb-sigil" aria-hidden="true">$</span><span class="cursor" aria-hidden="true"></span>
+    </a>
+
+    <div class="nav-tools order-lg-last">
+      <button class="theme-cycle" id="theme-cycle" type="button" aria-label="Color theme: auto (click to change)" title="Color theme">
+        <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i><span class="theme-cycle-label">auto</span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-nav-links" aria-controls="site-nav-links" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="site-nav-links">
+      <ul class="navbar-nav me-auto">
+        {%- for item in site.data.nav.main %}
+        <li class="nav-item"><a class="nav-link" href="{{ item.url }}" data-shortcut="{{ item.shortcut }}">{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+      <ul class="navbar-nav nav-external">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/" data-shortcut="l">class resources</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

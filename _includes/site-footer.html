@@ -1,0 +1,44 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container-xl">
+    <ul class="social-row">
+      {%- for s in site.data.social %}
+      <li><a href="{{ s.url }}" rel="me noopener" title="{{ s.name }}"><i class="{{ s.icon }}" aria-hidden="true"></i><span class="visually-hidden">{{ s.name }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    <div class="statusline">
+      <span class="sl-mode">NORMAL</span>
+      <span class="sl-seg">&copy; {{ site.time | date: "%Y" }} David Prescott Adams</span>
+      <a class="sl-seg sl-link" href="https://dadams.io/">dadams.io</a>
+      <a class="sl-seg sl-link" href="/termsofuse.html">terms of use</a>
+      <span class="sl-fill" aria-hidden="true"></span>
+      <button class="sl-seg sl-help" type="button" data-kbd-help><kbd>?</kbd> shortcuts</button>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" type="button" aria-label="Back to top" title="Back to top (gg)">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<dialog id="kbd-help" class="kbd-help" aria-labelledby="kbd-help-title">
+  <div class="term">
+    <div class="term-bar">
+      <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="term-title" id="kbd-help-title">man courses &mdash; keyboard shortcuts</span>
+      <button class="term-close" type="button" data-kbd-close aria-label="Close">&times;</button>
+    </div>
+    <div class="term-body">
+      <dl class="kbd-list">
+        <dt><kbd>/</kbd></dt><dd>search lectures</dd>
+        <dt><kbd>g</kbd> <kbd>l</kbd></dt><dd>class resources home</dd>
+        {%- for item in site.data.nav.main %}
+        <dt><kbd>g</kbd> <kbd>{{ item.shortcut }}</kbd></dt><dd>dadams.io {{ item.label }}</dd>
+        {%- endfor %}
+        <dt><kbd>t</kbd></dt><dd>cycle color theme</dd>
+        <dt><kbd>g</kbd> <kbd>g</kbd></dt><dd>back to top</dd>
+        <dt><kbd>?</kbd></dt><dd>toggle this help</dd>
+        <dt><kbd>esc</kbd></dt><dd>close / clear search</dd>
+      </dl>
+    </div>
+  </div>
+</dialog>

@@ -1,0 +1,29 @@
+# Profiles shown in the footer, on the contact page, and in structured data (sameAs).
+- name: GitHub
+  url: https://github.com/dadams-AU
+  icon: fa-brands fa-github
+  handle: dadams-AU
+- name: Bluesky
+  url: https://bsky.app/profile/dadams.io
+  icon: fa-brands fa-bluesky
+  handle: "@dadams.io"
+- name: LinkedIn
+  url: https://www.linkedin.com/in/dadamscsuf/
+  icon: fa-brands fa-linkedin-in
+  handle: dadamscsuf
+- name: Google Scholar
+  url: https://scholar.google.com/citations?user=Pg3KXfkAAAAJ&hl=en
+  icon: fa-brands fa-google-scholar
+  handle: David P. Adams
+- name: Medium
+  url: https://medium.dadams.io
+  icon: fa-brands fa-medium
+  handle: medium.dadams.io
+- name: Discord
+  url: https://discordapp.com/users/740691766277177346
+  icon: fa-brands fa-discord
+  handle: direct message
+- name: LibraryThing
+  url: https://www.librarything.com/profile/dadamsAU
+  icon: fa-solid fa-book
+  handle: dadamsAU

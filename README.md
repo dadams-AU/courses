@@ -63,3 +63,4 @@ Updated on _19 August 2023._
 - `index.html` holds the lecture lists. To add a lecture or deck, copy an existing `<div class="lecture-item">` block into the right unit; the lecture search and counts pick it up automatically.
 - Pages that share the site header and footer start with `layout: site` front matter. The header, nav, and footer live in `_includes/site-*.html`.
 - `css/custom.css` is a verbatim copy of the theme from [dadams-AU/mainweb](https://github.com/dadams-AU/mainweb); re-copy it to stay in sync. Styles specific to this site go in `css/courses.css`.
+- `favicon.ico` and `apple-touch-icon.png` are copies of dadams.io's, and `images/og-card.png` is drawn by mainweb's `tools/drawings.py og-courses`.

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programs for the Poor, Deservingness, and Paper 2</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Programs for the Poor, Deservingness, and Paper 2</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+6, Monday 28 September 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#this-week" id="toc-this-week">This week</a></li>
+<li><a href="#which-of-these-is-welfare"
+id="toc-which-of-these-is-welfare">Which of these is welfare?</a></li>
+<li><a href="#dave-and-marcella" id="toc-dave-and-marcella">Dave and
+Marcella</a></li>
+<li><a href="#down-the-rabbit-hole" id="toc-down-the-rabbit-hole">Down
+the rabbit hole</a></li>
+<li><a href="#campbells-tiers-ch.-3"
+id="toc-campbells-tiers-ch.-3">Campbell’s tiers (ch. 3)</a></li>
+<li><a href="#same-injury-three-tiers"
+id="toc-same-injury-three-tiers">Same injury, three tiers</a></li>
+<li><a href="#same-loss-different-program"
+id="toc-same-loss-different-program">Same loss, different
+program</a></li>
+<li><a href="#who-took-the-cuts" id="toc-who-took-the-cuts">1981: who
+took the cuts</a></li>
+<li><a href="#then-the-eitc-took-off"
+id="toc-then-the-eitc-took-off">Then the EITC took off</a></li>
+<li><a href="#two-kinds-of-means-tested-program"
+id="toc-two-kinds-of-means-tested-program">Two kinds of means-tested
+program</a></li>
+<li><a href="#why-what-howard-rules-out"
+id="toc-why-what-howard-rules-out">Why? What Howard rules out</a></li>
+<li><a href="#why-what-holds-up" id="toc-why-what-holds-up">Why? What
+holds up</a></li>
+<li><a href="#howards-recipe-p.-107"
+id="toc-howards-recipe-p.-107">Howard’s recipe (p. 107)</a></li>
+<li><a href="#the-case-that-breaks-the-recipe"
+id="toc-the-case-that-breaks-the-recipe">The case that breaks the
+recipe</a></li>
+<li><a href="#desmond-the-poor-avoid-welfare"
+id="toc-desmond-the-poor-avoid-welfare">Desmond: the poor avoid
+welfare</a></li>
+<li><a href="#who-gets-the-most-help"
+id="toc-who-gets-the-most-help">Who gets the most help?</a></li>
+<li><a href="#why-doesnt-it-feel-like-welfare"
+id="toc-why-doesnt-it-feel-like-welfare">Why doesn’t it feel like
+welfare?</a></li>
+<li><a href="#back-to-the-start-which-of-these-is-welfare"
+id="toc-back-to-the-start-which-of-these-is-welfare">Back to the start:
+which of these is welfare?</a></li>
+<li><a href="#paper-2" id="toc-paper-2">Paper 2</a></li>
+<li><a href="#the-prompt-in-plain-terms"
+id="toc-the-prompt-in-plain-terms">The prompt, in plain terms</a></li>
+<li><a href="#the-readings-for-paper-2"
+id="toc-the-readings-for-paper-2">The readings for Paper 2</a></li>
+<li><a href="#the-rules" id="toc-the-rules">The rules</a></li>
+<li><a href="#what-cost-points-on-paper-1"
+id="toc-what-cost-points-on-paper-1">What cost points on Paper
+1</a></li>
+<li><a href="#pairs-write-one-sentence"
+id="toc-pairs-write-one-sentence">Pairs: write one sentence</a></li>
+<li><a href="#wednesday-run-a-household-through-the-safety-net"
+id="toc-wednesday-run-a-household-through-the-safety-net">Wednesday: run
+a household through the safety net</a></li>
+<li><a href="#by-215-you-should-be-able-to-say"
+id="toc-by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 6 Monday slides — same
+content in linear order, with no slide-scaling container. Reading:
+Campbell chs. 1–3; Howard ch. 5; Desmond ch. 5.</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week 6
+· Monday, September 28</p>
+<p><em>Campbell chs. 1–3 · Howard ch. 5 · Desmond ch. 5</em></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li>Which of these is welfare?</li>
+<li><strong>Campbell:</strong> one family, two tiers</li>
+<li><strong>Howard:</strong> favorite sons, political orphans</li>
+<li><strong>Desmond:</strong> the welfare we don’t call welfare</li>
+<li><strong>Paper 2:</strong> the question, the rules, your thesis</li>
+<li>Wednesday: no class, an exercise instead</li>
+</ol>
+<h2 id="this-week">This week</h2>
+<table>
+<tbody>
+<tr>
+<td><strong>Wed 9/30</strong></td>
+<td><strong>No class.</strong> At-home exercise, due 11:59 p.m.</td>
+</tr>
+<tr>
+<td><strong>Thu 10/1</strong></td>
+<td><strong>No office hour.</strong> Email me.</td>
+</tr>
+<tr>
+<td><strong>Fri 10/2</strong></td>
+<td><strong>Paper 2</strong> due 11:59 p.m.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="which-of-these-is-welfare">Which of these is welfare?</h2>
+<p><strong>SNAP</strong> (food stamps)</p>
+<p><strong>The EITC</strong> (a tax credit for low-wage workers)</p>
+<p><strong>The mortgage interest deduction</strong></p>
+<p><strong>Tax-free employer health insurance</strong></p>
+<p><strong>Pell Grants</strong></p>
+<h2 id="dave-and-marcella">Dave and Marcella</h2>
+<ul>
+<li>Campbell’s brother and sister-in-law</li>
+<li>Married 2010, Northern California</li>
+<li>Dave: shop manager, <strong>$39,000</strong>, no health insurance
+(p. 3)</li>
+<li>2012: an accident. Marcella paralyzed, son born early</li>
+<li>Overnight: the bottom tier (p. 2)</li>
+</ul>
+<h2 id="down-the-rabbit-hole">Down the rabbit hole</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>The rule</th>
+<th>What it meant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Income:</strong> keep $2,100 of $3,250 a month</td>
+<td>“a 100 percent tax on Dave’s earnings” (p. 16)</td>
+</tr>
+<tr>
+<td><strong>Assets:</strong> $3,150, total</td>
+<td>No savings, no 401(k), no college fund (p. 17)</td>
+</tr>
+<tr>
+<td><strong>Family help</strong></td>
+<td>A gift counts as income (p. 16)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“Dave and Marcella must stay poor, forever.” (p. 16)</p>
+</blockquote>
+<h2 id="campbells-tiers-ch.-3">Campbell’s tiers (ch. 3)</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Private:</strong> employer benefits, tax-subsidized</td>
+<td>Health insurance, pensions</td>
+</tr>
+<tr>
+<td><strong>Social insurance</strong></td>
+<td>Social Security, SSDI, Medicare</td>
+</tr>
+<tr>
+<td><strong>Social assistance:</strong> means-tested</td>
+<td>Medicaid, SSI, SNAP, TANF</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“Which protections we enjoy depends on whether we work, and for
+whom.” (p. 31)</p>
+</blockquote>
+<h2 id="same-injury-three-tiers">Same injury, three tiers</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>If the person hurt were</th>
+<th>Tier</th>
+<th>Monthly support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Marcella</strong></td>
+<td>Social assistance</td>
+<td>SSI + Medi-Cal, $3,150 asset cap</td>
+</tr>
+<tr>
+<td><strong>Dave</strong></td>
+<td>Social insurance</td>
+<td>SSDI, $1,267 (p. 50)</td>
+</tr>
+<tr>
+<td><strong>Campbell</strong></td>
+<td>Private + social insurance</td>
+<td>60% of salary (SSDI + employer plan) + $864 (p. 52)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="same-loss-different-program">Same loss, different program</h2>
+<p>A husband <strong>leaves</strong> → AFDC/TANF</p>
+<p>A husband <strong>dies</strong> → Social Security survivors’
+benefits</p>
+<p><span class="muted">Joe Soss, quoted in Campbell, p. 56</span></p>
+<p><strong>Is that deservingness, or design?</strong></p>
+<h2 id="who-took-the-cuts">1981: who took the cuts</h2>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th style="text-align: center;">Cut by 1984</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Social Security</td>
+<td style="text-align: center;"><strong>1.5%</strong></td>
+</tr>
+<tr>
+<td>AFDC (welfare)</td>
+<td style="text-align: center;"><strong>16%</strong></td>
+</tr>
+<tr>
+<td>Food Stamps</td>
+<td style="text-align: center;"><strong>19%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Means-tested programs: <strong>under 15%</strong> of the budget,
+<strong>70%</strong> of the cuts</p>
+<p><span class="muted">Howard, pp. 92–93</span></p>
+<h2 id="then-the-eitc-took-off">Then the EITC took off</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">1985</th>
+<th style="text-align: center;">1990</th>
+<th style="text-align: center;">2000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Families (millions)</td>
+<td style="text-align: center;">7.4</td>
+<td style="text-align: center;">12.5</td>
+<td style="text-align: center;">19.3</td>
+</tr>
+<tr>
+<td>Cost (billions, 2000 $)</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">&lt; 10</td>
+<td style="text-align: center;">&gt; 32</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“No other U.S. social program grew faster” (p. 99)</p>
+</blockquote>
+<h2 id="two-kinds-of-means-tested-program">Two kinds of means-tested
+program</h2>
+<table>
+<thead>
+<tr>
+<th>Favorite sons</th>
+<th>Political orphans</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medicaid</td>
+<td>AFDC (welfare)</td>
+</tr>
+<tr>
+<td>EITC</td>
+<td>Food Stamps</td>
+</tr>
+<tr>
+<td></td>
+<td>Housing, job training</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard, p. 92</span></p>
+<h2 id="why-what-howard-rules-out">Why? What Howard rules out</h2>
+<ul>
+<li>The policy tool (grant vs. tax credit)</li>
+<li>Cash vs. services</li>
+<li>Who delivers it</li>
+<li>Which agency runs it</li>
+<li>Divided government</li>
+</ul>
+<p><span class="muted">pp. 100–101</span></p>
+<h2 id="why-what-holds-up">Why? What holds up</h2>
+<ul>
+<li><strong>Hidden</strong> in giant budget bills “You can’t hit what
+you can’t see” (p. 101)</li>
+<li><strong>Sweeteners</strong> in deficit deals</li>
+<li><strong>Champions</strong> inside Congress (Waxman)</li>
+<li><strong>Framing:</strong> “anything except welfare” (p. 103)</li>
+</ul>
+<h2 id="howards-recipe-p.-107">Howard’s recipe (p. 107)</h2>
+<ol type="1">
+<li>Change things <strong>a little at a time</strong></li>
+<li><strong>Avoid the spotlight</strong></li>
+<li>Say it is <strong>not welfare</strong></li>
+<li>Pitch it <strong>differently to different audiences</strong></li>
+</ol>
+<p>His caveat: “two formulas for success, not one”</p>
+<h2 id="the-case-that-breaks-the-recipe">The case that breaks the
+recipe</h2>
+<p><strong>Head Start</strong> serves young children.</p>
+<p>It did not grow like the EITC.</p>
+<blockquote>
+<p>“What’s not to like? There must be something” (p. 108)</p>
+</blockquote>
+<h2 id="desmond-the-poor-avoid-welfare">Desmond: the poor avoid
+welfare</h2>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Eligible people who take it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TANF</td>
+<td>about <strong>1 in 4</strong> families apply</td>
+</tr>
+<tr>
+<td>SNAP, older adults</td>
+<td><strong>48%</strong></td>
+</tr>
+<tr>
+<td>EITC</td>
+<td><strong>1 in 5</strong> don’t claim it: $17.3 billion a year</td>
+</tr>
+</tbody>
+</table>
+<p>Unclaimed aid, five programs: <strong>nearly $142 billion a
+year</strong> (p. 90)</p>
+<blockquote>
+<p>“The American poor are terrible at being welfare dependent.”
+(p. 90)</p>
+</blockquote>
+<h2 id="who-gets-the-most-help">Who gets the most help?</h2>
+<table>
+<thead>
+<tr>
+<th>2020</th>
+<th style="text-align: right;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Homeowner tax subsidies</td>
+<td style="text-align: right;"><strong>$193 billion</strong></td>
+</tr>
+<tr>
+<td>Direct housing aid, low-income families</td>
+<td style="text-align: right;"><strong>$53 billion</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Mortgage interest deduction, by income (p. 101):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Under $20,000</th>
+<th style="text-align: center;">Over $200,000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>$4 million</strong></td>
+<td style="text-align: center;"><strong>$15.5 billion</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-doesnt-it-feel-like-welfare">Why doesn’t it feel like
+welfare?</h2>
+<p>Desmond’s three answers:</p>
+<ol type="1">
+<li><strong>It’s invisible.</strong> A tax break doesn’t arrive as a
+check</li>
+<li><strong>“They deserve it.”</strong> He rejects this one (p. 99)</li>
+<li><strong>“We like it.”</strong> (p. 101)</li>
+</ol>
+<h2 id="back-to-the-start-which-of-these-is-welfare">Back to the start:
+which of these is welfare?</h2>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th style="text-align: center;">Share of Americans</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNAP</td>
+<td style="text-align: center;">14%</td>
+</tr>
+<tr>
+<td>EITC</td>
+<td style="text-align: center;">19%</td>
+</tr>
+<tr>
+<td>Employer health insurance, tax-free</td>
+<td style="text-align: center;">almost half</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“We’re all on the dole.” (p. 92)</p>
+</blockquote>
+<h2 id="paper-2">Paper 2</h2>
+<p><strong>Is “deservingness” an explanation, or a label for the
+outcome?</strong></p>
+<h2 id="the-prompt-in-plain-terms">The prompt, in plain terms</h2>
+<p><strong>Deservingness:</strong> the idea that some people have earned
+help (workers, children, the old, the disabled) and others have not</p>
+<p><strong>Pick one:</strong></p>
+<ul>
+<li><strong>It explains.</strong> Then it predicts something. Say what,
+and test it on a case.</li>
+<li><strong>It doesn’t.</strong> Then something else does the work. Name
+it.</li>
+</ul>
+<h2 id="the-readings-for-paper-2">The readings for Paper 2</h2>
+<ul>
+<li><strong>Howard</strong>, ch. 5</li>
+<li><strong>Campbell</strong>, chs. 1–3</li>
+<li><strong>Desmond</strong>, ch. 5</li>
+</ul>
+<p>Use at least one. Gitterman is optional.</p>
+<h2 id="the-rules">The rules</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Length</strong></td>
+<td>About 600 words</td>
+</tr>
+<tr>
+<td><strong>Evidence</strong></td>
+<td>One specific claim from a reading, with a page number</td>
+</tr>
+<tr>
+<td><strong>Position</strong></td>
+<td>Take a side. Both sides = partial credit</td>
+</tr>
+<tr>
+<td><strong>Citation</strong></td>
+<td>(Howard, 2007, p. 103). No title page, no reference list</td>
+</tr>
+<tr>
+<td><strong>AI</strong></td>
+<td>Yellow. Last sentence: what tool, what for</td>
+</tr>
+<tr>
+<td><strong>Due</strong></td>
+<td><strong>Fri 10/2, 11:59 p.m.</strong>, Canvas file upload</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-cost-points-on-paper-1">What cost points on Paper 1</h2>
+<ul>
+<li>No page number</li>
+<li>A reading claim stated in general terms</li>
+<li>Never answering the question asked</li>
+<li>Summary instead of a position</li>
+</ul>
+<h2 id="pairs-write-one-sentence">Pairs: write one sentence</h2>
+<p>Deservingness <strong>does / does not</strong> explain ______,</p>
+<p>because ______ (Author, year, p. __).</p>
+<p><span class="muted">10 minutes · then three pairs read
+theirs</span></p>
+<h2 id="wednesday-run-a-household-through-the-safety-net">Wednesday: run
+a household through the safety net</h2>
+<ul>
+<li><strong>No class.</strong> Click through the Week 6 Wednesday slides
+on Canvas</li>
+<li>Run one hypothetical household through two benefit screeners</li>
+<li>Screenshots + <strong>150–250 words</strong></li>
+<li><strong>10 points</strong> (participation) · <strong>due Wed 11:59
+p.m.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Last name</th>
+<th>Household</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A–H</strong></td>
+<td>A: single parent, two kids</td>
+</tr>
+<tr>
+<td><strong>I–R</strong></td>
+<td>B: married couple, one child</td>
+</tr>
+<tr>
+<td><strong>S–Z</strong></td>
+<td>C: full-time CSUF student</td>
+</tr>
+</tbody>
+</table>
+<h2 id="by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</h2>
+<p>Programs for the poor can thrive: the EITC did.</p>
+<p><strong>Friday’s question:</strong> does deservingness explain that,
+or just name it?</p>
+</body>
+</html>

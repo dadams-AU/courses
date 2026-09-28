@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Run a Household Through the Safety Net</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Run a Household Through the Safety Net</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+6, Wednesday 30 September 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today-instead-of-class"
+id="toc-today-instead-of-class">Today, instead of class</a></li>
+<li><a href="#why-do-this" id="toc-why-do-this">Why do this?</a></li>
+<li><a href="#the-two-programs" id="toc-the-two-programs">The two
+programs</a></li>
+<li><a href="#find-your-household" id="toc-find-your-household">Find
+your household</a></li>
+<li><a href="#household-a-last-names-ah"
+id="toc-household-a-last-names-ah">Household A · last names A–H</a></li>
+<li><a href="#household-b-last-names-ir"
+id="toc-household-b-last-names-ir">Household B · last names I–R</a></li>
+<li><a href="#household-c-last-names-sz"
+id="toc-household-c-last-names-sz">Household C · last names S–Z</a></li>
+<li><a href="#three-rules-before-you-start"
+id="toc-three-rules-before-you-start">Three rules before you
+start</a></li>
+<li><a href="#step-1-irs-eitc-assistant"
+id="toc-step-1-irs-eitc-assistant"><span class="step">Step 1</span> ·
+IRS EITC Assistant</a></li>
+<li><a href="#step-2-calfresh-screener"
+id="toc-step-2-calfresh-screener"><span class="step">Step 2</span> ·
+CalFresh screener</a></li>
+<li><a href="#while-you-click-keep-a-list"
+id="toc-while-you-click-keep-a-list">While you click, keep a
+list</a></li>
+<li><a href="#step-3-write-150250-words"
+id="toc-step-3-write-150250-words"><span class="step">Step 3</span> ·
+Write 150–250 words</a></li>
+<li><a href="#step-4-submit-on-canvas"
+id="toc-step-4-submit-on-canvas"><span class="step">Step 4</span> ·
+Submit on Canvas</a></li>
+<li><a href="#how-its-graded" id="toc-how-its-graded">How it’s
+graded</a></li>
+<li><a href="#what-happens-next" id="toc-what-happens-next">What happens
+next</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 6 Wednesday slides — same
+content in linear order, with no slide-scaling container. No class
+meeting: an at-home exercise, due Wednesday 11:59 p.m.</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week 6
+· Wednesday, September 30</p>
+<p><em>No class meeting. Click through these slides and do the
+exercise.</em> <em>Due tonight, 11:59 p.m.</em></p>
+<h2 id="today-instead-of-class">Today, instead of class</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>What</strong></td>
+<td>Run one hypothetical household through two benefit screeners</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>About 45 minutes</td>
+</tr>
+<tr>
+<td><strong>Turn in</strong></td>
+<td>2 screenshots + 150–250 words</td>
+</tr>
+<tr>
+<td><strong>Points</strong></td>
+<td>10 (attendance and participation)</td>
+</tr>
+<tr>
+<td><strong>Due</strong></td>
+<td><strong>Tonight, 11:59 p.m.</strong>, on Canvas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-do-this">Why do this?</h2>
+<ul>
+<li>Every eligibility question is a rule about <strong>who deserves
+help</strong></li>
+<li>Today you meet those rules the way a family does: one question at a
+time</li>
+<li>What you find is evidence for <strong>Paper 2</strong>, due
+Friday</li>
+</ul>
+<h2 id="the-two-programs">The two programs</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th><strong>EITC</strong></th>
+<th><strong>CalFresh</strong> (SNAP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What</strong></td>
+<td>Tax credit, paid as a refund</td>
+<td>Money for food, on an EBT card</td>
+</tr>
+<tr>
+<td><strong>For</strong></td>
+<td>Low- and moderate-income <strong>workers</strong></td>
+<td>Low-income households</td>
+</tr>
+<tr>
+<td><strong>Run by</strong></td>
+<td>IRS</td>
+<td>USDA, through the counties</td>
+</tr>
+<tr>
+<td><strong>Reaches</strong></td>
+<td>19% of Americans</td>
+<td>14% of Americans</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Shares: Desmond, p. 93. CalFresh is California’s
+name for SNAP.</span></p>
+<h2 id="find-your-household">Find your household</h2>
+<table>
+<thead>
+<tr>
+<th>Your last name</th>
+<th>Your household</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A–H</strong></td>
+<td><strong>A:</strong> single parent, two children</td>
+</tr>
+<tr>
+<td><strong>I–R</strong></td>
+<td><strong>B:</strong> married couple, one child</td>
+</tr>
+<tr>
+<td><strong>S–Z</strong></td>
+<td><strong>C:</strong> full-time CSUF student</td>
+</tr>
+</tbody>
+</table>
+<p>Use the household, <strong>not yourself</strong>.</p>
+<h2 id="household-a-last-names-ah">Household A · last names A–H</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Who</strong></td>
+<td>Single parent, 31. Children ages 4 and 9</td>
+</tr>
+<tr>
+<td><strong>Work</strong></td>
+<td>30 hours a week at $17.50</td>
+</tr>
+<tr>
+<td><strong>Income</strong></td>
+<td><strong>$27,300</strong> a year = <strong>$2,275</strong> a
+month</td>
+</tr>
+<tr>
+<td><strong>Home</strong></td>
+<td>Anaheim. Rent $1,800, utilities included</td>
+</tr>
+<tr>
+<td><strong>Taxes</strong></td>
+<td>Head of household. Kids lived at home all year</td>
+</tr>
+<tr>
+<td><strong>Also</strong></td>
+<td>U.S. citizens with Social Security numbers. No other income,
+savings, or child care costs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="household-b-last-names-ir">Household B · last names I–R</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Who</strong></td>
+<td>Married couple, 34 and 32. One child, age 6</td>
+</tr>
+<tr>
+<td><strong>Work</strong></td>
+<td>One parent works. The other stays home</td>
+</tr>
+<tr>
+<td><strong>Income</strong></td>
+<td><strong>$40,000</strong> a year = <strong>$3,333</strong> a
+month</td>
+</tr>
+<tr>
+<td><strong>Home</strong></td>
+<td>Fullerton. Rent $2,200, utilities included</td>
+</tr>
+<tr>
+<td><strong>Taxes</strong></td>
+<td>Married filing jointly. Child lived at home all year</td>
+</tr>
+<tr>
+<td><strong>Also</strong></td>
+<td>U.S. citizens with Social Security numbers. No other income,
+savings, or child care costs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="household-c-last-names-sz">Household C · last names S–Z</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Who</strong></td>
+<td>Age 21, no children. Full-time CSUF student (12 units)</td>
+</tr>
+<tr>
+<td><strong>Work</strong></td>
+<td>12 hours a week at $16.90</td>
+</tr>
+<tr>
+<td><strong>Income</strong></td>
+<td>2025 wages: <strong>$10,296</strong>. Now: <strong>$879</strong> a
+month</td>
+</tr>
+<tr>
+<td><strong>Home</strong></td>
+<td>Fullerton apartment. Rent share $900, utilities included. Buys food
+separately from roommates</td>
+</tr>
+<tr>
+<td><strong>Taxes</strong></td>
+<td>Files as single. Parents do <strong>not</strong> claim them</td>
+</tr>
+<tr>
+<td><strong>Also</strong></td>
+<td>U.S. citizen with a Social Security number. No Cal Grant,
+work-study, or EOP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="three-rules-before-you-start">Three rules before you start</h2>
+<ul>
+<li><strong>Hypothetical household only.</strong> Never your own
+information</li>
+<li><strong>Never</strong> enter a name, address, phone, email, or
+SSN</li>
+<li><strong>Never</strong> start an application. These are
+screeners</li>
+</ul>
+<p>A site asks for personal information? <strong>Stop.</strong>
+Screenshot that page and use it.</p>
+<h2 id="step-1-irs-eitc-assistant"><span class="step">Step 1</span> ·
+IRS EITC Assistant</h2>
+<p><strong><a
+href="https://apps.irs.gov/app/eitc/">apps.irs.gov/app/eitc</a></strong></p>
+<ol type="1">
+<li>Tax year: <strong>2025</strong></li>
+<li>Answer every question as your household</li>
+<li>Not on your household card? Take the simple answer:
+<strong>no</strong></li>
+<li>Screenshot the <strong>result page</strong></li>
+</ol>
+<p>About 10 minutes. No login, no personal information.</p>
+<h2 id="step-2-calfresh-screener"><span class="step">Step 2</span> ·
+CalFresh screener</h2>
+<p><strong><a
+href="https://benefitscal.com/">benefitscal.com</a></strong> →
+<strong>Ask Robin</strong> → <strong>See if I qualify</strong></p>
+<ol type="1">
+<li>County: <strong>Orange</strong></li>
+<li>Household size: <strong>A = 3 · B = 3 · C = 1</strong></li>
+<li>Income: the <strong>monthly</strong> figure on your card</li>
+<li>People working: <strong>1</strong></li>
+<li>Screenshot the <strong>result</strong></li>
+</ol>
+<p>About 5 minutes. Robin says <strong>whether</strong> you may qualify,
+not how much.</p>
+<h2 id="while-you-click-keep-a-list">While you click, keep a list</h2>
+<ul>
+<li>Every question each screener asked</li>
+<li>The one that <strong>decided</strong> your result</li>
+<li>One it <strong>never asked</strong> that you expected</li>
+</ul>
+<h2 id="step-3-write-150250-words"><span class="step">Step 3</span> ·
+Write 150–250 words</h2>
+<ol type="1">
+<li>What does your household get from each program?</li>
+<li>Which question decided the most? What does it assume about
+<strong>who deserves help</strong>?</li>
+<li>What did a screener <strong>not</strong> ask, and why might that
+matter?</li>
+</ol>
+<p>Name one reading if it fits (Howard, Campbell, or Desmond, with a
+page).</p>
+<h2 id="step-4-submit-on-canvas"><span class="step">Step 4</span> ·
+Submit on Canvas</h2>
+<p><strong>Week 6 module → “Run a Household Through the Safety
+Net”</strong></p>
+<ul>
+<li><strong>Two screenshots</strong> (EITC + CalFresh)</li>
+<li><strong>Your 150–250 words</strong></li>
+</ul>
+<p>Upload as one file or several. <strong>Due tonight, 11:59
+p.m.</strong></p>
+<h2 id="how-its-graded">How it’s graded</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>10 points</strong></td>
+<td>Both screenshots + 150–250 words that answer the questions</td>
+</tr>
+<tr>
+<td><strong>Site broken?</strong></td>
+<td>Screenshot the error and write anyway. Full credit</td>
+</tr>
+<tr>
+<td><strong>AI</strong></td>
+<td><strong>Green:</strong> allowed, no disclosure needed</td>
+</tr>
+</tbody>
+</table>
+<p>Questions: <strong>email me.</strong> No office hour Thursday.</p>
+<h2 id="what-happens-next">What happens next</h2>
+<p><strong>Fri 10/2:</strong> Paper 2 due, 11:59 p.m.</p>
+<p><strong>Mon 10/5:</strong> we put households A, B, and C side by
+side</p>
+<p><strong>Same programs. Three very different answers.</strong></p>
+</body>
+</html>

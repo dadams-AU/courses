@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Medicaid and the States</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Medicaid and the States</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+7, Wednesday 7 October 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#guess-the-number" id="toc-guess-the-number">Guess the
+number</a></li>
+<li><a href="#the-afterthought" id="toc-the-afterthought">1965: the
+afterthought</a></li>
+<li><a href="#three-seeds-of-expansion"
+id="toc-three-seeds-of-expansion">Three seeds of expansion</a></li>
+<li><a href="#then-waxman" id="toc-then-waxman">Then Waxman</a></li>
+<li><a href="#sold-as-anything-but-welfare"
+id="toc-sold-as-anything-but-welfare">Sold as anything but
+welfare</a></li>
+<li><a href="#what-it-added-up-to" id="toc-what-it-added-up-to">What it
+added up to</a></li>
+<li><a href="#the-answers" id="toc-the-answers">The answers</a></li>
+<li><a href="#middle-class-medicaid"
+id="toc-middle-class-medicaid">Middle-class Medicaid</a></li>
+<li><a href="#front-stage-backstage"
+id="toc-front-stage-backstage">Front stage, backstage</a></li>
+<li><a href="#medicaid-then-2013-and-now"
+id="toc-medicaid-then-2013-and-now">Medicaid, then (2013) and
+now</a></li>
+<li><a href="#howards-question" id="toc-howards-question">Howard’s
+question</a></li>
+<li><a href="#the-test-case-workers-compensation"
+id="toc-the-test-case-workers-compensation">The test case: workers’
+compensation</a></li>
+<li><a href="#why-nobody-fixed-it" id="toc-why-nobody-fixed-it">Why
+nobody fixed it</a></li>
+<li><a href="#the-one-time-the-states-moved"
+id="toc-the-one-time-the-states-moved">The one time the states
+moved</a></li>
+<li><a href="#two-readings-two-verdicts"
+id="toc-two-readings-two-verdicts">Two readings, two verdicts</a></li>
+<li><a href="#pairs-two-states-one-statute"
+id="toc-pairs-two-states-one-statute">Pairs: two states, one
+statute</a></li>
+<li><a href="#show-of-hands" id="toc-show-of-hands">Show of
+hands</a></li>
+<li><a href="#before-you-go" id="toc-before-you-go">Before you
+go</a></li>
+<li><a href="#by-215-you-should-be-able-to-say"
+id="toc-by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 7 Wednesday slides — same
+content in linear order, with no slide-scaling container. Reading:
+Grogan and Andrews (2014); Howard (2007), ch. 8 and ch. 5.</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week 7
+· Wednesday, October 7</p>
+<p><em>Grogan and Andrews, “Medicaid” · Howard (2007), ch. 8 and
+ch. 5</em></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li>How big is Medicaid?</li>
+<li><strong>Grogan and Andrews:</strong> built to grow</li>
+<li><strong>Howard ch. 5:</strong> Waxman’s wedge</li>
+<li>Middle-class Medicaid</li>
+<li><strong>Howard ch. 8:</strong> laboratories or cryogenic
+chambers?</li>
+<li>Pairs: two states, one statute</li>
+</ol>
+<h2 id="guess-the-number">Guess the number</h2>
+<p>What share of U.S. births does Medicaid pay for?</p>
+<p>What share of nursing-home residents?</p>
+<p>What share of children?</p>
+<h2 id="the-afterthought">1965: the afterthought</h2>
+<ul>
+<li>Medicare: the headline. Universal, for the old</li>
+<li><strong>Medicaid:</strong> the supplement. Means-tested, run by the
+states</li>
+<li>Wilbur Mills’s bet: cover the “worthy” poor and</li>
+</ul>
+<blockquote>
+<p>“stave off claims for broader health-care coverage” (p. 339)</p>
+</blockquote>
+<h2 id="three-seeds-of-expansion">Three seeds of expansion</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Seed</th>
+<th>What it lets a state do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Medical indigency</strong></td>
+<td>Cover people who aren’t poor but can’t pay the bill</td>
+</tr>
+<tr>
+<td><strong>Comprehensive benefits</strong></td>
+<td>Pay for nearly any service</td>
+</tr>
+<tr>
+<td><strong>A generous federal match</strong></td>
+<td>Spend a dollar, get 50 to 75 cents back</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Grogan and Andrews, p. 339</span></p>
+<h2 id="then-waxman">Then Waxman</h2>
+<p>Rep. Henry Waxman (D-CA), health subcommittee chair, 1979–1994</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>1984–87</strong></td>
+<td>Options: states <em>may</em> cover more pregnant women and
+children</td>
+</tr>
+<tr>
+<td><strong>1988–90</strong></td>
+<td>Mandates: states <em>must</em></td>
+</tr>
+<tr>
+<td><strong>1990</strong></td>
+<td>All poor children under 18, phased in through
+<strong>2002</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“the Waxman wedge” (Howard, p. 103)</p>
+</blockquote>
+<h2 id="sold-as-anything-but-welfare">Sold as anything but welfare</h2>
+<table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>The pitch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public health</td>
+<td>Fewer infant deaths</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>A healthier workforce</td>
+</tr>
+<tr>
+<td>Abortion opponents</td>
+<td>More babies carried to term</td>
+</tr>
+<tr>
+<td>Insurers</td>
+<td>Better than national health insurance</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“an investment, not expense” (Howard, p. 104)</p>
+</blockquote>
+<h2 id="what-it-added-up-to">What it added up to</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">Before</th>
+<th style="text-align: center;">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Births paid by Medicaid</td>
+<td style="text-align: center;"><strong>17%</strong> (1985)</td>
+<td style="text-align: center;"><strong>45%</strong> (1991)</td>
+</tr>
+<tr>
+<td>Children covered</td>
+<td style="text-align: center;"><strong>9 million</strong> (1980)</td>
+<td style="text-align: center;"><strong>19 million</strong> (2000)</td>
+</tr>
+<tr>
+<td>Spending</td>
+<td style="text-align: center;"><strong>$25 billion</strong> (1980)</td>
+<td style="text-align: center;"><strong>$200 billion</strong>
+(2000)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard, pp. 95, 98</span></p>
+<h2 id="the-answers">The answers</h2>
+<table>
+<tbody>
+<tr>
+<td>Births in Arkansas and Oklahoma (2009)</td>
+<td style="text-align: center;"><strong>64%</strong></td>
+</tr>
+<tr>
+<td>Nursing-home residents</td>
+<td style="text-align: center;"><strong>70%</strong></td>
+</tr>
+<tr>
+<td>Children who get Medicaid services</td>
+<td style="text-align: center;"><strong>60%</strong></td>
+</tr>
+<tr>
+<td>Americans covered</td>
+<td style="text-align: center;"><strong>1 in 5</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Grogan and Andrews, p. 343</span></p>
+<h2 id="middle-class-medicaid">Middle-class Medicaid</h2>
+<ul>
+<li>Nursing home: about <strong>$72,000</strong> a year (2005)</li>
+<li>Private payers at admission: two-thirds <strong>“spend
+down”</strong> onto Medicaid</li>
+<li><strong>51%</strong> of Americans: a personal connection to
+Medicaid</li>
+<li>No connection? Only <strong>32%</strong> call it important</li>
+</ul>
+<p><span class="muted">Grogan and Andrews, pp. 344–345</span></p>
+<h2 id="front-stage-backstage">Front stage, backstage</h2>
+<p><strong>Front stage:</strong> block grants, lawsuits</p>
+<p><strong>Backstage:</strong> take the match</p>
+<p>ACA lawsuit, which states joined? Correlation with:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Governor’s party</th>
+<th style="text-align: center;">Projected cost to the state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>.8</strong></td>
+<td style="text-align: center;"><strong>.15</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Grogan and Andrews, pp. 346–347, 350
+n. 5</span></p>
+<h2 id="medicaid-then-2013-and-now">Medicaid, then (2013) and now</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>The chapter</th>
+<th>Now</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACA expansion</td>
+<td>Optional</td>
+<td><strong>40 states and DC</strong> in; <strong>10</strong> out</td>
+</tr>
+<tr>
+<td>Enrollment</td>
+<td>62 million (2009)</td>
+<td><strong>73.2 million</strong> (June 2026)</td>
+</tr>
+<tr>
+<td>Seniors and disabled</td>
+<td>25% of people, 65% of dollars</td>
+<td><strong>23%</strong> and <strong>54%</strong></td>
+</tr>
+<tr>
+<td>Work requirement</td>
+<td>None</td>
+<td><strong>80 hours a month</strong>, expansion adults, 2027</td>
+</tr>
+<tr>
+<td>Eligibility checks</td>
+<td>Yearly</td>
+<td><strong>Every six months</strong>, expansion adults</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">KFF, Oct. 2026; CMS, June 2026 snapshot; Pub. L.
+119-21 (2025)</span></p>
+<h2 id="howards-question">Howard’s question</h2>
+<p><strong>Laboratories of democracy, or cryogenic
+chambers?</strong></p>
+<p><span class="muted">Howard 2007, ch. 8</span></p>
+<h2 id="the-test-case-workers-compensation">The test case: workers’
+compensation</h2>
+<ul>
+<li>First social insurance program: <strong>42 states by
+1920</strong></li>
+<li>No federal money, no federal rules</li>
+<li><strong>$50 billion</strong> in benefits (2001), bigger than any
+means-tested program but Medicaid</li>
+<li>Death benefit in Virginia: <strong>three times</strong> North
+Carolina’s</li>
+</ul>
+<p><span class="muted">Howard, pp. 154–155, 159</span></p>
+<h2 id="why-nobody-fixed-it">Why nobody fixed it</h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>Washington’s choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1935</strong></td>
+<td>Left it out of the Social Security Act</td>
+</tr>
+<tr>
+<td><strong>1956</strong></td>
+<td>Built disability insurance around it</td>
+</tr>
+<tr>
+<td><strong>1969–70</strong></td>
+<td>Black Lung; OSHA; a commission</td>
+</tr>
+<tr>
+<td><strong>1972 on</strong></td>
+<td>Commission says fix it. Congress does nothing</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“it already existed” (p. 167)</p>
+</blockquote>
+<h2 id="the-one-time-the-states-moved">The one time the states
+moved</h2>
+<p>Average state score on the commission’s <strong>19 essential
+elements</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1972</th>
+<th style="text-align: center;">1975</th>
+<th style="text-align: center;">1980</th>
+<th style="text-align: center;">1988</th>
+<th style="text-align: center;">late 1990s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6.9</strong></td>
+<td style="text-align: center;"><strong>9.4</strong></td>
+<td style="text-align: center;"><strong>12.1</strong></td>
+<td style="text-align: center;"><strong>12.2</strong></td>
+<td style="text-align: center;"><strong>12.8</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard, pp. 173–175</span></p>
+<h2 id="two-readings-two-verdicts">Two readings, two verdicts</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Howard, ch. 8</th>
+<th>Grogan and Andrews</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Case</strong></td>
+<td>Workers’ comp</td>
+<td>Medicaid</td>
+</tr>
+<tr>
+<td><strong>Federal role</strong></td>
+<td>None</td>
+<td>Match + mandates</td>
+</tr>
+<tr>
+<td><strong>States</strong></td>
+<td>Frozen</td>
+<td>Pushed to expand</td>
+</tr>
+<tr>
+<td><strong>Who locks it in</strong></td>
+<td>Insurers, employers, state boards</td>
+<td>Providers, enrollees, governors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pairs-two-states-one-statute">Pairs: two states, one
+statute</h2>
+<p><strong>Not expanded (10):</strong> AL · FL · GA · KS · MS · SC · TN
+· TX · WI · WY</p>
+<p><span class="muted">Map: kff.org → Status of State Medicaid Expansion
+Decisions</span></p>
+<ol type="1">
+<li>Pick <strong>one state that expanded</strong> and <strong>one that
+hasn’t</strong></li>
+<li>Same federal law, same 90% match. <strong>What explains the
+difference?</strong></li>
+<li>Is the difference <strong>innovation</strong> or
+<strong>entrenchment</strong>?</li>
+</ol>
+<p>Use one page from each reading.</p>
+<p><span class="muted">8 minutes · then a show of hands</span></p>
+<h2 id="show-of-hands">Show of hands</h2>
+<p><strong>Laboratories</strong> or <strong>cryogenic
+chambers</strong>?</p>
+<p>The smaller side goes first:</p>
+<p>name a policy that supports <strong>the other side</strong></p>
+<h2 id="before-you-go">Before you go</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Fri 10/9</strong></td>
+<td><strong>Source and claims memo</strong>, 11:59 p.m. Attach your
+conversation</td>
+</tr>
+<tr>
+<td><strong>Mon 10/12</strong></td>
+<td>Midterm review. Bring questions</td>
+</tr>
+<tr>
+<td><strong>Wed 10/14</strong></td>
+<td><strong>Midterm</strong>, in class, by hand. <strong>Bring a blue
+book</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</h2>
+<p>Medicaid grew because states could draw a federal match.</p>
+<p>Workers’ comp froze because nobody in Washington could make states
+move.</p>
+<p><strong>Federalism did both.</strong></p>
+</body>
+</html>

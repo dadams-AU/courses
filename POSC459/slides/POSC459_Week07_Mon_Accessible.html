@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Income, Food, Housing: How the Safety Net Works</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Income, Food, Housing: How the Safety Net Works</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+7, Monday 5 October 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#this-week-and-next" id="toc-this-week-and-next">This week
+and next</a></li>
+<li><a href="#three-households-two-screeners"
+id="toc-three-households-two-screeners">Three households, two
+screeners</a></li>
+<li><a href="#what-the-screeners-said"
+id="toc-what-the-screeners-said">What the screeners said</a></li>
+<li><a href="#the-question-that-decided-it"
+id="toc-the-question-that-decided-it">The question that decided
+it</a></li>
+<li><a href="#howards-four-questions"
+id="toc-howards-four-questions">Howard’s four questions</a></li>
+<li><a href="#income-start-with-a-job"
+id="toc-income-start-with-a-job">Income: start with a job</a></li>
+<li><a href="#the-three-programs-aimed-at-the-poor"
+id="toc-the-three-programs-aimed-at-the-poor">The three programs aimed
+at the poor</a></li>
+<li><a href="#tanf-depends-on-your-state"
+id="toc-tanf-depends-on-your-state">TANF depends on your state</a></li>
+<li><a href="#the-heavy-lifting-is-social-insurance"
+id="toc-the-heavy-lifting-is-social-insurance">The heavy lifting is
+social insurance</a></li>
+<li><a href="#income-who-pays" id="toc-income-who-pays">Income: who
+pays?</a></li>
+<li><a href="#income-in-one-line" id="toc-income-in-one-line">Income, in
+one line</a></li>
+<li><a href="#food-need-not-work" id="toc-food-need-not-work">Food:
+need, not work</a></li>
+<li><a href="#food-charity-and-business-are-in-the-net"
+id="toc-food-charity-and-business-are-in-the-net">Food: charity and
+business are in the net</a></li>
+<li><a href="#food-is-it-enough" id="toc-food-is-it-enough">Food: is it
+enough?</a></li>
+<li><a href="#housing-the-expensive-one"
+id="toc-housing-the-expensive-one">Housing: the expensive one</a></li>
+<li><a href="#housing-help-is-rationed"
+id="toc-housing-help-is-rationed">Housing: help is rationed</a></li>
+<li><a href="#housing-who-gets-the-big-subsidy"
+id="toc-housing-who-gets-the-big-subsidy">Housing: who gets the big
+subsidy?</a></li>
+<li><a href="#housing-is-it-enough"
+id="toc-housing-is-it-enough">Housing: is it enough?</a></li>
+<li><a href="#three-parts-of-one-net"
+id="toc-three-parts-of-one-net">Three parts of one net</a></li>
+<li><a href="#due-friday-source-and-claims-memo"
+id="toc-due-friday-source-and-claims-memo">Due Friday: source and claims
+memo</a></li>
+<li><a href="#the-memo-talk-it-through-first"
+id="toc-the-memo-talk-it-through-first">The memo: talk it through
+first</a></li>
+<li><a href="#try-one-now" id="toc-try-one-now">Try one now</a></li>
+<li><a href="#by-215-you-should-be-able-to-say"
+id="toc-by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 7 Monday slides — same
+content in linear order, with no slide-scaling container. Reading:
+Howard, Who Cares (2023), chs. 5–7.</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week 7
+· Monday, October 5</p>
+<p><em>Howard, Who Cares, chs. 5–7</em></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li>Your households: A, B, and C</li>
+<li><strong>Income:</strong> built for workers</li>
+<li><strong>Food:</strong> built on need</li>
+<li><strong>Housing:</strong> built on a waiting list</li>
+<li>The source and claims memo, due Friday</li>
+</ol>
+<h2 id="this-week-and-next">This week and next</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Wed 10/7</strong></td>
+<td>Medicaid and the states. Grogan and Andrews; Howard (2007)
+ch. 8</td>
+</tr>
+<tr>
+<td><strong>Fri 10/9</strong></td>
+<td><strong>Source and claims memo</strong> due 11:59 p.m.</td>
+</tr>
+<tr>
+<td><strong>Mon 10/12</strong></td>
+<td>Midterm review</td>
+</tr>
+<tr>
+<td><strong>Wed 10/14</strong></td>
+<td><strong>Midterm</strong>, in class. Bring a blue book</td>
+</tr>
+</tbody>
+</table>
+<h2 id="three-households-two-screeners">Three households, two
+screeners</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Household</th>
+<th>Income</th>
+<th>Rent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Single parent, kids 4 and 9</td>
+<td>$27,300</td>
+<td>$1,800</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Married couple, child 6</td>
+<td>$40,000</td>
+<td>$2,200</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>CSUF student, 21, no kids</td>
+<td>$10,296</td>
+<td>$900</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What did yours get?</strong></p>
+<h2 id="what-the-screeners-said">What the screeners said</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>EITC (tax year 2025)</th>
+<th>CalFresh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>$6,315</strong></td>
+<td>May qualify. About $557 a month</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><strong>$2,801</strong></td>
+<td>May qualify. About $304 a month</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><strong>$0</strong></td>
+<td>May qualify. Up to $306 a month</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Dollar estimates for CalFresh are mine. The
+screener only says “may qualify.”</span></p>
+<h2 id="the-question-that-decided-it">The question that decided it</h2>
+<table>
+<thead>
+<tr>
+<th>Screener</th>
+<th>Deciding questions</th>
+<th>Never asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IRS</strong></td>
+<td>Children? Age 25 to 64? Earned income?</td>
+<td>Rent. Need</td>
+</tr>
+<tr>
+<td><strong>Robin</strong></td>
+<td>Household size? Monthly income?</td>
+<td>Work. School</td>
+</tr>
+</tbody>
+</table>
+<h2 id="howards-four-questions">Howard’s four questions</h2>
+<p><strong>Who qualifies?</strong></p>
+<p><strong>Who pays?</strong></p>
+<p><strong>Who delivers?</strong></p>
+<p><strong>Is it enough?</strong></p>
+<p><span class="muted">Howard 2023, drawing on Joan Tronto’s phases of
+care</span></p>
+<h2 id="income-start-with-a-job">Income: start with a job</h2>
+<ul>
+<li><strong>8 million</strong> poor Americans worked in 2018</li>
+<li>More than <strong>two-thirds</strong> of them part-time</li>
+<li>Nearly <strong>one-third</strong> of the labor force: under $12 an
+hour</li>
+<li>A typical payday loan: <strong>382%</strong> a year</li>
+</ul>
+<p><span class="muted">Howard 2023, ch. 5</span></p>
+<h2 id="the-three-programs-aimed-at-the-poor">The three programs aimed
+at the poor</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Who</th>
+<th>Reach</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TANF</strong></td>
+<td>Very poor families with children</td>
+<td>3 million people</td>
+<td>Under half the poverty line</td>
+</tr>
+<tr>
+<td><strong>EITC</strong></td>
+<td>Low-wage workers, mostly parents</td>
+<td>27.5 million tax filers</td>
+<td>About $3,200, family of four</td>
+</tr>
+<tr>
+<td><strong>SSI</strong></td>
+<td>Aged, blind, disabled poor</td>
+<td>9 million</td>
+<td>About $550 a month</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard 2023, ch. 5. Figures for
+2017–2019</span></p>
+<h2 id="tanf-depends-on-your-state">TANF depends on your state</h2>
+<p>Income ceiling for a family of three, per month (2018):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Alabama</th>
+<th style="text-align: center;">Michigan</th>
+<th style="text-align: center;">Typical state</th>
+<th style="text-align: center;">Rhode Island</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>$268</strong></td>
+<td style="text-align: center;"><strong>$815</strong></td>
+<td style="text-align: center;"><strong>$840</strong></td>
+<td style="text-align: center;"><strong>$1,277</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Poor families on cash welfare: <strong>68%</strong> in 1996 →
+<strong>22%</strong> in 2018</p>
+<p><span class="muted">Howard 2023, ch. 5</span></p>
+<h2 id="the-heavy-lifting-is-social-insurance">The heavy lifting is
+social insurance</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Lifted out of poverty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Social Security</strong></td>
+<td><strong>18 million</strong> older Americans</td>
+</tr>
+<tr>
+<td><strong>TANF</strong></td>
+<td>Fewer than <strong>250,000</strong> children</td>
+</tr>
+</tbody>
+</table>
+<p>Child poverty <strong>16.2%</strong> · elderly poverty
+<strong>9.7%</strong> (official, 2018)</p>
+<p><span class="muted">Howard 2023, ch. 5</span></p>
+<h2 id="income-who-pays">Income: who pays?</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Program type</th>
+<th>Paid by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Means-tested</strong> (TANF, EITC, SSI)</td>
+<td>Income taxes. Mostly the affluent</td>
+</tr>
+<tr>
+<td><strong>Social insurance</strong></td>
+<td>Payroll taxes. Every worker</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>“The rich take care of the poor, whether they intend to or not.”</p>
+</blockquote>
+<h2 id="income-in-one-line">Income, in one line</h2>
+<p><strong>Cash follows work.</strong></p>
+<p>Not working, no children, no work history: very little</p>
+<h2 id="food-need-not-work">Food: need, not work</h2>
+<p><strong>SNAP</strong> (2019): <strong>36 million</strong> people a
+month · about <strong>$1.40 a meal</strong></p>
+<table>
+<thead>
+<tr>
+<th>Who gets SNAP</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Children</td>
+<td style="text-align: center;"><strong>44%</strong></td>
+</tr>
+<tr>
+<td>Seniors</td>
+<td style="text-align: center;"><strong>14%</strong></td>
+</tr>
+<tr>
+<td>Disabled adults</td>
+<td style="text-align: center;"><strong>10%</strong></td>
+</tr>
+<tr>
+<td>Able-bodied adults, no dependents</td>
+<td style="text-align: center;"><strong>7%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard 2023, ch. 6</span></p>
+<h2 id="food-charity-and-business-are-in-the-net">Food: charity and
+business are in the net</h2>
+<ul>
+<li><strong>Feeding America:</strong> 200 food banks, 60,000 pantries
+and kitchens</li>
+<li><strong>40 million</strong> people, about <strong>100 meals</strong>
+each a year</li>
+<li>Walmart: <strong>$11 billion</strong> in SNAP sales (2018)</li>
+<li>250,000 retailers take SNAP</li>
+</ul>
+<p><span class="muted">Howard 2023, ch. 6</span></p>
+<h2 id="food-is-it-enough">Food: is it enough?</h2>
+<p><strong>14.3 million</strong> households food insecure (2018):
+<strong>one in nine</strong></p>
+<ul>
+<li>Most of them are <strong>above</strong> the poverty line</li>
+<li><strong>44%</strong> get nothing from SNAP, WIC, or school
+meals</li>
+<li>Black households <strong>21.2%</strong> · Hispanic
+<strong>16.2%</strong> · White <strong>8.1%</strong></li>
+</ul>
+<p><span class="muted">Howard 2023, ch. 6, table 6.1</span></p>
+<h2 id="housing-the-expensive-one">Housing: the expensive one</h2>
+<table>
+<thead>
+<tr>
+<th>Renter households under $15,000</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spend over half their income on housing</td>
+<td style="text-align: center;"><strong>70%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>For every <strong>100</strong> extremely low-income households:</p>
+<p><strong>38</strong> affordable, available units · California:
+<strong>23</strong></p>
+<p><span class="muted">Howard 2023, ch. 7</span></p>
+<h2 id="housing-help-is-rationed">Housing: help is rationed</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Program</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public housing</strong></td>
+<td>1 million units · $7 billion</td>
+</tr>
+<tr>
+<td><strong>Vouchers</strong> (Section 8)</td>
+<td>2 million vouchers · $20–25 billion</td>
+</tr>
+<tr>
+<td><strong>Tax credit for developers</strong> (LIHTC)</td>
+<td>About 100,000 units a year · $10 billion</td>
+</tr>
+</tbody>
+</table>
+<p>About <strong>5 million</strong> households helped. Most who qualify
+get nothing.</p>
+<p><span class="muted">Howard 2023, ch. 7</span></p>
+<h2 id="housing-who-gets-the-big-subsidy">Housing: who gets the big
+subsidy?</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Homeowner tax breaks</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mortgage interest and property tax deductions</td>
+<td>$100 billion a year before 2017</td>
+</tr>
+<tr>
+<td>Share to filers under $40,000 (2019)</td>
+<td><strong>Under 1%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Net worth at 65+, lowest income quartile:</p>
+<p><strong>Owner $105,000</strong> · <strong>Renter $1,000</strong></p>
+<p><span class="muted">Howard 2023, ch. 7</span></p>
+<h2 id="housing-is-it-enough">Housing: is it enough?</h2>
+<ul>
+<li><strong>567,715</strong> homeless on one night (2019)</li>
+<li>More than a <strong>quarter</strong> of them in California</li>
+<li>Black Americans: <strong>13%</strong> of the population,
+<strong>40%</strong> of the homeless</li>
+<li><strong>79 million</strong> adults in shared households</li>
+</ul>
+<p><span class="muted">Howard 2023, ch. 7, table 7.1</span></p>
+<h2 id="three-parts-of-one-net">Three parts of one net</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Income</th>
+<th>Food</th>
+<th>Housing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Who qualifies</strong></td>
+<td>Workers</td>
+<td>Anyone in need</td>
+<td>In need, if there’s money</td>
+</tr>
+<tr>
+<td><strong>Who pays</strong></td>
+<td>Workers; the affluent</td>
+<td>The affluent</td>
+<td>The affluent</td>
+</tr>
+<tr>
+<td><strong>Who delivers</strong></td>
+<td>Agencies, the IRS</td>
+<td>Grocers, charities, schools</td>
+<td>Landlords, developers</td>
+</tr>
+<tr>
+<td><strong>Enough?</strong></td>
+<td>38 million poor</td>
+<td>14.3 million households insecure</td>
+<td>70% of the poorest renters pay over half</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard 2023, chs. 5–7</span></p>
+<h2 id="due-friday-source-and-claims-memo">Due Friday: source and claims
+memo</h2>
+<p><strong>One page, two columns</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Column A</th>
+<th>Column B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What I can support</td>
+<td>What I am still assuming</td>
+</tr>
+<tr>
+<td>Claim + the source you <strong>read</strong></td>
+<td>Claim you believe but have not checked</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>At least <strong>six claims</strong> in all</li>
+<li>One or two sentences: what you still need to find</li>
+<li><strong>5%</strong> · Canvas · Fri 10/9, 11:59 p.m.</li>
+</ul>
+<h2 id="the-memo-talk-it-through-first">The memo: talk it through
+first</h2>
+<p>Attach proof of <strong>one</strong> conversation. Any of these
+counts:</p>
+<ol type="1">
+<li><strong>Policy Brief Scaffold</strong> in PapyrusAI: download the
+transcript</li>
+<li><strong>Writing Center:</strong> the confirmation email</li>
+<li><strong>Me:</strong> office hours, or email your draft columns</li>
+</ol>
+<p><strong>AI: Yellow.</strong> A source an AI found goes in Column B
+until you read it.</p>
+<h2 id="try-one-now">Try one now</h2>
+<p><strong>Column A:</strong> one claim about your program from today,
+with Howard as the source</p>
+<p><strong>Column B:</strong> one thing you believe about your program
+and have not checked</p>
+<p><span class="muted">3 minutes, with a neighbor</span></p>
+<h2 id="by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</h2>
+<p>Cash follows work. Food follows need. Housing follows the budget.</p>
+<p><strong>Wednesday:</strong> Medicaid, and what happens when the
+states decide</p>
+</body>
+</html>

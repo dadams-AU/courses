@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Midterm Review</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Midterm Review</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+8, Monday 12 October 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#wednesday-october-14"
+id="toc-wednesday-october-14">Wednesday, October 14</a></li>
+<li><a href="#part-iii-your-program" id="toc-part-iii-your-program">Part
+III: your program</a></li>
+<li><a href="#finish-the-sentence" id="toc-finish-the-sentence">Finish
+the sentence</a></li>
+<li><a href="#both-columns-are-true" id="toc-both-columns-are-true">Both
+columns are true</a></li>
+<li><a href="#what-the-line-counts-and-what-it-cant"
+id="toc-what-the-line-counts-and-what-it-cant">What the line counts, and
+what it can’t</a></li>
+<li><a href="#is-it-small-six-tools-one-hidden-state"
+id="toc-is-it-small-six-tools-one-hidden-state">Is it small? Six tools,
+one hidden state</a></li>
+<li><a href="#two-tiers-sorted-by-work"
+id="toc-two-tiers-sorted-by-work">Two tiers, sorted by work</a></li>
+<li><a
+href="#cash-follows-work.-food-follows-need.-housing-follows-the-budget."
+id="toc-cash-follows-work.-food-follows-need.-housing-follows-the-budget.">Cash
+follows work. Food follows need. Housing follows the budget.</a></li>
+<li><a href="#who-built-it-and-when" id="toc-who-built-it-and-when">Who
+built it, and when?</a></li>
+<li><a href="#policy-feedback-when-effect-becomes-cause"
+id="toc-policy-feedback-when-effect-becomes-cause">Policy feedback: when
+effect becomes cause</a></li>
+<li><a
+href="#social-security-and-medicare-the-bet-the-hedge-the-fallback"
+id="toc-social-security-and-medicare-the-bet-the-hedge-the-fallback">Social
+Security and Medicare: the bet, the hedge, the fallback</a></li>
+<li><a href="#favorite-sons-political-orphans"
+id="toc-favorite-sons-political-orphans">Favorite sons, political
+orphans</a></li>
+<li><a href="#laboratories-or-cryogenic-chambers"
+id="toc-laboratories-or-cryogenic-chambers">Laboratories, or cryogenic
+chambers?</a></li>
+<li><a href="#a-blue-book-answer-has-four-parts"
+id="toc-a-blue-book-answer-has-four-parts">A blue-book answer has four
+parts</a></li>
+<li><a href="#your-questions" id="toc-your-questions">Your
+questions</a></li>
+<li><a href="#before-wednesday" id="toc-before-wednesday">Before
+Wednesday</a></li>
+<li><a href="#if-the-room-goes-quiet" id="toc-if-the-room-goes-quiet">If
+the room goes quiet</a></li>
+<li><a href="#which-cell" id="toc-which-cell">Which cell?</a></li>
+<li><a href="#which-cell-answers" id="toc-which-cell-answers">Which
+cell: answers</a></li>
+<li><a href="#name-the-program" id="toc-name-the-program">Name the
+program</a></li>
+<li><a href="#name-the-program-answers"
+id="toc-name-the-program-answers">Name the program: answers</a></li>
+<li><a href="#try-it-three-minutes" id="toc-try-it-three-minutes">Try
+it: three minutes</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 8 Monday slides — same
+content in linear order, with no slide-scaling container. Midterm review
+of Weeks 1 through 7; the exam is Wednesday 14 October.</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week 8
+· Monday, October 12</p>
+<p><em>Thirty minutes of review, then your questions</em></p>
+<h2 id="today">Today</h2>
+<table>
+<tbody>
+<tr>
+<td><strong>1:00</strong></td>
+<td>Wednesday: the format, and your program</td>
+</tr>
+<tr>
+<td><strong>1:06</strong></td>
+<td>Weeks 1 through 7 in eleven slides</td>
+</tr>
+<tr>
+<td><strong>1:28</strong></td>
+<td>How to write a blue-book answer</td>
+</tr>
+<tr>
+<td><strong>1:30</strong></td>
+<td><strong>Your questions</strong></td>
+</tr>
+<tr>
+<td><strong>2:10</strong></td>
+<td>Before Wednesday</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wednesday-october-14">Wednesday, October 14</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>When</strong></td>
+<td>1:00–2:15, GH 305. Time is called at 2:15</td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td>5 of 8 IDs (25) · 1 of 5 essays (50) · your program (25)</td>
+</tr>
+<tr>
+<td><strong>Clock</strong></td>
+<td>Read 5 min · IDs 15 · essay 35 · your program 15 · reread 5</td>
+</tr>
+<tr>
+<td><strong>Bring</strong></td>
+<td><strong>A blue book.</strong> A pen or pencil</td>
+</tr>
+<tr>
+<td><strong>Closed</strong></td>
+<td><strong>Book, notes, devices, AI.</strong> The exam is
+<strong>RED</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Name on the cover only. Label every answer: I.3, II.B, III.</p>
+<h2 id="part-iii-your-program">Part III: your program</h2>
+<ol type="1">
+<li><strong>Place it.</strong> Campbell’s tier · Howard’s four
+questions: who qualifies, who pays, who delivers, is it enough</li>
+<li><strong>The Week 5 tests.</strong> Who built it, and to do or hold
+down what? Whom has it organized, and what has that won or blocked?</li>
+</ol>
+<p>One fact from a source you read for the memo, <strong>document
+named</strong> · two course concepts <strong>by name</strong> · Column B
+stays an assumption</p>
+<p><strong>No program on file? Yours is Social Security.</strong> Email
+me a pick by <strong>Tuesday, 11:59 p.m.</strong> and I’ll use yours</p>
+<h2 id="finish-the-sentence">Finish the sentence</h2>
+<p><strong>Rate is not ______.</strong></p>
+<p><strong>Flow is not ______.</strong></p>
+<p><strong>Prevalence is not ______.</strong></p>
+<p><span class="muted">Week 1. Then one number for each.</span></p>
+<h2 id="both-columns-are-true">Both columns are true</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Both true</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rate is not <strong>composition</strong></td>
+<td>Black poverty rate <strong>18.8%</strong>, White non-Hispanic
+<strong>7.3%</strong> · Whites are <strong>66.2%</strong> of the
+poor</td>
+<td>Rank, table 5.1</td>
+</tr>
+<tr>
+<td>Flow is not <strong>stock</strong></td>
+<td><strong>52.5%</strong> of spells end within a year · most of the
+poor right now have been poor a long time</td>
+<td>Rank, table 4.1</td>
+</tr>
+<tr>
+<td>Prevalence is not <strong>penalty</strong></td>
+<td><strong>19</strong> of 29 rich democracies have more unemployment ·
+<strong>24</strong> punish it less</td>
+<td>Brady and colleagues</td>
+</tr>
+</tbody>
+</table>
+<p><strong>65%</strong> of Americans live in a means-tested household at
+some point between 20 and 65</p>
+<p><span class="muted">Week 1 · Rank, Eppard, and Bullock, Section
+I</span></p>
+<p><strong>Be able to:</strong> read a poverty table and say which
+column the speaker is standing on.</p>
+<h2 id="what-the-line-counts-and-what-it-cant">What the line counts, and
+what it can’t</h2>
+<ul>
+<li>Orshansky, 1965: a cheap food budget <strong>× 3</strong>, cash
+income only</li>
+<li>Official rate <strong>12.6%</strong> (1970) · <strong>15.1%</strong>
+(2010) · <strong>10.5%</strong> (2019). Spending per person
+<strong>$1,015 → $3,419</strong> (1980–2017)</li>
+<li>Never counted: SNAP, the EITC, housing aid. Child poverty,
+supplemental measure, <strong>9.7% → 5.2% → 12.4%</strong>
+(2020–22)</li>
+<li>The leak: TANF, <strong>22 cents</strong> of the dollar reaches a
+family as cash</li>
+</ul>
+<p><span class="muted">Week 2 · Desmond chs. 1–2</span></p>
+<p><strong>Be able to:</strong> explain the flatline twice, as a
+measurement story and as a leak story.</p>
+<h2 id="is-it-small-six-tools-one-hidden-state">Is it small? Six tools,
+one hidden state</h2>
+<p>Social insurance · Grants · <strong>Tax expenditures</strong> ·
+Regulation · Loan guarantees · Tort law</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th>Share of GDP, 1997</th>
+<th style="text-align: center;">Gross</th>
+<th style="text-align: center;">Net of taxes on benefits</th>
+<th style="text-align: center;">Plus tax expenditures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>United States</strong></td>
+<td style="text-align: center;"><strong>15.8%</strong></td>
+<td style="text-align: center;"><strong>15.0%</strong></td>
+<td style="text-align: center;"><strong>16.4%</strong></td>
+</tr>
+<tr>
+<td>17-nation average</td>
+<td style="text-align: center;">25.6%</td>
+<td style="text-align: center;">21.3%</td>
+<td style="text-align: center;">21.6%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Desmond: the market takes it back. Overdraft fees <strong>$11
+billion</strong> (2019); 9% of account holders pay 84%</li>
+<li>Average spending, poverty near the bottom of the rich world.
+<strong>Where does the money go?</strong></li>
+</ul>
+<p><span class="muted">Weeks 1 and 3 · Howard ch. 1 · Desmond
+chs. 3–4</span></p>
+<h2 id="two-tiers-sorted-by-work">Two tiers, sorted by work</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Upper tier: social insurance</th>
+<th>Lower tier: “welfare”</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Social Security · Medicare · Disability Insurance · UI · workers’
+comp</td>
+<td>Medicaid · the EITC · SSI · TANF · SNAP · housing</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Cracks: TANF for three, <strong>$201</strong> Texas ·
+<strong>$636</strong> Connecticut · UI reaches under
+<strong>40%</strong></li>
+<li>Campbell: work history sorts the tiers. One injury, three
+outcomes</li>
+<li>Soss: a husband <strong>leaves</strong> → TANF. A husband
+<strong>dies</strong> → survivors’ insurance</li>
+</ul>
+<p><span class="muted">Week 2 · Howard ch. 2 · Week 6 · Campbell
+chs. 1–3</span></p>
+<p><strong>Be able to:</strong> place a program, name one that breaks
+the map, and say what sorted it.</p>
+<h2
+id="cash-follows-work.-food-follows-need.-housing-follows-the-budget.">Cash
+follows work. Food follows need. Housing follows the budget.</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Income</th>
+<th>Food</th>
+<th>Housing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Who qualifies</strong></td>
+<td>Workers</td>
+<td>Anyone in need</td>
+<td>In need, if there’s money</td>
+</tr>
+<tr>
+<td><strong>Enough?</strong></td>
+<td>TANF: <strong>68% → 22%</strong> of poor families</td>
+<td>SNAP <strong>36 million</strong></td>
+<td><strong>38</strong> units per 100</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Welfare avoidance: about <strong>$142 billion</strong> a year
+unclaimed</li>
+<li>Homeowner subsidies <strong>$193 billion</strong> · direct housing
+aid <strong>$53 billion</strong> (2020)</li>
+</ul>
+<p><span class="muted">Weeks 6 and 7 · Desmond ch. 5 · Howard, Who
+Cares, chs. 5–7</span></p>
+<p><strong>Be able to:</strong> say whether deservingness explains this
+table, and test it on one case.</p>
+<h2 id="who-built-it-and-when">Who built it, and when?</h2>
+<ul>
+<li>Standard story: <strong>1935</strong> and <strong>1965</strong>,
+unified Democrats</li>
+<li>Howard’s recount: about <strong>fifty</strong> programs since
+<strong>1913</strong>; divided government built
+<strong>eighteen</strong></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 38%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr>
+<th>Who held power, 1900–2000</th>
+<th style="text-align: center;">Social insurance, grants</th>
+<th style="text-align: center;">Tax breaks, regulation, loans</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unified Democratic</td>
+<td style="text-align: center;"><strong>15</strong></td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr>
+<td>Republican president, divided government</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>8</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Layering:</strong> ERISA (1974) · the ADA (1990) · the Child
+Tax Credit (1997), each built to hold down an older program</li>
+</ul>
+<blockquote>
+<p>“Republicans designed new social programs in order to curb existing
+programs.” (Howard, p. 89)</p>
+</blockquote>
+<p><span class="muted">Weeks 4 and 5 · Howard chs. 3–4</span></p>
+<h2 id="policy-feedback-when-effect-becomes-cause">Policy feedback: when
+effect becomes cause</h2>
+<blockquote>
+<p>“New policies create a new politics.” (Schattschneider, in
+Pierson)</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Resources and incentives</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interest groups</strong></td>
+<td>Spoils · organizing niches · access</td>
+<td>Policy learning</td>
+</tr>
+<tr>
+<td><strong>Mass publics</strong></td>
+<td><strong>Lock-in</strong></td>
+<td><strong>Visibility and traceability</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Lock-in, tested: Bush’s personal accounts never reach a floor vote.
+Today’s workers would pay for two retirements</li>
+<li>Visibility: a tax break arrives as a line on a return. Nobody traces
+it to government</li>
+</ul>
+<p><span class="muted">Weeks 4 and 5 · Pierson 1993, figure 1 ·
+Berkowitz and DeWitt</span></p>
+<h2
+id="social-security-and-medicare-the-bet-the-hedge-the-fallback">Social
+Security and Medicare: the bet, the hedge, the fallback</h2>
+<ul>
+<li>1935: payroll financing, the <strong>bet.</strong> Old Age
+Assistance, means-tested and state-run, the <strong>hedge</strong></li>
+<li>1948: the hedge pays <strong>50 percent more.</strong> Then 1950
+coverage · 1972 indexing · the 1983 rescue</li>
+<li>Medicare, 1965: Ball’s “fallback” after national health insurance
+lost. The price: pay providers what they asked</li>
+</ul>
+<blockquote>
+<p>“the nation’s most important antipoverty program, in part because it
+did not target its benefits exclusively to the poor” (p. 271)</p>
+</blockquote>
+<p><span class="muted">Week 5 · Berkowitz and DeWitt ·
+Oberlander</span></p>
+<h2 id="favorite-sons-political-orphans">Favorite sons, political
+orphans</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">Social Security</th>
+<th style="text-align: center;">AFDC</th>
+<th style="text-align: center;">Food Stamps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1981 cuts, by 1984</strong></td>
+<td style="text-align: center;"><strong>1.5%</strong></td>
+<td style="text-align: center;"><strong>16%</strong></td>
+<td style="text-align: center;"><strong>19%</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The EITC: <strong>7.4 → 19.3 million</strong> families, 1985–2000.
+“No other U.S. social program grew faster”</li>
+<li>Medicaid’s three seeds: medical indigency · comprehensive benefits ·
+the <strong>federal match</strong></li>
+<li>Waxman: options, then mandates, inside omnibus bills. “Anything
+except welfare”</li>
+<li>Medicaid now: <strong>1 in 5</strong> Americans ·
+<strong>70%</strong> of nursing-home residents</li>
+</ul>
+<p><span class="muted">Weeks 6 and 7 · Howard ch. 5 · Grogan and
+Andrews</span></p>
+<p><strong>Be able to:</strong> explain why two programs for the poor
+grew while the rest were cut.</p>
+<h2 id="laboratories-or-cryogenic-chambers">Laboratories, or cryogenic
+chambers?</h2>
+<p>Workers’ compensation: no federal money, no federal rules, for a
+century</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1972</th>
+<th style="text-align: center;">1975</th>
+<th style="text-align: center;">1980</th>
+<th style="text-align: center;">1988</th>
+<th style="text-align: center;">late 1990s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>6.9</strong></td>
+<td style="text-align: center;"><strong>9.4</strong></td>
+<td style="text-align: center;"><strong>12.1</strong></td>
+<td style="text-align: center;">12.2</td>
+<td style="text-align: center;">12.8</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">average state score, of 19 essential
+elements</span></p>
+<ul>
+<li>States improved under threat of national standards. Stopped when the
+threat passed</li>
+<li>Medicaid grew with a match. Who sued over the ACA: governor’s party
+<strong>.8</strong>, cost <strong>.15</strong></li>
+</ul>
+<p><span class="muted">Week 7 · Howard ch. 8 · Grogan and
+Andrews</span></p>
+<h2 id="a-blue-book-answer-has-four-parts">A blue-book answer has four
+parts</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Claim</strong></td>
+<td>Answer the question in one sentence. Make it the first sentence</td>
+</tr>
+<tr>
+<td><strong>Concept</strong></td>
+<td>Name it, in the author’s term: lock-in, layering, the match, the
+hidden welfare state</td>
+</tr>
+<tr>
+<td><strong>Evidence</strong></td>
+<td>A case, a number, a year. “Social Security down 1.5 percent, AFDC
+16”</td>
+</tr>
+<tr>
+<td><strong>So what</strong></td>
+<td>What the case shows that the concept predicted, or didn’t</td>
+</tr>
+</tbody>
+</table>
+<p>Weak: everything you remember about the topic. Strong: one argument,
+two pieces of evidence, a name on each.</p>
+<h2 id="your-questions">Your questions</h2>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Week</th>
+<th></th>
+<th>Readings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Who are the poor?</td>
+<td>Rank, Eppard, and Bullock, Section I</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Why so many poor?</td>
+<td>Desmond chs. 1–2 · Howard ch. 2</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>American exceptionalism?</td>
+<td>Howard ch. 1 · Desmond chs. 3–4</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Political development</td>
+<td>Howard ch. 3 · Pierson</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>Social Security and Medicare</td>
+<td>Howard ch. 4 · Berkowitz and DeWitt · Oberlander</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>TANF, SNAP, the EITC</td>
+<td>Howard ch. 5 · Campbell chs. 1–3 · Desmond ch. 5</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>Housing, income, Medicaid</td>
+<td>Howard, Who Cares, chs. 5–7 · Grogan and Andrews · Howard ch. 8</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Any week, any reading, your program, the
+format</span></p>
+<h2 id="before-wednesday">Before Wednesday</h2>
+<p><strong>No program?</strong> Email me a pick by <strong>Tuesday,
+11:59 p.m.</strong></p>
+<p><strong>Accommodation letter</strong> not sent yet? Tonight</p>
+<p><strong>Reading Journal Checkpoint 1</strong> is due Wednesday, 11:59
+p.m. Five entries</p>
+<p><span class="muted">Office hours today, 3:00–4:00 and
+5:30–6:30</span></p>
+<p><strong>Wednesday: write it down.</strong></p>
+<h2 id="if-the-room-goes-quiet">If the room goes quiet</h2>
+<p>Which cell? · Name the program · Try it</p>
+<p><span class="muted">Backup drills for the question period</span></p>
+<h2 id="which-cell">Which cell?</h2>
+<ol type="1">
+<li>The AARP sells Medigap policies</li>
+<li>Bush’s personal accounts never reach a floor vote</li>
+<li>Democrats answer Studebaker with a bigger Social Security check</li>
+<li>Medicaid for poor children at Title IV, Subtitle B, Part 2 of a
+budget act</li>
+</ol>
+<p><span class="muted">Pierson’s figure. Answer before the next
+slide.</span></p>
+<h2 id="which-cell-answers">Which cell: answers</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Cell</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Interest groups · resources: an <strong>organizing
+niche</strong></td>
+<td>Thin elderly health benefits gave the AARP a reason to exist</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mass publics · <strong>lock-in</strong></td>
+<td>Current workers would finance two retirements at once</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Elites · <strong>policy learning</strong></td>
+<td>The tool you already have becomes the answer to the next risk</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Visibility and traceability</strong>, used in reverse</td>
+<td>“You can’t hit what you can’t see”</td>
+</tr>
+</tbody>
+</table>
+<p><strong>One concept, four programs.</strong></p>
+<h2 id="name-the-program">Name the program</h2>
+<ol type="1">
+<li>The hedge that outpaid the bet in 1948</li>
+<li>“No other U.S. social program grew faster”</li>
+<li>The 1965 afterthought that now covers one in five Americans</li>
+<li>The social insurance program left to the states for a century</li>
+<li>68 families per hundred in poverty, then 22</li>
+</ol>
+<p><span class="muted">Answer before the next slide.</span></p>
+<h2 id="name-the-program-answers">Name the program: answers</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Program</th>
+<th style="text-align: center;">Week</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Old Age Assistance</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The EITC</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Medicaid</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Workers’ compensation</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td>5</td>
+<td>AFDC, then TANF</td>
+<td style="text-align: center;">2 and 7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Five programs, four weeks. The exam asks about the course,
+not one week.</strong></p>
+<h2 id="try-it-three-minutes">Try it: three minutes</h2>
+<p><strong>“Programs for the poor are poor programs.” Agree or
+disagree?</strong></p>
+<p>Claim · Concept · Evidence · So what</p>
+<p><span class="muted">Four lines on paper. Two people read
+theirs.</span></p>
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Why Health Reform Happened</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Why Health Reform Happened</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+10, Monday 26 October 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#your-midterm-back-today"
+id="toc-your-midterm-back-today">Your midterm, back today</a></li>
+<li><a href="#what-the-strong-books-did"
+id="toc-what-the-strong-books-did">What the strong books did</a></li>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#this-week" id="toc-this-week">This week</a></li>
+<li><a href="#four-questions" id="toc-four-questions">Four
+questions</a></li>
+<li><a href="#the-broken-system" id="toc-the-broken-system">1. The
+broken system</a></li>
+<li><a href="#who-was-uninsured" id="toc-who-was-uninsured">Who was
+uninsured</a></li>
+<li><a href="#paying-more-for-less" id="toc-paying-more-for-less">Paying
+more for less</a></li>
+<li><a href="#how-it-came-to-this" id="toc-how-it-came-to-this">How it
+came to this</a></li>
+<li><a href="#the-window-2008" id="toc-the-window-2008">2. The window:
+2008</a></li>
+<li><a href="#november-2008" id="toc-november-2008">November
+2008</a></li>
+<li><a href="#the-decision-to-go" id="toc-the-decision-to-go">The
+decision to go</a></li>
+<li><a href="#hackers-three-questions"
+id="toc-hackers-three-questions">3. Hacker’s three questions</a></li>
+<li><a href="#why-it-passed-the-standard-answer"
+id="toc-why-it-passed-the-standard-answer">Why it passed: the standard
+answer</a></li>
+<li><a href="#why-it-passed-three-factors"
+id="toc-why-it-passed-three-factors">Why it passed: three
+factors</a></li>
+<li><a href="#the-groups-switched-sides"
+id="toc-the-groups-switched-sides">The groups switched sides</a></li>
+<li><a href="#democrats-sang-from-one-hymnbook"
+id="toc-democrats-sang-from-one-hymnbook">Democrats sang from one
+hymnbook</a></li>
+<li><a href="#why-so-limited-the-plan-itself"
+id="toc-why-so-limited-the-plan-itself">Why so limited: the plan
+itself</a></li>
+<li><a href="#why-so-limited-the-senate"
+id="toc-why-so-limited-the-senate">Why so limited: the Senate</a></li>
+<li><a href="#what-the-house-passed-and-the-senate-killed"
+id="toc-what-the-house-passed-and-the-senate-killed">What the House
+passed, and the Senate killed</a></li>
+<li><a href="#why-so-limited-the-cbo"
+id="toc-why-so-limited-the-cbo">Why so limited: the CBO</a></li>
+<li><a href="#why-so-angry" id="toc-why-so-angry">Why so angry</a></li>
+<li><a href="#was-it-worth-it" id="toc-was-it-worth-it">Was it worth
+it?</a></li>
+<li><a href="#pat-tumultys-four-problems"
+id="toc-pat-tumultys-four-problems">4. Pat Tumulty’s four
+problems</a></li>
+<li><a href="#wednesday-the-year-of-pitched-battles"
+id="toc-wednesday-the-year-of-pitched-battles">Wednesday: the year of
+pitched battles</a></li>
+<li><a href="#wednesday-1159-p.m.-the-policy-brief"
+id="toc-wednesday-1159-p.m.-the-policy-brief">Wednesday, 11:59 p.m.: the
+policy brief</a></li>
+<li><a href="#by-215-you-should-be-able-to-say"
+id="toc-by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 10 Monday slides — same
+content in linear order, with no slide-scaling container. Readings:
+Jacobs and Skocpol, Health Care Reform and American Politics, ch. 1;
+Hacker (2010), “The Road to Somewhere,” Perspectives on Politics
+8(3).</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week
+10 · Monday, October 26</p>
+<p><em>Jacobs and Skocpol, ch. 1 · Hacker (2010), “The Road to
+Somewhere”</em></p>
+<h2 id="your-midterm-back-today">Your midterm, back today</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Points</th>
+<th>Command</th>
+<th>Working</th>
+<th>Coverage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I. Five IDs</td>
+<td>25</td>
+<td>5 each: meaning, source, what it explains</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>II. Essay</td>
+<td>50</td>
+<td>46–50</td>
+<td>40–45</td>
+<td>34–39</td>
+</tr>
+<tr>
+<td>III. Program</td>
+<td>25</td>
+<td>23–25</td>
+<td>20–22</td>
+<td>17–19</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Comments are on the cover and in the margins.
+Scores are in Canvas.</span></p>
+<h2 id="what-the-strong-books-did">What the strong books did</h2>
+<ol type="1">
+<li>Took a position someone could dispute, in the first paragraph</li>
+<li><strong>Applied</strong> the concept, not just named it</li>
+<li>Evidence with a program, a year, a number, an author</li>
+<li>Argued the final turn: the concession, the complication, the test
+case</li>
+</ol>
+<p><span class="muted">Questions about a score: office hours or email
+this week, book in hand</span></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li>The broken system, 2009: Jacobs and Skocpol</li>
+<li>The window: 2008 and the decision to go</li>
+<li>Hacker’s three questions: why passed, why limited, why angry</li>
+<li>Pat Tumulty’s four problems</li>
+<li>Wednesday and the brief</li>
+</ol>
+<h2 id="this-week">This week</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><strong>Mon 10/26</strong></td>
+<td>Jacobs and Skocpol ch. 1 · Hacker (2010)</td>
+</tr>
+<tr>
+<td><strong>Wed 10/28</strong></td>
+<td>Jacobs and Skocpol ch. 2–3: the year of pitched battles</td>
+</tr>
+<tr>
+<td><strong>Wed 10/28</strong></td>
+<td><strong>Policy brief</strong> due 11:59 p.m., Canvas</td>
+</tr>
+<tr>
+<td>After you submit</td>
+<td><strong>Term Paper Dialectical Partner</strong> unlocks in
+PapyrusAI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="four-questions">Four questions</h2>
+<p>Why did it take a century?</p>
+<p>Why 2010?</p>
+<p>Why so much less than reformers wanted?</p>
+<p>Why so angry?</p>
+<h2 id="the-broken-system">1. The broken system</h2>
+<p><strong>“So You Think You’re Insured? (Think Again)”</strong>
+<em>Time</em>, March 16, 2009</p>
+<p>Pat Tumulty, San Antonio. Six years without job-based coverage.
+Six-month Assurant policies, high deductible. Kidney failure.
+“Preexisting condition.” Claim denied. Hospital’s highest rates. Texas
+Medicaid: adults with children, 26% of poverty.</p>
+<p><span class="muted">Jacobs and Skocpol, pp. 1–2</span></p>
+<h2 id="who-was-uninsured">Who was uninsured</h2>
+<p><strong>38 million</strong> working-age Americans and family members
+Three-quarters work. More than half full-time.</p>
+<table>
+<thead>
+<tr>
+<th>Wage fifth</th>
+<th>Uninsured, ~1980</th>
+<th>Uninsured, late 2000s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top two-fifths</td>
+<td></td>
+<td>still over 90% covered</td>
+</tr>
+<tr>
+<td>Middle</td>
+<td>5%</td>
+<td>12.4%</td>
+</tr>
+<tr>
+<td>Fourth</td>
+<td>under 10%</td>
+<td>21.9%</td>
+</tr>
+<tr>
+<td>Bottom</td>
+<td>18%</td>
+<td><strong>37.4%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Jacobs and Skocpol, p. 3; plus 16 million
+underinsured</span></p>
+<h2 id="paying-more-for-less">Paying more for less</h2>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Health spending, % GDP, 2006</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>United States</strong></td>
+<td><strong>15.3</strong></td>
+</tr>
+<tr>
+<td>Switzerland</td>
+<td>11.3</td>
+</tr>
+<tr>
+<td>France</td>
+<td>11.0</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>10.6</td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Britain</td>
+<td>8.4</td>
+</tr>
+</tbody>
+</table>
+<p>US: 7.2% of GDP in 1970 → 15.3% in 2006 → 17.6% projected 2009 Infant
+mortality: 28th in the world</p>
+<p><span class="muted">Jacobs and Skocpol, pp. 3–4, OECD</span></p>
+<h2 id="how-it-came-to-this">How it came to this</h2>
+<ul>
+<li>1880s–1945: other rich countries go universal; the US tries and
+fails</li>
+<li><strong>1940s: Truman loses.</strong> Hospitals, research, and
+patents get funded instead</li>
+<li>Unions and big employers buy tax-subsidized coverage; the “haves” no
+longer need the “have-nots”</li>
+<li><strong>1965: Medicare and Medicaid</strong> fill the gaps private
+insurers won’t touch</li>
+<li>Late 1970s on: costs explode; a million more uninsured every
+year</li>
+<li>2000–2007: public programs stall; SCHIP vetoed; Part D unpaid
+for</li>
+</ul>
+<p><span class="muted">Jacobs and Skocpol, pp. 5–8</span></p>
+<h2 id="the-window-2008">2. The window: 2008</h2>
+<ul>
+<li>Las Vegas forum, March 24, 2007: Clinton and Edwards have plans.
+Obama “could wing it”</li>
+<li>Obama’s plan: October 2007. No individual mandate.
+“Affordability”</li>
+<li>Clinton: his plan “simply flunks the test” on universal
+coverage</li>
+<li>June 2008: Bristol, Virginia, the first general-election event.
+Health care, by story</li>
+<li>October 2008: Obama attacks McCain for “taxing health benefits for
+the first time ever”</li>
+</ul>
+<p><span class="muted">Jacobs and Skocpol, pp. 10–14</span></p>
+<h2 id="november-2008">November 2008</h2>
+<table>
+<tbody>
+<tr>
+<td>Popular vote</td>
+<td><strong>53–46</strong></td>
+</tr>
+<tr>
+<td>Electoral College</td>
+<td><strong>365–173</strong></td>
+</tr>
+<tr>
+<td>“Most important issue”: the economy</td>
+<td><strong>63%</strong></td>
+</tr>
+<tr>
+<td>“Most important issue”: health care</td>
+<td><strong>9%</strong></td>
+</tr>
+<tr>
+<td>Worried about affording health care</td>
+<td>66%</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Jacobs and Skocpol, pp. 14–16, exit
+polls</span></p>
+<h2 id="the-decision-to-go">The decision to go</h2>
+<p><strong>Delay:</strong> Biden, Axelrod, Emanuel, Geithner. “I don’t
+want to fail.” <strong>Go:</strong> Kennedy, Baucus, the party base.
+Orszag: no deficit control without health reform.</p>
+<p>Obama: “victories would beget victories”</p>
+<ul>
+<li>Feb 26, 2009: $630 billion “down payment” in the budget</li>
+<li>Mar 5, 2009: White House summit, both parties, every interest
+group</li>
+<li>Target: bills through both houses before the summer recess</li>
+</ul>
+<p><span class="muted">Jacobs and Skocpol, pp. 16–20</span></p>
+<h2 id="hackers-three-questions">3. Hacker’s three questions</h2>
+<p><strong>Why did it pass?<br>Why so limited?<br>Why so
+polarized?</strong></p>
+<p><span class="muted">Hacker (2010), p. 862</span></p>
+<h2 id="why-it-passed-the-standard-answer">Why it passed: the standard
+answer</h2>
+<p>Democratic president + Democratic Congress, 2006 and 2008</p>
+<p>Fewer Jim Coopers: a more homogeneous caucus</p>
+<p><strong>Necessary. Not sufficient.</strong></p>
+<p>“Why this approach? Why this session? Why did Obama push forward
+given how much else was on his plate?”</p>
+<p><span class="muted">Hacker, pp. 863–864</span></p>
+<h2 id="why-it-passed-three-factors">Why it passed: three factors</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Factor</th>
+<th>1993–94</th>
+<th>2009–10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Economic context</strong></td>
+<td>Short 1991 recession</td>
+<td>Deep downturn; 2-to-1 said “take it on right now”</td>
+</tr>
+<tr>
+<td><strong>Group conflict</strong></td>
+<td>Harry and Louise 1.0: “There has to be a better way”</td>
+<td>Harry and Louise 2.0: “It’s about time”</td>
+</tr>
+<tr>
+<td><strong>Democratic coalescence</strong></td>
+<td>Single payer vs. play-or-pay vs. incrementalism</td>
+<td>One plan, the Massachusetts template</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Hacker, pp. 864–867</span></p>
+<h2 id="the-groups-switched-sides">The groups switched sides</h2>
+<ul>
+<li>Industry was being priced out of its own customers; fewer insured
+meant fewer paying patients</li>
+<li><strong>AHIP</strong>: regulation in exchange for a coverage
+requirement, the Massachusetts deal</li>
+<li><strong>PhRMA and hospitals</strong>: early deals; modest givebacks,
+White House protection</li>
+<li><strong>AMA</strong>: endorsed both bills, waiting on the Medicare
+“doc fix”</li>
+<li>Lobbying, 1998–2010: <strong>$4 billion</strong>; 2009 alone:
+<strong>$500 million+</strong></li>
+</ul>
+<p>The quid pro quo: more public regulation and financing in return for
+guaranteed customers</p>
+<p><span class="muted">Hacker, pp. 864–865</span></p>
+<h2 id="democrats-sang-from-one-hymnbook">Democrats sang from one
+hymnbook</h2>
+<ul>
+<li>Massachusetts 2006: mandate + Medicaid expansion + exchanges</li>
+<li>Plus: stronger cost controls, employer requirements, a
+<strong>public option</strong></li>
+<li><strong>HCAN</strong>: unions, think tanks, advocacy groups; a
+pledge list, 190 members of Congress</li>
+<li>Modeled on Americans for Tax Reform’s no-new-taxes pledge</li>
+<li>The lesson of 1994: “one shot when the window opened”</li>
+</ul>
+<p><span class="muted">Hacker, pp. 866–867</span></p>
+<h2 id="why-so-limited-the-plan-itself">Why so limited: the plan
+itself</h2>
+<p>“It incorporates all sorts of Republican ideas.” — Barack Obama,
+<em>Today</em>, March 2010</p>
+<ul>
+<li>Romney’s 2006 Massachusetts law, shaped by the Heritage
+Foundation</li>
+<li>Close to the 1993 moderate-Republican alternative to Clinton</li>
+<li>The “Obama-Romney-McCain Health Plan”</li>
+</ul>
+<p>Roots: the employer-based path, and <strong>Medicare 1965</strong>,
+which covered the sympathetic and left the rest</p>
+<p><span class="muted">Hacker, p. 867</span></p>
+<h2 id="why-so-limited-the-senate">Why so limited: the Senate</h2>
+<table>
+<tbody>
+<tr>
+<td>Cloture motions filed since 1919</td>
+<td><strong>1,200+</strong></td>
+</tr>
+<tr>
+<td>Filed since 1981</td>
+<td>over 80%</td>
+</tr>
+<tr>
+<td>Filed since 1993</td>
+<td>over 60%</td>
+</tr>
+<tr>
+<td>Bob Dole, 1994</td>
+<td>“You need 60 votes to do anything around here”</td>
+</tr>
+<tr>
+<td>The Gang of Six</td>
+<td>6 senators, <strong>2.7%</strong> of Americans</td>
+</tr>
+<tr>
+<td>Max Baucus, health-industry money, 2007–08</td>
+<td><strong>$1.5 million</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Hacker, pp. 867–868</span></p>
+<h2 id="what-the-house-passed-and-the-senate-killed">What the House
+passed, and the Senate killed</h2>
+<table>
+<thead>
+<tr>
+<th>Provision</th>
+<th>House bill</th>
+<th>Senate bill</th>
+<th>Final law</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public option</td>
+<td>✔</td>
+<td>✘</td>
+<td>✘</td>
+</tr>
+<tr>
+<td>National exchange</td>
+<td>✔</td>
+<td>state exchanges</td>
+<td>state exchanges</td>
+</tr>
+<tr>
+<td>Tough employer requirement</td>
+<td>✔</td>
+<td>weak</td>
+<td>weak</td>
+</tr>
+</tbody>
+</table>
+<p>“What stood in the way of the public option… was less Joe Lieberman
+than a once-obscure procedural rule.”</p>
+<p><span class="muted">Hacker, pp. 868–869</span></p>
+<h2 id="why-so-limited-the-cbo">Why so limited: the CBO</h2>
+<p>Three fights the White House picked, against public opinion:</p>
+<ol type="1">
+<li>The <strong>individual mandate</strong></li>
+<li>The tax on <strong>high-cost plans</strong></li>
+<li>An independent <strong>Medicare commission</strong></li>
+</ol>
+<p>Reason: the CBO score. The mandate kept the exchanges from becoming a
+dumping ground; the plan tax scored as savings.</p>
+<p>The public option would have saved <strong>~$150 billion</strong>
+over ten years. It faced the fiercest group resistance, so it went.</p>
+<p><span class="muted">Hacker, pp. 869–870</span></p>
+<h2 id="why-so-angry">Why so angry</h2>
+<p>“American politics has often been an arena for angry minds.” —
+Hofstadter, 1964</p>
+<ul>
+<li>The provisions polled well. “The health care bill” polled at ~50% or
+less</li>
+<li>Only about half knew the popular provisions were in it</li>
+<li>Tea Party supporters: slightly upscale, very conservative
+Republicans</li>
+<li><strong>Asymmetric polarization</strong>: the GOP moved right;
+moderates lost first</li>
+<li><strong>Zero</strong> Republican votes for the final bill, either
+chamber</li>
+</ul>
+<p><span class="muted">Hacker, pp. 870–872</span></p>
+<h2 id="was-it-worth-it">Was it worth it?</h2>
+<p>Harkin: a <strong>“starter home”</strong></p>
+<p>Social Security’s “cruel hoax” to “third rail” took decades, in a
+friendlier fiscal climate, with a simpler program</p>
+<p>No tangible benefits for years. A complex statute to implement and
+defend.</p>
+<blockquote>
+<p>“Policy substance matters.”</p>
+</blockquote>
+<p><span class="muted">Hacker, p. 872; Lasswell: who gets what, when,
+how</span></p>
+<h2 id="pat-tumultys-four-problems">4. Pat Tumulty’s four problems</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What would fix it?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No job-based coverage, six years</td>
+<td></td>
+</tr>
+<tr>
+<td>Policy cancelled after diagnosis</td>
+<td></td>
+</tr>
+<tr>
+<td>Hospital list prices, no bargaining pool</td>
+<td></td>
+</tr>
+<tr>
+<td>Texas Medicaid: adults with children only, 26% of poverty</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">3 minutes with a neighbor. Name the provision,
+from ch. 1–4 or anything you know</span></p>
+<h2 id="wednesday-the-year-of-pitched-battles">Wednesday: the year of
+pitched battles</h2>
+<p>Jacobs and Skocpol, <strong>ch. 2–3</strong></p>
+<p>Who fought for what, why, and how Summer 2009, the town halls, Scott
+Brown, and the final votes</p>
+<p>Read for: which of Hacker’s three factors shows up in the fight, and
+which one almost failed</p>
+<h2 id="wednesday-1159-p.m.-the-policy-brief">Wednesday, 11:59 p.m.: the
+policy brief</h2>
+<ul>
+<li>Your program, your two columns from the memo, now as a brief</li>
+<li>Every Column A claim has a source you <strong>read</strong></li>
+<li>The scaffold rubric and the student guide are on Canvas</li>
+<li>After you submit: the <strong>Dialectical Partner</strong> opens. It
+argues back. It will not write for you.</li>
+</ul>
+<p><span class="muted">Questions: office hours Tuesday, or email the
+draft</span></p>
+<h2 id="by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</h2>
+<p>It passed because the groups split, the party agreed, and the window
+opened.</p>
+<p>It was limited by the path, the Senate, and the score.</p>
+<p>It was angry because of a party, not the public.</p>
+<p><strong>Wednesday:</strong> ch. 2–3, and the brief at 11:59</p>
+</body>
+</html>

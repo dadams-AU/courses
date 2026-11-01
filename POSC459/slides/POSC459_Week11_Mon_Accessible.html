@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.13" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Poverty, Politics and Profit</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Poverty, Politics and Profit</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+11, Monday 2 November 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#the-film-follows-the-federal-money-for-rent"
+id="toc-the-film-follows-the-federal-money-for-rent">The film follows
+the federal money for rent</a></li>
+<li><a href="#you-met-the-tax-credit-in-week-7-it-pays-to-build"
+id="toc-you-met-the-tax-credit-in-week-7-it-pays-to-build">You met the
+tax credit in Week 7: it pays to build</a></li>
+<li><a href="#paper-4-which-reform-better-survives-its-own-politics"
+id="toc-paper-4-which-reform-better-survives-its-own-politics">Paper 4:
+which reform better survives its own politics?</a></li>
+<li><a href="#quick-write-four-minutes"
+id="toc-quick-write-four-minutes">Quick write: four minutes</a></li>
+<li><a href="#who-stood-up-for-each-program"
+id="toc-who-stood-up-for-each-program">Who stood up for each
+program?</a></li>
+<li><a href="#two-counts-of-one-program"
+id="toc-two-counts-of-one-program">Two counts of one program</a></li>
+<li><a href="#wednesday-the-two-reforms-side-by-side"
+id="toc-wednesday-the-two-reforms-side-by-side">Wednesday: the two
+reforms, side by side</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 11 Monday slides — same
+content in linear order, with no slide-scaling container. Film: Poverty,
+Politics and Profit (PBS Frontline with NPR, 2017, 54 min.), screened in
+class. Reading tie-back: Howard, Who Cares, ch. 7, “Housing” (Week
+7).</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week
+11 · Monday, November 2</p>
+<p><em>PBS Frontline with NPR, 2017, 54 min.</em></p>
+<h2 id="the-film-follows-the-federal-money-for-rent">The film follows
+the federal money for rent</h2>
+<p>Nearly <strong>$50 billion</strong> a year:</p>
+<ul>
+<li><strong>Section 8 vouchers</strong> (HUD): help paying rent</li>
+<li><strong>Low-Income Housing Tax Credit</strong> (IRS): help
+building</li>
+</ul>
+<blockquote>
+<p><strong>Correction:</strong> last Wednesday’s slide described this
+film wrongly.</p>
+</blockquote>
+<p><span class="muted">Film narration · Howard ch. 7, pp. 8–9</span></p>
+<h2 id="you-met-the-tax-credit-in-week-7-it-pays-to-build">You met the
+tax credit in Week 7: it pays to build</h2>
+<p>IRS → states → developers → investors → apartments</p>
+<ul>
+<li>About <strong>$10 billion</strong> a year</li>
+<li>About <strong>100,000</strong> units a year</li>
+</ul>
+<p>“‘Low-Income’ does not mean poor.”</p>
+<p><span class="muted">Howard ch. 7, p. 9</span></p>
+<h2 id="paper-4-which-reform-better-survives-its-own-politics">Paper 4:
+which reform better survives its own politics?</h2>
+<p>Welfare reform (1996) or the ACA (2010)? Test case: the tax
+credit</p>
+<ol type="1">
+<li>Who benefits?</li>
+<li>Who can see it?</li>
+<li>Who defends it?</li>
+</ol>
+<p><span class="muted">Policy feedback: Pierson, Week 4</span></p>
+<h2 id="quick-write-four-minutes">Quick write: four minutes</h2>
+<ol type="1">
+<li>One moment: who, and what they said or did</li>
+<li>Who benefits, who can see it, or who defends it?</li>
+<li>Welfare reform or the ACA: who defended it? Is the tax credit like
+it?</li>
+</ol>
+<p><span class="muted">Keep it for Paper 4 and Wednesday</span></p>
+<h2 id="who-stood-up-for-each-program">Who stood up for each
+program?</h2>
+<ul>
+<li>The tax credit: who spoke for it?</li>
+<li>Section 8: who spoke for it?</li>
+<li>Grassley: seven audits in 29 years</li>
+</ul>
+<blockquote>
+<p>“policies also shape interest groups” (Pierson, p. 598)</p>
+</blockquote>
+<h2 id="two-counts-of-one-program">Two counts of one program</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Howard</th>
+<th>Film (2017)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost a year</td>
+<td>~$10 billion</td>
+<td>~$8 billion</td>
+</tr>
+<tr>
+<td>Units a year</td>
+<td>~100,000</td>
+<td>70,000+ → under 59,000</td>
+</tr>
+<tr>
+<td>Credits, 1997–2014</td>
+<td></td>
+<td><strong>66% more</strong>, after inflation</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Howard ch. 7, p. 9 · NPR’s analysis, in the
+film</span></p>
+<h2 id="wednesday-the-two-reforms-side-by-side">Wednesday: the two
+reforms, side by side</h2>
+<ul>
+<li><strong>Wed 11/4:</strong> bring your quick write</li>
+<li><strong>Fri 11/6, 11:59 p.m.:</strong> Paper 4, about 600 words</li>
+<li>One film moment + one reading claim, with a page number</li>
+</ul>
+<p><span class="muted">Full prompt on Canvas · transcript on the film’s
+PBS page</span></p>
+</body>
+</html>

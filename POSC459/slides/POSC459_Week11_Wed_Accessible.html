@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.13" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programs Build Their Own Defenders</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Programs Build Their Own Defenders</h1>
+<p class="subtitle">POSC 459 — Social Welfare Politics and Policy · Week
+11, Wednesday 4 November 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#today" id="toc-today">Today</a></li>
+<li><a href="#three-programs-three-fates"
+id="toc-three-programs-three-fates">Three programs, three fates</a></li>
+<li><a href="#forty-years-in-one-slide"
+id="toc-forty-years-in-one-slide">Forty years in one slide</a></li>
+<li><a href="#words-youll-need-today"
+id="toc-words-youll-need-today">Words you’ll need today</a></li>
+<li><a href="#pierson-programs-create-their-own-defenders-or-dont"
+id="toc-pierson-programs-create-their-own-defenders-or-dont">Pierson:
+programs create their own defenders, or don’t</a></li>
+<li><a href="#mondays-film-two-programs-two-kinds-of-beneficiary"
+id="toc-mondays-film-two-programs-two-kinds-of-beneficiary">Monday’s
+film: two programs, two kinds of beneficiary</a></li>
+<li><a href="#welfare-reform-no-one-organized-to-defend-afdc"
+id="toc-welfare-reform-no-one-organized-to-defend-afdc">1. Welfare
+reform: no one organized to defend AFDC</a></li>
+<li><a href="#tanf-shrank-and-nobody-came-back-for-it"
+id="toc-tanf-shrank-and-nobody-came-back-for-it">TANF shrank, and nobody
+came back for it</a></li>
+<li><a href="#ending-welfare-didnt-change-views-of-the-poor"
+id="toc-ending-welfare-didnt-change-views-of-the-poor">Ending welfare
+didn’t change views of the poor</a></li>
+<li><a href="#the-aca-benefits-went-to-groups-with-lobbyists"
+id="toc-the-aca-benefits-went-to-groups-with-lobbyists">2. The ACA:
+benefits went to groups with lobbyists</a></li>
+<li><a href="#the-aca-was-visible-and-traceable-that-cut-both-ways"
+id="toc-the-aca-was-visible-and-traceable-that-cut-both-ways">The ACA
+was visible and traceable: that cut both ways</a></li>
+<li><a href="#the-aca-delayed-the-pain-as-pierson-predicted"
+id="toc-the-aca-delayed-the-pain-as-pierson-predicted">The ACA delayed
+the pain, as Pierson predicted</a></li>
+<li><a href="#the-tax-credit-housing-built-through-investors-tax-bills"
+id="toc-the-tax-credit-housing-built-through-investors-tax-bills">3. The
+tax credit: housing built through investors’ tax bills</a></li>
+<li><a href="#its-defenders-get-what-pierson-calls-spoils"
+id="toc-its-defenders-get-what-pierson-calls-spoils">Its defenders get
+what Pierson calls “spoils”</a></li>
+<li><a href="#who-can-see-it-almost-no-one-and-that-protects-it"
+id="toc-who-can-see-it-almost-no-one-and-that-protects-it">Who can see
+it? Almost no one, and that protects it</a></li>
+<li><a href="#where-it-is-weak-fraud-cost-siting"
+id="toc-where-it-is-weak-fraud-cost-siting">Where it is weak: fraud,
+cost, siting</a></li>
+<li><a href="#you-run-a-senators-office.-three-bills-arrive."
+id="toc-you-run-a-senators-office.-three-bills-arrive.">You run a
+senator’s office. Three bills arrive.</a></li>
+<li><a href="#the-three-programs-on-piersons-grid"
+id="toc-the-three-programs-on-piersons-grid">The three programs on
+Pierson’s grid</a></li>
+<li><a href="#what-held-up-means-decides-your-answer"
+id="toc-what-held-up-means-decides-your-answer">What “held up” means
+decides your answer</a></li>
+<li><a href="#where-the-readings-push-back"
+id="toc-where-the-readings-push-back">Where the readings push
+back</a></li>
+<li><a href="#paper-4-due-friday-116-1159-p.m."
+id="toc-paper-4-due-friday-116-1159-p.m.">Paper 4: due Friday 11/6,
+11:59 p.m.</a></li>
+<li><a href="#film-moments-you-could-pair-with-a-reading"
+id="toc-film-moments-you-could-pair-with-a-reading">Film moments you
+could pair with a reading</a></li>
+<li><a href="#next-week" id="toc-next-week">Next week</a></li>
+<li><a href="#by-215-you-should-be-able-to-say"
+id="toc-by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</a></li>
+</ul>
+</nav>
+<p><em>Accessible text version of the Week 11 Wednesday slides — same
+content in linear order, with no slide-scaling container. Frame: Pierson
+(1993). Cases: Béland and Waddan (Week 9), Jacobs and Skocpol (Week 10),
+Howard, Who Cares, chapter 7 (Week 7), and Poverty, Politics and Profit
+(Monday’s film).</em></p>
+<p><strong>POSC 459 — Social Welfare Politics and Policy</strong> Week
+11 · Wednesday, November 4</p>
+<p><em>Pierson 1993 · Béland and Waddan · Jacobs and Skocpol · Howard
+ch. 7 · Monday’s film</em></p>
+<h2 id="today">Today</h2>
+<ol type="1">
+<li>Three fates</li>
+<li>Pierson’s questions</li>
+<li>Welfare reform</li>
+<li>The ACA</li>
+<li>The housing tax credit</li>
+<li>Exercise: a senator’s office</li>
+<li>Paper 4</li>
+</ol>
+<h2 id="three-programs-three-fates">Three programs, three fates</h2>
+<p><strong>1996:</strong> Congress ends AFDC</p>
+<p><strong>2017:</strong> ACA repeal bill fails,
+<strong>49–51</strong></p>
+<p><strong>2025:</strong> Film’s tax credit raised <strong>12%</strong>,
+for good</p>
+<p>Which has held up better: welfare reform or the ACA?</p>
+<p><span class="muted">Béland and Waddan, p. 24 · outside the readings:
+Senate; CRS</span></p>
+<h2 id="forty-years-in-one-slide">Forty years in one slide</h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>What happened</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1986</strong></td>
+<td>Housing tax credit (LIHTC) created</td>
+</tr>
+<tr>
+<td><strong>1996</strong></td>
+<td>AFDC ends; TANF begins</td>
+</tr>
+<tr>
+<td><strong>2005</strong></td>
+<td>TANF reaches <strong>40%</strong> of eligible families (AFDC:
+<strong>84%</strong>)</td>
+</tr>
+<tr>
+<td><strong>2010</strong></td>
+<td>ACA signed</td>
+</tr>
+<tr>
+<td><strong>2013–14</strong></td>
+<td>Exchanges open; mandate takes effect</td>
+</tr>
+<tr>
+<td><strong>2017</strong></td>
+<td>Film airs · repeal fails 49–51 · penalty to <strong>$0</strong></td>
+</tr>
+<tr>
+<td><strong>2025</strong></td>
+<td>LIHTC enlarged · TANF grant frozen since 1996</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Béland and Waddan · Jacobs and Skocpol · outside
+the readings: CRS, Senate, IRS</span></p>
+<h2 id="words-youll-need-today">Words you’ll need today</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Policy feedback</strong></td>
+<td>Laws reshape their own politics</td>
+</tr>
+<tr>
+<td><strong>Spoils</strong></td>
+<td>Benefits worth organizing for</td>
+</tr>
+<tr>
+<td><strong>Lock-in</strong></td>
+<td>Lives built around a program</td>
+</tr>
+<tr>
+<td><strong>Visibility</strong></td>
+<td>Noticed at all?</td>
+</tr>
+<tr>
+<td><strong>Traceability</strong></td>
+<td>Traced to government?</td>
+</tr>
+<tr>
+<td><strong>Tax expenditure</strong></td>
+<td>Spending through the tax code</td>
+</tr>
+<tr>
+<td><strong>Block grant</strong></td>
+<td>Fixed federal sum per state</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Pierson 1993</span></p>
+<h2 id="pierson-programs-create-their-own-defenders-or-dont">Pierson:
+programs create their own defenders, or don’t</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pierson’s term</th>
+<th>Ask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spoils</strong></td>
+<td>Who gains, and organizes to keep it?</td>
+</tr>
+<tr>
+<td><strong>Lock-in</strong></td>
+<td>What did people build around it?</td>
+</tr>
+<tr>
+<td><strong>Visibility, traceability</strong></td>
+<td>Can people see it, and trace it to Washington?</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Pierson 1993, figure 1, p. 626</span></p>
+<h2 id="mondays-film-two-programs-two-kinds-of-beneficiary">Monday’s
+film: two programs, two kinds of beneficiary</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Vouchers</th>
+<th>Tax credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who gets the benefit</td>
+<td>Poor families</td>
+<td>Developers, investors</td>
+</tr>
+<tr>
+<td>What the film found</td>
+<td>1 in 4 eligible get housing help</td>
+<td>Fewer units, more money; fraud</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted"><i>Poverty, Politics and Profit</i>
+(2017)</span></p>
+<h2 id="welfare-reform-no-one-organized-to-defend-afdc">1. Welfare
+reform: no one organized to defend AFDC</h2>
+<ul>
+<li>Social Security, Medicare: a powerful constituency</li>
+<li>Welfare recipients “lacked a strong political presence”</li>
+<li>Medicaid’s providers have a stake; AFDC had none</li>
+</ul>
+<p><span class="muted">Béland and Waddan, p. 69 · Week 9</span></p>
+<h2 id="tanf-shrank-and-nobody-came-back-for-it">TANF shrank, and nobody
+came back for it</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eligible families reached</td>
+<td><strong>84%</strong> (1995) → <strong>40%</strong> (2005)</td>
+</tr>
+<tr>
+<td>2007–09 recession</td>
+<td>Unemployment doubled; caseload <strong>+13%</strong></td>
+</tr>
+<tr>
+<td>Block grant</td>
+<td><strong>$16.5 billion</strong> since 1996 <em>(outside the
+readings)</em></td>
+</tr>
+</tbody>
+</table>
+<p>“No impetus to roll back the changes”</p>
+<p><span class="muted">Béland and Waddan, pp. 67–68 · CRS
+IF10036</span></p>
+<h2 id="ending-welfare-didnt-change-views-of-the-poor">Ending welfare
+didn’t change views of the poor</h2>
+<ul>
+<li>Welfare as a top problem: <strong>26.6%</strong> (1996) →
+<strong>4.8%</strong> (2000)</li>
+<li>Poor are too dependent on aid, 2003: <strong>71%</strong></li>
+<li><strong>Distant-visible</strong>: a spectacle few experience</li>
+</ul>
+<p>“Erasure, however, is not the same as counter-argument”</p>
+<p><span class="muted">Soss and Schram, pp. 116, 122–123 · open to all
+for Paper 4</span></p>
+<h2 id="the-aca-benefits-went-to-groups-with-lobbyists">2. The ACA:
+benefits went to groups with lobbyists</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Who</th>
+<th>Gained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The uninsured</td>
+<td><strong>26 million</strong> more covered</td>
+</tr>
+<tr>
+<td>Hospitals</td>
+<td>Medicaid pays for the uninsured</td>
+</tr>
+<tr>
+<td>Health industry</td>
+<td><strong>32 million</strong> new customers; “winners, on
+balance”</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Jacobs and Skocpol, chs. 2 and 4</span></p>
+<h2 id="the-aca-was-visible-and-traceable-that-cut-both-ways">The ACA
+was visible and traceable: that cut both ways</h2>
+<ul>
+<li>“ObamaCare”: more disapproved than approved</li>
+<li>Its core features: <strong>60% to 80%</strong> support</li>
+<li>Pierson: voters react to what they can see and trace</li>
+</ul>
+<p><span class="muted">Jacobs and Skocpol, ch. 4, p. 1 · Pierson,
+p. 622</span></p>
+<h2 id="the-aca-delayed-the-pain-as-pierson-predicted">The ACA delayed
+the pain, as Pierson predicted</h2>
+<p>“front-load benefits and back-load costs” (Pierson, p. 622)</p>
+<table>
+<thead>
+<tr>
+<th>Provision</th>
+<th>What happened</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coverage, Medicaid, insurer rules</td>
+<td>Still law</td>
+</tr>
+<tr>
+<td>Mandate penalty</td>
+<td>Repeal fails, July 2017; <strong>$0</strong> from 2019</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Jacobs and Skocpol, p. 17 · outside the readings:
+Senate; IRS</span></p>
+<h2 id="the-tax-credit-housing-built-through-investors-tax-bills">3. The
+tax credit: housing built through investors’ tax bills</h2>
+<ul>
+<li>IRS → states → developers → investors, mostly banks</li>
+<li>About <strong>$10 billion</strong> a year (Howard); <strong>$8
+billion</strong> (film)</li>
+<li>“‘Low-Income’ does not mean poor”</li>
+</ul>
+<p><span class="muted">Howard ch. 7, Canvas PDF p. 9 · film</span></p>
+<h2 id="its-defenders-get-what-pierson-calls-spoils">Its defenders get
+what Pierson calls “spoils”</h2>
+<ul>
+<li>An industry convention in Chicago</li>
+<li>Investors: “a good after-tax yield”</li>
+<li>Howard: developers and landlords as caregivers</li>
+</ul>
+<p><span class="muted">Film · Howard, Canvas PDF p. 11 · Pierson,
+p. 599</span></p>
+<h2 id="who-can-see-it-almost-no-one-and-that-protects-it">Who can see
+it? Almost no one, and that protects it</h2>
+<ul>
+<li>Tax expenditures: no yearly review by Congress</li>
+<li>“There’s only been seven audits in 29 years” (Grassley)</li>
+<li>Treasury declined an interview</li>
+</ul>
+<p><span class="muted">Pierson, p. 620 · film</span></p>
+<h2 id="where-it-is-weak-fraud-cost-siting">Where it is weak: fraud,
+cost, siting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Film</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fraud</td>
+<td><strong>$34 million</strong> taken from 14 Florida projects</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Fewer units for <strong>66%</strong> more, 1997–2014</td>
+</tr>
+<tr>
+<td>Siting</td>
+<td>Dallas: <strong>90%+</strong> of family projects in poor areas</td>
+</tr>
+</tbody>
+</table>
+<p><em>Outside the readings:</em> Congress enlarged it in 2020 and
+2025</p>
+<p><span class="muted">Film · CRS RS22389</span></p>
+<h2 id="you-run-a-senators-office.-three-bills-arrive.">You run a
+senator’s office. Three bills arrive.</h2>
+<table>
+<thead>
+<tr>
+<th>Made-up bill</th>
+<th>Who calls to stop it?</th>
+<th>Who never hears?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A.</strong> Cut TANF’s block grant 10%</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>B.</strong> End the ACA’s Medicaid expansion</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>C.</strong> End the housing tax credit</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Groups of three · 6 minutes · cite a
+source</span></p>
+<h2 id="the-three-programs-on-piersons-grid">The three programs on
+Pierson’s grid</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Welfare reform</th>
+<th>The ACA</th>
+<th>Tax credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Who depends</strong></td>
+<td>Poor families, no lobby</td>
+<td>Patients, hospitals, insurers</td>
+<td>Developers, banks</td>
+</tr>
+<tr>
+<td><strong>Who sees it</strong></td>
+<td>The symbol, not the program</td>
+<td>Everyone: “ObamaCare”</td>
+<td>Almost no one</td>
+</tr>
+<tr>
+<td><strong>Weak spot</strong></td>
+<td>Reach: 84% → 40%</td>
+<td>Penalty cut to $0</td>
+<td>Fraud, cost, siting</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>The point:</strong> The poorest families’ program had the
+weakest defenders.</p>
+</blockquote>
+<p><span class="muted">Béland and Waddan · Jacobs and Skocpol · Howard ·
+film</span></p>
+<h2 id="what-held-up-means-decides-your-answer">What “held up” means
+decides your answer</h2>
+<table>
+<thead>
+<tr>
+<th>If “held up” means</th>
+<th>Stronger case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The rules stuck</td>
+<td>Welfare reform</td>
+</tr>
+<tr>
+<td>The benefits survived</td>
+<td>The ACA</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>The point:</strong> Name your meaning in paragraph one.</p>
+</blockquote>
+<p><span class="muted">Béland and Waddan, p. 67 · Jacobs and Skocpol,
+ch. 4</span></p>
+<h2 id="where-the-readings-push-back">Where the readings push back</h2>
+<ul>
+<li>Pierson: the evidence “remains illustrative” (p. 602)</li>
+<li>Tax credit tenants are often not poor (Howard, Canvas PDF p. 9)</li>
+<li>Most of the film’s families hold vouchers</li>
+</ul>
+<p><span class="muted">Pick one as the objection your paper
+answers</span></p>
+<h2 id="paper-4-due-friday-116-1159-p.m.">Paper 4: due Friday 11/6,
+11:59 p.m.</h2>
+<ol type="1">
+<li>Your position: which held up better, and why</li>
+<li>Policy feedback for each; test it on the tax credit</li>
+<li>A film moment + a reading claim, with a page</li>
+</ol>
+<p><span class="muted">About 600 words · any edition’s pages · prompt on
+Canvas</span></p>
+<h2 id="film-moments-you-could-pair-with-a-reading">Film moments you
+could pair with a reading</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Film moment</th>
+<th>Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grassley’s seven audits</td>
+<td>Pierson, p. 620: no yearly review</td>
+</tr>
+<tr>
+<td>The Chicago convention</td>
+<td>Pierson, p. 599: spoils</td>
+</tr>
+<tr>
+<td>Farryn: “Nobody wants my voucher”</td>
+<td>Howard, Canvas PDF p. 8: most landlords opt out</td>
+</tr>
+</tbody>
+</table>
+<p><span class="muted">Starting pairs, not answers</span></p>
+<h2 id="next-week">Next week</h2>
+<p><strong>Fri 11/6, 11:59 p.m.:</strong> Paper 4</p>
+<p><strong>Mon 11/9:</strong> Howard ch. 9; Gilens ch. 3 (skim
+ch. 5)</p>
+<p><strong>Wed 11/11:</strong> Veterans Day, no class</p>
+<h2 id="by-215-you-should-be-able-to-say">By 2:15 you should be able to
+say</h2>
+<p>Welfare reform stuck: no one defended the benefit</p>
+<p>The ACA’s benefits survived; its delayed penalty didn’t</p>
+<p>The tax credit: quiet, well defended, growing</p>
+<p><strong>Friday:</strong> Paper 4 at 11:59</p>
+</body>
+</html>

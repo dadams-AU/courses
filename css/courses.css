@@ -214,7 +214,6 @@ a.sl-link:hover { color: var(--term-cyan); text-decoration: underline; }
   font-size: 1.2rem;
   font-weight: 700;
 }
-.doc-section h2::before { content: "## "; color: var(--accent); }
 .doc-section p, .doc-section li { line-height: 1.75; }
 
 /* ---------- Handout pages ---------- */
